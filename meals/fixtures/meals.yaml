@@ -1,0 +1,1693 @@
+- fields: {app_label: admin, model: logentry}
+  model: contenttypes.contenttype
+  pk: 1
+- fields: {app_label: auth, model: permission}
+  model: contenttypes.contenttype
+  pk: 2
+- fields: {app_label: auth, model: group}
+  model: contenttypes.contenttype
+  pk: 3
+- fields: {app_label: auth, model: user}
+  model: contenttypes.contenttype
+  pk: 4
+- fields: {app_label: contenttypes, model: contenttype}
+  model: contenttypes.contenttype
+  pk: 5
+- fields: {app_label: sessions, model: session}
+  model: contenttypes.contenttype
+  pk: 6
+- fields: {app_label: meals, model: dish}
+  model: contenttypes.contenttype
+  pk: 7
+- fields: {app_label: meals, model: ingredient}
+  model: contenttypes.contenttype
+  pk: 8
+- fields: {app_label: meals, model: dishingredient}
+  model: contenttypes.contenttype
+  pk: 9
+- fields: {expire_date: ! '2015-08-27 20:10:18.989145+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
+  model: sessions.session
+  pk: 5mw831wsdpba1508dqjx0i4kx8sf4y58
+- fields: {name: Tacos of Tomatillo Chicken}
+  model: meals.dish
+  pk: 1
+- fields: {name: Spicy Yucatecan Beef "Salad" Tacos}
+  model: meals.dish
+  pk: 2
+- fields: {name: Smoky Shredded Pork Tacos}
+  model: meals.dish
+  pk: 3
+- fields: {name: Yucatecan Grilled Fish Tacos}
+  model: meals.dish
+  pk: 4
+- fields: {name: Spicy Pasilla-Mushroom Tacos}
+  model: meals.dish
+  pk: 5
+- fields: {name: Tacos of Inky "Corn Mushroom"}
+  model: meals.dish
+  pk: 6
+- fields: {name: Tacos of Garlicky Mexican Greens}
+  model: meals.dish
+  pk: 7
+- fields: {name: 'Tacos of Creamy Braised Chard, Potatoes, and Poblanos'}
+  model: meals.dish
+  pk: 8
+- fields: {name: Herby Ricotta-Poblano Tacos}
+  model: meals.dish
+  pk: 9
+- fields: {name: Crispy Black Bean-Bacon Tacos}
+  model: meals.dish
+  pk: 10
+- fields: {name: Achiote-Roasted Pork Tacos}
+  model: meals.dish
+  pk: 11
+- fields: {name: achiote seeds}
+  model: meals.ingredient
+  pk: 1
+- fields: {name: allspice}
+  model: meals.ingredient
+  pk: 2
+- fields: {name: black pepper}
+  model: meals.ingredient
+  pk: 3
+- fields: {name: dried Mexican oregano}
+  model: meals.ingredient
+  pk: 4
+- fields: {name: cider vinegar}
+  model: meals.ingredient
+  pk: 5
+- fields: {name: garlic}
+  model: meals.ingredient
+  pk: 6
+- fields: {name: salt}
+  model: meals.ingredient
+  pk: 7
+- fields: {name: lime juice}
+  model: meals.ingredient
+  pk: 8
+- fields: {name: orange juice}
+  model: meals.ingredient
+  pk: 9
+- fields: {name: pork shoulder}
+  model: meals.ingredient
+  pk: 10
+- fields: {name: banana leaves}
+  model: meals.ingredient
+  pk: 11
+- fields: {name: corn tortillas}
+  model: meals.ingredient
+  pk: 12
+- fields: {name: red onions}
+  model: meals.ingredient
+  pk: 13
+- fields: {name: cumin seeds}
+  model: meals.ingredient
+  pk: 14
+- fields: {name: cilantro}
+  model: meals.ingredient
+  pk: 15
+- fields: {name: bacon}
+  model: meals.ingredient
+  pk: 16
+- fields: {name: white onions}
+  model: meals.ingredient
+  pk: 17
+- fields: {name: black beans}
+  model: meals.ingredient
+  pk: 18
+- fields: {name: chipotle chiles en adobo}
+  model: meals.ingredient
+  pk: 19
+- fields: {name: vegetable oil}
+  model: meals.ingredient
+  pk: 20
+- fields: {name: Mexican queso fresco}
+  model: meals.ingredient
+  pk: 21
+- fields: {name: romaine lettuce}
+  model: meals.ingredient
+  pk: 22
+- fields: {name: tomatoes}
+  model: meals.ingredient
+  pk: 23
+- fields: {name: poblano chiles}
+  model: meals.ingredient
+  pk: 24
+- fields: {name: ricotta cheese}
+  model: meals.ingredient
+  pk: 25
+- fields: {name: tomatillos}
+  model: meals.ingredient
+  pk: 26
+- fields: {name: serrano chiles}
+  model: meals.ingredient
+  pk: 27
+- fields: {name: avocados}
+  model: meals.ingredient
+  pk: 28
+- fields: {name: radishes}
+  model: meals.ingredient
+  pk: 29
+- fields: {name: chard}
+  model: meals.ingredient
+  pk: 30
+- fields: {name: sugar}
+  model: meals.ingredient
+  pk: 31
+- fields: {name: huitlacoche}
+  model: meals.ingredient
+  pk: 32
+- fields: {name: epazote}
+  model: meals.ingredient
+  pk: 33
+- fields: {name: pasilla chiles}
+  model: meals.ingredient
+  pk: 34
+- fields: {name: cumin}
+  model: meals.ingredient
+  pk: 35
+- fields: {name: chicken broth}
+  model: meals.ingredient
+  pk: 36
+- fields: {name: shitake mushrooms}
+  model: meals.ingredient
+  pk: 37
+- fields: {name: fish fillets}
+  model: meals.ingredient
+  pk: 38
+- fields: {name: habanero chiles}
+  model: meals.ingredient
+  pk: 39
+- fields: {name: Mexican cinnamon}
+  model: meals.ingredient
+  pk: 40
+- fields: {name: cloves}
+  model: meals.ingredient
+  pk: 41
+- fields: {name: raisins}
+  model: meals.ingredient
+  pk: 42
+- fields: {name: almonds}
+  model: meals.ingredient
+  pk: 43
+- fields: {name: hot sauce}
+  model: meals.ingredient
+  pk: 44
+- fields: {name: skirt steak}
+  model: meals.ingredient
+  pk: 45
+- fields: {name: curly leaf lettuce}
+  model: meals.ingredient
+  pk: 46
+- fields: {name: chicken}
+  model: meals.ingredient
+  pk: 47
+- fields: {name: dried thyme}
+  model: meals.ingredient
+  pk: 48
+- fields: {name: red-skin potatoes}
+  model: meals.ingredient
+  pk: 49
+- fields: {name: whipping cream}
+  model: meals.ingredient
+  pk: 50
+- fields: {dish: 11, ingredient: 1}
+  model: meals.dishingredient
+  pk: 1
+- fields: {dish: 11, ingredient: 2}
+  model: meals.dishingredient
+  pk: 2
+- fields: {dish: 11, ingredient: 3}
+  model: meals.dishingredient
+  pk: 3
+- fields: {dish: 11, ingredient: 4}
+  model: meals.dishingredient
+  pk: 4
+- fields: {dish: 11, ingredient: 5}
+  model: meals.dishingredient
+  pk: 5
+- fields: {dish: 11, ingredient: 6}
+  model: meals.dishingredient
+  pk: 6
+- fields: {dish: 11, ingredient: 7}
+  model: meals.dishingredient
+  pk: 7
+- fields: {dish: 11, ingredient: 8}
+  model: meals.dishingredient
+  pk: 8
+- fields: {dish: 11, ingredient: 9}
+  model: meals.dishingredient
+  pk: 9
+- fields: {dish: 11, ingredient: 10}
+  model: meals.dishingredient
+  pk: 10
+- fields: {dish: 11, ingredient: 11}
+  model: meals.dishingredient
+  pk: 11
+- fields: {dish: 11, ingredient: 12}
+  model: meals.dishingredient
+  pk: 12
+- fields: {dish: 11, ingredient: 13}
+  model: meals.dishingredient
+  pk: 13
+- fields: {dish: 11, ingredient: 14}
+  model: meals.dishingredient
+  pk: 14
+- fields: {dish: 11, ingredient: 15}
+  model: meals.dishingredient
+  pk: 15
+- fields: {dish: 10, ingredient: 16}
+  model: meals.dishingredient
+  pk: 16
+- fields: {dish: 10, ingredient: 17}
+  model: meals.dishingredient
+  pk: 17
+- fields: {dish: 10, ingredient: 18}
+  model: meals.dishingredient
+  pk: 18
+- fields: {dish: 10, ingredient: 19}
+  model: meals.dishingredient
+  pk: 19
+- fields: {dish: 10, ingredient: 7}
+  model: meals.dishingredient
+  pk: 20
+- fields: {dish: 10, ingredient: 20}
+  model: meals.dishingredient
+  pk: 21
+- fields: {dish: 10, ingredient: 12}
+  model: meals.dishingredient
+  pk: 22
+- fields: {dish: 10, ingredient: 21}
+  model: meals.dishingredient
+  pk: 23
+- fields: {dish: 10, ingredient: 22}
+  model: meals.dishingredient
+  pk: 24
+- fields: {dish: 10, ingredient: 5}
+  model: meals.dishingredient
+  pk: 25
+- fields: {dish: 10, ingredient: 23}
+  model: meals.dishingredient
+  pk: 26
+- fields: {dish: 9, ingredient: 6}
+  model: meals.dishingredient
+  pk: 27
+- fields: {dish: 9, ingredient: 24}
+  model: meals.dishingredient
+  pk: 28
+- fields: {dish: 9, ingredient: 25}
+  model: meals.dishingredient
+  pk: 29
+- fields: {dish: 9, ingredient: 15}
+  model: meals.dishingredient
+  pk: 30
+- fields: {dish: 9, ingredient: 7}
+  model: meals.dishingredient
+  pk: 31
+- fields: {dish: 9, ingredient: 3}
+  model: meals.dishingredient
+  pk: 32
+- fields: {dish: 9, ingredient: 12}
+  model: meals.dishingredient
+  pk: 33
+- fields: {dish: 9, ingredient: 26}
+  model: meals.dishingredient
+  pk: 34
+- fields: {dish: 9, ingredient: 27}
+  model: meals.dishingredient
+  pk: 35
+- fields: {dish: 9, ingredient: 17}
+  model: meals.dishingredient
+  pk: 36
+- fields: {dish: 9, ingredient: 28}
+  model: meals.dishingredient
+  pk: 37
+- fields: {dish: 9, ingredient: 29}
+  model: meals.dishingredient
+  pk: 38
+- fields: {dish: 7, ingredient: 12}
+  model: meals.dishingredient
+  pk: 39
+- fields: {dish: 7, ingredient: 30}
+  model: meals.dishingredient
+  pk: 40
+- fields: {dish: 7, ingredient: 20}
+  model: meals.dishingredient
+  pk: 41
+- fields: {dish: 7, ingredient: 17}
+  model: meals.dishingredient
+  pk: 42
+- fields: {dish: 7, ingredient: 6}
+  model: meals.dishingredient
+  pk: 43
+- fields: {dish: 7, ingredient: 7}
+  model: meals.dishingredient
+  pk: 44
+- fields: {dish: 7, ingredient: 21}
+  model: meals.dishingredient
+  pk: 45
+- fields: {dish: 7, ingredient: 19}
+  model: meals.dishingredient
+  pk: 46
+- fields: {dish: 7, ingredient: 26}
+  model: meals.dishingredient
+  pk: 47
+- fields: {dish: 7, ingredient: 31}
+  model: meals.dishingredient
+  pk: 48
+- fields: {dish: 6, ingredient: 24}
+  model: meals.dishingredient
+  pk: 49
+- fields: {dish: 6, ingredient: 20}
+  model: meals.dishingredient
+  pk: 50
+- fields: {dish: 6, ingredient: 17}
+  model: meals.dishingredient
+  pk: 51
+- fields: {dish: 6, ingredient: 6}
+  model: meals.dishingredient
+  pk: 52
+- fields: {dish: 6, ingredient: 23}
+  model: meals.dishingredient
+  pk: 53
+- fields: {dish: 6, ingredient: 32}
+  model: meals.dishingredient
+  pk: 54
+- fields: {dish: 6, ingredient: 7}
+  model: meals.dishingredient
+  pk: 55
+- fields: {dish: 6, ingredient: 33}
+  model: meals.dishingredient
+  pk: 56
+- fields: {dish: 6, ingredient: 12}
+  model: meals.dishingredient
+  pk: 57
+- fields: {dish: 5, ingredient: 6}
+  model: meals.dishingredient
+  pk: 58
+- fields: {dish: 5, ingredient: 34}
+  model: meals.dishingredient
+  pk: 59
+- fields: {dish: 5, ingredient: 4}
+  model: meals.dishingredient
+  pk: 60
+- fields: {dish: 5, ingredient: 3}
+  model: meals.dishingredient
+  pk: 61
+- fields: {dish: 5, ingredient: 35}
+  model: meals.dishingredient
+  pk: 62
+- fields: {dish: 5, ingredient: 20}
+  model: meals.dishingredient
+  pk: 63
+- fields: {dish: 5, ingredient: 36}
+  model: meals.dishingredient
+  pk: 64
+- fields: {dish: 5, ingredient: 37}
+  model: meals.dishingredient
+  pk: 65
+- fields: {dish: 5, ingredient: 33}
+  model: meals.dishingredient
+  pk: 66
+- fields: {dish: 5, ingredient: 12}
+  model: meals.dishingredient
+  pk: 67
+- fields: {dish: 5, ingredient: 7}
+  model: meals.dishingredient
+  pk: 68
+- fields: {dish: 5, ingredient: 17}
+  model: meals.dishingredient
+  pk: 69
+- fields: {dish: 5, ingredient: 21}
+  model: meals.dishingredient
+  pk: 70
+- fields: {dish: 4, ingredient: 1}
+  model: meals.dishingredient
+  pk: 71
+- fields: {dish: 4, ingredient: 2}
+  model: meals.dishingredient
+  pk: 72
+- fields: {dish: 4, ingredient: 3}
+  model: meals.dishingredient
+  pk: 73
+- fields: {dish: 4, ingredient: 4}
+  model: meals.dishingredient
+  pk: 74
+- fields: {dish: 4, ingredient: 5}
+  model: meals.dishingredient
+  pk: 75
+- fields: {dish: 4, ingredient: 6}
+  model: meals.dishingredient
+  pk: 76
+- fields: {dish: 4, ingredient: 7}
+  model: meals.dishingredient
+  pk: 77
+- fields: {dish: 4, ingredient: 8}
+  model: meals.dishingredient
+  pk: 78
+- fields: {dish: 4, ingredient: 38}
+  model: meals.dishingredient
+  pk: 79
+- fields: {dish: 4, ingredient: 11}
+  model: meals.dishingredient
+  pk: 80
+- fields: {dish: 4, ingredient: 12}
+  model: meals.dishingredient
+  pk: 81
+- fields: {dish: 4, ingredient: 13}
+  model: meals.dishingredient
+  pk: 82
+- fields: {dish: 4, ingredient: 23}
+  model: meals.dishingredient
+  pk: 83
+- fields: {dish: 4, ingredient: 29}
+  model: meals.dishingredient
+  pk: 84
+- fields: {dish: 4, ingredient: 39}
+  model: meals.dishingredient
+  pk: 85
+- fields: {dish: 4, ingredient: 15}
+  model: meals.dishingredient
+  pk: 86
+- fields: {dish: 3, ingredient: 10}
+  model: meals.dishingredient
+  pk: 87
+- fields: {dish: 3, ingredient: 6}
+  model: meals.dishingredient
+  pk: 88
+- fields: {dish: 3, ingredient: 17}
+  model: meals.dishingredient
+  pk: 89
+- fields: {dish: 3, ingredient: 19}
+  model: meals.dishingredient
+  pk: 90
+- fields: {dish: 3, ingredient: 23}
+  model: meals.dishingredient
+  pk: 91
+- fields: {dish: 3, ingredient: 20}
+  model: meals.dishingredient
+  pk: 92
+- fields: {dish: 3, ingredient: 7}
+  model: meals.dishingredient
+  pk: 93
+- fields: {dish: 3, ingredient: 40}
+  model: meals.dishingredient
+  pk: 94
+- fields: {dish: 3, ingredient: 3}
+  model: meals.dishingredient
+  pk: 95
+- fields: {dish: 3, ingredient: 41}
+  model: meals.dishingredient
+  pk: 96
+- fields: {dish: 3, ingredient: 42}
+  model: meals.dishingredient
+  pk: 97
+- fields: {dish: 3, ingredient: 43}
+  model: meals.dishingredient
+  pk: 98
+- fields: {dish: 3, ingredient: 12}
+  model: meals.dishingredient
+  pk: 99
+- fields: {dish: 3, ingredient: 44}
+  model: meals.dishingredient
+  pk: 100
+- fields: {dish: 2, ingredient: 45}
+  model: meals.dishingredient
+  pk: 101
+- fields: {dish: 2, ingredient: 20}
+  model: meals.dishingredient
+  pk: 102
+- fields: {dish: 2, ingredient: 17}
+  model: meals.dishingredient
+  pk: 103
+- fields: {dish: 2, ingredient: 6}
+  model: meals.dishingredient
+  pk: 104
+- fields: {dish: 2, ingredient: 7}
+  model: meals.dishingredient
+  pk: 105
+- fields: {dish: 2, ingredient: 11}
+  model: meals.dishingredient
+  pk: 106
+- fields: {dish: 2, ingredient: 13}
+  model: meals.dishingredient
+  pk: 107
+- fields: {dish: 2, ingredient: 8}
+  model: meals.dishingredient
+  pk: 108
+- fields: {dish: 2, ingredient: 9}
+  model: meals.dishingredient
+  pk: 109
+- fields: {dish: 2, ingredient: 23}
+  model: meals.dishingredient
+  pk: 110
+- fields: {dish: 2, ingredient: 29}
+  model: meals.dishingredient
+  pk: 111
+- fields: {dish: 2, ingredient: 39}
+  model: meals.dishingredient
+  pk: 112
+- fields: {dish: 2, ingredient: 15}
+  model: meals.dishingredient
+  pk: 113
+- fields: {dish: 2, ingredient: 12}
+  model: meals.dishingredient
+  pk: 114
+- fields: {dish: 2, ingredient: 46}
+  model: meals.dishingredient
+  pk: 115
+- fields: {dish: 1, ingredient: 26}
+  model: meals.dishingredient
+  pk: 116
+- fields: {dish: 1, ingredient: 27}
+  model: meals.dishingredient
+  pk: 117
+- fields: {dish: 1, ingredient: 20}
+  model: meals.dishingredient
+  pk: 118
+- fields: {dish: 1, ingredient: 17}
+  model: meals.dishingredient
+  pk: 119
+- fields: {dish: 1, ingredient: 6}
+  model: meals.dishingredient
+  pk: 120
+- fields: {dish: 1, ingredient: 36}
+  model: meals.dishingredient
+  pk: 121
+- fields: {dish: 1, ingredient: 15}
+  model: meals.dishingredient
+  pk: 122
+- fields: {dish: 1, ingredient: 7}
+  model: meals.dishingredient
+  pk: 123
+- fields: {dish: 1, ingredient: 12}
+  model: meals.dishingredient
+  pk: 124
+- fields: {dish: 1, ingredient: 30}
+  model: meals.dishingredient
+  pk: 125
+- fields: {dish: 1, ingredient: 47}
+  model: meals.dishingredient
+  pk: 126
+- fields: {dish: 1, ingredient: 21}
+  model: meals.dishingredient
+  pk: 127
+- fields: {dish: 8, ingredient: 24}
+  model: meals.dishingredient
+  pk: 128
+- fields: {dish: 8, ingredient: 20}
+  model: meals.dishingredient
+  pk: 129
+- fields: {dish: 8, ingredient: 17}
+  model: meals.dishingredient
+  pk: 130
+- fields: {dish: 8, ingredient: 6}
+  model: meals.dishingredient
+  pk: 131
+- fields: {dish: 8, ingredient: 4}
+  model: meals.dishingredient
+  pk: 132
+- fields: {dish: 8, ingredient: 48}
+  model: meals.dishingredient
+  pk: 133
+- fields: {dish: 8, ingredient: 12}
+  model: meals.dishingredient
+  pk: 134
+- fields: {dish: 8, ingredient: 36}
+  model: meals.dishingredient
+  pk: 135
+- fields: {dish: 8, ingredient: 49}
+  model: meals.dishingredient
+  pk: 136
+- fields: {dish: 8, ingredient: 30}
+  model: meals.dishingredient
+  pk: 137
+- fields: {dish: 8, ingredient: 50}
+  model: meals.dishingredient
+  pk: 138
+- fields: {dish: 8, ingredient: 7}
+  model: meals.dishingredient
+  pk: 139
+- fields: {dish: 8, ingredient: 21}
+  model: meals.dishingredient
+  pk: 140
+- fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
+  model: auth.permission
+  pk: 1
+- fields: {codename: change_logentry, content_type: 1, name: Can change log entry}
+  model: auth.permission
+  pk: 2
+- fields: {codename: delete_logentry, content_type: 1, name: Can delete log entry}
+  model: auth.permission
+  pk: 3
+- fields: {codename: add_permission, content_type: 2, name: Can add permission}
+  model: auth.permission
+  pk: 4
+- fields: {codename: change_permission, content_type: 2, name: Can change permission}
+  model: auth.permission
+  pk: 5
+- fields: {codename: delete_permission, content_type: 2, name: Can delete permission}
+  model: auth.permission
+  pk: 6
+- fields: {codename: add_group, content_type: 3, name: Can add group}
+  model: auth.permission
+  pk: 7
+- fields: {codename: change_group, content_type: 3, name: Can change group}
+  model: auth.permission
+  pk: 8
+- fields: {codename: delete_group, content_type: 3, name: Can delete group}
+  model: auth.permission
+  pk: 9
+- fields: {codename: add_user, content_type: 4, name: Can add user}
+  model: auth.permission
+  pk: 10
+- fields: {codename: change_user, content_type: 4, name: Can change user}
+  model: auth.permission
+  pk: 11
+- fields: {codename: delete_user, content_type: 4, name: Can delete user}
+  model: auth.permission
+  pk: 12
+- fields: {codename: add_contenttype, content_type: 5, name: Can add content type}
+  model: auth.permission
+  pk: 13
+- fields: {codename: change_contenttype, content_type: 5, name: Can change content
+      type}
+  model: auth.permission
+  pk: 14
+- fields: {codename: delete_contenttype, content_type: 5, name: Can delete content
+      type}
+  model: auth.permission
+  pk: 15
+- fields: {codename: add_session, content_type: 6, name: Can add session}
+  model: auth.permission
+  pk: 16
+- fields: {codename: change_session, content_type: 6, name: Can change session}
+  model: auth.permission
+  pk: 17
+- fields: {codename: delete_session, content_type: 6, name: Can delete session}
+  model: auth.permission
+  pk: 18
+- fields: {codename: add_dish, content_type: 7, name: Can add dish}
+  model: auth.permission
+  pk: 19
+- fields: {codename: change_dish, content_type: 7, name: Can change dish}
+  model: auth.permission
+  pk: 20
+- fields: {codename: delete_dish, content_type: 7, name: Can delete dish}
+  model: auth.permission
+  pk: 21
+- fields: {codename: add_ingredient, content_type: 8, name: Can add ingredient}
+  model: auth.permission
+  pk: 22
+- fields: {codename: change_ingredient, content_type: 8, name: Can change ingredient}
+  model: auth.permission
+  pk: 23
+- fields: {codename: delete_ingredient, content_type: 8, name: Can delete ingredient}
+  model: auth.permission
+  pk: 24
+- fields: {codename: add_dishingredient, content_type: 9, name: Can add dish ingredient}
+  model: auth.permission
+  pk: 25
+- fields: {codename: change_dishingredient, content_type: 9, name: Can change dish
+      ingredient}
+  model: auth.permission
+  pk: 26
+- fields: {codename: delete_dishingredient, content_type: 9, name: Can delete dish
+      ingredient}
+  model: auth.permission
+  pk: 27
+- fields:
+    date_joined: 2015-08-13 19:38:24.010044+00:00
+    email: jason.a.parent@gmail.com
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: 2015-08-13 20:10:18.984593+00:00
+    last_name: ''
+    password: pbkdf2_sha256$20000$zhS3opA2H4Io$pKEk9BgW4iv8LX7pZLMJuch49XcRTIhKJ2zv66EmRlY=
+    user_permissions: []
+    username: jason.a.parent@gmail.com
+  model: auth.user
+  pk: 1
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:11:17.693988+00:00', change_message: '',
+    content_type: 7, object_id: '1', object_repr: Tacos of Tomatillo Chicken, user: 1}
+  model: admin.logentry
+  pk: 1
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:11:46.744943+00:00', change_message: '',
+    content_type: 7, object_id: '2', object_repr: Spicy Yucatecan Beef "Salad" Tacos,
+    user: 1}
+  model: admin.logentry
+  pk: 2
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:11:57.574578+00:00', change_message: '',
+    content_type: 7, object_id: '3', object_repr: Smoky Shredded Pork Tacos, user: 1}
+  model: admin.logentry
+  pk: 3
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:12:13.537907+00:00', change_message: '',
+    content_type: 7, object_id: '4', object_repr: Yucatecan Grilled Fish Tacos, user: 1}
+  model: admin.logentry
+  pk: 4
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:12:28.115394+00:00', change_message: '',
+    content_type: 7, object_id: '5', object_repr: Spicy Pasilla-Mushroom Tacos, user: 1}
+  model: admin.logentry
+  pk: 5
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:12:42.931518+00:00', change_message: '',
+    content_type: 7, object_id: '6', object_repr: Tacos of Inky "Corn Mushroom", user: 1}
+  model: admin.logentry
+  pk: 6
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:13:00.131520+00:00', change_message: '',
+    content_type: 7, object_id: '7', object_repr: Tacos of Garlicky Mexican Greens,
+    user: 1}
+  model: admin.logentry
+  pk: 7
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:13:23.017896+00:00', change_message: '',
+    content_type: 7, object_id: '8', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos', user: 1}
+  model: admin.logentry
+  pk: 8
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:13:40.420676+00:00', change_message: '',
+    content_type: 7, object_id: '9', object_repr: Herby Ricotta-Poblano Tacos, user: 1}
+  model: admin.logentry
+  pk: 9
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:14:03.693197+00:00', change_message: '',
+    content_type: 7, object_id: '10', object_repr: Crispy Black Bean-Bacon Tacos,
+    user: 1}
+  model: admin.logentry
+  pk: 10
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:14:16.763219+00:00', change_message: '',
+    content_type: 7, object_id: '11', object_repr: Achiote-Roasted Pork Tacos, user: 1}
+  model: admin.logentry
+  pk: 11
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:15:07.176034+00:00', change_message: '',
+    content_type: 8, object_id: '1', object_repr: achiote seeds, user: 1}
+  model: admin.logentry
+  pk: 12
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:15:09.468085+00:00', change_message: '',
+    content_type: 9, object_id: '1', object_repr: 'Achiote-Roasted Pork Tacos: achiote
+      seeds', user: 1}
+  model: admin.logentry
+  pk: 13
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:15:20.145479+00:00', change_message: '',
+    content_type: 8, object_id: '2', object_repr: allspice, user: 1}
+  model: admin.logentry
+  pk: 14
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:15:22.107571+00:00', change_message: '',
+    content_type: 9, object_id: '2', object_repr: 'Achiote-Roasted Pork Tacos: allspice',
+    user: 1}
+  model: admin.logentry
+  pk: 15
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:15:35.569573+00:00', change_message: '',
+    content_type: 8, object_id: '3', object_repr: black pepper, user: 1}
+  model: admin.logentry
+  pk: 16
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:15:37.143950+00:00', change_message: '',
+    content_type: 9, object_id: '3', object_repr: 'Achiote-Roasted Pork Tacos: black
+      pepper', user: 1}
+  model: admin.logentry
+  pk: 17
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:15:53.446660+00:00', change_message: '',
+    content_type: 8, object_id: '4', object_repr: dried Mexican oregano, user: 1}
+  model: admin.logentry
+  pk: 18
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:15:55.126052+00:00', change_message: '',
+    content_type: 9, object_id: '4', object_repr: 'Achiote-Roasted Pork Tacos: dried
+      Mexican oregano', user: 1}
+  model: admin.logentry
+  pk: 19
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:16:07.797317+00:00', change_message: '',
+    content_type: 8, object_id: '5', object_repr: cider vinegar, user: 1}
+  model: admin.logentry
+  pk: 20
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:16:09.619637+00:00', change_message: '',
+    content_type: 9, object_id: '5', object_repr: 'Achiote-Roasted Pork Tacos: cider
+      vinegar', user: 1}
+  model: admin.logentry
+  pk: 21
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:16:22.080888+00:00', change_message: '',
+    content_type: 8, object_id: '6', object_repr: garlic, user: 1}
+  model: admin.logentry
+  pk: 22
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:16:26.332467+00:00', change_message: '',
+    content_type: 9, object_id: '6', object_repr: 'Achiote-Roasted Pork Tacos: garlic',
+    user: 1}
+  model: admin.logentry
+  pk: 23
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:16:34.480630+00:00', change_message: '',
+    content_type: 8, object_id: '7', object_repr: salt, user: 1}
+  model: admin.logentry
+  pk: 24
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:16:37.057385+00:00', change_message: '',
+    content_type: 9, object_id: '7', object_repr: 'Achiote-Roasted Pork Tacos: salt',
+    user: 1}
+  model: admin.logentry
+  pk: 25
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:16:53.155050+00:00', change_message: '',
+    content_type: 8, object_id: '8', object_repr: lime juice, user: 1}
+  model: admin.logentry
+  pk: 26
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:16:54.570480+00:00', change_message: '',
+    content_type: 9, object_id: '8', object_repr: 'Achiote-Roasted Pork Tacos: lime
+      juice', user: 1}
+  model: admin.logentry
+  pk: 27
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:17:04.846470+00:00', change_message: '',
+    content_type: 8, object_id: '9', object_repr: orange juice, user: 1}
+  model: admin.logentry
+  pk: 28
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:17:07.066460+00:00', change_message: '',
+    content_type: 9, object_id: '9', object_repr: 'Achiote-Roasted Pork Tacos: orange
+      juice', user: 1}
+  model: admin.logentry
+  pk: 29
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:17:24.218494+00:00', change_message: '',
+    content_type: 8, object_id: '10', object_repr: pork shoulder, user: 1}
+  model: admin.logentry
+  pk: 30
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:17:26.323314+00:00', change_message: '',
+    content_type: 9, object_id: '10', object_repr: 'Achiote-Roasted Pork Tacos: pork
+      shoulder', user: 1}
+  model: admin.logentry
+  pk: 31
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:17:49.575817+00:00', change_message: '',
+    content_type: 8, object_id: '11', object_repr: banana leaves, user: 1}
+  model: admin.logentry
+  pk: 32
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:17:51.595409+00:00', change_message: '',
+    content_type: 9, object_id: '11', object_repr: 'Achiote-Roasted Pork Tacos: banana
+      leaves', user: 1}
+  model: admin.logentry
+  pk: 33
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:18:01.716173+00:00', change_message: '',
+    content_type: 8, object_id: '12', object_repr: corn tortilla, user: 1}
+  model: admin.logentry
+  pk: 34
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:18:03.385589+00:00', change_message: '',
+    content_type: 9, object_id: '12', object_repr: 'Achiote-Roasted Pork Tacos: corn
+      tortilla', user: 1}
+  model: admin.logentry
+  pk: 35
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:18:41.620420+00:00', change_message: '',
+    content_type: 8, object_id: '13', object_repr: red onions, user: 1}
+  model: admin.logentry
+  pk: 36
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:18:43.292930+00:00', change_message: '',
+    content_type: 9, object_id: '13', object_repr: 'Achiote-Roasted Pork Tacos: red
+      onions', user: 1}
+  model: admin.logentry
+  pk: 37
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:19:00.646332+00:00', change_message: '',
+    content_type: 8, object_id: '14', object_repr: cumin seeds, user: 1}
+  model: admin.logentry
+  pk: 38
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:19:03.600664+00:00', change_message: '',
+    content_type: 9, object_id: '14', object_repr: 'Achiote-Roasted Pork Tacos: cumin
+      seeds', user: 1}
+  model: admin.logentry
+  pk: 39
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:19:18.546569+00:00', change_message: '',
+    content_type: 8, object_id: '15', object_repr: cilantro, user: 1}
+  model: admin.logentry
+  pk: 40
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:19:20.893518+00:00', change_message: '',
+    content_type: 9, object_id: '15', object_repr: 'Achiote-Roasted Pork Tacos: cilantro',
+    user: 1}
+  model: admin.logentry
+  pk: 41
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:19:48.130523+00:00', change_message: '',
+    content_type: 8, object_id: '16', object_repr: bacon, user: 1}
+  model: admin.logentry
+  pk: 42
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:19:51.002462+00:00', change_message: '',
+    content_type: 9, object_id: '16', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      bacon', user: 1}
+  model: admin.logentry
+  pk: 43
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:20:01.642266+00:00', change_message: '',
+    content_type: 8, object_id: '17', object_repr: white onion, user: 1}
+  model: admin.logentry
+  pk: 44
+- fields: {action_flag: 2, action_time: ! '2015-08-13 20:20:06.981587+00:00', change_message: Changed
+      name., content_type: 8, object_id: '17', object_repr: white onions, user: 1}
+  model: admin.logentry
+  pk: 45
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:20:09.027292+00:00', change_message: '',
+    content_type: 9, object_id: '17', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      white onions', user: 1}
+  model: admin.logentry
+  pk: 46
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:20:21.416164+00:00', change_message: '',
+    content_type: 8, object_id: '18', object_repr: black beans, user: 1}
+  model: admin.logentry
+  pk: 47
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:20:23.237077+00:00', change_message: '',
+    content_type: 9, object_id: '18', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      black beans', user: 1}
+  model: admin.logentry
+  pk: 48
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:20:50.611918+00:00', change_message: '',
+    content_type: 8, object_id: '19', object_repr: chipotle chiles en adobo, user: 1}
+  model: admin.logentry
+  pk: 49
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:20:53.482179+00:00', change_message: '',
+    content_type: 9, object_id: '19', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      chipotle chiles en adobo', user: 1}
+  model: admin.logentry
+  pk: 50
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:21:02.799410+00:00', change_message: '',
+    content_type: 9, object_id: '20', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      salt', user: 1}
+  model: admin.logentry
+  pk: 51
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:21:13.490581+00:00', change_message: '',
+    content_type: 8, object_id: '20', object_repr: vegetable oil, user: 1}
+  model: admin.logentry
+  pk: 52
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:21:15.925818+00:00', change_message: '',
+    content_type: 9, object_id: '21', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      vegetable oil', user: 1}
+  model: admin.logentry
+  pk: 53
+- fields: {action_flag: 2, action_time: ! '2015-08-13 20:21:31.658341+00:00', change_message: Changed
+      name., content_type: 8, object_id: '12', object_repr: corn tortillas, user: 1}
+  model: admin.logentry
+  pk: 54
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:21:33.185881+00:00', change_message: '',
+    content_type: 9, object_id: '22', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      corn tortillas', user: 1}
+  model: admin.logentry
+  pk: 55
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:21:57.626493+00:00', change_message: '',
+    content_type: 8, object_id: '21', object_repr: Mexican queso fresco, user: 1}
+  model: admin.logentry
+  pk: 56
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:21:59.255018+00:00', change_message: '',
+    content_type: 9, object_id: '23', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      Mexican queso fresco', user: 1}
+  model: admin.logentry
+  pk: 57
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:22:16.149300+00:00', change_message: '',
+    content_type: 8, object_id: '22', object_repr: romaine lettuce, user: 1}
+  model: admin.logentry
+  pk: 58
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:22:17.785951+00:00', change_message: '',
+    content_type: 9, object_id: '24', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      romaine lettuce', user: 1}
+  model: admin.logentry
+  pk: 59
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:22:30.652564+00:00', change_message: '',
+    content_type: 9, object_id: '25', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      cider vinegar', user: 1}
+  model: admin.logentry
+  pk: 60
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:23:05.672043+00:00', change_message: '',
+    content_type: 8, object_id: '23', object_repr: tomatoes, user: 1}
+  model: admin.logentry
+  pk: 61
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:23:07.233003+00:00', change_message: '',
+    content_type: 9, object_id: '26', object_repr: 'Crispy Black Bean-Bacon Tacos:
+      tomatoes', user: 1}
+  model: admin.logentry
+  pk: 62
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:23:31.881987+00:00', change_message: '',
+    content_type: 9, object_id: '27', object_repr: 'Herby Ricotta-Poblano Tacos: garlic',
+    user: 1}
+  model: admin.logentry
+  pk: 63
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:24:40.749589+00:00', change_message: '',
+    content_type: 8, object_id: '24', object_repr: poblano peppers, user: 1}
+  model: admin.logentry
+  pk: 64
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:24:44.278724+00:00', change_message: '',
+    content_type: 9, object_id: '28', object_repr: 'Herby Ricotta-Poblano Tacos: poblano
+      peppers', user: 1}
+  model: admin.logentry
+  pk: 65
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:24:56.367719+00:00', change_message: '',
+    content_type: 8, object_id: '25', object_repr: ricotta cheese, user: 1}
+  model: admin.logentry
+  pk: 66
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:24:58.176212+00:00', change_message: '',
+    content_type: 9, object_id: '29', object_repr: 'Herby Ricotta-Poblano Tacos: ricotta
+      cheese', user: 1}
+  model: admin.logentry
+  pk: 67
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:25:23.324613+00:00', change_message: '',
+    content_type: 9, object_id: '30', object_repr: 'Herby Ricotta-Poblano Tacos: cilantro',
+    user: 1}
+  model: admin.logentry
+  pk: 68
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:25:33.964364+00:00', change_message: '',
+    content_type: 9, object_id: '31', object_repr: 'Herby Ricotta-Poblano Tacos: salt',
+    user: 1}
+  model: admin.logentry
+  pk: 69
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:25:40.221858+00:00', change_message: '',
+    content_type: 9, object_id: '32', object_repr: 'Herby Ricotta-Poblano Tacos: black
+      pepper', user: 1}
+  model: admin.logentry
+  pk: 70
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:25:48.389844+00:00', change_message: '',
+    content_type: 9, object_id: '33', object_repr: 'Herby Ricotta-Poblano Tacos: corn
+      tortillas', user: 1}
+  model: admin.logentry
+  pk: 71
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:26:15.639259+00:00', change_message: '',
+    content_type: 8, object_id: '26', object_repr: tomatillos, user: 1}
+  model: admin.logentry
+  pk: 72
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:26:17.004587+00:00', change_message: '',
+    content_type: 9, object_id: '34', object_repr: 'Herby Ricotta-Poblano Tacos: tomatillos',
+    user: 1}
+  model: admin.logentry
+  pk: 73
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:26:35.354487+00:00', change_message: '',
+    content_type: 8, object_id: '27', object_repr: serrano chiles, user: 1}
+  model: admin.logentry
+  pk: 74
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:26:37.063618+00:00', change_message: '',
+    content_type: 9, object_id: '35', object_repr: 'Herby Ricotta-Poblano Tacos: serrano
+      chiles', user: 1}
+  model: admin.logentry
+  pk: 75
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:27:01.298135+00:00', change_message: '',
+    content_type: 9, object_id: '36', object_repr: 'Herby Ricotta-Poblano Tacos: white
+      onions', user: 1}
+  model: admin.logentry
+  pk: 76
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:27:12.099612+00:00', change_message: '',
+    content_type: 8, object_id: '28', object_repr: avocados, user: 1}
+  model: admin.logentry
+  pk: 77
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:27:18.483440+00:00', change_message: '',
+    content_type: 9, object_id: '37', object_repr: 'Herby Ricotta-Poblano Tacos: avocados',
+    user: 1}
+  model: admin.logentry
+  pk: 78
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:27:27.166154+00:00', change_message: '',
+    content_type: 8, object_id: '29', object_repr: radishes, user: 1}
+  model: admin.logentry
+  pk: 79
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:27:29.104587+00:00', change_message: '',
+    content_type: 9, object_id: '38', object_repr: 'Herby Ricotta-Poblano Tacos: radishes',
+    user: 1}
+  model: admin.logentry
+  pk: 80
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:29:18.506369+00:00', change_message: '',
+    content_type: 9, object_id: '39', object_repr: 'Tacos of Garlicky Mexican Greens:
+      corn tortillas', user: 1}
+  model: admin.logentry
+  pk: 81
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:29:42.267346+00:00', change_message: '',
+    content_type: 8, object_id: '30', object_repr: chard, user: 1}
+  model: admin.logentry
+  pk: 82
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:29:44.199151+00:00', change_message: '',
+    content_type: 9, object_id: '40', object_repr: 'Tacos of Garlicky Mexican Greens:
+      chard', user: 1}
+  model: admin.logentry
+  pk: 83
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:29:53.235916+00:00', change_message: '',
+    content_type: 9, object_id: '41', object_repr: 'Tacos of Garlicky Mexican Greens:
+      vegetable oil', user: 1}
+  model: admin.logentry
+  pk: 84
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:30:02.811016+00:00', change_message: '',
+    content_type: 9, object_id: '42', object_repr: 'Tacos of Garlicky Mexican Greens:
+      white onions', user: 1}
+  model: admin.logentry
+  pk: 85
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:30:13.637462+00:00', change_message: '',
+    content_type: 9, object_id: '43', object_repr: 'Tacos of Garlicky Mexican Greens:
+      garlic', user: 1}
+  model: admin.logentry
+  pk: 86
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:30:24.104016+00:00', change_message: '',
+    content_type: 9, object_id: '44', object_repr: 'Tacos of Garlicky Mexican Greens:
+      salt', user: 1}
+  model: admin.logentry
+  pk: 87
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:30:33.343792+00:00', change_message: '',
+    content_type: 9, object_id: '45', object_repr: 'Tacos of Garlicky Mexican Greens:
+      Mexican queso fresco', user: 1}
+  model: admin.logentry
+  pk: 88
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:31:03.118905+00:00', change_message: '',
+    content_type: 9, object_id: '46', object_repr: 'Tacos of Garlicky Mexican Greens:
+      chipotle chiles en adobo', user: 1}
+  model: admin.logentry
+  pk: 89
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:31:13.202538+00:00', change_message: '',
+    content_type: 9, object_id: '47', object_repr: 'Tacos of Garlicky Mexican Greens:
+      tomatillos', user: 1}
+  model: admin.logentry
+  pk: 90
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:31:24.555686+00:00', change_message: '',
+    content_type: 8, object_id: '31', object_repr: sugar, user: 1}
+  model: admin.logentry
+  pk: 91
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:31:27.093061+00:00', change_message: '',
+    content_type: 9, object_id: '48', object_repr: 'Tacos of Garlicky Mexican Greens:
+      sugar', user: 1}
+  model: admin.logentry
+  pk: 92
+- fields: {action_flag: 2, action_time: ! '2015-08-13 20:31:59.989953+00:00', change_message: Changed
+      name., content_type: 8, object_id: '24', object_repr: poblano chiles, user: 1}
+  model: admin.logentry
+  pk: 93
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:32:01.966534+00:00', change_message: '',
+    content_type: 9, object_id: '49', object_repr: 'Tacos of Inky "Corn Mushroom":
+      poblano chiles', user: 1}
+  model: admin.logentry
+  pk: 94
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:32:10.023324+00:00', change_message: '',
+    content_type: 9, object_id: '50', object_repr: 'Tacos of Inky "Corn Mushroom":
+      vegetable oil', user: 1}
+  model: admin.logentry
+  pk: 95
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:32:17.715603+00:00', change_message: '',
+    content_type: 9, object_id: '51', object_repr: 'Tacos of Inky "Corn Mushroom":
+      white onions', user: 1}
+  model: admin.logentry
+  pk: 96
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:32:26.412908+00:00', change_message: '',
+    content_type: 9, object_id: '52', object_repr: 'Tacos of Inky "Corn Mushroom":
+      garlic', user: 1}
+  model: admin.logentry
+  pk: 97
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:32:35.118513+00:00', change_message: '',
+    content_type: 9, object_id: '53', object_repr: 'Tacos of Inky "Corn Mushroom":
+      tomatoes', user: 1}
+  model: admin.logentry
+  pk: 98
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:33:59.801459+00:00', change_message: '',
+    content_type: 8, object_id: '32', object_repr: huitlacoche, user: 1}
+  model: admin.logentry
+  pk: 99
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:34:02.061444+00:00', change_message: '',
+    content_type: 9, object_id: '54', object_repr: 'Tacos of Inky "Corn Mushroom":
+      huitlacoche', user: 1}
+  model: admin.logentry
+  pk: 100
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:34:13.387669+00:00', change_message: '',
+    content_type: 9, object_id: '55', object_repr: 'Tacos of Inky "Corn Mushroom":
+      salt', user: 1}
+  model: admin.logentry
+  pk: 101
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:34:23.380595+00:00', change_message: '',
+    content_type: 8, object_id: '33', object_repr: epazote, user: 1}
+  model: admin.logentry
+  pk: 102
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:34:25.181820+00:00', change_message: '',
+    content_type: 9, object_id: '56', object_repr: 'Tacos of Inky "Corn Mushroom":
+      epazote', user: 1}
+  model: admin.logentry
+  pk: 103
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:34:38.023474+00:00', change_message: '',
+    content_type: 9, object_id: '57', object_repr: 'Tacos of Inky "Corn Mushroom":
+      corn tortillas', user: 1}
+  model: admin.logentry
+  pk: 104
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:35:01.463216+00:00', change_message: '',
+    content_type: 9, object_id: '58', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      garlic', user: 1}
+  model: admin.logentry
+  pk: 105
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:35:13.583739+00:00', change_message: '',
+    content_type: 8, object_id: '34', object_repr: pasilla chiles, user: 1}
+  model: admin.logentry
+  pk: 106
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:35:15.265319+00:00', change_message: '',
+    content_type: 9, object_id: '59', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      pasilla chiles', user: 1}
+  model: admin.logentry
+  pk: 107
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:35:25.087887+00:00', change_message: '',
+    content_type: 9, object_id: '60', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      dried Mexican oregano', user: 1}
+  model: admin.logentry
+  pk: 108
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:35:46.821554+00:00', change_message: '',
+    content_type: 9, object_id: '61', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      black pepper', user: 1}
+  model: admin.logentry
+  pk: 109
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:35:58.801262+00:00', change_message: '',
+    content_type: 8, object_id: '35', object_repr: cumin, user: 1}
+  model: admin.logentry
+  pk: 110
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:36:00.119590+00:00', change_message: '',
+    content_type: 9, object_id: '62', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      cumin', user: 1}
+  model: admin.logentry
+  pk: 111
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:36:11.339365+00:00', change_message: '',
+    content_type: 9, object_id: '63', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      vegetable oil', user: 1}
+  model: admin.logentry
+  pk: 112
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:36:21.681136+00:00', change_message: '',
+    content_type: 8, object_id: '36', object_repr: chicken broth, user: 1}
+  model: admin.logentry
+  pk: 113
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:36:23.349372+00:00', change_message: '',
+    content_type: 9, object_id: '64', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      chicken broth', user: 1}
+  model: admin.logentry
+  pk: 114
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:36:45.652751+00:00', change_message: '',
+    content_type: 8, object_id: '37', object_repr: shitake mushrooms, user: 1}
+  model: admin.logentry
+  pk: 115
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:36:47.275663+00:00', change_message: '',
+    content_type: 9, object_id: '65', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      shitake mushrooms', user: 1}
+  model: admin.logentry
+  pk: 116
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:36:57.293959+00:00', change_message: '',
+    content_type: 9, object_id: '66', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      epazote', user: 1}
+  model: admin.logentry
+  pk: 117
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:37:09.097147+00:00', change_message: '',
+    content_type: 9, object_id: '67', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      corn tortillas', user: 1}
+  model: admin.logentry
+  pk: 118
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:37:40.815322+00:00', change_message: '',
+    content_type: 9, object_id: '68', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      salt', user: 1}
+  model: admin.logentry
+  pk: 119
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:37:50.798419+00:00', change_message: '',
+    content_type: 9, object_id: '69', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      white onions', user: 1}
+  model: admin.logentry
+  pk: 120
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:37:59.156766+00:00', change_message: '',
+    content_type: 9, object_id: '70', object_repr: 'Spicy Pasilla-Mushroom Tacos:
+      Mexican queso fresco', user: 1}
+  model: admin.logentry
+  pk: 121
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:38:27.941779+00:00', change_message: '',
+    content_type: 9, object_id: '71', object_repr: 'Yucatecan Grilled Fish Tacos:
+      achiote seeds', user: 1}
+  model: admin.logentry
+  pk: 122
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:38:39.894924+00:00', change_message: '',
+    content_type: 9, object_id: '72', object_repr: 'Yucatecan Grilled Fish Tacos:
+      allspice', user: 1}
+  model: admin.logentry
+  pk: 123
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:38:48.903929+00:00', change_message: '',
+    content_type: 9, object_id: '73', object_repr: 'Yucatecan Grilled Fish Tacos:
+      black pepper', user: 1}
+  model: admin.logentry
+  pk: 124
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:38:56.506658+00:00', change_message: '',
+    content_type: 9, object_id: '74', object_repr: 'Yucatecan Grilled Fish Tacos:
+      dried Mexican oregano', user: 1}
+  model: admin.logentry
+  pk: 125
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:39:07.768284+00:00', change_message: '',
+    content_type: 9, object_id: '75', object_repr: 'Yucatecan Grilled Fish Tacos:
+      cider vinegar', user: 1}
+  model: admin.logentry
+  pk: 126
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:39:14.419506+00:00', change_message: '',
+    content_type: 9, object_id: '76', object_repr: 'Yucatecan Grilled Fish Tacos:
+      garlic', user: 1}
+  model: admin.logentry
+  pk: 127
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:39:20.960573+00:00', change_message: '',
+    content_type: 9, object_id: '77', object_repr: 'Yucatecan Grilled Fish Tacos:
+      salt', user: 1}
+  model: admin.logentry
+  pk: 128
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:39:29.892471+00:00', change_message: '',
+    content_type: 9, object_id: '78', object_repr: 'Yucatecan Grilled Fish Tacos:
+      lime juice', user: 1}
+  model: admin.logentry
+  pk: 129
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:40:07.033954+00:00', change_message: '',
+    content_type: 8, object_id: '38', object_repr: fish fillets, user: 1}
+  model: admin.logentry
+  pk: 130
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:40:08.850534+00:00', change_message: '',
+    content_type: 9, object_id: '79', object_repr: 'Yucatecan Grilled Fish Tacos:
+      fish fillets', user: 1}
+  model: admin.logentry
+  pk: 131
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:40:14.810241+00:00', change_message: '',
+    content_type: 9, object_id: '80', object_repr: 'Yucatecan Grilled Fish Tacos:
+      banana leaves', user: 1}
+  model: admin.logentry
+  pk: 132
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:40:21.759118+00:00', change_message: '',
+    content_type: 9, object_id: '81', object_repr: 'Yucatecan Grilled Fish Tacos:
+      corn tortillas', user: 1}
+  model: admin.logentry
+  pk: 133
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:40:44.999531+00:00', change_message: '',
+    content_type: 9, object_id: '82', object_repr: 'Yucatecan Grilled Fish Tacos:
+      red onions', user: 1}
+  model: admin.logentry
+  pk: 134
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:41:03.186572+00:00', change_message: '',
+    content_type: 9, object_id: '83', object_repr: 'Yucatecan Grilled Fish Tacos:
+      tomatoes', user: 1}
+  model: admin.logentry
+  pk: 135
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:41:10.418396+00:00', change_message: '',
+    content_type: 9, object_id: '84', object_repr: 'Yucatecan Grilled Fish Tacos:
+      radishes', user: 1}
+  model: admin.logentry
+  pk: 136
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:41:24.829917+00:00', change_message: '',
+    content_type: 8, object_id: '39', object_repr: habanero chiles, user: 1}
+  model: admin.logentry
+  pk: 137
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:41:26.977434+00:00', change_message: '',
+    content_type: 9, object_id: '85', object_repr: 'Yucatecan Grilled Fish Tacos:
+      habanero chiles', user: 1}
+  model: admin.logentry
+  pk: 138
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:41:34.742099+00:00', change_message: '',
+    content_type: 9, object_id: '86', object_repr: 'Yucatecan Grilled Fish Tacos:
+      cilantro', user: 1}
+  model: admin.logentry
+  pk: 139
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:42:01.329213+00:00', change_message: '',
+    content_type: 9, object_id: '87', object_repr: 'Smoky Shredded Pork Tacos: pork
+      shoulder', user: 1}
+  model: admin.logentry
+  pk: 140
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:42:12.266706+00:00', change_message: '',
+    content_type: 9, object_id: '88', object_repr: 'Smoky Shredded Pork Tacos: garlic',
+    user: 1}
+  model: admin.logentry
+  pk: 141
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:42:18.051792+00:00', change_message: '',
+    content_type: 9, object_id: '89', object_repr: 'Smoky Shredded Pork Tacos: white
+      onions', user: 1}
+  model: admin.logentry
+  pk: 142
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:42:27.071849+00:00', change_message: '',
+    content_type: 9, object_id: '90', object_repr: 'Smoky Shredded Pork Tacos: chipotle
+      chiles en adobo', user: 1}
+  model: admin.logentry
+  pk: 143
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:42:33.646460+00:00', change_message: '',
+    content_type: 9, object_id: '91', object_repr: 'Smoky Shredded Pork Tacos: tomatoes',
+    user: 1}
+  model: admin.logentry
+  pk: 144
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:42:39.388807+00:00', change_message: '',
+    content_type: 9, object_id: '92', object_repr: 'Smoky Shredded Pork Tacos: vegetable
+      oil', user: 1}
+  model: admin.logentry
+  pk: 145
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:42:47.810272+00:00', change_message: '',
+    content_type: 9, object_id: '93', object_repr: 'Smoky Shredded Pork Tacos: salt',
+    user: 1}
+  model: admin.logentry
+  pk: 146
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:06.694743+00:00', change_message: '',
+    content_type: 8, object_id: '40', object_repr: Mexican cinnamon, user: 1}
+  model: admin.logentry
+  pk: 147
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:11.229133+00:00', change_message: '',
+    content_type: 9, object_id: '94', object_repr: 'Smoky Shredded Pork Tacos: Mexican
+      cinnamon', user: 1}
+  model: admin.logentry
+  pk: 148
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:17.437572+00:00', change_message: '',
+    content_type: 9, object_id: '95', object_repr: 'Smoky Shredded Pork Tacos: black
+      pepper', user: 1}
+  model: admin.logentry
+  pk: 149
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:31.940628+00:00', change_message: '',
+    content_type: 8, object_id: '41', object_repr: cloves, user: 1}
+  model: admin.logentry
+  pk: 150
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:33.094222+00:00', change_message: '',
+    content_type: 9, object_id: '96', object_repr: 'Smoky Shredded Pork Tacos: cloves',
+    user: 1}
+  model: admin.logentry
+  pk: 151
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:40.717317+00:00', change_message: '',
+    content_type: 8, object_id: '42', object_repr: raisins, user: 1}
+  model: admin.logentry
+  pk: 152
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:42.200608+00:00', change_message: '',
+    content_type: 9, object_id: '97', object_repr: 'Smoky Shredded Pork Tacos: raisins',
+    user: 1}
+  model: admin.logentry
+  pk: 153
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:52.530502+00:00', change_message: '',
+    content_type: 8, object_id: '43', object_repr: almonds, user: 1}
+  model: admin.logentry
+  pk: 154
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:43:54.947228+00:00', change_message: '',
+    content_type: 9, object_id: '98', object_repr: 'Smoky Shredded Pork Tacos: almonds',
+    user: 1}
+  model: admin.logentry
+  pk: 155
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:44:04.980722+00:00', change_message: '',
+    content_type: 9, object_id: '99', object_repr: 'Smoky Shredded Pork Tacos: corn
+      tortillas', user: 1}
+  model: admin.logentry
+  pk: 156
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:44:19.306999+00:00', change_message: '',
+    content_type: 8, object_id: '44', object_repr: hot sauce, user: 1}
+  model: admin.logentry
+  pk: 157
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:44:21.092210+00:00', change_message: '',
+    content_type: 9, object_id: '100', object_repr: 'Smoky Shredded Pork Tacos: hot
+      sauce', user: 1}
+  model: admin.logentry
+  pk: 158
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:44:56.597394+00:00', change_message: '',
+    content_type: 8, object_id: '45', object_repr: skirt steak, user: 1}
+  model: admin.logentry
+  pk: 159
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:44:58.369819+00:00', change_message: '',
+    content_type: 9, object_id: '101', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: skirt steak', user: 1}
+  model: admin.logentry
+  pk: 160
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:45:08.570011+00:00', change_message: '',
+    content_type: 9, object_id: '102', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: vegetable oil', user: 1}
+  model: admin.logentry
+  pk: 161
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:45:14.150974+00:00', change_message: '',
+    content_type: 9, object_id: '103', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: white onions', user: 1}
+  model: admin.logentry
+  pk: 162
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:45:19.230559+00:00', change_message: '',
+    content_type: 9, object_id: '104', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: garlic', user: 1}
+  model: admin.logentry
+  pk: 163
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:45:25.053884+00:00', change_message: '',
+    content_type: 9, object_id: '105', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: salt', user: 1}
+  model: admin.logentry
+  pk: 164
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:45:33.830104+00:00', change_message: '',
+    content_type: 9, object_id: '106', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: banana leaves', user: 1}
+  model: admin.logentry
+  pk: 165
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:45:46.161265+00:00', change_message: '',
+    content_type: 9, object_id: '107', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: red onions', user: 1}
+  model: admin.logentry
+  pk: 166
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:45:53.467497+00:00', change_message: '',
+    content_type: 9, object_id: '108', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: lime juice', user: 1}
+  model: admin.logentry
+  pk: 167
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:45:58.207526+00:00', change_message: '',
+    content_type: 9, object_id: '109', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: orange juice', user: 1}
+  model: admin.logentry
+  pk: 168
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:46:07.074996+00:00', change_message: '',
+    content_type: 9, object_id: '110', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: tomatoes', user: 1}
+  model: admin.logentry
+  pk: 169
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:46:12.099645+00:00', change_message: '',
+    content_type: 9, object_id: '111', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: radishes', user: 1}
+  model: admin.logentry
+  pk: 170
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:46:18.947787+00:00', change_message: '',
+    content_type: 9, object_id: '112', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: habanero chiles', user: 1}
+  model: admin.logentry
+  pk: 171
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:46:26.960870+00:00', change_message: '',
+    content_type: 9, object_id: '113', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: cilantro', user: 1}
+  model: admin.logentry
+  pk: 172
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:46:35.273801+00:00', change_message: '',
+    content_type: 9, object_id: '114', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: corn tortillas', user: 1}
+  model: admin.logentry
+  pk: 173
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:46:50.464344+00:00', change_message: '',
+    content_type: 8, object_id: '46', object_repr: curly leaf lettuce, user: 1}
+  model: admin.logentry
+  pk: 174
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:46:52.441872+00:00', change_message: '',
+    content_type: 9, object_id: '115', object_repr: 'Spicy Yucatecan Beef "Salad"
+      Tacos: curly leaf lettuce', user: 1}
+  model: admin.logentry
+  pk: 175
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:47:15.974637+00:00', change_message: '',
+    content_type: 9, object_id: '116', object_repr: 'Tacos of Tomatillo Chicken: tomatillos',
+    user: 1}
+  model: admin.logentry
+  pk: 176
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:47:29.231175+00:00', change_message: '',
+    content_type: 9, object_id: '117', object_repr: 'Tacos of Tomatillo Chicken: serrano
+      chiles', user: 1}
+  model: admin.logentry
+  pk: 177
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:47:35.615491+00:00', change_message: '',
+    content_type: 9, object_id: '118', object_repr: 'Tacos of Tomatillo Chicken: vegetable
+      oil', user: 1}
+  model: admin.logentry
+  pk: 178
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:47:49.027945+00:00', change_message: '',
+    content_type: 9, object_id: '119', object_repr: 'Tacos of Tomatillo Chicken: white
+      onions', user: 1}
+  model: admin.logentry
+  pk: 179
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:47:57.307145+00:00', change_message: '',
+    content_type: 9, object_id: '120', object_repr: 'Tacos of Tomatillo Chicken: garlic',
+    user: 1}
+  model: admin.logentry
+  pk: 180
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:48:08.820658+00:00', change_message: '',
+    content_type: 9, object_id: '121', object_repr: 'Tacos of Tomatillo Chicken: chicken
+      broth', user: 1}
+  model: admin.logentry
+  pk: 181
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:48:18.407399+00:00', change_message: '',
+    content_type: 9, object_id: '122', object_repr: 'Tacos of Tomatillo Chicken: cilantro',
+    user: 1}
+  model: admin.logentry
+  pk: 182
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:48:29.039327+00:00', change_message: '',
+    content_type: 9, object_id: '123', object_repr: 'Tacos of Tomatillo Chicken: salt',
+    user: 1}
+  model: admin.logentry
+  pk: 183
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:48:36.417427+00:00', change_message: '',
+    content_type: 9, object_id: '124', object_repr: 'Tacos of Tomatillo Chicken: corn
+      tortillas', user: 1}
+  model: admin.logentry
+  pk: 184
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:49:00.418905+00:00', change_message: '',
+    content_type: 9, object_id: '125', object_repr: 'Tacos of Tomatillo Chicken: chard',
+    user: 1}
+  model: admin.logentry
+  pk: 185
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:49:10.905238+00:00', change_message: '',
+    content_type: 8, object_id: '47', object_repr: chicken, user: 1}
+  model: admin.logentry
+  pk: 186
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:49:13.181759+00:00', change_message: '',
+    content_type: 9, object_id: '126', object_repr: 'Tacos of Tomatillo Chicken: chicken',
+    user: 1}
+  model: admin.logentry
+  pk: 187
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:49:27.001377+00:00', change_message: '',
+    content_type: 9, object_id: '127', object_repr: 'Tacos of Tomatillo Chicken: Mexican
+      queso fresco', user: 1}
+  model: admin.logentry
+  pk: 188
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:51:32.595912+00:00', change_message: '',
+    content_type: 9, object_id: '128', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: poblano chiles', user: 1}
+  model: admin.logentry
+  pk: 189
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:51:43.615049+00:00', change_message: '',
+    content_type: 9, object_id: '129', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: vegetable oil', user: 1}
+  model: admin.logentry
+  pk: 190
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:51:51.586075+00:00', change_message: '',
+    content_type: 9, object_id: '130', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: white onions', user: 1}
+  model: admin.logentry
+  pk: 191
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:51:59.570841+00:00', change_message: '',
+    content_type: 9, object_id: '131', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: garlic', user: 1}
+  model: admin.logentry
+  pk: 192
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:52:08.547085+00:00', change_message: '',
+    content_type: 9, object_id: '132', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: dried Mexican oregano', user: 1}
+  model: admin.logentry
+  pk: 193
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:52:18.832731+00:00', change_message: '',
+    content_type: 8, object_id: '48', object_repr: dried thyme, user: 1}
+  model: admin.logentry
+  pk: 194
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:52:20.128089+00:00', change_message: '',
+    content_type: 9, object_id: '133', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: dried thyme', user: 1}
+  model: admin.logentry
+  pk: 195
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:52:33.724253+00:00', change_message: '',
+    content_type: 9, object_id: '134', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: corn tortillas', user: 1}
+  model: admin.logentry
+  pk: 196
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:52:45.341987+00:00', change_message: '',
+    content_type: 9, object_id: '135', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: chicken broth', user: 1}
+  model: admin.logentry
+  pk: 197
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:53:10.251089+00:00', change_message: '',
+    content_type: 8, object_id: '49', object_repr: red-skin potatoes, user: 1}
+  model: admin.logentry
+  pk: 198
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:53:13.932896+00:00', change_message: '',
+    content_type: 9, object_id: '136', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: red-skin potatoes', user: 1}
+  model: admin.logentry
+  pk: 199
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:53:27.148883+00:00', change_message: '',
+    content_type: 9, object_id: '137', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: chard', user: 1}
+  model: admin.logentry
+  pk: 200
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:54:04.864011+00:00', change_message: '',
+    content_type: 8, object_id: '50', object_repr: whipping cream, user: 1}
+  model: admin.logentry
+  pk: 201
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:54:06.813930+00:00', change_message: '',
+    content_type: 9, object_id: '138', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: whipping cream', user: 1}
+  model: admin.logentry
+  pk: 202
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:54:19.593110+00:00', change_message: '',
+    content_type: 9, object_id: '139', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: salt', user: 1}
+  model: admin.logentry
+  pk: 203
+- fields: {action_flag: 1, action_time: ! '2015-08-13 20:54:26.100330+00:00', change_message: '',
+    content_type: 9, object_id: '140', object_repr: 'Tacos of Creamy Braised Chard,
+      Potatoes, and Poblanos: Mexican queso fresco', user: 1}
+  model: admin.logentry
+  pk: 204
