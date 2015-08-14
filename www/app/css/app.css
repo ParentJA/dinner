@@ -1,3 +1,7 @@
 body {
   padding-top: 70px;
 }
+
+.selectable-table tbody tr {
+  cursor: pointer;
+}

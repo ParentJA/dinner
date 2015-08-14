@@ -1,3 +1,8 @@
-<ul>
-  <li ng-repeat="dish in models.dishes">{{ dish.name }}</li>
-</ul>
+<div class="row">
+  <div class="col-md-6">
+    <div x-dish-list data-dishes="models.dishes" data-selected-dish="models.selectedDish"></div>
+  </div>
+  <div class="col-md-6">
+    <div x-dish-detail data-selected-dish="models.selectedDish"></div>
+  </div>
+</div>

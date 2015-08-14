@@ -8,9 +8,14 @@ from .models import Dish, Ingredient
 
 
 class DishSerializer(serializers.ModelSerializer):
+    ingredient_ids = serializers.SerializerMethodField()
+
+    def get_ingredient_ids(self, obj):
+        return getattr(obj, 'ingredient_ids', [])
+
     class Meta:
         model = Dish
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'ingredient_ids')
 
 
 class IngredientSerializer(serializers.ModelSerializer):
