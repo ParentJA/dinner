@@ -17,6 +17,11 @@
         url: "/dishes",
         templateUrl: "/static/views/dishes.html",
         controller: "DishController"
+      })
+      .state("ingredients", {
+        url: "/ingredients",
+        templateUrl: "/static/views/ingredients.html",
+        controller: "IngredientController"
       });
 
     //Default state...

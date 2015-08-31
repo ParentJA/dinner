@@ -1,5 +1,8 @@
 __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 
+# Standard library imports...
+import collections
+
 # Third-party imports...
 from rest_framework import status, views
 from rest_framework.response import Response
@@ -34,5 +37,31 @@ class DishAPIView(views.APIView):
 
         return Response(status=status.HTTP_200_OK, data={
             'dishes': DishSerializer(dishes, many=True).data,
+            'ingredients': IngredientSerializer(ingredients, many=True).data
+        })
+
+
+class IngredientAPIView(views.APIView):
+    def get(self, request, pk=None):
+        if request.query_params.get('count'):
+            dish_ingredients = DishIngredient.objects.select_related('ingredient')
+            ingredient_count = collections.defaultdict(int)
+
+            for dish_ingredient in dish_ingredients:
+                ingredient_count[dish_ingredient.ingredient] += 1
+
+            ingredients = []
+
+            for ingredient, count in ingredient_count.iteritems():
+                ingredient.count = count
+                ingredients.append(ingredient)
+
+        else:
+            ingredients = Ingredient.objects.all()
+
+        if pk:
+            ingredients = ingredients.filter(pk=pk)
+
+        return Response(status=status.HTTP_200_OK, data={
             'ingredients': IngredientSerializer(ingredients, many=True).data
         })

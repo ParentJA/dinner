@@ -24,8 +24,21 @@
     };
   }
 
+  function ingredientList() {
+    return {
+      restrict: "A",
+      scope: {
+        ingredients: "=",
+        selectedIngredient: "="
+      },
+      templateUrl: "/static/views/ingredient_list.html",
+      controller: "IngredientListController"
+    };
+  }
+
   angular.module("app")
     .directive("dishList", [dishList])
-    .directive("dishDetail", [dishDetail]);
+    .directive("dishDetail", [dishDetail])
+    .directive("ingredientList", [ingredientList]);
 
 })(window, window.angular);

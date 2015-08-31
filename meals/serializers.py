@@ -19,6 +19,11 @@ class DishSerializer(serializers.ModelSerializer):
 
 
 class IngredientSerializer(serializers.ModelSerializer):
+    count = serializers.SerializerMethodField()
+
+    def get_count(self, obj):
+        return getattr(obj, 'count', 0)
+
     class Meta:
         model = Ingredient
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'count')
