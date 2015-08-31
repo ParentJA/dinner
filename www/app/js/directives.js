@@ -36,9 +36,29 @@
     };
   }
 
+  function pillbox() {
+    return {
+      restrict: "A",
+      scope: {},
+      templateUrl: "/static/views/pillbox.html",
+      controller: "PillboxController"
+    };
+  }
+
+  function pillboxTag() {
+    return {
+      restrict: "A",
+      scope: {},
+      templateUrl: "/static/views/pillbox_tag.html",
+      controller: "PillboxTagController"
+    };
+  }
+
   angular.module("app")
     .directive("dishList", [dishList])
     .directive("dishDetail", [dishDetail])
-    .directive("ingredientList", [ingredientList]);
+    .directive("ingredientList", [ingredientList])
+    .directive("pillbox", [pillbox])
+    .directive("pillboxTag", [pillboxTag]);
 
 })(window, window.angular);

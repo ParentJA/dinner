@@ -131,6 +131,14 @@
     };
   }
 
+  function PillboxController($scope) {
+
+  }
+
+  function PillboxTagController($scope) {
+
+  }
+
   angular.module("app")
     .controller("MainController", ["$scope", MainController])
     .controller("HomeController", ["$scope", HomeController])
@@ -138,6 +146,8 @@
     .controller("DishListController", ["$scope", DishListController])
     .controller("DishDetailController", ["$scope", DishDetailController])
     .controller("IngredientController", ["$scope", "IngredientFactory", "ingredientService", IngredientController])
-    .controller("IngredientListController", ["$scope", IngredientListController]);
+    .controller("IngredientListController", ["$scope", IngredientListController])
+    .controller("PillboxController", ["$scope", PillboxController])
+    .controller("PillboxTagController", ["$scope", PillboxTagController]);
 
 })(window, window.angular);
