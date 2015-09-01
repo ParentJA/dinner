@@ -39,7 +39,10 @@
   function pillbox() {
     return {
       restrict: "A",
-      scope: {},
+      scope: {
+        tagList: "=",
+        exclusions: "="
+      },
       templateUrl: "/static/views/pillbox.html",
       controller: "PillboxController"
     };
@@ -48,7 +51,11 @@
   function pillboxTag() {
     return {
       restrict: "A",
-      scope: {},
+      require: "^pillbox",
+      scope: {
+        tag: "=",
+        removeTag: "&"
+      },
       templateUrl: "/static/views/pillbox_tag.html",
       controller: "PillboxTagController"
     };

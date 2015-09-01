@@ -5,3 +5,33 @@ body {
 .selectable-table tbody tr {
   cursor: pointer;
 }
+
+.component--pillbox {
+
+}
+
+[x-pillbox-tag] {
+  padding-right: 5px;
+  display: inline;
+}
+
+.component--pillbox .borderless-input {
+  width: 150px;
+  display: inline;
+}
+
+.component--pillbox-tag {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #CCC;
+  display: inline-block;
+}
+
+.component--pillbox-tag .tag-name {
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.component--pillbox-tag .close {
+
+}

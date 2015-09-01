@@ -93,6 +93,7 @@
 
   function IngredientListController($scope) {
     $scope.number = 15;
+    $scope.exclusions = [];
 
     $scope.isSelectedIngredient = function isSelectedIngredient(ingredient) {
       return $scope.selectedIngredient === ingredient;
@@ -106,33 +107,50 @@
       return !_.isEmpty($scope.ingredients);
     };
 
+    $scope.getIngredients = function getIngredients() {
+      return $scope.ingredients;
+    };
+
     $scope.filterAll = function filterAll() {
       $scope.filteredIngredients = $scope.ingredients;
     };
 
     $scope.filterMost = function filterMost() {
-      var exclusions = [
-        _.findWhere($scope.ingredients, {name: "corn tortillas"}),
-        _.findWhere($scope.ingredients, {name: "Mexican queso fresco"})
-      ];
-
-      $scope.filteredIngredients = _.sortBy(_.difference($scope.ingredients, exclusions), "count")
+      $scope.filteredIngredients = _.sortBy(_.difference($scope.ingredients, $scope.exclusions), "count")
         .reverse().slice(0, $scope.number);
     };
 
     $scope.filterLeast = function filterLeast() {
-      var exclusions = [
-        _.findWhere($scope.ingredients, {name: "ricotta cheese"}),
-        _.findWhere($scope.ingredients, {name: "whipping cream"})
-      ];
-
-      $scope.filteredIngredients = _.sortBy(_.difference($scope.ingredients, exclusions), "count")
+      $scope.filteredIngredients = _.sortBy(_.difference($scope.ingredients, $scope.exclusions), "count")
         .slice(0, $scope.number);
     };
   }
 
   function PillboxController($scope) {
+    $scope.tagName = null;
 
+    $scope.addTag = function addTag(tagName) {
+      var tagObject = _.findWhere($scope.tagList, {name: tagName});
+
+      if (tagObject && !_.includes($scope.exclusions, tagObject)) {
+        $scope.exclusions.push(tagObject);
+      }
+    };
+
+    $scope.removeTag = function removeTag(tagName) {
+      var tagObject = _.findWhere($scope.tagList, {name: tagName});
+
+      if (tagObject) {
+        _.remove($scope.exclusions, tagObject);
+      }
+    };
+
+    $scope.onKeyPressed = function onKeyPressed(event) {
+      if (event.keyCode === 13) {
+        $scope.addTag($scope.tagName);
+        $scope.tagName = null;
+      }
+    };
   }
 
   function PillboxTagController($scope) {
