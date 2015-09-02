@@ -2,56 +2,101 @@
   "use strict";
 
   function DishFactory() {
-    var ingredients = [];
-
     return function (data) {
       _.forEach(data.dishes, function (dish) {
         dish._ingredients = [];
 
         _.forEach(dish.ingredient_ids, function (ingredientId) {
-          var ingredient = _.findWhere(data.ingredients, {id: ingredientId});
-
-          // Keep a running tally of ingredients...
-          ingredients.push(ingredient.name);
-
-          dish._ingredients.push(ingredient);
+          dish._ingredients.push(_.findWhere(data.ingredients, {id: ingredientId}));
         });
       });
 
       return data.dishes;
-    };
+    }
   }
 
-  function dishService($http, BASE_URL) {
-    this.list = function list() {
-      return $http.get(BASE_URL + "meals/dishes/");
+  function dishService($http, BASE_URL, DishFactory) {
+    var dishes = [],
+        selectedDish = null;
+
+    var service = {
+      hasDishes: function hasDishes() {
+        return (!_.isEmpty(dishes));
+      },
+      getDishes: function getDishes() {
+        return dishes;
+      },
+      getSelectedDish: function getSelectedDish() {
+        return selectedDish;
+      },
+      setSelectedDish: function setSelectedDish(value) {
+        selectedDish = value;
+      },
+      isSelectedDish: function isSelectedDish(value) {
+        return (selectedDish === value);
+      }
     };
 
-    this.retrieve = function retrieve(id) {
-      return $http.get(BASE_URL + "meals/dishes/" + id + "/");
+    var init = function init() {
+      $http.get(BASE_URL + "meals/dishes/").then(function (response) {
+        dishes = new DishFactory(response.data);
+        selectedDish = _.first(_.sortBy(dishes, "name"));
+      }, function () {
+        console.error("Dishes failed to load!");
+      });
     };
+
+    init();
+
+    return service;
   }
 
   function IngredientFactory() {
-    return function(data) {
+    return function (data) {
       return data.ingredients;
     }
   }
 
-  function ingredientService($http, BASE_URL) {
-    this.list = function list(count) {
-      return $http.get(BASE_URL + "meals/ingredients/?count=" + count);
+  function ingredientService($http, BASE_URL, IngredientFactory) {
+    var ingredients = [],
+        selectedIngredient = null;
+
+    var service = {
+      hasIngredients: function hasIngredients() {
+        return (!_.isEmpty(ingredients));
+      },
+      getIngredients: function getIngredients() {
+        return ingredients;
+      },
+      getSelectedIngredient: function getSelectedIngredient() {
+        return selectedIngredient;
+      },
+      setSelectedIngredient: function setSelectedIngredient(value) {
+        selectedIngredient = value;
+      },
+      isSelectedIngredient: function isSelectedIngredient(value) {
+        return (selectedIngredient === value);
+      }
     };
 
-    this.retrieve = function retrieve(id) {
-      return $http.get(BASE_URL + "meals/dishes/" + id + "/");
+    var init = function init() {
+      $http.get(BASE_URL + "meals/ingredients/?count=true").then(function (response) {
+        ingredients = new IngredientFactory(response.data);
+      }, function () {
+        console.error("Ingredients failed to load!");
+      });
     };
+
+    init();
+
+    return service;
   }
 
   angular.module("app")
     .factory("DishFactory", [DishFactory])
-    .service("dishService", ["$http", "BASE_URL", dishService])
+    .factory("DFactory", [DishFactory])
+    .service("dishService", ["$http", "BASE_URL", "DFactory", dishService])
     .factory("IngredientFactory", [IngredientFactory])
-    .service("ingredientService", ["$http", "BASE_URL", ingredientService]);
+    .service("ingredientService", ["$http", "BASE_URL", "IngredientFactory", ingredientService]);
 
 })(window, window.angular);

@@ -4,10 +4,7 @@
   function dishList() {
     return {
       restrict: "A",
-      scope: {
-        dishes: "=",
-        selectedDish: "="
-      },
+      scope: {},
       templateUrl: "/static/views/dish_list.html",
       controller: "DishListController"
     };
@@ -16,9 +13,7 @@
   function dishDetail() {
     return {
       restrict: "A",
-      scope: {
-        selectedDish: "="
-      },
+      scope: {},
       templateUrl: "/static/views/dish_detail.html",
       controller: "DishDetailController"
     };
@@ -27,10 +22,7 @@
   function ingredientList() {
     return {
       restrict: "A",
-      scope: {
-        ingredients: "=",
-        selectedIngredient: "="
-      },
+      scope: {},
       templateUrl: "/static/views/ingredient_list.html",
       controller: "IngredientListController"
     };

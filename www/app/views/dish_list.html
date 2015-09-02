@@ -12,7 +12,7 @@
     <tr ng-hide="hasDishes()">
       <td class="text-center" colspan="5">No dishes</td>
     </tr>
-    <tr ng-repeat="dish in dishes | orderBy: 'name'"
+    <tr ng-repeat="dish in getDishes() | orderBy: 'name'"
         ng-class="{active: isSelectedDish(dish)}"
         ng-click="setSelectedDish(dish)"
         ng-show="hasDishes()">

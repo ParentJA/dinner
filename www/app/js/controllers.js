@@ -7,111 +7,59 @@
   function HomeController($scope) {
   }
 
-  function DishController($scope, DishFactory, dishService) {
-    $scope.models = {
-      dishes: [{
-        name: "",
-        ingredient_ids: [],
-        _ingredients: [{
-          name: ""
-        }]
-      }],
-      selectedDish: {
-        name: "",
-        _ingredients: [{
-          name: ""
-        }]
-      }
+  function DishController($scope, dishService) {}
+
+  function DishListController($scope, dishService) {
+    $scope.hasDishes = function hasDishes() {
+      return dishService.hasDishes();
     };
 
     $scope.getDishes = function getDishes() {
-      dishService.list().then(function (response) {
-        $scope.models.dishes = new DishFactory(response.data);
-        $scope.models.selectedDish = _.first(_.sortBy($scope.models.dishes, "name"));
-      }, function (response) {
-        console.error("Dishes failed to load!");
-      });
-    };
-
-    function init() {
-      $scope.getDishes();
-    }
-
-    init();
-  }
-
-  function DishListController($scope) {
-    $scope.isSelectedDish = function isSelectedDish(dish) {
-      return $scope.selectedDish === dish;
+      return dishService.getDishes();
     };
 
     $scope.setSelectedDish = function setSelectedDish(value) {
-      return $scope.selectedDish = value;
+      dishService.setSelectedDish(value);
     };
 
-    $scope.hasDishes = function hasDishes() {
-      return !_.isEmpty($scope.dishes);
+    $scope.isSelectedDish = function isSelectedDish(value) {
+      return dishService.isSelectedDish(value);
     };
   }
 
-  function DishDetailController($scope) {
+  function DishDetailController($scope, dishService) {
+    $scope.getSelectedDish = function getSelectedDish() {
+      return dishService.getSelectedDish();
+    };
   }
 
-  function IngredientController($scope, IngredientFactory, ingredientService) {
+  function IngredientController($scope, ingredientService) {
     $scope.models = {
-      ingredients: [{
-        id: 0,
-        name: "",
-        count: 0
-      }],
-      filteredIngredients: [{
-        id: 0,
-        name: "",
-        count: 0
-      }],
-      selectedIngredient: {
-        id: 0,
-        name: "",
-        count: 0
-      }
+      ingredients: ingredientService
+    };
+  }
+
+  function IngredientListController($scope, ingredientService) {
+    //$scope.number = 15;
+    //$scope.exclusions = [];
+
+    $scope.hasIngredients = function hasIngredients() {
+      return ingredientService.hasIngredients();
     };
 
     $scope.getIngredients = function getIngredients() {
-      ingredientService.list(true).then(function (response) {
-        $scope.models.ingredients = new IngredientFactory(response.data);
-      }, function (response) {
-        console.error("Ingredients failed to load!");
-      });
-    };
-
-    function init() {
-      $scope.getIngredients();
-    }
-
-    init();
-  }
-
-  function IngredientListController($scope) {
-    $scope.number = 15;
-    $scope.exclusions = [];
-
-    $scope.isSelectedIngredient = function isSelectedIngredient(ingredient) {
-      return $scope.selectedIngredient === ingredient;
+      return ingredientService.getIngredients();
     };
 
     $scope.setSelectedIngredient = function setSelectedIngredient(value) {
-      return $scope.selectedIngredient = value;
+      ingredientService.setSelectedIngredient(value);
     };
 
-    $scope.hasIngredients = function hasIngredients() {
-      return !_.isEmpty($scope.ingredients);
+    $scope.isSelectedIngredient = function isSelectedIngredient(value) {
+      return ingredientService.isSelectedIngredient(value);
     };
 
-    $scope.getIngredients = function getIngredients() {
-      return $scope.ingredients;
-    };
-
-    $scope.filterAll = function filterAll() {
+    /*$scope.filterAll = function filterAll() {
       $scope.filteredIngredients = $scope.ingredients;
     };
 
@@ -123,7 +71,7 @@
     $scope.filterLeast = function filterLeast() {
       $scope.filteredIngredients = _.sortBy(_.difference($scope.ingredients, $scope.exclusions), "count")
         .slice(0, $scope.number);
-    };
+    };*/
   }
 
   function PillboxController($scope) {
@@ -160,11 +108,11 @@
   angular.module("app")
     .controller("MainController", ["$scope", MainController])
     .controller("HomeController", ["$scope", HomeController])
-    .controller("DishController", ["$scope", "DishFactory", "dishService", DishController])
-    .controller("DishListController", ["$scope", DishListController])
-    .controller("DishDetailController", ["$scope", DishDetailController])
-    .controller("IngredientController", ["$scope", "IngredientFactory", "ingredientService", IngredientController])
-    .controller("IngredientListController", ["$scope", IngredientListController])
+    .controller("DishController", ["$scope", "dishService", DishController])
+    .controller("DishListController", ["$scope", "dishService", DishListController])
+    .controller("DishDetailController", ["$scope", "dishService", DishDetailController])
+    .controller("IngredientController", ["$scope", "ingredientService", IngredientController])
+    .controller("IngredientListController", ["$scope", "ingredientService", IngredientListController])
     .controller("PillboxController", ["$scope", PillboxController])
     .controller("PillboxTagController", ["$scope", PillboxTagController]);
 

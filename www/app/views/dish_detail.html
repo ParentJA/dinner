@@ -3,7 +3,7 @@
     <h4 class="panel-title">Dish Detail</h4>
   </div>
   <div class="panel-body">
-    <h3>{{ selectedDish.name | title }}</h3>
+    <h3>{{ getSelectedDish().name | title }}</h3>
   </div>
   <table class="table">
     <thead>
@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="ingredient in selectedDish._ingredients | orderBy: 'name'">
+    <tr ng-repeat="ingredient in getSelectedDish()._ingredients | orderBy: 'name'">
       <td>{{ ingredient.name | title }}</td>
     </tr>
     </tbody>

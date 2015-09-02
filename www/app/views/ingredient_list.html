@@ -2,7 +2,7 @@
   <div class="panel-heading">
     <h4 class="panel-title">Ingredient List</h4>
   </div>
-  <div class="panel-body">
+  <!--<div class="panel-body">
     <div x-pillbox data-tag-list="ingredients" data-exclusions="exclusions"></div>
     <form class="form-inline" novalidate>
       <div class="form-group">
@@ -17,7 +17,7 @@
         </label>
       </div>
     </form>
-  </div>
+  </div>-->
   <table class="table table-hover selectable-table">
     <thead>
     <tr>
@@ -28,7 +28,7 @@
     <tr ng-hide="hasIngredients()">
       <td class="text-center">No ingredients</td>
     </tr>
-    <tr ng-repeat="ingredient in filteredIngredients | orderBy: 'name'"
+    <tr ng-repeat="ingredient in getIngredients() | orderBy: 'name'"
         ng-class="{active: isSelectedIngredient(ingredient)}"
         ng-click="setSelectedIngredient(ingredient)"
         ng-show="hasIngredients()">
