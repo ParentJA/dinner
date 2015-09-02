@@ -25,12 +25,15 @@
 - fields: {app_label: meals, model: dishingredient}
   model: contenttypes.contenttype
   pk: 9
-- fields: {expire_date: ! '2015-09-12 17:40:18.738204+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
-  model: sessions.session
-  pk: 5etmj06t1q8hybxiaqd0g7e5fztm0ljh
 - fields: {expire_date: ! '2015-08-27 20:10:18.989145+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
   model: sessions.session
   pk: 5mw831wsdpba1508dqjx0i4kx8sf4y58
+- fields: {expire_date: ! '2015-09-16 03:17:59.653182+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
+  model: sessions.session
+  pk: j85j806o1e6ycfhpkuehrdgn1herrvdz
+- fields: {expire_date: ! '2015-09-14 14:19:41.792865+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
+  model: sessions.session
+  pk: rva426jr5wgvoz17bzppg7vrpmfkezwd
 - fields: {name: Tacos of Tomatillo Chicken}
   model: meals.dish
   pk: 1
@@ -103,6 +106,24 @@
 - fields: {name: Chipotle Shrimp}
   model: meals.dish
   pk: 25
+- fields: {name: Guacamole}
+  model: meals.dish
+  pk: 26
+- fields: {name: Tomatillo-Green Guacamole}
+  model: meals.dish
+  pk: 27
+- fields: {name: Oaxacan Seared Cheese with Tomato and Green Chile}
+  model: meals.dish
+  pk: 28
+- fields: {name: Classic Seviche Tostadas}
+  model: meals.dish
+  pk: 29
+- fields: {name: 'Crispy Tortillas, Fried or Baked'}
+  model: meals.dish
+  pk: 30
+- fields: {name: Shrimp Seviche with Roasted Cactus}
+  model: meals.dish
+  pk: 31
 - fields: {name: achiote seeds}
   model: meals.ingredient
   pk: 1
@@ -322,6 +343,15 @@
 - fields: {name: shrimp}
   model: meals.ingredient
   pk: 73
+- fields: {name: tortilla chips}
+  model: meals.ingredient
+  pk: 74
+- fields: {name: lime}
+  model: meals.ingredient
+  pk: 75
+- fields: {name: nopales}
+  model: meals.ingredient
+  pk: 76
 - fields: {dish: 11, ingredient: 1}
   model: meals.dishingredient
   pk: 1
@@ -1231,6 +1261,162 @@
 - fields: {dish: 25, ingredient: 73}
   model: meals.dishingredient
   pk: 304
+- fields: {dish: 26, ingredient: 23}
+  model: meals.dishingredient
+  pk: 305
+- fields: {dish: 26, ingredient: 27}
+  model: meals.dishingredient
+  pk: 306
+- fields: {dish: 26, ingredient: 6}
+  model: meals.dishingredient
+  pk: 307
+- fields: {dish: 26, ingredient: 15}
+  model: meals.dishingredient
+  pk: 308
+- fields: {dish: 26, ingredient: 17}
+  model: meals.dishingredient
+  pk: 309
+- fields: {dish: 26, ingredient: 28}
+  model: meals.dishingredient
+  pk: 310
+- fields: {dish: 26, ingredient: 8}
+  model: meals.dishingredient
+  pk: 311
+- fields: {dish: 26, ingredient: 7}
+  model: meals.dishingredient
+  pk: 312
+- fields: {dish: 26, ingredient: 29}
+  model: meals.dishingredient
+  pk: 313
+- fields: {dish: 27, ingredient: 26}
+  model: meals.dishingredient
+  pk: 314
+- fields: {dish: 27, ingredient: 27}
+  model: meals.dishingredient
+  pk: 315
+- fields: {dish: 27, ingredient: 6}
+  model: meals.dishingredient
+  pk: 316
+- fields: {dish: 27, ingredient: 17}
+  model: meals.dishingredient
+  pk: 317
+- fields: {dish: 27, ingredient: 15}
+  model: meals.dishingredient
+  pk: 318
+- fields: {dish: 27, ingredient: 28}
+  model: meals.dishingredient
+  pk: 319
+- fields: {dish: 27, ingredient: 7}
+  model: meals.dishingredient
+  pk: 320
+- fields: {dish: 28, ingredient: 23}
+  model: meals.dishingredient
+  pk: 321
+- fields: {dish: 28, ingredient: 17}
+  model: meals.dishingredient
+  pk: 322
+- fields: {dish: 28, ingredient: 6}
+  model: meals.dishingredient
+  pk: 323
+- fields: {dish: 28, ingredient: 24}
+  model: meals.dishingredient
+  pk: 324
+- fields: {dish: 28, ingredient: 36}
+  model: meals.dishingredient
+  pk: 325
+- fields: {dish: 28, ingredient: 7}
+  model: meals.dishingredient
+  pk: 326
+- fields: {dish: 28, ingredient: 33}
+  model: meals.dishingredient
+  pk: 327
+- fields: {dish: 28, ingredient: 20}
+  model: meals.dishingredient
+  pk: 328
+- fields: {dish: 28, ingredient: 21}
+  model: meals.dishingredient
+  pk: 329
+- fields: {dish: 29, ingredient: 38}
+  model: meals.dishingredient
+  pk: 330
+- fields: {dish: 29, ingredient: 23}
+  model: meals.dishingredient
+  pk: 331
+- fields: {dish: 29, ingredient: 27}
+  model: meals.dishingredient
+  pk: 332
+- fields: {dish: 29, ingredient: 15}
+  model: meals.dishingredient
+  pk: 333
+- fields: {dish: 29, ingredient: 17}
+  model: meals.dishingredient
+  pk: 334
+- fields: {dish: 29, ingredient: 20}
+  model: meals.dishingredient
+  pk: 335
+- fields: {dish: 29, ingredient: 7}
+  model: meals.dishingredient
+  pk: 336
+- fields: {dish: 29, ingredient: 31}
+  model: meals.dishingredient
+  pk: 337
+- fields: {dish: 29, ingredient: 28}
+  model: meals.dishingredient
+  pk: 338
+- fields: {dish: 29, ingredient: 74}
+  model: meals.dishingredient
+  pk: 339
+- fields: {dish: 30, ingredient: 12}
+  model: meals.dishingredient
+  pk: 340
+- fields: {dish: 30, ingredient: 20}
+  model: meals.dishingredient
+  pk: 341
+- fields: {dish: 30, ingredient: 7}
+  model: meals.dishingredient
+  pk: 342
+- fields: {dish: 31, ingredient: 75}
+  model: meals.dishingredient
+  pk: 343
+- fields: {dish: 31, ingredient: 73}
+  model: meals.dishingredient
+  pk: 344
+- fields: {dish: 31, ingredient: 76}
+  model: meals.dishingredient
+  pk: 345
+- fields: {dish: 31, ingredient: 7}
+  model: meals.dishingredient
+  pk: 346
+- fields: {dish: 31, ingredient: 13}
+  model: meals.dishingredient
+  pk: 347
+- fields: {dish: 31, ingredient: 8}
+  model: meals.dishingredient
+  pk: 348
+- fields: {dish: 31, ingredient: 5}
+  model: meals.dishingredient
+  pk: 349
+- fields: {dish: 31, ingredient: 48}
+  model: meals.dishingredient
+  pk: 350
+- fields: {dish: 31, ingredient: 4}
+  model: meals.dishingredient
+  pk: 351
+- fields: {dish: 31, ingredient: 27}
+  model: meals.dishingredient
+  pk: 352
+- fields: {dish: 31, ingredient: 23}
+  model: meals.dishingredient
+  pk: 353
+- fields: {dish: 31, ingredient: 15}
+  model: meals.dishingredient
+  pk: 354
+- fields: {dish: 31, ingredient: 28}
+  model: meals.dishingredient
+  pk: 355
+- fields: {dish: 31, ingredient: 22}
+  model: meals.dishingredient
+  pk: 356
 - fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
   model: auth.permission
   pk: 1
@@ -1324,7 +1510,7 @@
     is_active: true
     is_staff: true
     is_superuser: true
-    last_login: 2015-08-29 17:40:18.716781+00:00
+    last_login: 2015-09-02 03:17:59.640394+00:00
     last_name: ''
     password: pbkdf2_sha256$20000$zhS3opA2H4Io$pKEk9BgW4iv8LX7pZLMJuch49XcRTIhKJ2zv66EmRlY=
     user_permissions: []
@@ -3291,3 +3477,303 @@
     content_type: 9, object_id: '304', object_repr: 'Chipotle Shrimp: shrimp', user: 1}
   model: admin.logentry
   pk: 410
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:19:18.320197+00:00', change_message: '',
+    content_type: 7, object_id: '26', object_repr: Guacamole, user: 1}
+  model: admin.logentry
+  pk: 411
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:19:35.569153+00:00', change_message: '',
+    content_type: 9, object_id: '305', object_repr: 'Guacamole: tomatoes', user: 1}
+  model: admin.logentry
+  pk: 412
+- fields: {action_flag: 2, action_time: ! '2015-09-02 03:19:37.864701+00:00', change_message: No
+      fields changed., content_type: 9, object_id: '305', object_repr: 'Guacamole:
+      tomatoes', user: 1}
+  model: admin.logentry
+  pk: 413
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:19:48.664506+00:00', change_message: '',
+    content_type: 9, object_id: '306', object_repr: 'Guacamole: serrano chiles', user: 1}
+  model: admin.logentry
+  pk: 414
+- fields: {action_flag: 2, action_time: ! '2015-09-02 03:19:50.751406+00:00', change_message: No
+      fields changed., content_type: 9, object_id: '306', object_repr: 'Guacamole:
+      serrano chiles', user: 1}
+  model: admin.logentry
+  pk: 415
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:20:06.624875+00:00', change_message: '',
+    content_type: 9, object_id: '307', object_repr: 'Guacamole: garlic', user: 1}
+  model: admin.logentry
+  pk: 416
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:20:18.645731+00:00', change_message: '',
+    content_type: 9, object_id: '308', object_repr: 'Guacamole: cilantro', user: 1}
+  model: admin.logentry
+  pk: 417
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:20:27.926235+00:00', change_message: '',
+    content_type: 9, object_id: '309', object_repr: 'Guacamole: white onions', user: 1}
+  model: admin.logentry
+  pk: 418
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:20:37.005108+00:00', change_message: '',
+    content_type: 9, object_id: '310', object_repr: 'Guacamole: avocados', user: 1}
+  model: admin.logentry
+  pk: 419
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:20:44.487968+00:00', change_message: '',
+    content_type: 9, object_id: '311', object_repr: 'Guacamole: lime juice', user: 1}
+  model: admin.logentry
+  pk: 420
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:20:53.499421+00:00', change_message: '',
+    content_type: 9, object_id: '312', object_repr: 'Guacamole: salt', user: 1}
+  model: admin.logentry
+  pk: 421
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:21:10.212764+00:00', change_message: '',
+    content_type: 9, object_id: '313', object_repr: 'Guacamole: radishes', user: 1}
+  model: admin.logentry
+  pk: 422
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:21:36.431047+00:00', change_message: '',
+    content_type: 7, object_id: '27', object_repr: Tomatillo-Green Guacamole, user: 1}
+  model: admin.logentry
+  pk: 423
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:21:52.275923+00:00', change_message: '',
+    content_type: 9, object_id: '314', object_repr: 'Tomatillo-Green Guacamole: tomatillos',
+    user: 1}
+  model: admin.logentry
+  pk: 424
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:22:01.770180+00:00', change_message: '',
+    content_type: 9, object_id: '315', object_repr: 'Tomatillo-Green Guacamole: serrano
+      chiles', user: 1}
+  model: admin.logentry
+  pk: 425
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:22:08.329802+00:00', change_message: '',
+    content_type: 9, object_id: '316', object_repr: 'Tomatillo-Green Guacamole: garlic',
+    user: 1}
+  model: admin.logentry
+  pk: 426
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:22:14.402688+00:00', change_message: '',
+    content_type: 9, object_id: '317', object_repr: 'Tomatillo-Green Guacamole: white
+      onions', user: 1}
+  model: admin.logentry
+  pk: 427
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:22:22.826003+00:00', change_message: '',
+    content_type: 9, object_id: '318', object_repr: 'Tomatillo-Green Guacamole: cilantro',
+    user: 1}
+  model: admin.logentry
+  pk: 428
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:22:37.610309+00:00', change_message: '',
+    content_type: 9, object_id: '319', object_repr: 'Tomatillo-Green Guacamole: avocados',
+    user: 1}
+  model: admin.logentry
+  pk: 429
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:22:42.352689+00:00', change_message: '',
+    content_type: 9, object_id: '320', object_repr: 'Tomatillo-Green Guacamole: salt',
+    user: 1}
+  model: admin.logentry
+  pk: 430
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:23:55.614604+00:00', change_message: '',
+    content_type: 7, object_id: '28', object_repr: Oaxacan Seared Cheese with Tomato
+      and Green Chile, user: 1}
+  model: admin.logentry
+  pk: 431
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:24:07.904310+00:00', change_message: '',
+    content_type: 9, object_id: '321', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: tomatoes', user: 1}
+  model: admin.logentry
+  pk: 432
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:24:15.664469+00:00', change_message: '',
+    content_type: 9, object_id: '322', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: white onions', user: 1}
+  model: admin.logentry
+  pk: 433
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:24:24.942424+00:00', change_message: '',
+    content_type: 9, object_id: '323', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: garlic', user: 1}
+  model: admin.logentry
+  pk: 434
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:24:35.038921+00:00', change_message: '',
+    content_type: 9, object_id: '324', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: poblano chiles', user: 1}
+  model: admin.logentry
+  pk: 435
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:24:43.083304+00:00', change_message: '',
+    content_type: 9, object_id: '325', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: chicken broth', user: 1}
+  model: admin.logentry
+  pk: 436
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:24:48.953397+00:00', change_message: '',
+    content_type: 9, object_id: '326', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: salt', user: 1}
+  model: admin.logentry
+  pk: 437
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:24:55.655626+00:00', change_message: '',
+    content_type: 9, object_id: '327', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: epazote', user: 1}
+  model: admin.logentry
+  pk: 438
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:25:04.564852+00:00', change_message: '',
+    content_type: 9, object_id: '328', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: vegetable oil', user: 1}
+  model: admin.logentry
+  pk: 439
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:25:12.349467+00:00', change_message: '',
+    content_type: 9, object_id: '329', object_repr: 'Oaxacan Seared Cheese with Tomato
+      and Green Chile: Mexican queso fresco', user: 1}
+  model: admin.logentry
+  pk: 440
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:26:00.456335+00:00', change_message: '',
+    content_type: 7, object_id: '29', object_repr: Classic Seviche Tostadas, user: 1}
+  model: admin.logentry
+  pk: 441
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:26:14.709513+00:00', change_message: '',
+    content_type: 9, object_id: '330', object_repr: 'Classic Seviche Tostadas: fish
+      fillets', user: 1}
+  model: admin.logentry
+  pk: 442
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:26:23.450420+00:00', change_message: '',
+    content_type: 9, object_id: '331', object_repr: 'Classic Seviche Tostadas: tomatoes',
+    user: 1}
+  model: admin.logentry
+  pk: 443
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:26:30.819786+00:00', change_message: '',
+    content_type: 9, object_id: '332', object_repr: 'Classic Seviche Tostadas: serrano
+      chiles', user: 1}
+  model: admin.logentry
+  pk: 444
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:26:40.250941+00:00', change_message: '',
+    content_type: 9, object_id: '333', object_repr: 'Classic Seviche Tostadas: cilantro',
+    user: 1}
+  model: admin.logentry
+  pk: 445
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:26:46.595311+00:00', change_message: '',
+    content_type: 9, object_id: '334', object_repr: 'Classic Seviche Tostadas: white
+      onions', user: 1}
+  model: admin.logentry
+  pk: 446
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:26:54.586092+00:00', change_message: '',
+    content_type: 9, object_id: '335', object_repr: 'Classic Seviche Tostadas: vegetable
+      oil', user: 1}
+  model: admin.logentry
+  pk: 447
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:27:03.226345+00:00', change_message: '',
+    content_type: 9, object_id: '336', object_repr: 'Classic Seviche Tostadas: salt',
+    user: 1}
+  model: admin.logentry
+  pk: 448
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:27:12.562468+00:00', change_message: '',
+    content_type: 9, object_id: '337', object_repr: 'Classic Seviche Tostadas: sugar',
+    user: 1}
+  model: admin.logentry
+  pk: 449
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:27:21.402484+00:00', change_message: '',
+    content_type: 9, object_id: '338', object_repr: 'Classic Seviche Tostadas: avocados',
+    user: 1}
+  model: admin.logentry
+  pk: 450
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:27:35.079577+00:00', change_message: '',
+    content_type: 8, object_id: '74', object_repr: tortilla chips, user: 1}
+  model: admin.logentry
+  pk: 451
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:27:37.323892+00:00', change_message: '',
+    content_type: 9, object_id: '339', object_repr: 'Classic Seviche Tostadas: tortilla
+      chips', user: 1}
+  model: admin.logentry
+  pk: 452
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:28:17.044697+00:00', change_message: '',
+    content_type: 7, object_id: '30', object_repr: 'Crispy Tortillas, Fried or Baked',
+    user: 1}
+  model: admin.logentry
+  pk: 453
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:28:34.048306+00:00', change_message: '',
+    content_type: 9, object_id: '340', object_repr: 'Crispy Tortillas, Fried or Baked:
+      corn tortillas', user: 1}
+  model: admin.logentry
+  pk: 454
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:28:42.663186+00:00', change_message: '',
+    content_type: 9, object_id: '341', object_repr: 'Crispy Tortillas, Fried or Baked:
+      vegetable oil', user: 1}
+  model: admin.logentry
+  pk: 455
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:28:49.910602+00:00', change_message: '',
+    content_type: 9, object_id: '342', object_repr: 'Crispy Tortillas, Fried or Baked:
+      salt', user: 1}
+  model: admin.logentry
+  pk: 456
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:29:32.621154+00:00', change_message: '',
+    content_type: 7, object_id: '31', object_repr: Shrimp Seviche with Roasted Cactus,
+    user: 1}
+  model: admin.logentry
+  pk: 457
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:29:47.294717+00:00', change_message: '',
+    content_type: 8, object_id: '75', object_repr: lime, user: 1}
+  model: admin.logentry
+  pk: 458
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:29:49.328493+00:00', change_message: '',
+    content_type: 9, object_id: '343', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      lime', user: 1}
+  model: admin.logentry
+  pk: 459
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:29:59.125379+00:00', change_message: '',
+    content_type: 9, object_id: '344', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      shrimp', user: 1}
+  model: admin.logentry
+  pk: 460
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:30:12.231444+00:00', change_message: '',
+    content_type: 8, object_id: '76', object_repr: nopales, user: 1}
+  model: admin.logentry
+  pk: 461
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:30:14.690883+00:00', change_message: '',
+    content_type: 9, object_id: '345', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      nopales', user: 1}
+  model: admin.logentry
+  pk: 462
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:30:21.981125+00:00', change_message: '',
+    content_type: 9, object_id: '346', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      salt', user: 1}
+  model: admin.logentry
+  pk: 463
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:30:33.698162+00:00', change_message: '',
+    content_type: 9, object_id: '347', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      red onions', user: 1}
+  model: admin.logentry
+  pk: 464
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:30:42.392094+00:00', change_message: '',
+    content_type: 9, object_id: '348', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      lime juice', user: 1}
+  model: admin.logentry
+  pk: 465
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:30:57.702370+00:00', change_message: '',
+    content_type: 9, object_id: '349', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      cider vinegar', user: 1}
+  model: admin.logentry
+  pk: 466
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:31:11.179998+00:00', change_message: '',
+    content_type: 9, object_id: '350', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      dried thyme', user: 1}
+  model: admin.logentry
+  pk: 467
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:31:19.205405+00:00', change_message: '',
+    content_type: 9, object_id: '351', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      dried Mexican oregano', user: 1}
+  model: admin.logentry
+  pk: 468
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:31:29.730863+00:00', change_message: '',
+    content_type: 9, object_id: '352', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      serrano chiles', user: 1}
+  model: admin.logentry
+  pk: 469
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:31:36.779161+00:00', change_message: '',
+    content_type: 9, object_id: '353', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      tomatoes', user: 1}
+  model: admin.logentry
+  pk: 470
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:31:47.882122+00:00', change_message: '',
+    content_type: 9, object_id: '354', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      cilantro', user: 1}
+  model: admin.logentry
+  pk: 471
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:31:59.954968+00:00', change_message: '',
+    content_type: 9, object_id: '355', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      avocados', user: 1}
+  model: admin.logentry
+  pk: 472
+- fields: {action_flag: 1, action_time: ! '2015-09-02 03:32:28.105645+00:00', change_message: '',
+    content_type: 9, object_id: '356', object_repr: 'Shrimp Seviche with Roasted Cactus:
+      romaine lettuce', user: 1}
+  model: admin.logentry
+  pk: 473
