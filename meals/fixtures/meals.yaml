@@ -28,6 +28,9 @@
 - fields: {expire_date: ! '2015-08-27 20:10:18.989145+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
   model: sessions.session
   pk: 5mw831wsdpba1508dqjx0i4kx8sf4y58
+- fields: {expire_date: ! '2015-09-16 23:40:02.302675+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
+  model: sessions.session
+  pk: d8azqebajyscdg3cpuuklorvgwmp2ouj
 - fields: {expire_date: ! '2015-09-16 03:17:59.653182+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
   model: sessions.session
   pk: j85j806o1e6ycfhpkuehrdgn1herrvdz
@@ -124,6 +127,12 @@
 - fields: {name: Shrimp Seviche with Roasted Cactus}
   model: meals.dish
   pk: 31
+- fields: {name: Spicy Chile-Baked Oysters}
+  model: meals.dish
+  pk: 32
+- fields: {name: Rustic Jicama Appetizer with Red Chile and Lime}
+  model: meals.dish
+  pk: 33
 - fields: {name: achiote seeds}
   model: meals.ingredient
   pk: 1
@@ -346,12 +355,24 @@
 - fields: {name: tortilla chips}
   model: meals.ingredient
   pk: 74
-- fields: {name: lime}
+- fields: {name: limes}
   model: meals.ingredient
   pk: 75
 - fields: {name: nopales}
   model: meals.ingredient
   pk: 76
+- fields: {name: oysters}
+  model: meals.ingredient
+  pk: 77
+- fields: {name: jicama}
+  model: meals.ingredient
+  pk: 78
+- fields: {name: cucumbers}
+  model: meals.ingredient
+  pk: 79
+- fields: {name: chile powder}
+  model: meals.ingredient
+  pk: 80
 - fields: {dish: 11, ingredient: 1}
   model: meals.dishingredient
   pk: 1
@@ -1417,6 +1438,96 @@
 - fields: {dish: 31, ingredient: 22}
   model: meals.dishingredient
   pk: 356
+- fields: {dish: 32, ingredient: 6}
+  model: meals.dishingredient
+  pk: 357
+- fields: {dish: 32, ingredient: 53}
+  model: meals.dishingredient
+  pk: 358
+- fields: {dish: 32, ingredient: 4}
+  model: meals.dishingredient
+  pk: 359
+- fields: {dish: 32, ingredient: 3}
+  model: meals.dishingredient
+  pk: 360
+- fields: {dish: 32, ingredient: 14}
+  model: meals.dishingredient
+  pk: 361
+- fields: {dish: 32, ingredient: 41}
+  model: meals.dishingredient
+  pk: 362
+- fields: {dish: 32, ingredient: 36}
+  model: meals.dishingredient
+  pk: 363
+- fields: {dish: 32, ingredient: 7}
+  model: meals.dishingredient
+  pk: 364
+- fields: {dish: 32, ingredient: 20}
+  model: meals.dishingredient
+  pk: 365
+- fields: {dish: 32, ingredient: 17}
+  model: meals.dishingredient
+  pk: 366
+- fields: {dish: 32, ingredient: 19}
+  model: meals.dishingredient
+  pk: 367
+- fields: {dish: 32, ingredient: 8}
+  model: meals.dishingredient
+  pk: 368
+- fields: {dish: 32, ingredient: 77}
+  model: meals.dishingredient
+  pk: 369
+- fields: {dish: 32, ingredient: 55}
+  model: meals.dishingredient
+  pk: 370
+- fields: {dish: 32, ingredient: 15}
+  model: meals.dishingredient
+  pk: 371
+- fields: {dish: 32, ingredient: 75}
+  model: meals.dishingredient
+  pk: 372
+- fields: {dish: 33, ingredient: 78}
+  model: meals.dishingredient
+  pk: 373
+- fields: {dish: 33, ingredient: 79}
+  model: meals.dishingredient
+  pk: 374
+- fields: {dish: 33, ingredient: 65}
+  model: meals.dishingredient
+  pk: 375
+- fields: {dish: 33, ingredient: 29}
+  model: meals.dishingredient
+  pk: 376
+- fields: {dish: 33, ingredient: 75}
+  model: meals.dishingredient
+  pk: 377
+- fields: {dish: 33, ingredient: 7}
+  model: meals.dishingredient
+  pk: 378
+- fields: {dish: 33, ingredient: 80}
+  model: meals.dishingredient
+  pk: 379
+- fields: {dish: 33, ingredient: 15}
+  model: meals.dishingredient
+  pk: 380
+- fields: {dish: 33, ingredient: 13}
+  model: meals.dishingredient
+  pk: 381
+- fields: {dish: 33, ingredient: 3}
+  model: meals.dishingredient
+  pk: 382
+- fields: {dish: 33, ingredient: 14}
+  model: meals.dishingredient
+  pk: 383
+- fields: {dish: 33, ingredient: 4}
+  model: meals.dishingredient
+  pk: 384
+- fields: {dish: 33, ingredient: 6}
+  model: meals.dishingredient
+  pk: 385
+- fields: {dish: 33, ingredient: 5}
+  model: meals.dishingredient
+  pk: 386
 - fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
   model: auth.permission
   pk: 1
@@ -1510,7 +1621,7 @@
     is_active: true
     is_staff: true
     is_superuser: true
-    last_login: 2015-09-02 03:17:59.640394+00:00
+    last_login: 2015-09-02 23:40:02.288825+00:00
     last_name: ''
     password: pbkdf2_sha256$20000$zhS3opA2H4Io$pKEk9BgW4iv8LX7pZLMJuch49XcRTIhKJ2zv66EmRlY=
     user_permissions: []
@@ -3777,3 +3888,182 @@
       romaine lettuce', user: 1}
   model: admin.logentry
   pk: 473
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:40:14.815825+00:00', change_message: '',
+    content_type: 7, object_id: '32', object_repr: Spicy Chile-Baked Oysters, user: 1}
+  model: admin.logentry
+  pk: 474
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:40:32.121118+00:00', change_message: '',
+    content_type: 9, object_id: '357', object_repr: 'Spicy Chile-Baked Oysters: garlic',
+    user: 1}
+  model: admin.logentry
+  pk: 475
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:40:43.046408+00:00', change_message: '',
+    content_type: 9, object_id: '358', object_repr: 'Spicy Chile-Baked Oysters: ancho
+      chiles', user: 1}
+  model: admin.logentry
+  pk: 476
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:40:50.662336+00:00', change_message: '',
+    content_type: 9, object_id: '359', object_repr: 'Spicy Chile-Baked Oysters: dried
+      Mexican oregano', user: 1}
+  model: admin.logentry
+  pk: 477
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:40:59.453596+00:00', change_message: '',
+    content_type: 9, object_id: '360', object_repr: 'Spicy Chile-Baked Oysters: black
+      pepper', user: 1}
+  model: admin.logentry
+  pk: 478
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:41:10.629678+00:00', change_message: '',
+    content_type: 9, object_id: '361', object_repr: 'Spicy Chile-Baked Oysters: cumin
+      seeds', user: 1}
+  model: admin.logentry
+  pk: 479
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:41:22.429279+00:00', change_message: '',
+    content_type: 9, object_id: '362', object_repr: 'Spicy Chile-Baked Oysters: cloves',
+    user: 1}
+  model: admin.logentry
+  pk: 480
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:41:32.157036+00:00', change_message: '',
+    content_type: 9, object_id: '363', object_repr: 'Spicy Chile-Baked Oysters: chicken
+      broth', user: 1}
+  model: admin.logentry
+  pk: 481
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:41:38.926072+00:00', change_message: '',
+    content_type: 9, object_id: '364', object_repr: 'Spicy Chile-Baked Oysters: salt',
+    user: 1}
+  model: admin.logentry
+  pk: 482
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:41:52.878409+00:00', change_message: '',
+    content_type: 9, object_id: '365', object_repr: 'Spicy Chile-Baked Oysters: vegetable
+      oil', user: 1}
+  model: admin.logentry
+  pk: 483
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:41:59.228478+00:00', change_message: '',
+    content_type: 9, object_id: '366', object_repr: 'Spicy Chile-Baked Oysters: white
+      onions', user: 1}
+  model: admin.logentry
+  pk: 484
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:42:06.668803+00:00', change_message: '',
+    content_type: 9, object_id: '367', object_repr: 'Spicy Chile-Baked Oysters: chipotle
+      chiles en adobo', user: 1}
+  model: admin.logentry
+  pk: 485
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:42:13.510423+00:00', change_message: '',
+    content_type: 9, object_id: '368', object_repr: 'Spicy Chile-Baked Oysters: lime
+      juice', user: 1}
+  model: admin.logentry
+  pk: 486
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:42:23.453518+00:00', change_message: '',
+    content_type: 8, object_id: '77', object_repr: oysters, user: 1}
+  model: admin.logentry
+  pk: 487
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:42:25.974221+00:00', change_message: '',
+    content_type: 9, object_id: '369', object_repr: 'Spicy Chile-Baked Oysters: oysters',
+    user: 1}
+  model: admin.logentry
+  pk: 488
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:42:48.050091+00:00', change_message: '',
+    content_type: 9, object_id: '370', object_repr: 'Spicy Chile-Baked Oysters: bread',
+    user: 1}
+  model: admin.logentry
+  pk: 489
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:43:00.298949+00:00', change_message: '',
+    content_type: 9, object_id: '371', object_repr: 'Spicy Chile-Baked Oysters: cilantro',
+    user: 1}
+  model: admin.logentry
+  pk: 490
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:43:12.138840+00:00', change_message: '',
+    content_type: 9, object_id: '372', object_repr: 'Spicy Chile-Baked Oysters: lime',
+    user: 1}
+  model: admin.logentry
+  pk: 491
+- fields: {action_flag: 2, action_time: ! '2015-09-02 23:43:40.518177+00:00', change_message: Changed
+      name., content_type: 8, object_id: '75', object_repr: limes, user: 1}
+  model: admin.logentry
+  pk: 492
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:44:30.466516+00:00', change_message: '',
+    content_type: 7, object_id: '33', object_repr: Rustic Jicama Appetizer with Red
+      Chile and Lime, user: 1}
+  model: admin.logentry
+  pk: 493
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:44:48.198099+00:00', change_message: '',
+    content_type: 8, object_id: '78', object_repr: jicama, user: 1}
+  model: admin.logentry
+  pk: 494
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:44:51.567946+00:00', change_message: '',
+    content_type: 9, object_id: '373', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: jicama', user: 1}
+  model: admin.logentry
+  pk: 495
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:45:03.488561+00:00', change_message: '',
+    content_type: 8, object_id: '79', object_repr: cucumbers, user: 1}
+  model: admin.logentry
+  pk: 496
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:45:05.473569+00:00', change_message: '',
+    content_type: 9, object_id: '374', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: cucumbers', user: 1}
+  model: admin.logentry
+  pk: 497
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:45:11.849306+00:00', change_message: '',
+    content_type: 9, object_id: '375', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: oranges', user: 1}
+  model: admin.logentry
+  pk: 498
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:45:17.606926+00:00', change_message: '',
+    content_type: 9, object_id: '376', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: radishes', user: 1}
+  model: admin.logentry
+  pk: 499
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:45:27.941377+00:00', change_message: '',
+    content_type: 9, object_id: '377', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: limes', user: 1}
+  model: admin.logentry
+  pk: 500
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:45:33.439890+00:00', change_message: '',
+    content_type: 9, object_id: '378', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: salt', user: 1}
+  model: admin.logentry
+  pk: 501
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:45:55.376021+00:00', change_message: '',
+    content_type: 8, object_id: '80', object_repr: chile powder, user: 1}
+  model: admin.logentry
+  pk: 502
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:45:57.705656+00:00', change_message: '',
+    content_type: 9, object_id: '379', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: chile powder', user: 1}
+  model: admin.logentry
+  pk: 503
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:46:07.815400+00:00', change_message: '',
+    content_type: 9, object_id: '380', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: cilantro', user: 1}
+  model: admin.logentry
+  pk: 504
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:47:05.507850+00:00', change_message: '',
+    content_type: 9, object_id: '381', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: red onions', user: 1}
+  model: admin.logentry
+  pk: 505
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:47:14.921448+00:00', change_message: '',
+    content_type: 9, object_id: '382', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: black pepper', user: 1}
+  model: admin.logentry
+  pk: 506
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:47:24.077527+00:00', change_message: '',
+    content_type: 9, object_id: '383', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: cumin seeds', user: 1}
+  model: admin.logentry
+  pk: 507
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:47:30.395259+00:00', change_message: '',
+    content_type: 9, object_id: '384', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: dried Mexican oregano', user: 1}
+  model: admin.logentry
+  pk: 508
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:47:35.299394+00:00', change_message: '',
+    content_type: 9, object_id: '385', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: garlic', user: 1}
+  model: admin.logentry
+  pk: 509
+- fields: {action_flag: 1, action_time: ! '2015-09-02 23:47:49.331855+00:00', change_message: '',
+    content_type: 9, object_id: '386', object_repr: 'Rustic Jicama Appetizer with
+      Red Chile and Lime: cider vinegar', user: 1}
+  model: admin.logentry
+  pk: 510
