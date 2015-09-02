@@ -1,5 +1,22 @@
 <div class="row">
-  <div class="col-lg-12">
+  <div class="col-lg-6">
     <div x-ingredient-list></div>
+  </div>
+  <div class="col-lg-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">Most Frequently Used Ingredients</h4>
+      </div>
+      <div class="panel-body">
+        <div x-pillbox data-collection="getIngredients()" data-exclusions="exclusions"></div>
+      </div>
+      <div class="list-group">
+        <a class="list-group-item" href
+           ng-repeat="ingredient in getIngredients() | orderBy: '-count' | limitTo: numIngredients">
+          <span class="badge badge-success">{{ frequency(ingredient) }}%</span>
+          {{ ingredient.name }}
+        </a>
+      </div>
+    </div>
   </div>
 </div>

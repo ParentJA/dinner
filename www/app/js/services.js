@@ -34,6 +34,9 @@
       },
       isSelectedDish: function isSelectedDish(value) {
         return (selectedDish === value);
+      },
+      getTotalDishes: function getTotalDishes() {
+        return _.size(dishes);
       }
     };
 
@@ -76,6 +79,9 @@
       },
       isSelectedIngredient: function isSelectedIngredient(value) {
         return (selectedIngredient === value);
+      },
+      getTotalIngredients: function getTotalIngredients() {
+        return _.size(ingredients);
       }
     };
 

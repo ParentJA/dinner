@@ -11,7 +11,7 @@ body {
 }
 
 [x-pillbox-tag] {
-  padding-right: 5px;
+  margin-right: 5px;
   display: inline;
 }
 
@@ -23,7 +23,7 @@ body {
 .component--pillbox-tag {
   border-radius: 5px;
   padding: 5px;
-  background-color: #CCC;
+  background-color: #ccc;
   display: inline-block;
 }
 
@@ -33,5 +33,9 @@ body {
 }
 
 .component--pillbox-tag .close {
+  color: #000;
+}
 
+.badge-success {
+  background-color: #4e9f15
 }

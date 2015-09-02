@@ -32,7 +32,7 @@
     return {
       restrict: "A",
       scope: {
-        tagList: "=",
+        getCollection: "&collection",
         exclusions: "="
       },
       templateUrl: "/static/views/pillbox.html",

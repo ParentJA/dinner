@@ -1,5 +1,5 @@
 <div class="component--pillbox">
-  <div x-pillbox-tag data-tag="tag" data-remove-tag="removeTag(element)" ng-repeat="tag in exclusions"></div>
+  <div x-pillbox-tag data-tag="tag" data-remove-tag="removeTag(tag)" ng-repeat="tag in exclusions"></div>
   <input class="borderless-input" type="text" placeholder="Enter a tag..." ng-model="tagName"
          ng-keydown="onKeyPressed($event)">
 </div>
