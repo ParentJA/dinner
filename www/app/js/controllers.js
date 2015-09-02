@@ -43,7 +43,9 @@
     };
 
     $scope.frequency = function frequency(ingredient) {
-      return Math.round(ingredient.count / dishService.getTotalDishes() * 100);
+      var percentage = Math.round(ingredient.count / dishService.getTotalDishes() * 100);
+
+      return (percentage === Infinity) ? 0 : percentage;
     };
   }
 
