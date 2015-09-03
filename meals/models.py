@@ -6,7 +6,13 @@ from django.db import models
 
 class Dish(models.Model):
     name = models.CharField(max_length=250)
-    ingredients = models.ManyToManyField('Ingredient', through='DishIngredient', through_fields=('dish', 'ingredient'))
+    ingredients = models.ManyToManyField(
+        'meals.Ingredient',
+        through='meals.DishIngredient',
+        through_fields=('dish', 'ingredient')
+    )
+    source = models.ForeignKey('meals.Source', related_name='dishes', blank=True, null=True)
+    cuisine = models.ForeignKey('meals.Cuisine', related_name='dishes', blank=True, null=True)
 
     class Meta:
         verbose_name_plural = 'dishes'
@@ -31,3 +37,17 @@ class DishIngredient(models.Model):
 
     def __unicode__(self):
         return '{}: {}'.format(self.dish, self.ingredient)
+
+
+class Source(models.Model):
+    title = models.CharField(max_length=250, unique=True)
+
+    def __unicode__(self):
+        return self.title
+
+
+class Cuisine(models.Model):
+    name = models.CharField(max_length=250, unique=True)
+
+    def __unicode__(self):
+        return self.name
