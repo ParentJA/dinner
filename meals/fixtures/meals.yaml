@@ -25,6 +25,12 @@
 - fields: {app_label: meals, model: dishingredient}
   model: contenttypes.contenttype
   pk: 9
+- fields: {app_label: meals, model: source}
+  model: contenttypes.contenttype
+  pk: 10
+- fields: {app_label: meals, model: cuisine}
+  model: contenttypes.contenttype
+  pk: 11
 - fields: {expire_date: ! '2015-08-27 20:10:18.989145+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
   model: sessions.session
   pk: 5mw831wsdpba1508dqjx0i4kx8sf4y58
@@ -37,205 +43,225 @@
 - fields: {expire_date: ! '2015-09-14 14:19:41.792865+00:00', session_data: ODZkMzZlNzdlZjYzODJkYzBlZTIzNzkwMDY4ZDBlZTQ2MzY3MjBkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI1ZmQ1Yjg2MDFiMGNkZDVkZDdmODgwY2ZjMGRlOWEwMDIxMjE3ODIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
   model: sessions.session
   pk: rva426jr5wgvoz17bzppg7vrpmfkezwd
-- fields: {name: Tacos of Tomatillo Chicken}
+- fields: {cuisine: null, name: Tacos of Tomatillo Chicken, source: null}
   model: meals.dish
   pk: 1
-- fields: {name: Spicy Yucatecan Beef "Salad" Tacos}
+- fields: {cuisine: null, name: Spicy Yucatecan Beef "Salad" Tacos, source: null}
   model: meals.dish
   pk: 2
-- fields: {name: Smoky Shredded Pork Tacos}
+- fields: {cuisine: null, name: Smoky Shredded Pork Tacos, source: null}
   model: meals.dish
   pk: 3
-- fields: {name: Yucatecan Grilled Fish Tacos}
+- fields: {cuisine: null, name: Yucatecan Grilled Fish Tacos, source: null}
   model: meals.dish
   pk: 4
-- fields: {name: Spicy Pasilla-Mushroom Tacos}
+- fields: {cuisine: null, name: Spicy Pasilla-Mushroom Tacos, source: null}
   model: meals.dish
   pk: 5
-- fields: {name: Tacos of Inky "Corn Mushroom"}
+- fields: {cuisine: null, name: Tacos of Inky "Corn Mushroom", source: null}
   model: meals.dish
   pk: 6
-- fields: {name: Tacos of Garlicky Mexican Greens}
+- fields: {cuisine: null, name: Tacos of Garlicky Mexican Greens, source: null}
   model: meals.dish
   pk: 7
-- fields: {name: 'Tacos of Creamy Braised Chard, Potatoes, and Poblanos'}
+- fields: {cuisine: null, name: 'Tacos of Creamy Braised Chard, Potatoes, and Poblanos',
+    source: null}
   model: meals.dish
   pk: 8
-- fields: {name: Herby Ricotta-Poblano Tacos}
+- fields: {cuisine: null, name: Herby Ricotta-Poblano Tacos, source: null}
   model: meals.dish
   pk: 9
-- fields: {name: Crispy Black Bean-Bacon Tacos}
+- fields: {cuisine: null, name: Crispy Black Bean-Bacon Tacos, source: null}
   model: meals.dish
   pk: 10
-- fields: {name: Achiote-Roasted Pork Tacos}
+- fields: {cuisine: null, name: Achiote-Roasted Pork Tacos, source: null}
   model: meals.dish
   pk: 11
-- fields: {name: Duck in Smooth Pumpkinseed Sauce}
+- fields: {cuisine: null, name: Duck in Smooth Pumpkinseed Sauce, source: null}
   model: meals.dish
   pk: 12
-- fields: {name: 'Charcoal-Grilled Chicken, Sinaloa-Style'}
+- fields: {cuisine: null, name: 'Charcoal-Grilled Chicken, Sinaloa-Style', source: null}
   model: meals.dish
   pk: 13
-- fields: {name: 'Chicken Thighs with Vinegar, Oil, and Aromatic Spices'}
+- fields: {cuisine: null, name: 'Chicken Thighs with Vinegar, Oil, and Aromatic Spices',
+    source: null}
   model: meals.dish
   pk: 14
-- fields: {name: 'Pork with Smoky Tomato Sauce, Potatoes, and Avocado'}
+- fields: {cuisine: null, name: 'Pork with Smoky Tomato Sauce, Potatoes, and Avocado',
+    source: null}
   model: meals.dish
   pk: 16
-- fields: {name: Charcoal-Grilled Pork Loin with Rich Red-Chile Sauce}
+- fields: {cuisine: null, name: Charcoal-Grilled Pork Loin with Rich Red-Chile Sauce,
+    source: null}
   model: meals.dish
   pk: 17
-- fields: {name: Red Chile-Braised Chicken with Potatoes and Greens}
+- fields: {cuisine: null, name: Red Chile-Braised Chicken with Potatoes and Greens,
+    source: null}
   model: meals.dish
   pk: 18
-- fields: {name: Broiled Chipotle Chicken with Creamy Spinach}
+- fields: {cuisine: null, name: Broiled Chipotle Chicken with Creamy Spinach, source: null}
   model: meals.dish
   pk: 19
-- fields: {name: Grilled Chicken Breasts in Tomato-Guaje Sauce}
+- fields: {cuisine: null, name: Grilled Chicken Breasts in Tomato-Guaje Sauce, source: null}
   model: meals.dish
   pk: 20
-- fields: {name: Smoky Shredded Chicken and Potatoes with Roasted Tomatoes}
+- fields: {cuisine: null, name: Smoky Shredded Chicken and Potatoes with Roasted Tomatoes,
+    source: null}
   model: meals.dish
   pk: 21
-- fields: {name: 'Chicken Breasts with Poblanos, Mushrooms, and Cream'}
+- fields: {cuisine: null, name: 'Chicken Breasts with Poblanos, Mushrooms, and Cream',
+    source: null}
   model: meals.dish
   pk: 22
-- fields: {name: 'Achiote-Grilled Turkey Breast with Tomato, Chile, and Mint'}
+- fields: {cuisine: null, name: 'Achiote-Grilled Turkey Breast with Tomato, Chile,
+      and Mint', source: null}
   model: meals.dish
   pk: 23
-- fields: {name: 'Shrimp a la Mexicana with Tomatoes, Serranos, and Cilantro'}
+- fields: {cuisine: null, name: 'Shrimp a la Mexicana with Tomatoes, Serranos, and
+      Cilantro', source: null}
   model: meals.dish
   pk: 24
-- fields: {name: Chipotle Shrimp}
+- fields: {cuisine: null, name: Chipotle Shrimp, source: null}
   model: meals.dish
   pk: 25
-- fields: {name: Guacamole}
+- fields: {cuisine: null, name: Guacamole, source: null}
   model: meals.dish
   pk: 26
-- fields: {name: Tomatillo-Green Guacamole}
+- fields: {cuisine: null, name: Tomatillo-Green Guacamole, source: null}
   model: meals.dish
   pk: 27
-- fields: {name: Oaxacan Seared Cheese with Tomato and Green Chile}
+- fields: {cuisine: null, name: Oaxacan Seared Cheese with Tomato and Green Chile,
+    source: null}
   model: meals.dish
   pk: 28
-- fields: {name: Classic Seviche Tostadas}
+- fields: {cuisine: null, name: Classic Seviche Tostadas, source: null}
   model: meals.dish
   pk: 29
-- fields: {name: 'Crispy Tortillas, Fried or Baked'}
+- fields: {cuisine: null, name: 'Crispy Tortillas, Fried or Baked', source: null}
   model: meals.dish
   pk: 30
-- fields: {name: Shrimp Seviche with Roasted Cactus}
+- fields: {cuisine: null, name: Shrimp Seviche with Roasted Cactus, source: null}
   model: meals.dish
   pk: 31
-- fields: {name: Spicy Chile-Baked Oysters}
+- fields: {cuisine: null, name: Spicy Chile-Baked Oysters, source: null}
   model: meals.dish
   pk: 32
-- fields: {name: Rustic Jicama Appetizer with Red Chile and Lime}
+- fields: {cuisine: null, name: Rustic Jicama Appetizer with Red Chile and Lime, source: null}
   model: meals.dish
   pk: 33
-- fields: {name: Roasted Cactus Salad}
+- fields: {cuisine: null, name: Roasted Cactus Salad, source: null}
   model: meals.dish
   pk: 34
-- fields: {name: Topolo "Caesar" Salad}
+- fields: {cuisine: null, name: Topolo "Caesar" Salad, source: null}
   model: meals.dish
   pk: 35
-- fields: {name: Roasted Poblano Chile Salad with Smoked Fish or Chicken}
+- fields: {cuisine: null, name: Roasted Poblano Chile Salad with Smoked Fish or Chicken,
+    source: null}
   model: meals.dish
   pk: 36
-- fields: {name: Ripe Plantain Turnovers with Fresh Cheese Filling}
+- fields: {cuisine: null, name: Ripe Plantain Turnovers with Fresh Cheese Filling,
+    source: null}
   model: meals.dish
   pk: 37
-- fields: {name: Picadillo-Stuffed Jalapenos}
+- fields: {cuisine: null, name: Picadillo-Stuffed Jalapenos, source: null}
   model: meals.dish
   pk: 38
-- fields: {name: Sweet Pickled Chipotles}
+- fields: {cuisine: null, name: Sweet Pickled Chipotles, source: null}
   model: meals.dish
   pk: 39
-- fields: {name: Chorizo-Stuffed Ancho Chiles with Sweet-Sour Escabeche}
+- fields: {cuisine: null, name: Chorizo-Stuffed Ancho Chiles with Sweet-Sour Escabeche,
+    source: null}
   model: meals.dish
   pk: 41
-- fields: {name: Corn-Masa Crepas with Mexican Flavors}
+- fields: {cuisine: null, name: Corn-Masa Crepas with Mexican Flavors, source: null}
   model: meals.dish
   pk: 42
-- fields: {name: Essential Simmered Tomato-Jalapeno Sauce}
+- fields: {cuisine: null, name: Essential Simmered Tomato-Jalapeno Sauce, source: null}
   model: meals.dish
   pk: 43
-- fields: {name: Essential Roasted Tomato-Jalapeno Salsa from the Stone Mortar}
+- fields: {cuisine: null, name: Essential Roasted Tomato-Jalapeno Salsa from the Stone
+      Mortar, source: null}
   model: meals.dish
   pk: 44
-- fields: {name: Essential Chopped Tomato-Serrano Salsa}
+- fields: {cuisine: null, name: Essential Chopped Tomato-Serrano Salsa, source: null}
   model: meals.dish
   pk: 45
-- fields: {name: Essential Chopped Tomato-Habanero Salsa}
+- fields: {cuisine: null, name: Essential Chopped Tomato-Habanero Salsa, source: null}
   model: meals.dish
   pk: 46
-- fields: {name: Essential Simmered Tomato-Habanero Sauce}
+- fields: {cuisine: null, name: Essential Simmered Tomato-Habanero Sauce, source: null}
   model: meals.dish
   pk: 47
-- fields: {name: Essential Quick-Cooked Tomato-Chipotle Sauce}
+- fields: {cuisine: null, name: Essential Quick-Cooked Tomato-Chipotle Sauce, source: null}
   model: meals.dish
   pk: 48
-- fields: {name: Essential Simmered Tomatillo-Serrano Sauce}
+- fields: {cuisine: null, name: Essential Simmered Tomatillo-Serrano Sauce, source: null}
   model: meals.dish
   pk: 49
-- fields: {name: Essential Roasted Tomatillo-Serrano Salsa}
+- fields: {cuisine: null, name: Essential Roasted Tomatillo-Serrano Salsa, source: null}
   model: meals.dish
   pk: 50
-- fields: {name: Essential Roasted Tomatillo-Chipotle Salsa}
+- fields: {cuisine: null, name: Essential Roasted Tomatillo-Chipotle Salsa, source: null}
   model: meals.dish
   pk: 51
-- fields: {name: Essential Sweet-and-Spicy Ancho Seasoning Paste}
+- fields: {cuisine: null, name: Essential Sweet-and-Spicy Ancho Seasoning Paste, source: null}
   model: meals.dish
   pk: 52
-- fields: {name: Essential Sweet-and-Smoky Chipotle Seasoning Salsa}
+- fields: {cuisine: null, name: Essential Sweet-and-Smoky Chipotle Seasoning Salsa,
+    source: null}
   model: meals.dish
   pk: 53
-- fields: {name: Essential Bold Pasilla Seasoning Paste}
+- fields: {cuisine: null, name: Essential Bold Pasilla Seasoning Paste, source: null}
   model: meals.dish
   pk: 54
-- fields: {name: Essential Simmered Guajillo Sauce}
+- fields: {cuisine: null, name: Essential Simmered Guajillo Sauce, source: null}
   model: meals.dish
   pk: 55
-- fields: {name: Essential Roasted Poblano Rajas with Seared White Onions and Herbs}
+- fields: {cuisine: null, name: Essential Roasted Poblano Rajas with Seared White
+      Onions and Herbs, source: null}
   model: meals.dish
   pk: 56
-- fields: {name: Essential Garlicky Achiote Seasoning Paste}
+- fields: {cuisine: null, name: Essential Garlicky Achiote Seasoning Paste, source: null}
   model: meals.dish
   pk: 57
-- fields: {name: Corn Tortillas}
+- fields: {cuisine: null, name: Corn Tortillas, source: null}
   model: meals.dish
   pk: 58
-- fields: {name: Chilied Tortilla Soup with Shredded Chard}
+- fields: {cuisine: null, name: Chilied Tortilla Soup with Shredded Chard, source: null}
   model: meals.dish
   pk: 59
-- fields: {name: Mexican-Style Sweet Roasted Garlic Soup}
+- fields: {cuisine: null, name: Mexican-Style Sweet Roasted Garlic Soup, source: null}
   model: meals.dish
   pk: 60
-- fields: {name: Robust Red-Chile Beef Soup with Mexican Vegetables}
+- fields: {cuisine: null, name: Robust Red-Chile Beef Soup with Mexican Vegetables,
+    source: null}
   model: meals.dish
   pk: 61
-- fields: {name: 'Roasted Tomato Soup with Poblanos, Oregano, and Fresh Cheese'}
+- fields: {cuisine: null, name: 'Roasted Tomato Soup with Poblanos, Oregano, and Fresh
+      Cheese', source: null}
   model: meals.dish
   pk: 62
-- fields: {name: 'Rustic Ranch-Style Soup with Tomato, Jalapeno, and Avocado'}
+- fields: {cuisine: null, name: 'Rustic Ranch-Style Soup with Tomato, Jalapeno, and
+      Avocado', source: null}
   model: meals.dish
   pk: 63
-- fields: {name: Mushrooms-Cactus Soup with Roasted Tomatillos}
+- fields: {cuisine: null, name: Mushrooms-Cactus Soup with Roasted Tomatillos, source: null}
   model: meals.dish
   pk: 64
-- fields: {name: Oaxacan Black Bean Soup}
+- fields: {cuisine: null, name: Oaxacan Black Bean Soup, source: null}
   model: meals.dish
   pk: 65
-- fields: {name: Slow-Simmered Fava Bean Soup with Mint and Pasilla Chile}
+- fields: {cuisine: null, name: Slow-Simmered Fava Bean Soup with Mint and Pasilla
+      Chile, source: null}
   model: meals.dish
   pk: 66
-- fields: {name: Roasted Poblano Crema with Mexican Greens}
+- fields: {cuisine: null, name: Roasted Poblano Crema with Mexican Greens, source: null}
   model: meals.dish
   pk: 67
-- fields: {name: Chicken Broth}
+- fields: {cuisine: null, name: Chicken Broth, source: null}
   model: meals.dish
   pk: 68
-- fields: {name: Golden Squash Blossom Crema}
+- fields: {cuisine: null, name: Golden Squash Blossom Crema, source: null}
   model: meals.dish
   pk: 69
 - fields: {name: achiote seeds}
@@ -2695,6 +2721,12 @@
 - fields: {dish: 69, ingredient: 33}
   model: meals.dishingredient
   pk: 725
+- fields: {title: Authentic Mexican}
+  model: meals.source
+  pk: 1
+- fields: {name: Mexican}
+  model: meals.cuisine
+  pk: 1
 - fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
   model: auth.permission
   pk: 1
@@ -2780,6 +2812,24 @@
       ingredient}
   model: auth.permission
   pk: 27
+- fields: {codename: add_source, content_type: 10, name: Can add source}
+  model: auth.permission
+  pk: 28
+- fields: {codename: change_source, content_type: 10, name: Can change source}
+  model: auth.permission
+  pk: 29
+- fields: {codename: delete_source, content_type: 10, name: Can delete source}
+  model: auth.permission
+  pk: 30
+- fields: {codename: add_cuisine, content_type: 11, name: Can add cuisine}
+  model: auth.permission
+  pk: 31
+- fields: {codename: change_cuisine, content_type: 11, name: Can change cuisine}
+  model: auth.permission
+  pk: 32
+- fields: {codename: delete_cuisine, content_type: 11, name: Can delete cuisine}
+  model: auth.permission
+  pk: 33
 - fields:
     date_joined: 2015-08-13 19:38:24.010044+00:00
     email: jason.a.parent@gmail.com
@@ -5541,3 +5591,11 @@
     content_type: 7, object_id: '69', object_repr: Golden Squash Blossom Crema, user: 1}
   model: admin.logentry
   pk: 577
+- fields: {action_flag: 1, action_time: ! '2015-09-03 02:49:51.033348+00:00', change_message: '',
+    content_type: 11, object_id: '1', object_repr: Mexican, user: 1}
+  model: admin.logentry
+  pk: 578
+- fields: {action_flag: 1, action_time: ! '2015-09-03 02:51:39.068270+00:00', change_message: '',
+    content_type: 10, object_id: '1', object_repr: Authentic Mexican, user: 1}
+  model: admin.logentry
+  pk: 579
