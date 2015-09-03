@@ -14,7 +14,7 @@ from .serializers import DishSerializer, IngredientSerializer
 
 class DishAPIView(views.APIView):
     def get(self, request, pk=None):
-        dishes = Dish.objects.select_related()
+        dishes = Dish.objects.prefetch_related()
 
         if pk:
             dishes = dishes.filter(pk=pk)
