@@ -205,6 +205,39 @@
 - fields: {name: Corn Tortillas}
   model: meals.dish
   pk: 58
+- fields: {name: Chilied Tortilla Soup with Shredded Chard}
+  model: meals.dish
+  pk: 59
+- fields: {name: Mexican-Style Sweet Roasted Garlic Soup}
+  model: meals.dish
+  pk: 60
+- fields: {name: Robust Red-Chile Beef Soup with Mexican Vegetables}
+  model: meals.dish
+  pk: 61
+- fields: {name: 'Roasted Tomato Soup with Poblanos, Oregano, and Fresh Cheese'}
+  model: meals.dish
+  pk: 62
+- fields: {name: 'Rustic Ranch-Style Soup with Tomato, Jalapeno, and Avocado'}
+  model: meals.dish
+  pk: 63
+- fields: {name: Mushrooms-Cactus Soup with Roasted Tomatillos}
+  model: meals.dish
+  pk: 64
+- fields: {name: Oaxacan Black Bean Soup}
+  model: meals.dish
+  pk: 65
+- fields: {name: Slow-Simmered Fava Bean Soup with Mint and Pasilla Chile}
+  model: meals.dish
+  pk: 66
+- fields: {name: Roasted Poblano Crema with Mexican Greens}
+  model: meals.dish
+  pk: 67
+- fields: {name: Chicken Broth}
+  model: meals.dish
+  pk: 68
+- fields: {name: Golden Squash Blossom Crema}
+  model: meals.dish
+  pk: 69
 - fields: {name: achiote seeds}
   model: meals.ingredient
   pk: 1
@@ -493,6 +526,39 @@
 - fields: {name: guajillo chiles}
   model: meals.ingredient
   pk: 96
+- fields: {name: green onions}
+  model: meals.ingredient
+  pk: 97
+- fields: {name: beef chuck}
+  model: meals.ingredient
+  pk: 98
+- fields: {name: oxtails}
+  model: meals.ingredient
+  pk: 99
+- fields: {name: xoconostles}
+  model: meals.ingredient
+  pk: 100
+- fields: {name: green beans}
+  model: meals.ingredient
+  pk: 101
+- fields: {name: beef broth}
+  model: meals.ingredient
+  pk: 102
+- fields: {name: hoja santa leaves}
+  model: meals.ingredient
+  pk: 103
+- fields: {name: avocado leaves}
+  model: meals.ingredient
+  pk: 104
+- fields: {name: fava beans}
+  model: meals.ingredient
+  pk: 105
+- fields: {name: ham}
+  model: meals.ingredient
+  pk: 106
+- fields: {name: squash blossoms}
+  model: meals.ingredient
+  pk: 107
 - fields: {dish: 11, ingredient: 1}
   model: meals.dishingredient
   pk: 1
@@ -2236,6 +2302,399 @@
 - fields: {dish: 58, ingredient: 72}
   model: meals.dishingredient
   pk: 594
+- fields: {dish: 59, ingredient: 12}
+  model: meals.dishingredient
+  pk: 595
+- fields: {dish: 59, ingredient: 20}
+  model: meals.dishingredient
+  pk: 596
+- fields: {dish: 59, ingredient: 34}
+  model: meals.dishingredient
+  pk: 597
+- fields: {dish: 59, ingredient: 6}
+  model: meals.dishingredient
+  pk: 598
+- fields: {dish: 59, ingredient: 23}
+  model: meals.dishingredient
+  pk: 599
+- fields: {dish: 59, ingredient: 17}
+  model: meals.dishingredient
+  pk: 600
+- fields: {dish: 59, ingredient: 36}
+  model: meals.dishingredient
+  pk: 601
+- fields: {dish: 59, ingredient: 7}
+  model: meals.dishingredient
+  pk: 602
+- fields: {dish: 59, ingredient: 95}
+  model: meals.dishingredient
+  pk: 603
+- fields: {dish: 59, ingredient: 75}
+  model: meals.dishingredient
+  pk: 604
+- fields: {dish: 59, ingredient: 30}
+  model: meals.dishingredient
+  pk: 605
+- fields: {dish: 60, ingredient: 20}
+  model: meals.dishingredient
+  pk: 606
+- fields: {dish: 60, ingredient: 6}
+  model: meals.dishingredient
+  pk: 607
+- fields: {dish: 60, ingredient: 36}
+  model: meals.dishingredient
+  pk: 608
+- fields: {dish: 60, ingredient: 55}
+  model: meals.dishingredient
+  pk: 609
+- fields: {dish: 60, ingredient: 7}
+  model: meals.dishingredient
+  pk: 610
+- fields: {dish: 60, ingredient: 28}
+  model: meals.dishingredient
+  pk: 611
+- fields: {dish: 60, ingredient: 21}
+  model: meals.dishingredient
+  pk: 612
+- fields: {dish: 60, ingredient: 23}
+  model: meals.dishingredient
+  pk: 613
+- fields: {dish: 60, ingredient: 97}
+  model: meals.dishingredient
+  pk: 614
+- fields: {dish: 60, ingredient: 84}
+  model: meals.dishingredient
+  pk: 615
+- fields: {dish: 60, ingredient: 19}
+  model: meals.dishingredient
+  pk: 616
+- fields: {dish: 61, ingredient: 98}
+  model: meals.dishingredient
+  pk: 617
+- fields: {dish: 61, ingredient: 99}
+  model: meals.dishingredient
+  pk: 618
+- fields: {dish: 61, ingredient: 100}
+  model: meals.dishingredient
+  pk: 619
+- fields: {dish: 61, ingredient: 7}
+  model: meals.dishingredient
+  pk: 620
+- fields: {dish: 61, ingredient: 17}
+  model: meals.dishingredient
+  pk: 621
+- fields: {dish: 61, ingredient: 6}
+  model: meals.dishingredient
+  pk: 622
+- fields: {dish: 61, ingredient: 52}
+  model: meals.dishingredient
+  pk: 623
+- fields: {dish: 61, ingredient: 41}
+  model: meals.dishingredient
+  pk: 624
+- fields: {dish: 61, ingredient: 35}
+  model: meals.dishingredient
+  pk: 625
+- fields: {dish: 61, ingredient: 3}
+  model: meals.dishingredient
+  pk: 626
+- fields: {dish: 61, ingredient: 53}
+  model: meals.dishingredient
+  pk: 627
+- fields: {dish: 61, ingredient: 96}
+  model: meals.dishingredient
+  pk: 628
+- fields: {dish: 61, ingredient: 23}
+  model: meals.dishingredient
+  pk: 629
+- fields: {dish: 61, ingredient: 33}
+  model: meals.dishingredient
+  pk: 630
+- fields: {dish: 61, ingredient: 90}
+  model: meals.dishingredient
+  pk: 631
+- fields: {dish: 61, ingredient: 94}
+  model: meals.dishingredient
+  pk: 632
+- fields: {dish: 61, ingredient: 93}
+  model: meals.dishingredient
+  pk: 633
+- fields: {dish: 61, ingredient: 101}
+  model: meals.dishingredient
+  pk: 634
+- fields: {dish: 61, ingredient: 75}
+  model: meals.dishingredient
+  pk: 635
+- fields: {dish: 62, ingredient: 23}
+  model: meals.dishingredient
+  pk: 636
+- fields: {dish: 62, ingredient: 24}
+  model: meals.dishingredient
+  pk: 637
+- fields: {dish: 62, ingredient: 20}
+  model: meals.dishingredient
+  pk: 638
+- fields: {dish: 62, ingredient: 17}
+  model: meals.dishingredient
+  pk: 639
+- fields: {dish: 62, ingredient: 6}
+  model: meals.dishingredient
+  pk: 640
+- fields: {dish: 62, ingredient: 4}
+  model: meals.dishingredient
+  pk: 641
+- fields: {dish: 62, ingredient: 7}
+  model: meals.dishingredient
+  pk: 642
+- fields: {dish: 62, ingredient: 102}
+  model: meals.dishingredient
+  pk: 643
+- fields: {dish: 62, ingredient: 21}
+  model: meals.dishingredient
+  pk: 644
+- fields: {dish: 63, ingredient: 36}
+  model: meals.dishingredient
+  pk: 645
+- fields: {dish: 63, ingredient: 6}
+  model: meals.dishingredient
+  pk: 646
+- fields: {dish: 63, ingredient: 33}
+  model: meals.dishingredient
+  pk: 647
+- fields: {dish: 63, ingredient: 87}
+  model: meals.dishingredient
+  pk: 648
+- fields: {dish: 63, ingredient: 17}
+  model: meals.dishingredient
+  pk: 649
+- fields: {dish: 63, ingredient: 23}
+  model: meals.dishingredient
+  pk: 650
+- fields: {dish: 63, ingredient: 7}
+  model: meals.dishingredient
+  pk: 651
+- fields: {dish: 63, ingredient: 15}
+  model: meals.dishingredient
+  pk: 652
+- fields: {dish: 63, ingredient: 47}
+  model: meals.dishingredient
+  pk: 653
+- fields: {dish: 63, ingredient: 28}
+  model: meals.dishingredient
+  pk: 654
+- fields: {dish: 63, ingredient: 75}
+  model: meals.dishingredient
+  pk: 655
+- fields: {dish: 64, ingredient: 26}
+  model: meals.dishingredient
+  pk: 656
+- fields: {dish: 64, ingredient: 23}
+  model: meals.dishingredient
+  pk: 657
+- fields: {dish: 64, ingredient: 6}
+  model: meals.dishingredient
+  pk: 658
+- fields: {dish: 64, ingredient: 27}
+  model: meals.dishingredient
+  pk: 659
+- fields: {dish: 64, ingredient: 17}
+  model: meals.dishingredient
+  pk: 660
+- fields: {dish: 64, ingredient: 33}
+  model: meals.dishingredient
+  pk: 661
+- fields: {dish: 64, ingredient: 103}
+  model: meals.dishingredient
+  pk: 662
+- fields: {dish: 64, ingredient: 15}
+  model: meals.dishingredient
+  pk: 663
+- fields: {dish: 64, ingredient: 36}
+  model: meals.dishingredient
+  pk: 664
+- fields: {dish: 64, ingredient: 20}
+  model: meals.dishingredient
+  pk: 665
+- fields: {dish: 64, ingredient: 37}
+  model: meals.dishingredient
+  pk: 666
+- fields: {dish: 64, ingredient: 7}
+  model: meals.dishingredient
+  pk: 667
+- fields: {dish: 64, ingredient: 76}
+  model: meals.dishingredient
+  pk: 668
+- fields: {dish: 64, ingredient: 34}
+  model: meals.dishingredient
+  pk: 669
+- fields: {dish: 65, ingredient: 18}
+  model: meals.dishingredient
+  pk: 670
+- fields: {dish: 65, ingredient: 60}
+  model: meals.dishingredient
+  pk: 671
+- fields: {dish: 65, ingredient: 104}
+  model: meals.dishingredient
+  pk: 672
+- fields: {dish: 65, ingredient: 17}
+  model: meals.dishingredient
+  pk: 673
+- fields: {dish: 65, ingredient: 7}
+  model: meals.dishingredient
+  pk: 674
+- fields: {dish: 65, ingredient: 20}
+  model: meals.dishingredient
+  pk: 675
+- fields: {dish: 65, ingredient: 12}
+  model: meals.dishingredient
+  pk: 676
+- fields: {dish: 65, ingredient: 73}
+  model: meals.dishingredient
+  pk: 677
+- fields: {dish: 65, ingredient: 21}
+  model: meals.dishingredient
+  pk: 678
+- fields: {dish: 66, ingredient: 105}
+  model: meals.dishingredient
+  pk: 679
+- fields: {dish: 66, ingredient: 36}
+  model: meals.dishingredient
+  pk: 680
+- fields: {dish: 66, ingredient: 6}
+  model: meals.dishingredient
+  pk: 681
+- fields: {dish: 66, ingredient: 17}
+  model: meals.dishingredient
+  pk: 682
+- fields: {dish: 66, ingredient: 23}
+  model: meals.dishingredient
+  pk: 683
+- fields: {dish: 66, ingredient: 34}
+  model: meals.dishingredient
+  pk: 684
+- fields: {dish: 66, ingredient: 20}
+  model: meals.dishingredient
+  pk: 685
+- fields: {dish: 66, ingredient: 5}
+  model: meals.dishingredient
+  pk: 686
+- fields: {dish: 66, ingredient: 4}
+  model: meals.dishingredient
+  pk: 687
+- fields: {dish: 66, ingredient: 7}
+  model: meals.dishingredient
+  pk: 688
+- fields: {dish: 66, ingredient: 15}
+  model: meals.dishingredient
+  pk: 689
+- fields: {dish: 66, ingredient: 71}
+  model: meals.dishingredient
+  pk: 690
+- fields: {dish: 66, ingredient: 81}
+  model: meals.dishingredient
+  pk: 691
+- fields: {dish: 67, ingredient: 24}
+  model: meals.dishingredient
+  pk: 692
+- fields: {dish: 67, ingredient: 20}
+  model: meals.dishingredient
+  pk: 693
+- fields: {dish: 67, ingredient: 17}
+  model: meals.dishingredient
+  pk: 694
+- fields: {dish: 67, ingredient: 6}
+  model: meals.dishingredient
+  pk: 695
+- fields: {dish: 67, ingredient: 4}
+  model: meals.dishingredient
+  pk: 696
+- fields: {dish: 67, ingredient: 48}
+  model: meals.dishingredient
+  pk: 697
+- fields: {dish: 67, ingredient: 30}
+  model: meals.dishingredient
+  pk: 698
+- fields: {dish: 67, ingredient: 36}
+  model: meals.dishingredient
+  pk: 699
+- fields: {dish: 67, ingredient: 50}
+  model: meals.dishingredient
+  pk: 700
+- fields: {dish: 67, ingredient: 72}
+  model: meals.dishingredient
+  pk: 701
+- fields: {dish: 67, ingredient: 7}
+  model: meals.dishingredient
+  pk: 702
+- fields: {dish: 67, ingredient: 12}
+  model: meals.dishingredient
+  pk: 703
+- fields: {dish: 67, ingredient: 106}
+  model: meals.dishingredient
+  pk: 704
+- fields: {dish: 67, ingredient: 49}
+  model: meals.dishingredient
+  pk: 705
+- fields: {dish: 67, ingredient: 33}
+  model: meals.dishingredient
+  pk: 706
+- fields: {dish: 68, ingredient: 47}
+  model: meals.dishingredient
+  pk: 707
+- fields: {dish: 68, ingredient: 17}
+  model: meals.dishingredient
+  pk: 708
+- fields: {dish: 68, ingredient: 6}
+  model: meals.dishingredient
+  pk: 709
+- fields: {dish: 68, ingredient: 52}
+  model: meals.dishingredient
+  pk: 710
+- fields: {dish: 68, ingredient: 57}
+  model: meals.dishingredient
+  pk: 711
+- fields: {dish: 68, ingredient: 48}
+  model: meals.dishingredient
+  pk: 712
+- fields: {dish: 68, ingredient: 3}
+  model: meals.dishingredient
+  pk: 713
+- fields: {dish: 69, ingredient: 92}
+  model: meals.dishingredient
+  pk: 714
+- fields: {dish: 69, ingredient: 17}
+  model: meals.dishingredient
+  pk: 715
+- fields: {dish: 69, ingredient: 36}
+  model: meals.dishingredient
+  pk: 716
+- fields: {dish: 69, ingredient: 49}
+  model: meals.dishingredient
+  pk: 717
+- fields: {dish: 69, ingredient: 24}
+  model: meals.dishingredient
+  pk: 718
+- fields: {dish: 69, ingredient: 91}
+  model: meals.dishingredient
+  pk: 719
+- fields: {dish: 69, ingredient: 94}
+  model: meals.dishingredient
+  pk: 720
+- fields: {dish: 69, ingredient: 107}
+  model: meals.dishingredient
+  pk: 721
+- fields: {dish: 69, ingredient: 93}
+  model: meals.dishingredient
+  pk: 722
+- fields: {dish: 69, ingredient: 50}
+  model: meals.dishingredient
+  pk: 723
+- fields: {dish: 69, ingredient: 7}
+  model: meals.dishingredient
+  pk: 724
+- fields: {dish: 69, ingredient: 33}
+  model: meals.dishingredient
+  pk: 725
 - fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
   model: auth.permission
   pk: 1
@@ -4986,3 +5445,99 @@
     content_type: 7, object_id: '58', object_repr: Corn Tortillas, user: 1}
   model: admin.logentry
   pk: 555
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:36:48.046789+00:00', change_message: '',
+    content_type: 7, object_id: '59', object_repr: Chilied Tortilla Soup with Shredded
+      Chard, user: 1}
+  model: admin.logentry
+  pk: 556
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:38:29.606100+00:00', change_message: '',
+    content_type: 8, object_id: '97', object_repr: green onions, user: 1}
+  model: admin.logentry
+  pk: 557
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:38:46.507853+00:00', change_message: '',
+    content_type: 7, object_id: '60', object_repr: Mexican-Style Sweet Roasted Garlic
+      Soup, user: 1}
+  model: admin.logentry
+  pk: 558
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:39:33.033342+00:00', change_message: '',
+    content_type: 8, object_id: '98', object_repr: beef chuck, user: 1}
+  model: admin.logentry
+  pk: 559
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:39:53.255831+00:00', change_message: '',
+    content_type: 8, object_id: '99', object_repr: oxtails, user: 1}
+  model: admin.logentry
+  pk: 560
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:40:20.642458+00:00', change_message: '',
+    content_type: 8, object_id: '100', object_repr: xoconostles, user: 1}
+  model: admin.logentry
+  pk: 561
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:42:28.275007+00:00', change_message: '',
+    content_type: 8, object_id: '101', object_repr: green beans, user: 1}
+  model: admin.logentry
+  pk: 562
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:42:40.138744+00:00', change_message: '',
+    content_type: 7, object_id: '61', object_repr: Robust Red-Chile Beef Soup with
+      Mexican Vegetables, user: 1}
+  model: admin.logentry
+  pk: 563
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:44:50.198604+00:00', change_message: '',
+    content_type: 8, object_id: '102', object_repr: beef broth, user: 1}
+  model: admin.logentry
+  pk: 564
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:45:05.584347+00:00', change_message: '',
+    content_type: 7, object_id: '62', object_repr: 'Roasted Tomato Soup with Poblanos,
+      Oregano, and Fresh Cheese', user: 1}
+  model: admin.logentry
+  pk: 565
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:46:35.043217+00:00', change_message: '',
+    content_type: 7, object_id: '63', object_repr: 'Rustic Ranch-Style Soup with Tomato,
+      Jalapeno, and Avocado', user: 1}
+  model: admin.logentry
+  pk: 566
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:47:55.417077+00:00', change_message: '',
+    content_type: 8, object_id: '103', object_repr: hoja santa leaves, user: 1}
+  model: admin.logentry
+  pk: 567
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:48:37.352151+00:00', change_message: '',
+    content_type: 7, object_id: '64', object_repr: Mushrooms-Cactus Soup with Roasted
+      Tomatillos, user: 1}
+  model: admin.logentry
+  pk: 568
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:49:10.635745+00:00', change_message: '',
+    content_type: 8, object_id: '104', object_repr: avocado leaves, user: 1}
+  model: admin.logentry
+  pk: 569
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:49:54.513460+00:00', change_message: '',
+    content_type: 7, object_id: '65', object_repr: Oaxacan Black Bean Soup, user: 1}
+  model: admin.logentry
+  pk: 570
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:50:30.593676+00:00', change_message: '',
+    content_type: 8, object_id: '105', object_repr: fava beans, user: 1}
+  model: admin.logentry
+  pk: 571
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:51:57.586544+00:00', change_message: '',
+    content_type: 7, object_id: '66', object_repr: Slow-Simmered Fava Bean Soup with
+      Mint and Pasilla Chile, user: 1}
+  model: admin.logentry
+  pk: 572
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:53:33.837442+00:00', change_message: '',
+    content_type: 8, object_id: '106', object_repr: ham, user: 1}
+  model: admin.logentry
+  pk: 573
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:54:03.418569+00:00', change_message: '',
+    content_type: 7, object_id: '67', object_repr: Roasted Poblano Crema with Mexican
+      Greens, user: 1}
+  model: admin.logentry
+  pk: 574
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:55:18.723764+00:00', change_message: '',
+    content_type: 7, object_id: '68', object_repr: Chicken Broth, user: 1}
+  model: admin.logentry
+  pk: 575
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:56:12.736719+00:00', change_message: '',
+    content_type: 8, object_id: '107', object_repr: squash blossoms, user: 1}
+  model: admin.logentry
+  pk: 576
+- fields: {action_flag: 1, action_time: ! '2015-09-03 01:56:51.135353+00:00', change_message: '',
+    content_type: 7, object_id: '69', object_repr: Golden Squash Blossom Crema, user: 1}
+  model: admin.logentry
+  pk: 577
