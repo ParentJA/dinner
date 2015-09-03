@@ -34,16 +34,16 @@
     };
   }
 
-  function IngredientController($scope, dishService, ingredientService) {
+  function IngredientController($scope, dishService) {
     $scope.numIngredients = 15;
     $scope.exclusions = [];
 
     $scope.getIngredients = function getIngredients() {
-      return _.difference(ingredientService.getIngredients(), $scope.exclusions);
+      return _.difference(dishService.getIngredients(), $scope.exclusions);
     };
 
     $scope.getTotalIngredients = function getTotalIngredients() {
-      return ingredientService.getTotalIngredients();
+      return dishService.getTotalIngredients();
     };
 
     $scope.frequency = function frequency(ingredient) {
@@ -53,13 +53,13 @@
     };
   }
 
-  function IngredientListController($scope, dishService, ingredientService) {
+  function IngredientListController($scope, dishService) {
     $scope.hasIngredients = function hasIngredients() {
-      return ingredientService.hasIngredients();
+      return dishService.hasIngredients();
     };
 
     $scope.getIngredients = function getIngredients() {
-      return ingredientService.getIngredients();
+      return dishService.getIngredients();
     };
 
     $scope.frequency = function frequency(ingredient) {
@@ -102,8 +102,8 @@
     .controller("DishController", ["$scope", "dishService", DishController])
     .controller("DishListController", ["$scope", "dishService", DishListController])
     .controller("DishDetailController", ["$scope", "dishService", DishDetailController])
-    .controller("IngredientController", ["$scope", "dishService", "ingredientService", IngredientController])
-    .controller("IngredientListController", ["$scope", "dishService", "ingredientService", IngredientListController])
+    .controller("IngredientController", ["$scope", "dishService", IngredientController])
+    .controller("IngredientListController", ["$scope", "dishService", IngredientListController])
     .controller("PillboxController", ["$scope", PillboxController])
     .controller("PillboxTagController", ["$scope", PillboxTagController]);
 
