@@ -7,16 +7,18 @@ from django.contrib import admin
 from .models import Dish, DishIngredient, Ingredient
 
 
+class DishIngredientAdmin(admin.TabularInline):
+    model = Dish.ingredients.through
+
+
 @admin.register(Dish)
 class DishAdmin(admin.ModelAdmin):
+    fields = ('name',)
     ordering = ('name',)
-
-
-@admin.register(DishIngredient)
-class DishIngredientAdmin(admin.ModelAdmin):
-    pass
+    inlines = (DishIngredientAdmin,)
 
 
 @admin.register(Ingredient)
 class IngredientAdmin(admin.ModelAdmin):
+    fields = ('name',)
     ordering = ('name',)

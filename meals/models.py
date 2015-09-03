@@ -6,6 +6,7 @@ from django.db import models
 
 class Dish(models.Model):
     name = models.CharField(max_length=250)
+    ingredients = models.ManyToManyField('Ingredient', through='DishIngredient', through_fields=('dish', 'ingredient'))
 
     class Meta:
         verbose_name_plural = 'dishes'
