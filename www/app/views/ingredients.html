@@ -1,11 +1,18 @@
 <div class="row">
   <div class="col-lg-6">
-    <div x-ingredient-list></div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Ingredients <span
+          class="badge pull-right">{{ getTotalIngredients() }}</span></h4>
+      </div>
+      <div x-ingredient-list></div>
+    </div>
   </div>
   <div class="col-lg-6">
     <div class="panel panel-success">
       <div class="panel-heading">
-        <h4 class="panel-title">Most Frequently Used Ingredients</h4>
+        <h4 class="panel-title">Most Frequently Used Ingredients <span
+          class="badge pull-right">{{ numIngredients }}</span></h4>
       </div>
       <div class="panel-body">
         <div x-pillbox data-collection="getIngredients()" data-exclusions="exclusions"></div>

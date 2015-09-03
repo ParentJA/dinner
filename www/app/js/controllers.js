@@ -42,6 +42,10 @@
       return _.difference(ingredientService.getIngredients(), $scope.exclusions);
     };
 
+    $scope.getTotalIngredients = function getTotalIngredients() {
+      return ingredientService.getTotalIngredients();
+    };
+
     $scope.frequency = function frequency(ingredient) {
       var percentage = Math.round(ingredient.count / dishService.getTotalDishes() * 100);
 
@@ -49,7 +53,7 @@
     };
   }
 
-  function IngredientListController($scope, ingredientService) {
+  function IngredientListController($scope, dishService, ingredientService) {
     $scope.hasIngredients = function hasIngredients() {
       return ingredientService.hasIngredients();
     };
@@ -58,12 +62,10 @@
       return ingredientService.getIngredients();
     };
 
-    $scope.setSelectedIngredient = function setSelectedIngredient(value) {
-      ingredientService.setSelectedIngredient(value);
-    };
+    $scope.frequency = function frequency(ingredient) {
+      var percentage = Math.round(ingredient.count / dishService.getTotalDishes() * 100);
 
-    $scope.isSelectedIngredient = function isSelectedIngredient(value) {
-      return ingredientService.isSelectedIngredient(value);
+      return (percentage === Infinity) ? 0 : percentage;
     };
   }
 
@@ -101,7 +103,7 @@
     .controller("DishListController", ["$scope", "dishService", DishListController])
     .controller("DishDetailController", ["$scope", "dishService", DishDetailController])
     .controller("IngredientController", ["$scope", "dishService", "ingredientService", IngredientController])
-    .controller("IngredientListController", ["$scope", "ingredientService", IngredientListController])
+    .controller("IngredientListController", ["$scope", "dishService", "ingredientService", IngredientListController])
     .controller("PillboxController", ["$scope", PillboxController])
     .controller("PillboxTagController", ["$scope", PillboxTagController]);
 

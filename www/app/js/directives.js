@@ -22,6 +22,7 @@
   function ingredientList() {
     return {
       restrict: "A",
+      replace: true,
       scope: {},
       templateUrl: "/static/views/ingredient_list.html",
       controller: "IngredientListController"

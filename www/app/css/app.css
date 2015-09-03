@@ -17,6 +17,7 @@ body {
 
 .component--pillbox .borderless-input {
   width: 150px;
+  border: none;
   display: inline;
 }
 
@@ -34,6 +35,10 @@ body {
 
 .component--pillbox-tag .close {
   color: #000;
+}
+
+.badge-default {
+  background-color: #000;
 }
 
 .badge-success {
