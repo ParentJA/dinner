@@ -4,11 +4,8 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 from django.conf.urls import url
 
 # Local imports...
-from .views import DishAPIView, IngredientAPIView
+from .views import DishAPIView
 
 urlpatterns = [
     url(r'^dishes/$', DishAPIView.as_view()),
-    url(r'^dishes/(?P<pk>\d+)/$', DishAPIView.as_view()),
-    url(r'^ingredients/$', IngredientAPIView.as_view()),
-    url(r'^ingredients/(?P<pk>\d+)/$', IngredientAPIView.as_view()),
 ]

@@ -4,26 +4,30 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 from rest_framework import serializers
 
 # Local imports...
-from .models import Dish, Ingredient
+from .models import Cuisine, Dish, Ingredient, Source
+
+
+class CuisineSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cuisine
+        fields = ('id', 'name')
 
 
 class DishSerializer(serializers.ModelSerializer):
-    ingredient_ids = serializers.SerializerMethodField()
-
-    def get_ingredient_ids(self, obj):
-        return getattr(obj, 'ingredient_ids', [])
-
     class Meta:
         model = Dish
-        fields = ('id', 'name', 'ingredient_ids', 'source', 'cuisine')
+        fields = ('id', 'name', 'ingredients', 'source', 'cuisine')
 
 
 class IngredientSerializer(serializers.ModelSerializer):
-    count = serializers.SerializerMethodField()
-
-    def get_count(self, obj):
-        return getattr(obj, 'count', 0)
+    count = serializers.IntegerField()
 
     class Meta:
         model = Ingredient
         fields = ('id', 'name', 'count')
+
+
+class SourceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Source
+        fields = ('id', 'title')

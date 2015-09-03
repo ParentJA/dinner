@@ -8,60 +8,34 @@ from rest_framework import status, views
 from rest_framework.response import Response
 
 # Local imports...
-from .models import Dish, DishIngredient, Ingredient
-from .serializers import DishSerializer, IngredientSerializer
+from .models import Cuisine, Dish, DishIngredient, Ingredient, Source
+from .serializers import CuisineSerializer, DishSerializer, IngredientSerializer, SourceSerializer
 
 
 class DishAPIView(views.APIView):
-    def get(self, request, pk=None):
-        dishes = Dish.objects.prefetch_related()
+    def get(self, request):
+        # Dishes...
+        dishes = Dish.objects.all()
 
-        if pk:
-            dishes = dishes.filter(pk=pk)
+        # Ingredients...
+        ingredients = Ingredient.objects.all()
 
-        ingredients = set()
+        # Count and modify ingredients...
+        dish_ingredients = DishIngredient.objects.select_related('ingredient')
+        ingredient_counter = collections.Counter(map(lambda di: di.ingredient.id, dish_ingredients))
 
-        for dish in dishes:
-            dish_ingredients = set()
-            dish_ingredient_ids = set()
+        for ingredient in ingredients:
+            ingredient.count = ingredient_counter.get(ingredient.id)
 
-            for dish_ingredient in dish.dish_ingredients.all():
-                dish_ingredients.add(dish_ingredient.ingredient)
-                dish_ingredient_ids.add(dish_ingredient.ingredient.id)
+        # Cuisines...
+        cuisines = Cuisine.objects.all()
 
-            # Update the total list of ingredients...
-            ingredients.update(dish_ingredients)
-
-            # Assign the list of ingredient IDs to the dish...
-            dish.ingredient_ids = dish_ingredient_ids
+        # Sources...
+        sources = Source.objects.all()
 
         return Response(status=status.HTTP_200_OK, data={
             'dishes': DishSerializer(dishes, many=True).data,
-            'ingredients': IngredientSerializer(ingredients, many=True).data
-        })
-
-
-class IngredientAPIView(views.APIView):
-    def get(self, request, pk=None):
-        if request.query_params.get('count'):
-            dish_ingredients = DishIngredient.objects.select_related('ingredient')
-            ingredient_count = collections.defaultdict(int)
-
-            for dish_ingredient in dish_ingredients:
-                ingredient_count[dish_ingredient.ingredient] += 1
-
-            ingredients = []
-
-            for ingredient, count in ingredient_count.iteritems():
-                ingredient.count = count
-                ingredients.append(ingredient)
-
-        else:
-            ingredients = Ingredient.objects.all()
-
-        if pk:
-            ingredients = ingredients.filter(pk=pk)
-
-        return Response(status=status.HTTP_200_OK, data={
-            'ingredients': IngredientSerializer(ingredients, many=True).data
+            'ingredients': IngredientSerializer(ingredients, many=True).data,
+            'cuisines': CuisineSerializer(cuisines, many=True).data,
+            'sources': SourceSerializer(sources, many=True).data
         })
