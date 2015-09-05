@@ -2,7 +2,7 @@
   <a class="list-group-item disabled text-center" ng-hide="hasIngredients()">No ingredients</a>
   <a class="list-group-item" href
      ng-repeat="ingredient in getIngredients() | orderBy: '-count'" ng-show="hasIngredients()">
-    <span class="badge badge-default">{{ frequency(ingredient) }}%</span>
+    <span class="badge badge-success">{{ frequency(ingredient) }}%</span>
     {{ ingredient.name }}
   </a>
 </div>

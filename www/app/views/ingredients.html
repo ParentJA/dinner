@@ -1,28 +1,38 @@
 <div class="row">
-  <div class="col-lg-6">
-    <div class="panel panel-default">
+  <!--<div class="col-lg-6">
+    <div class="panel panel-success">
       <div class="panel-heading">
         <h4 class="panel-title">Ingredients <span
           class="badge pull-right">{{ getTotalIngredients() }}</span></h4>
       </div>
       <div x-ingredient-list></div>
     </div>
-  </div>
+  </div>-->
   <div class="col-lg-6">
     <div class="panel panel-success">
       <div class="panel-heading">
-        <h4 class="panel-title">Most Frequently Used Ingredients <span
-          class="badge pull-right">{{ numIngredients }}</span></h4>
+        <h4 class="panel-title">Ingredients <span class="badge pull-right">{{ getTotalIngredients() }}</span></h4>
       </div>
       <div class="panel-body">
         <div x-pillbox data-collection="getIngredients()" data-exclusions="exclusions"></div>
       </div>
       <div class="list-group">
         <a class="list-group-item" href
-           ng-repeat="ingredient in getIngredients() | orderBy: '-count' | limitTo: numIngredients">
+           ng-repeat="ingredient in getIngredients() | orderBy: '-count'" ng-click="setSelectedIngredient(ingredient)">
           <span class="badge badge-success">{{ frequency(ingredient) }}%</span>
           {{ ingredient.name }}
         </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">Dishes with Ingredient</h4>
+      </div>
+      <div class="list-group">
+        <a class="list-group-item" href
+           ng-repeat="dish in getDishes() | hasIngredient: getSelectedIngredient() | orderBy: 'name'">{{ dish.name }}</a>
       </div>
     </div>
   </div>

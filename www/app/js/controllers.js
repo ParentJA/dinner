@@ -38,8 +38,20 @@
     $scope.numIngredients = 15;
     $scope.exclusions = [];
 
+    $scope.getDishes = function getDishes() {
+      return dishService.getDishes();
+    };
+
     $scope.getIngredients = function getIngredients() {
       return _.difference(dishService.getIngredients(), $scope.exclusions);
+    };
+
+    $scope.getSelectedIngredient = function getSelectedIngredient() {
+      return dishService.getSelectedIngredient();
+    };
+
+    $scope.setSelectedIngredient = function setSelectedIngredient(ingredient) {
+      dishService.setSelectedIngredient(ingredient);
     };
 
     $scope.getTotalIngredients = function getTotalIngredients() {

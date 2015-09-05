@@ -7,7 +7,16 @@
     };
   }
 
+  function hasIngredient() {
+    return function hasIngredientFilter(dishes, ingredient) {
+      return _.filter(dishes, function (dish) {
+        return _.includes(dish.ingredients, ingredient.id);
+      });
+    };
+  }
+
   angular.module("app")
-    .filter("title", title);
+    .filter("title", title)
+    .filter("hasIngredient", hasIngredient);
 
 })(window, window.angular);
