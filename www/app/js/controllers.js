@@ -42,6 +42,10 @@
       return dishService.getDishes();
     };
 
+    $scope.setSelectedDish = function setSelectedDish(dish) {
+      dishService.setSelectedDish(dish);
+    };
+
     $scope.getIngredients = function getIngredients() {
       return _.difference(dishService.getIngredients(), $scope.exclusions);
     };

@@ -30,9 +30,13 @@
       <div class="panel-heading">
         <h4 class="panel-title">Dishes with Ingredient</h4>
       </div>
-      <div class="list-group">
+      <div class="panel-body" ng-hide="getSelectedIngredient()">
+        <span class="text-center">Select an ingredient</span>
+      </div>
+      <div class="list-group" ng-if="getSelectedIngredient()">
         <a class="list-group-item" href
-           ng-repeat="dish in getDishes() | hasIngredient: getSelectedIngredient() | orderBy: 'name'">{{ dish.name }}</a>
+           ng-repeat="dish in getDishes() | hasIngredient: getSelectedIngredient() | orderBy: 'name'"
+           ng-click="setSelectedDish(dish)" ui-sref="dishes">{{ dish.name }}</a>
       </div>
     </div>
   </div>
