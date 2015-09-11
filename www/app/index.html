@@ -24,6 +24,9 @@
     </div>
     <div id="navbar-content" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
+        <li ng-class="{active: $state.is('menus')}">
+          <a ui-sref="menus">Menus</a>
+        </li>
         <li ng-class="{active: $state.is('dishes')}">
           <a ui-sref="dishes">Dishes</a>
         </li>

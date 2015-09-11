@@ -7,6 +7,8 @@
   function HomeController($scope) {
   }
 
+  function MenuController($scope) {}
+
   function DishController($scope, dishService) {
   }
 
@@ -115,6 +117,7 @@
   angular.module("app")
     .controller("MainController", ["$scope", MainController])
     .controller("HomeController", ["$scope", HomeController])
+    .controller("MenuController", ["$scope", MenuController])
     .controller("DishController", ["$scope", "dishService", DishController])
     .controller("DishListController", ["$scope", "dishService", DishListController])
     .controller("DishDetailController", ["$scope", "dishService", DishDetailController])

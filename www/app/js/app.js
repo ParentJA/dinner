@@ -13,6 +13,11 @@
         templateUrl: "/static/views/home.html",
         controller: "HomeController"
       })
+      .state("menus", {
+        url: "/menus",
+        templateUrl: "/static/views/menus.html",
+        controller: "MenuController"
+      })
       .state("dishes", {
         url: "/dishes",
         templateUrl: "/static/views/dishes.html",
