@@ -49,7 +49,15 @@
     };
 
     $scope.getIngredients = function getIngredients() {
-      return _.difference(dishService.getIngredients(), $scope.exclusions);
+      var ingredients = dishService.getIngredients();
+
+      // Remove exclusions...
+      ingredients = _.difference(ingredients, $scope.exclusions);
+
+      // Remove selected ingredients...
+      ingredients = _.difference(ingredients, dishService.getSelectedIngredients());
+
+      return ingredients;
     };
 
     $scope.getSelectedIngredient = function getSelectedIngredient() {
@@ -68,6 +76,30 @@
       var percentage = Math.round(ingredient.count / dishService.getTotalDishes() * 100);
 
       return (percentage === Infinity) ? 0 : percentage;
+    };
+
+    $scope.hasSelectedIngredients = function hasSelectedIngredients() {
+      return !_.isEmpty(dishService.getSelectedIngredients());
+    };
+
+    $scope.getSelectedIngredients = function getSelectedIngredients() {
+      return dishService.getSelectedIngredients();
+    };
+
+    $scope.addSelectedIngredient = function addSelectedIngredient(ingredient) {
+      dishService.addSelectedIngredient(ingredient);
+    };
+
+    $scope.removeSelectedIngredient = function removeSelectedIngredient(ingredient) {
+      dishService.removeSelectedIngredient(ingredient);
+    };
+
+    $scope.getDishByName = function getDishByName(name) {
+      return _.find(dishService.getDishes(), "name", name);
+    };
+
+    $scope.getMatchingDishes = function getMatchingDishes() {
+      return dishService.findMatchingDishes(dishService.getSelectedIngredients());
     };
   }
 
@@ -114,6 +146,29 @@
 
   }
 
+  function DynamicListController($scope) {
+    $scope.name = null;
+
+    $scope.addElement = function addElement(name) {
+      var element = _.find($scope.getCollection(), {name: name});
+
+      if (!_.isEmpty(element) && !_.includes($scope.getElements(), element)) {
+        $scope.addFn({element: element});
+      }
+    };
+
+    $scope.removeElement = function removeElement(element) {
+      $scope.removeFn({element: element});
+    };
+
+    $scope.onKeyPressed = function onKeyPressed(event) {
+      if (event.keyCode === 13) {
+        $scope.addElement($scope.name);
+        $scope.name = null;
+      }
+    };
+  }
+
   angular.module("app")
     .controller("MainController", ["$scope", MainController])
     .controller("HomeController", ["$scope", HomeController])
@@ -124,6 +179,7 @@
     .controller("IngredientController", ["$scope", "dishService", IngredientController])
     .controller("IngredientListController", ["$scope", "dishService", IngredientListController])
     .controller("PillboxController", ["$scope", PillboxController])
-    .controller("PillboxTagController", ["$scope", PillboxTagController]);
+    .controller("PillboxTagController", ["$scope", PillboxTagController])
+    .controller("DynamicListController", ["$scope", DynamicListController]);
 
 })(window, window.angular);

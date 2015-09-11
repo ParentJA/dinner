@@ -54,11 +54,26 @@
     };
   }
 
+  function dynamicList() {
+    return {
+      restrict: "A",
+      scope: {
+        getCollection: "&collection",
+        getElements: "&elements",
+        addFn: "&",
+        removeFn: "&"
+      },
+      templateUrl: "/static/views/dynamic_list.html",
+      controller: "DynamicListController"
+    };
+  }
+
   angular.module("app")
     .directive("dishList", [dishList])
     .directive("dishDetail", [dishDetail])
     .directive("ingredientList", [ingredientList])
     .directive("pillbox", [pillbox])
-    .directive("pillboxTag", [pillboxTag]);
+    .directive("pillboxTag", [pillboxTag])
+    .directive("dynamicList", [dynamicList]);
 
 })(window, window.angular);

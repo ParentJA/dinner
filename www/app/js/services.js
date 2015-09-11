@@ -40,7 +40,8 @@
 
     // Ingredients...
     var ingredients = [],
-      selectedIngredient = null;
+      selectedIngredient = null,
+      selectedIngredients = [];
 
     // Cuisines...
     var cuisines = [],
@@ -84,6 +85,22 @@
       isSelectedIngredient: function isSelectedIngredient(value) {
         return (selectedIngredient === value);
       },
+
+      addSelectedIngredient: function addSelectedIngredient(ingredient) {
+        if (!_.includes(selectedIngredients, ingredient)) {
+          selectedIngredients.push(ingredient);
+        }
+      },
+      removeSelectedIngredient: function removeSelectedIngredient(ingredient) {
+        _.remove(selectedIngredients, ingredient);
+      },
+      hasSelectedIngredients: function hasSelectedIngredients() {
+        return !_.isEmpty(selectedIngredients);
+      },
+      getSelectedIngredients: function getSelectedIngredients() {
+        return selectedIngredients;
+      },
+
       getTotalIngredients: function getTotalIngredients() {
         return _.size(ingredients);
       },
@@ -122,10 +139,46 @@
       },
       getTotalSources: function getTotalSources() {
         return _.size(sources);
+      },
+
+      findMatchingDishes: function findMatchingDishes(ingredients) {
+        if (_.isEmpty(ingredients)) {
+          return [];
+        }
+
+        var rankMap = {};
+
+        _.forEach(ingredients, function (ingredient) {
+          var dishesWithIngredient = _.filter(dishes, function (dish) {
+            return _.includes(dish._ingredients, ingredient);
+          });
+
+          _.forEach(dishesWithIngredient, function (dish) {
+            if (!_.has(rankMap, dish.name)) {
+              rankMap[dish.name] = 0;
+            }
+
+            rankMap[dish.name] += 1;
+          });
+        });
+
+        var invertedRankMap = _.invert(rankMap, true);
+        var bestMatchesIndex = _.last(_.keys(invertedRankMap).sort());
+        var bestMatches = invertedRankMap[bestMatchesIndex];
+
+        return _.findByValues(dishes, "name", bestMatches);
       }
     };
 
     var init = function init() {
+      _.mixin({
+        findByValues: function (collection, property, values) {
+          return _.filter(collection, function (element) {
+            return _.includes(values, element[property]);
+          });
+        }
+      });
+
       $http.get(BASE_URL + "meals/dishes/").then(function (response) {
         // Dishes...
         dishes = new DishFactory(response.data);

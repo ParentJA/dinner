@@ -14,11 +14,16 @@
         <h4 class="panel-title">Ingredients <span class="badge pull-right">{{ getTotalIngredients() }}</span></h4>
       </div>
       <div class="panel-body">
-        <div x-pillbox data-collection="getIngredients()" data-exclusions="exclusions"></div>
+        <!--<div x-pillbox data-collection="getIngredients()" data-exclusions="exclusions"></div>-->
+        <div x-dynamic-list
+             data-collection="getIngredients()"
+             data-elements="getSelectedIngredients()"
+             data-add-fn="addSelectedIngredient(element)"
+             data-remove-fn="removeSelectedIngredient(element)"></div>
       </div>
       <div class="list-group">
         <a class="list-group-item" href
-           ng-repeat="ingredient in getIngredients() | orderBy: '-count'" ng-click="setSelectedIngredient(ingredient)">
+           ng-repeat="ingredient in getIngredients() | orderBy: '-count'" ng-click="addSelectedIngredient(ingredient)">
           <span class="badge badge-success">{{ frequency(ingredient) }}%</span>
           {{ ingredient.name }}
         </a>
@@ -30,13 +35,14 @@
       <div class="panel-heading">
         <h4 class="panel-title">Dishes with Ingredient</h4>
       </div>
-      <div class="panel-body" ng-hide="getSelectedIngredient()">
+      <div class="panel-body" ng-hide="hasSelectedIngredients()">
         <span class="text-center">Select an ingredient</span>
       </div>
-      <div class="list-group" ng-if="getSelectedIngredient()">
-        <a class="list-group-item" href
-           ng-repeat="dish in getDishes() | hasIngredient: getSelectedIngredient() | orderBy: 'name'"
-           ng-click="setSelectedDish(dish)" ui-sref="dishes">{{ dish.name }}</a>
+      <div class="list-group" ng-show="hasSelectedIngredients()">
+        <a class="list-group-item"
+           ng-repeat="dish in getMatchingDishes() | orderBy: 'name'"
+           ng-click="setSelectedDish(dish)"
+           ui-sref="dishes">{{ dish.name }}</a>
       </div>
     </div>
   </div>
