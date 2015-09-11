@@ -1,4 +1,5 @@
 (function (window, angular, undefined) {
+
   "use strict";
 
   function HttpConfig($httpProvider) {
@@ -12,6 +13,11 @@
         url: "/",
         templateUrl: "/static/views/home.html",
         controller: "HomeController"
+      })
+      .state("pantry", {
+        url: "/pantry",
+        templateUrl: "/static/views/pantry.html",
+        controller: "PantryController"
       })
       .state("menus", {
         url: "/menus",

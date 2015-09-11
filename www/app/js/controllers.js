@@ -1,10 +1,15 @@
 (function (window, angular, undefined) {
+
   "use strict";
 
   function MainController($scope) {
   }
 
   function HomeController($scope) {
+  }
+
+  function PantryController($scope) {
+
   }
 
   function MenuController($scope) {}
@@ -172,6 +177,7 @@
   angular.module("app")
     .controller("MainController", ["$scope", MainController])
     .controller("HomeController", ["$scope", HomeController])
+    .controller("PantryController", ["$scope", PantryController])
     .controller("MenuController", ["$scope", MenuController])
     .controller("DishController", ["$scope", "dishService", DishController])
     .controller("DishListController", ["$scope", "dishService", DishListController])

@@ -1,4 +1,5 @@
 (function (window, angular, undefined) {
+
   "use strict";
 
   function dishList() {
