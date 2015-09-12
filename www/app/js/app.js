@@ -33,6 +33,11 @@
         url: "/ingredients",
         templateUrl: "/static/views/ingredients.html",
         controller: "IngredientController"
+      })
+      .state("settings", {
+        url: "/settings",
+        templateUrl: "/static/views/settings.html",
+        controller: "SettingsController"
       });
 
     //Default state...

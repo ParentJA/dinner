@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">Settings</h4>
+      </div>
+      <div class="panel-body">
+        <h4>Ingredient Exclusions</h4>
+        <div x-dynamic-list
+             data-collection="getIngredients()"
+             data-elements="getIngredientExclusions()"
+             data-add-fn="addIngredientExclusion(element)"
+             data-remove-fn="removeIngredientExclusion(element)"></div>
+      </div>
+    </div>
+  </div>
+</div>

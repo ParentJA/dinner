@@ -13,25 +13,25 @@
       });
 
       return data.dishes;
-    }
+    };
   }
 
   function IngredientFactory() {
     return function (data) {
       return data.ingredients;
-    }
+    };
   }
 
   function CuisineFactory() {
     return function (data) {
       return data.cuisines;
-    }
+    };
   }
 
   function SourceFactory() {
     return function (data) {
       return data.sources;
-    }
+    };
   }
 
   function dishService($http, BASE_URL, DishFactory, IngredientFactory, CuisineFactory, SourceFactory) {
@@ -203,6 +203,30 @@
     return service;
   }
 
+  function settingsService() {
+    // Users might want to exclude specific ingredients for dietary reasons (e.g. Paleo, lactose intolerance, etc.)
+    var ingredientExclusions = [];
+
+    var service = {
+      hasIngredientExclusions: function hasIngredientExclusions() {
+        return !_.isEmpty(ingredientExclusions);
+      },
+      getIngredientExclusions: function getIngredientExclusions() {
+        return ingredientExclusions;
+      },
+      addIngredientExclusion: function addIngredientExclusion(exclusion) {
+        if (!_.includes(ingredientExclusions, exclusion)) {
+          ingredientExclusions.push(exclusion);
+        }
+      },
+      removeIngredientExclusion: function removeIngredientExclusion(exclusion) {
+        _.remove(ingredientExclusions, exclusion);
+      }
+    };
+
+    return service;
+  }
+
   angular.module("app")
     .factory("DishFactory", [DishFactory])
     .factory("IngredientFactory", [IngredientFactory])
@@ -210,6 +234,7 @@
     .factory("SourceFactory", [SourceFactory])
     .service("dishService", [
       "$http", "BASE_URL", "DishFactory", "IngredientFactory", "CuisineFactory", "SourceFactory", dishService
-    ]);
+    ])
+    .service("settingsService", [settingsService]);
 
 })(window, window.angular);

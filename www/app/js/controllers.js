@@ -41,9 +41,8 @@
     };
   }
 
-  function IngredientController($scope, dishService) {
+  function IngredientController($scope, dishService, settingsService) {
     $scope.numIngredients = 15;
-    $scope.exclusions = [];
 
     $scope.getDishes = function getDishes() {
       return dishService.getDishes();
@@ -57,7 +56,7 @@
       var ingredients = dishService.getIngredients();
 
       // Remove exclusions...
-      ingredients = _.difference(ingredients, $scope.exclusions);
+      ingredients = _.difference(ingredients, settingsService.getIngredientExclusions());
 
       // Remove selected ingredients...
       ingredients = _.difference(ingredients, dishService.getSelectedIngredients());
@@ -73,8 +72,8 @@
       dishService.setSelectedIngredient(ingredient);
     };
 
-    $scope.getTotalIngredients = function getTotalIngredients() {
-      return dishService.getTotalIngredients();
+    $scope.getNumIngredients = function getTotalIngredients() {
+      return _.size($scope.getIngredients());
     };
 
     $scope.frequency = function frequency(ingredient) {
@@ -105,6 +104,10 @@
 
     $scope.getMatchingDishes = function getMatchingDishes() {
       return dishService.findMatchingDishes(dishService.getSelectedIngredients());
+    };
+
+    $scope.getNumMatchingDishes = function getNumMatchingDishes() {
+      return _.size($scope.getMatchingDishes());
     };
   }
 
@@ -174,6 +177,24 @@
     };
   }
 
+  function SettingsController($scope, dishService, settingsService) {
+    $scope.getIngredients = function getIngredients() {
+      return dishService.getIngredients();
+    };
+
+    $scope.getIngredientExclusions = function getIngredientExclusions() {
+      return settingsService.getIngredientExclusions();
+    };
+
+    $scope.addIngredientExclusion = function addIngredientExclusion(ingredient) {
+      settingsService.addIngredientExclusion(ingredient);
+    };
+
+    $scope.removeIngredientExclusion = function removeIngredientExclusion(ingredient) {
+      settingsService.removeIngredientExclusion(ingredient);
+    };
+  }
+
   angular.module("app")
     .controller("MainController", ["$scope", MainController])
     .controller("HomeController", ["$scope", HomeController])
@@ -182,10 +203,11 @@
     .controller("DishController", ["$scope", "dishService", DishController])
     .controller("DishListController", ["$scope", "dishService", DishListController])
     .controller("DishDetailController", ["$scope", "dishService", DishDetailController])
-    .controller("IngredientController", ["$scope", "dishService", IngredientController])
+    .controller("IngredientController", ["$scope", "dishService", "settingsService", IngredientController])
     .controller("IngredientListController", ["$scope", "dishService", IngredientListController])
     .controller("PillboxController", ["$scope", PillboxController])
     .controller("PillboxTagController", ["$scope", PillboxTagController])
-    .controller("DynamicListController", ["$scope", DynamicListController]);
+    .controller("DynamicListController", ["$scope", DynamicListController])
+    .controller("SettingsController", ["$scope", "dishService", "settingsService", SettingsController]);
 
 })(window, window.angular);
