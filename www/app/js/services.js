@@ -8,7 +8,7 @@
         dish._ingredients = [];
 
         _.forEach(dish.ingredients, function (ingredientId) {
-          dish._ingredients.push(_.findWhere(data.ingredients, {id: ingredientId}));
+          dish._ingredients.push(_.find(data.ingredients, {id: ingredientId}));
         });
       });
 
@@ -18,6 +18,14 @@
 
   function IngredientFactory() {
     return function (data) {
+      _.forEach(data.ingredients, function (ingredient) {
+        ingredient._tags = [];
+
+        _.forEach(ingredient.tags, function (tagId) {
+          ingredient._tags.push(_.find(data.tags, {id: tagId}));
+        });
+      });
+
       return data.ingredients;
     };
   }
@@ -34,7 +42,13 @@
     };
   }
 
-  function dishService($http, BASE_URL, DishFactory, IngredientFactory, CuisineFactory, SourceFactory) {
+  function TagFactory() {
+    return function (data) {
+      return data.tags;
+    }
+  }
+
+  function dishService($http, BASE_URL, DishFactory, IngredientFactory, CuisineFactory, SourceFactory, TagFactory) {
     // Dishes...
     var dishes = [],
       selectedDish = null;
@@ -51,6 +65,9 @@
     // Sources...
     var sources = [],
       selectedSource = null;
+
+    // Tag...
+    var tags = [];
 
     var service = {
       hasDishes: function hasDishes() {
@@ -141,6 +158,9 @@
       getTotalSources: function getTotalSources() {
         return _.size(sources);
       },
+      getTags: function getTags() {
+        return tags;
+      },
 
       findMatchingDishes: function findMatchingDishes(ingredients) {
         if (_.isEmpty(ingredients)) {
@@ -193,6 +213,9 @@
 
         // Sources...
         sources = new SourceFactory(response.data);
+
+        // Tags...
+        tags = new TagFactory(response.data);
       }, function () {
         console.error("Dishes failed to load!");
       });
@@ -207,12 +230,15 @@
     // Users might want to exclude specific ingredients for dietary reasons (e.g. Paleo, lactose intolerance, etc.)
     var ingredientExclusions = [];
 
+    // Users might want to exclude groups of ingredients according to their tags
+    var ingredientTagExclusions = [];
+
     var service = {
       hasIngredientExclusions: function hasIngredientExclusions() {
         return !_.isEmpty(ingredientExclusions);
       },
       getIngredientExclusions: function getIngredientExclusions() {
-        return ingredientExclusions;
+        return _.sortBy(ingredientExclusions, "name");
       },
       addIngredientExclusion: function addIngredientExclusion(exclusion) {
         if (!_.includes(ingredientExclusions, exclusion)) {
@@ -221,6 +247,20 @@
       },
       removeIngredientExclusion: function removeIngredientExclusion(exclusion) {
         _.remove(ingredientExclusions, exclusion);
+      },
+      hasIngredientTagExclusions: function hasIngredientTagExclusions() {
+        return !_.isEmpty(ingredientTagExclusions);
+      },
+      getIngredientTagExclusions: function getIngredientTagExclusions() {
+        return _.sortBy(ingredientTagExclusions, "name");
+      },
+      addIngredientTagExclusion: function addIngredientTagExclusion(exclusion) {
+        if (!_.includes(ingredientTagExclusions, exclusion)) {
+          ingredientTagExclusions.push(exclusion);
+        }
+      },
+      removeIngredientTagExclusion: function removeIngredientTagExclusion(exclusion) {
+        _.remove(ingredientTagExclusions, exclusion);
       }
     };
 
@@ -232,8 +272,16 @@
     .factory("IngredientFactory", [IngredientFactory])
     .factory("CuisineFactory", [CuisineFactory])
     .factory("SourceFactory", [SourceFactory])
+    .factory("TagFactory", [TagFactory])
     .service("dishService", [
-      "$http", "BASE_URL", "DishFactory", "IngredientFactory", "CuisineFactory", "SourceFactory", dishService
+      "$http",
+      "BASE_URL",
+      "DishFactory",
+      "IngredientFactory",
+      "CuisineFactory",
+      "SourceFactory",
+      "TagFactory",
+      dishService
     ])
     .service("settingsService", [settingsService]);
 

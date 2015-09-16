@@ -23,6 +23,7 @@ class Dish(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=250, unique=True)
+    tags = models.ManyToManyField('meals.Tag', through='meals.IngredientTag', through_fields=('ingredient', 'tag'))
 
     def __unicode__(self):
         return self.name
@@ -51,3 +52,21 @@ class Cuisine(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=250, unique=True)
+
+    def __unicode__(self):
+        return self.name
+
+
+class IngredientTag(models.Model):
+    ingredient = models.ForeignKey('meals.Ingredient', related_name='ingredient_tags')
+    tag = models.ForeignKey('meals.Tag', related_name='ingredient_tags')
+
+    class Meta:
+        unique_together = ('ingredient', 'tag')
+
+    def __unicode__(self):
+        return '{}: {}'.format(self.ingredient, self.tag)

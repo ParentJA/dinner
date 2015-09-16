@@ -45,6 +45,10 @@ body {
   background-color: #4e9f15
 }
 
+.label-success {
+  background-color: #4e9f15;
+}
+
 .component--dynamic-list .close {
   color: #000;
 }

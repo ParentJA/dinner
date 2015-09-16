@@ -25,7 +25,8 @@
         <a class="list-group-item" href
            ng-repeat="ingredient in getIngredients() | orderBy: '-count'" ng-click="addSelectedIngredient(ingredient)">
           <span class="badge badge-success">{{ frequency(ingredient) }}%</span>
-          {{ ingredient.name }}
+          <span>{{ ingredient.name }}</span>
+          <span class="label label-success" ng-repeat="tag in ingredient._tags">{{ tag.name }}</span>
         </a>
       </div>
     </div>

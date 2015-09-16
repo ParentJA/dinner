@@ -4,7 +4,7 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 from rest_framework import serializers
 
 # Local imports...
-from .models import Cuisine, Dish, Ingredient, Source
+from .models import Cuisine, Dish, Ingredient, Source, Tag
 
 
 class CuisineSerializer(serializers.ModelSerializer):
@@ -24,10 +24,16 @@ class IngredientSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Ingredient
-        fields = ('id', 'name', 'count')
+        fields = ('id', 'name', 'count', 'tags')
 
 
 class SourceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Source
         fields = ('id', 'title')
+
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = ('id', 'name')

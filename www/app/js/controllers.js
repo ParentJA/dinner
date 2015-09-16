@@ -55,8 +55,17 @@
     $scope.getIngredients = function getIngredients() {
       var ingredients = dishService.getIngredients();
 
-      // Remove exclusions...
+      // Remove ingredient exclusions...
       ingredients = _.difference(ingredients, settingsService.getIngredientExclusions());
+
+      // Remove ingredient tag exclusions...
+      _.forEach(settingsService.getIngredientTagExclusions(), function (tag) {
+        ingredients = _.difference(ingredients, _.filter(ingredients, function (ingredient) {
+          return _.includes(ingredient._tags, tag);
+        }));
+      });
+
+      ingredients = _.difference(ingredients, settingsService.getIngredientTagExclusions());
 
       // Remove selected ingredients...
       ingredients = _.difference(ingredients, dishService.getSelectedIngredients());
@@ -186,12 +195,28 @@
       return settingsService.getIngredientExclusions();
     };
 
-    $scope.addIngredientExclusion = function addIngredientExclusion(ingredient) {
-      settingsService.addIngredientExclusion(ingredient);
+    $scope.addIngredientExclusion = function addIngredientExclusion(exclusion) {
+      settingsService.addIngredientExclusion(exclusion);
     };
 
-    $scope.removeIngredientExclusion = function removeIngredientExclusion(ingredient) {
-      settingsService.removeIngredientExclusion(ingredient);
+    $scope.removeIngredientExclusion = function removeIngredientExclusion(exclusion) {
+      settingsService.removeIngredientExclusion(exclusion);
+    };
+
+    $scope.getTags = function getTags() {
+      return dishService.getTags();
+    };
+
+    $scope.getIngredientTagExclusions = function getIngredientTagExclusions() {
+      return settingsService.getIngredientTagExclusions();
+    };
+
+    $scope.addIngredientTagExclusion = function addIngredientTagExclusion(exclusion) {
+      settingsService.addIngredientTagExclusion(exclusion);
+    };
+
+    $scope.removeIngredientTagExclusion = function removeIngredientTagExclusion(exclusion) {
+      settingsService.removeIngredientTagExclusion(exclusion);
     };
   }
 
