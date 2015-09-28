@@ -503,6 +503,88 @@
     source: null}
   model: meals.dish
   pk: 135
+- fields: {cuisine: null, name: Bacalao-Stuffed Chiles with Tomatoes and Olives, source: null}
+  model: meals.dish
+  pk: 136
+- fields: {cuisine: null, name: Grilled Steak With Spicy Guajillo Sauce, source: null}
+  model: meals.dish
+  pk: 137
+- fields: {cuisine: null, name: Seared Skirt Steak with Chipotle and Garlic, source: null}
+  model: meals.dish
+  pk: 138
+- fields: {cuisine: null, name: Chipotle-Seasoned Pot Roast with Mexican Vegetables,
+    source: null}
+  model: meals.dish
+  pk: 139
+- fields: {cuisine: null, name: Seared Lamb (or Pork) in Swarthy Pasilla-Honey Sauce,
+    source: null}
+  model: meals.dish
+  pk: 140
+- fields: {cuisine: null, name: Almond-Thickened Veal Stew with Raisins and Olives,
+    source: null}
+  model: meals.dish
+  pk: 141
+- fields: {cuisine: null, name: Lamb Barbacoa from the Backyard Grill, source: null}
+  model: meals.dish
+  pk: 142
+- fields: {cuisine: null, name: Chile-Seasoned Pot-Roasted Pork, source: null}
+  model: meals.dish
+  pk: 143
+- fields: {cuisine: null, name: Chile-Glazed Country Ribs, source: null}
+  model: meals.dish
+  pk: 144
+- fields: {cuisine: null, name: Tomatillo-Braised Pork Country Ribs with Mexican Greens,
+    source: null}
+  model: meals.dish
+  pk: 145
+- fields: {cuisine: null, name: Tangy Yucatecan Grilled Pork, source: null}
+  model: meals.dish
+  pk: 146
+- fields: {cuisine: null, name: Modern Mexican Chocolate Flan with Kahlua, source: null}
+  model: meals.dish
+  pk: 147
+- fields: {cuisine: null, name: Mango-Lime Ice, source: null}
+  model: meals.dish
+  pk: 148
+- fields: {cuisine: null, name: Celebration Cake, source: null}
+  model: meals.dish
+  pk: 149
+- fields: {cuisine: null, name: Tropical "Trifle" of Mango and Almonds, source: null}
+  model: meals.dish
+  pk: 150
+- fields: {cuisine: null, name: Warm Cajeta Pudding with Fresh Berries, source: null}
+  model: meals.dish
+  pk: 152
+- fields: {cuisine: null, name: Goat-Milk Caramel, source: null}
+  model: meals.dish
+  pk: 153
+- fields: {cuisine: null, name: Yucatecan-Style Fresh Coconut Pie, source: null}
+  model: meals.dish
+  pk: 154
+- fields: {cuisine: null, name: Frontera Grill's Chocolate Pecan Pie, source: null}
+  model: meals.dish
+  pk: 155
+- fields: {cuisine: null, name: Crunchy Amaranth Tart, source: null}
+  model: meals.dish
+  pk: 156
+- fields: {cuisine: null, name: Creamy Lime Pie, source: null}
+  model: meals.dish
+  pk: 157
+- fields: {cuisine: null, name: Crimson Prickly Pear Sauce, source: null}
+  model: meals.dish
+  pk: 158
+- fields: {cuisine: null, name: Spicy Plantain Pie, source: null}
+  model: meals.dish
+  pk: 159
+- fields: {cuisine: null, name: Frontera's Gold Margarita, source: null}
+  model: meals.dish
+  pk: 160
+- fields: {cuisine: null, name: Topolo Margarita, source: null}
+  model: meals.dish
+  pk: 161
+- fields: {cuisine: null, name: Top-of-the-Line Margarita, source: null}
+  model: meals.dish
+  pk: 162
 - fields: {name: achiote seeds}
   model: meals.ingredient
   pk: 1
@@ -941,6 +1023,114 @@
 - fields: {name: catfish}
   model: meals.ingredient
   pk: 146
+- fields: {name: salt cod}
+  model: meals.ingredient
+  pk: 147
+- fields: {name: New York strip steak}
+  model: meals.ingredient
+  pk: 148
+- fields: {name: lamb stew meat}
+  model: meals.ingredient
+  pk: 149
+- fields: {name: veal stew meat}
+  model: meals.ingredient
+  pk: 150
+- fields: {name: garbanzo beans}
+  model: meals.ingredient
+  pk: 151
+- fields: {name: lamb shoulder}
+  model: meals.ingredient
+  pk: 152
+- fields: {name: pork country ribs}
+  model: meals.ingredient
+  pk: 153
+- fields: {name: cabbage}
+  model: meals.ingredient
+  pk: 154
+- fields: {name: half-and-half}
+  model: meals.ingredient
+  pk: 155
+- fields: {name: Khalua}
+  model: meals.ingredient
+  pk: 156
+- fields: {name: vanilla extract}
+  model: meals.ingredient
+  pk: 157
+- fields: {name: almond extract}
+  model: meals.ingredient
+  pk: 158
+- fields: {name: mangoes}
+  model: meals.ingredient
+  pk: 159
+- fields: {name: cake flour}
+  model: meals.ingredient
+  pk: 160
+- fields: {name: evaporated milk}
+  model: meals.ingredient
+  pk: 161
+- fields: {name: goat-milk caramel}
+  model: meals.ingredient
+  pk: 162
+- fields: {name: orange liqueur}
+  model: meals.ingredient
+  pk: 163
+- fields: {name: raspberries}
+  model: meals.ingredient
+  pk: 164
+- fields: {name: goat's milk}
+  model: meals.ingredient
+  pk: 165
+- fields: {name: light corn syrup}
+  model: meals.ingredient
+  pk: 166
+- fields: {name: baking soda}
+  model: meals.ingredient
+  pk: 167
+- fields: {name: cream sherry}
+  model: meals.ingredient
+  pk: 168
+- fields: {name: coconut}
+  model: meals.ingredient
+  pk: 169
+- fields: {name: all-purpose flour}
+  model: meals.ingredient
+  pk: 170
+- fields: {name: semisweet chocolate}
+  model: meals.ingredient
+  pk: 171
+- fields: {name: dark brown sugar}
+  model: meals.ingredient
+  pk: 172
+- fields: {name: molasses}
+  model: meals.ingredient
+  pk: 173
+- fields: {name: puffed amaranth}
+  model: meals.ingredient
+  pk: 174
+- fields: {name: ice cream}
+  model: meals.ingredient
+  pk: 175
+- fields: {name: powdered sugar}
+  model: meals.ingredient
+  pk: 176
+- fields: {name: prickly pears}
+  model: meals.ingredient
+  pk: 177
+- fields: {name: Cuervo Especial gold tequila}
+  model: meals.ingredient
+  pk: 178
+- fields: {name: Grand Marnier}
+  model: meals.ingredient
+  pk: 179
+- fields: {name: Sauza Conmemorativo tequila}
+  model: meals.ingredient
+  pk: 180
+- fields: {name: Tesoro silver tequila}
+  model: meals.ingredient
+  pk: 181
+- fields: {name: Cointreau orange liqueur}
+  model: meals.ingredient
+  pk: 182
 - fields: {dish: 11, ingredient: 1}
   model: meals.dishingredient
   pk: 1
@@ -5528,6 +5718,819 @@
 - fields: {dish: 135, ingredient: 15}
   model: meals.dishingredient
   pk: 1568
+- fields: {dish: 136, ingredient: 147}
+  model: meals.dishingredient
+  pk: 1569
+- fields: {dish: 136, ingredient: 23}
+  model: meals.dishingredient
+  pk: 1570
+- fields: {dish: 136, ingredient: 20}
+  model: meals.dishingredient
+  pk: 1571
+- fields: {dish: 136, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1572
+- fields: {dish: 136, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1573
+- fields: {dish: 136, ingredient: 124}
+  model: meals.dishingredient
+  pk: 1574
+- fields: {dish: 136, ingredient: 63}
+  model: meals.dishingredient
+  pk: 1575
+- fields: {dish: 136, ingredient: 64}
+  model: meals.dishingredient
+  pk: 1576
+- fields: {dish: 136, ingredient: 57}
+  model: meals.dishingredient
+  pk: 1577
+- fields: {dish: 136, ingredient: 48}
+  model: meals.dishingredient
+  pk: 1578
+- fields: {dish: 136, ingredient: 24}
+  model: meals.dishingredient
+  pk: 1579
+- fields: {dish: 136, ingredient: 49}
+  model: meals.dishingredient
+  pk: 1580
+- fields: {dish: 136, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1581
+- fields: {dish: 137, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1582
+- fields: {dish: 137, ingredient: 96}
+  model: meals.dishingredient
+  pk: 1583
+- fields: {dish: 137, ingredient: 4}
+  model: meals.dishingredient
+  pk: 1584
+- fields: {dish: 137, ingredient: 3}
+  model: meals.dishingredient
+  pk: 1585
+- fields: {dish: 137, ingredient: 35}
+  model: meals.dishingredient
+  pk: 1586
+- fields: {dish: 137, ingredient: 102}
+  model: meals.dishingredient
+  pk: 1587
+- fields: {dish: 137, ingredient: 20}
+  model: meals.dishingredient
+  pk: 1588
+- fields: {dish: 137, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1589
+- fields: {dish: 137, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1590
+- fields: {dish: 137, ingredient: 5}
+  model: meals.dishingredient
+  pk: 1591
+- fields: {dish: 137, ingredient: 13}
+  model: meals.dishingredient
+  pk: 1592
+- fields: {dish: 137, ingredient: 148}
+  model: meals.dishingredient
+  pk: 1593
+- fields: {dish: 137, ingredient: 15}
+  model: meals.dishingredient
+  pk: 1594
+- fields: {dish: 138, ingredient: 19}
+  model: meals.dishingredient
+  pk: 1595
+- fields: {dish: 138, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1596
+- fields: {dish: 138, ingredient: 26}
+  model: meals.dishingredient
+  pk: 1597
+- fields: {dish: 138, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1598
+- fields: {dish: 138, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1599
+- fields: {dish: 138, ingredient: 20}
+  model: meals.dishingredient
+  pk: 1600
+- fields: {dish: 138, ingredient: 45}
+  model: meals.dishingredient
+  pk: 1601
+- fields: {dish: 138, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1602
+- fields: {dish: 138, ingredient: 35}
+  model: meals.dishingredient
+  pk: 1603
+- fields: {dish: 138, ingredient: 3}
+  model: meals.dishingredient
+  pk: 1604
+- fields: {dish: 138, ingredient: 102}
+  model: meals.dishingredient
+  pk: 1605
+- fields: {dish: 138, ingredient: 15}
+  model: meals.dishingredient
+  pk: 1606
+- fields: {dish: 139, ingredient: 19}
+  model: meals.dishingredient
+  pk: 1607
+- fields: {dish: 139, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1608
+- fields: {dish: 139, ingredient: 26}
+  model: meals.dishingredient
+  pk: 1609
+- fields: {dish: 139, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1610
+- fields: {dish: 139, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1611
+- fields: {dish: 139, ingredient: 98}
+  model: meals.dishingredient
+  pk: 1612
+- fields: {dish: 139, ingredient: 20}
+  model: meals.dishingredient
+  pk: 1613
+- fields: {dish: 139, ingredient: 90}
+  model: meals.dishingredient
+  pk: 1614
+- fields: {dish: 139, ingredient: 113}
+  model: meals.dishingredient
+  pk: 1615
+- fields: {dish: 139, ingredient: 49}
+  model: meals.dishingredient
+  pk: 1616
+- fields: {dish: 139, ingredient: 15}
+  model: meals.dishingredient
+  pk: 1617
+- fields: {dish: 140, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1618
+- fields: {dish: 140, ingredient: 34}
+  model: meals.dishingredient
+  pk: 1619
+- fields: {dish: 140, ingredient: 4}
+  model: meals.dishingredient
+  pk: 1620
+- fields: {dish: 140, ingredient: 3}
+  model: meals.dishingredient
+  pk: 1621
+- fields: {dish: 140, ingredient: 35}
+  model: meals.dishingredient
+  pk: 1622
+- fields: {dish: 140, ingredient: 20}
+  model: meals.dishingredient
+  pk: 1623
+- fields: {dish: 140, ingredient: 149}
+  model: meals.dishingredient
+  pk: 1624
+- fields: {dish: 140, ingredient: 102}
+  model: meals.dishingredient
+  pk: 1625
+- fields: {dish: 140, ingredient: 114}
+  model: meals.dishingredient
+  pk: 1626
+- fields: {dish: 140, ingredient: 115}
+  model: meals.dishingredient
+  pk: 1627
+- fields: {dish: 140, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1628
+- fields: {dish: 140, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1629
+- fields: {dish: 140, ingredient: 15}
+  model: meals.dishingredient
+  pk: 1630
+- fields: {dish: 141, ingredient: 150}
+  model: meals.dishingredient
+  pk: 1631
+- fields: {dish: 141, ingredient: 20}
+  model: meals.dishingredient
+  pk: 1632
+- fields: {dish: 141, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1633
+- fields: {dish: 141, ingredient: 3}
+  model: meals.dishingredient
+  pk: 1634
+- fields: {dish: 141, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1635
+- fields: {dish: 141, ingredient: 23}
+  model: meals.dishingredient
+  pk: 1636
+- fields: {dish: 141, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1637
+- fields: {dish: 141, ingredient: 43}
+  model: meals.dishingredient
+  pk: 1638
+- fields: {dish: 141, ingredient: 55}
+  model: meals.dishingredient
+  pk: 1639
+- fields: {dish: 141, ingredient: 41}
+  model: meals.dishingredient
+  pk: 1640
+- fields: {dish: 141, ingredient: 40}
+  model: meals.dishingredient
+  pk: 1641
+- fields: {dish: 141, ingredient: 4}
+  model: meals.dishingredient
+  pk: 1642
+- fields: {dish: 141, ingredient: 42}
+  model: meals.dishingredient
+  pk: 1643
+- fields: {dish: 141, ingredient: 63}
+  model: meals.dishingredient
+  pk: 1644
+- fields: {dish: 141, ingredient: 64}
+  model: meals.dishingredient
+  pk: 1645
+- fields: {dish: 141, ingredient: 5}
+  model: meals.dishingredient
+  pk: 1646
+- fields: {dish: 141, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1647
+- fields: {dish: 142, ingredient: 49}
+  model: meals.dishingredient
+  pk: 1648
+- fields: {dish: 142, ingredient: 90}
+  model: meals.dishingredient
+  pk: 1649
+- fields: {dish: 142, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1650
+- fields: {dish: 142, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1651
+- fields: {dish: 142, ingredient: 33}
+  model: meals.dishingredient
+  pk: 1652
+- fields: {dish: 142, ingredient: 152}
+  model: meals.dishingredient
+  pk: 1653
+- fields: {dish: 142, ingredient: 151}
+  model: meals.dishingredient
+  pk: 1654
+- fields: {dish: 142, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1655
+- fields: {dish: 142, ingredient: 15}
+  model: meals.dishingredient
+  pk: 1656
+- fields: {dish: 142, ingredient: 19}
+  model: meals.dishingredient
+  pk: 1657
+- fields: {dish: 142, ingredient: 26}
+  model: meals.dishingredient
+  pk: 1658
+- fields: {dish: 142, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1659
+- fields: {dish: 142, ingredient: 81}
+  model: meals.dishingredient
+  pk: 1660
+- fields: {dish: 142, ingredient: 124}
+  model: meals.dishingredient
+  pk: 1661
+- fields: {dish: 142, ingredient: 63}
+  model: meals.dishingredient
+  pk: 1662
+- fields: {dish: 143, ingredient: 53}
+  model: meals.dishingredient
+  pk: 1663
+- fields: {dish: 143, ingredient: 96}
+  model: meals.dishingredient
+  pk: 1664
+- fields: {dish: 143, ingredient: 52}
+  model: meals.dishingredient
+  pk: 1665
+- fields: {dish: 143, ingredient: 5}
+  model: meals.dishingredient
+  pk: 1666
+- fields: {dish: 143, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1667
+- fields: {dish: 143, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1668
+- fields: {dish: 143, ingredient: 4}
+  model: meals.dishingredient
+  pk: 1669
+- fields: {dish: 143, ingredient: 57}
+  model: meals.dishingredient
+  pk: 1670
+- fields: {dish: 143, ingredient: 48}
+  model: meals.dishingredient
+  pk: 1671
+- fields: {dish: 143, ingredient: 2}
+  model: meals.dishingredient
+  pk: 1672
+- fields: {dish: 143, ingredient: 41}
+  model: meals.dishingredient
+  pk: 1673
+- fields: {dish: 143, ingredient: 20}
+  model: meals.dishingredient
+  pk: 1674
+- fields: {dish: 143, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1675
+- fields: {dish: 143, ingredient: 10}
+  model: meals.dishingredient
+  pk: 1676
+- fields: {dish: 143, ingredient: 22}
+  model: meals.dishingredient
+  pk: 1677
+- fields: {dish: 143, ingredient: 29}
+  model: meals.dishingredient
+  pk: 1678
+- fields: {dish: 144, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1679
+- fields: {dish: 144, ingredient: 53}
+  model: meals.dishingredient
+  pk: 1680
+- fields: {dish: 144, ingredient: 96}
+  model: meals.dishingredient
+  pk: 1681
+- fields: {dish: 144, ingredient: 4}
+  model: meals.dishingredient
+  pk: 1682
+- fields: {dish: 144, ingredient: 40}
+  model: meals.dishingredient
+  pk: 1683
+- fields: {dish: 144, ingredient: 3}
+  model: meals.dishingredient
+  pk: 1684
+- fields: {dish: 144, ingredient: 41}
+  model: meals.dishingredient
+  pk: 1685
+- fields: {dish: 144, ingredient: 35}
+  model: meals.dishingredient
+  pk: 1686
+- fields: {dish: 144, ingredient: 5}
+  model: meals.dishingredient
+  pk: 1687
+- fields: {dish: 144, ingredient: 102}
+  model: meals.dishingredient
+  pk: 1688
+- fields: {dish: 144, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1689
+- fields: {dish: 144, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1690
+- fields: {dish: 144, ingredient: 115}
+  model: meals.dishingredient
+  pk: 1691
+- fields: {dish: 144, ingredient: 153}
+  model: meals.dishingredient
+  pk: 1692
+- fields: {dish: 144, ingredient: 22}
+  model: meals.dishingredient
+  pk: 1693
+- fields: {dish: 144, ingredient: 29}
+  model: meals.dishingredient
+  pk: 1694
+- fields: {dish: 144, ingredient: 15}
+  model: meals.dishingredient
+  pk: 1695
+- fields: {dish: 144, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1696
+- fields: {dish: 145, ingredient: 26}
+  model: meals.dishingredient
+  pk: 1697
+- fields: {dish: 145, ingredient: 27}
+  model: meals.dishingredient
+  pk: 1698
+- fields: {dish: 145, ingredient: 15}
+  model: meals.dishingredient
+  pk: 1699
+- fields: {dish: 145, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1700
+- fields: {dish: 145, ingredient: 20}
+  model: meals.dishingredient
+  pk: 1701
+- fields: {dish: 145, ingredient: 153}
+  model: meals.dishingredient
+  pk: 1702
+- fields: {dish: 145, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1703
+- fields: {dish: 145, ingredient: 6}
+  model: meals.dishingredient
+  pk: 1704
+- fields: {dish: 145, ingredient: 49}
+  model: meals.dishingredient
+  pk: 1705
+- fields: {dish: 145, ingredient: 30}
+  model: meals.dishingredient
+  pk: 1706
+- fields: {dish: 146, ingredient: 17}
+  model: meals.dishingredient
+  pk: 1707
+- fields: {dish: 146, ingredient: 10}
+  model: meals.dishingredient
+  pk: 1708
+- fields: {dish: 146, ingredient: 8}
+  model: meals.dishingredient
+  pk: 1709
+- fields: {dish: 146, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1710
+- fields: {dish: 146, ingredient: 3}
+  model: meals.dishingredient
+  pk: 1711
+- fields: {dish: 146, ingredient: 154}
+  model: meals.dishingredient
+  pk: 1712
+- fields: {dish: 146, ingredient: 15}
+  model: meals.dishingredient
+  pk: 1713
+- fields: {dish: 146, ingredient: 23}
+  model: meals.dishingredient
+  pk: 1714
+- fields: {dish: 146, ingredient: 28}
+  model: meals.dishingredient
+  pk: 1715
+- fields: {dish: 147, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1716
+- fields: {dish: 147, ingredient: 155}
+  model: meals.dishingredient
+  pk: 1717
+- fields: {dish: 147, ingredient: 91}
+  model: meals.dishingredient
+  pk: 1718
+- fields: {dish: 147, ingredient: 108}
+  model: meals.dishingredient
+  pk: 1719
+- fields: {dish: 147, ingredient: 40}
+  model: meals.dishingredient
+  pk: 1720
+- fields: {dish: 147, ingredient: 84}
+  model: meals.dishingredient
+  pk: 1721
+- fields: {dish: 147, ingredient: 156}
+  model: meals.dishingredient
+  pk: 1722
+- fields: {dish: 147, ingredient: 157}
+  model: meals.dishingredient
+  pk: 1723
+- fields: {dish: 147, ingredient: 158}
+  model: meals.dishingredient
+  pk: 1724
+- fields: {dish: 148, ingredient: 159}
+  model: meals.dishingredient
+  pk: 1725
+- fields: {dish: 148, ingredient: 65}
+  model: meals.dishingredient
+  pk: 1726
+- fields: {dish: 148, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1727
+- fields: {dish: 148, ingredient: 8}
+  model: meals.dishingredient
+  pk: 1728
+- fields: {dish: 149, ingredient: 43}
+  model: meals.dishingredient
+  pk: 1729
+- fields: {dish: 149, ingredient: 160}
+  model: meals.dishingredient
+  pk: 1730
+- fields: {dish: 149, ingredient: 92}
+  model: meals.dishingredient
+  pk: 1731
+- fields: {dish: 149, ingredient: 157}
+  model: meals.dishingredient
+  pk: 1732
+- fields: {dish: 149, ingredient: 84}
+  model: meals.dishingredient
+  pk: 1733
+- fields: {dish: 149, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1734
+- fields: {dish: 149, ingredient: 65}
+  model: meals.dishingredient
+  pk: 1735
+- fields: {dish: 149, ingredient: 50}
+  model: meals.dishingredient
+  pk: 1736
+- fields: {dish: 149, ingredient: 161}
+  model: meals.dishingredient
+  pk: 1737
+- fields: {dish: 149, ingredient: 163}
+  model: meals.dishingredient
+  pk: 1738
+- fields: {dish: 150, ingredient: 160}
+  model: meals.dishingredient
+  pk: 1739
+- fields: {dish: 150, ingredient: 111}
+  model: meals.dishingredient
+  pk: 1740
+- fields: {dish: 150, ingredient: 84}
+  model: meals.dishingredient
+  pk: 1741
+- fields: {dish: 150, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1742
+- fields: {dish: 150, ingredient: 157}
+  model: meals.dishingredient
+  pk: 1743
+- fields: {dish: 150, ingredient: 159}
+  model: meals.dishingredient
+  pk: 1744
+- fields: {dish: 150, ingredient: 8}
+  model: meals.dishingredient
+  pk: 1745
+- fields: {dish: 150, ingredient: 158}
+  model: meals.dishingredient
+  pk: 1746
+- fields: {dish: 150, ingredient: 163}
+  model: meals.dishingredient
+  pk: 1747
+- fields: {dish: 150, ingredient: 43}
+  model: meals.dishingredient
+  pk: 1748
+- fields: {dish: 150, ingredient: 50}
+  model: meals.dishingredient
+  pk: 1749
+- fields: {dish: 152, ingredient: 160}
+  model: meals.dishingredient
+  pk: 1759
+- fields: {dish: 152, ingredient: 111}
+  model: meals.dishingredient
+  pk: 1760
+- fields: {dish: 152, ingredient: 84}
+  model: meals.dishingredient
+  pk: 1761
+- fields: {dish: 152, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1762
+- fields: {dish: 152, ingredient: 157}
+  model: meals.dishingredient
+  pk: 1763
+- fields: {dish: 152, ingredient: 50}
+  model: meals.dishingredient
+  pk: 1764
+- fields: {dish: 152, ingredient: 162}
+  model: meals.dishingredient
+  pk: 1765
+- fields: {dish: 152, ingredient: 164}
+  model: meals.dishingredient
+  pk: 1766
+- fields: {dish: 153, ingredient: 165}
+  model: meals.dishingredient
+  pk: 1767
+- fields: {dish: 153, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1768
+- fields: {dish: 153, ingredient: 166}
+  model: meals.dishingredient
+  pk: 1769
+- fields: {dish: 153, ingredient: 40}
+  model: meals.dishingredient
+  pk: 1770
+- fields: {dish: 153, ingredient: 167}
+  model: meals.dishingredient
+  pk: 1771
+- fields: {dish: 153, ingredient: 168}
+  model: meals.dishingredient
+  pk: 1772
+- fields: {dish: 154, ingredient: 43}
+  model: meals.dishingredient
+  pk: 1773
+- fields: {dish: 154, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1774
+- fields: {dish: 154, ingredient: 55}
+  model: meals.dishingredient
+  pk: 1775
+- fields: {dish: 154, ingredient: 92}
+  model: meals.dishingredient
+  pk: 1776
+- fields: {dish: 154, ingredient: 169}
+  model: meals.dishingredient
+  pk: 1777
+- fields: {dish: 154, ingredient: 50}
+  model: meals.dishingredient
+  pk: 1778
+- fields: {dish: 154, ingredient: 84}
+  model: meals.dishingredient
+  pk: 1779
+- fields: {dish: 154, ingredient: 157}
+  model: meals.dishingredient
+  pk: 1780
+- fields: {dish: 155, ingredient: 170}
+  model: meals.dishingredient
+  pk: 1781
+- fields: {dish: 155, ingredient: 92}
+  model: meals.dishingredient
+  pk: 1782
+- fields: {dish: 155, ingredient: 110}
+  model: meals.dishingredient
+  pk: 1783
+- fields: {dish: 155, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1784
+- fields: {dish: 155, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1785
+- fields: {dish: 155, ingredient: 84}
+  model: meals.dishingredient
+  pk: 1786
+- fields: {dish: 155, ingredient: 127}
+  model: meals.dishingredient
+  pk: 1787
+- fields: {dish: 155, ingredient: 171}
+  model: meals.dishingredient
+  pk: 1788
+- fields: {dish: 155, ingredient: 172}
+  model: meals.dishingredient
+  pk: 1789
+- fields: {dish: 155, ingredient: 166}
+  model: meals.dishingredient
+  pk: 1790
+- fields: {dish: 155, ingredient: 173}
+  model: meals.dishingredient
+  pk: 1791
+- fields: {dish: 155, ingredient: 156}
+  model: meals.dishingredient
+  pk: 1792
+- fields: {dish: 155, ingredient: 157}
+  model: meals.dishingredient
+  pk: 1793
+- fields: {dish: 155, ingredient: 50}
+  model: meals.dishingredient
+  pk: 1794
+- fields: {dish: 156, ingredient: 174}
+  model: meals.dishingredient
+  pk: 1795
+- fields: {dish: 156, ingredient: 66}
+  model: meals.dishingredient
+  pk: 1796
+- fields: {dish: 156, ingredient: 115}
+  model: meals.dishingredient
+  pk: 1797
+- fields: {dish: 156, ingredient: 8}
+  model: meals.dishingredient
+  pk: 1798
+- fields: {dish: 156, ingredient: 175}
+  model: meals.dishingredient
+  pk: 1799
+- fields: {dish: 156, ingredient: 108}
+  model: meals.dishingredient
+  pk: 1800
+- fields: {dish: 156, ingredient: 159}
+  model: meals.dishingredient
+  pk: 1801
+- fields: {dish: 156, ingredient: 71}
+  model: meals.dishingredient
+  pk: 1802
+- fields: {dish: 157, ingredient: 170}
+  model: meals.dishingredient
+  pk: 1803
+- fields: {dish: 157, ingredient: 92}
+  model: meals.dishingredient
+  pk: 1804
+- fields: {dish: 157, ingredient: 110}
+  model: meals.dishingredient
+  pk: 1805
+- fields: {dish: 157, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1806
+- fields: {dish: 157, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1807
+- fields: {dish: 157, ingredient: 84}
+  model: meals.dishingredient
+  pk: 1808
+- fields: {dish: 157, ingredient: 75}
+  model: meals.dishingredient
+  pk: 1809
+- fields: {dish: 157, ingredient: 72}
+  model: meals.dishingredient
+  pk: 1810
+- fields: {dish: 157, ingredient: 50}
+  model: meals.dishingredient
+  pk: 1811
+- fields: {dish: 157, ingredient: 8}
+  model: meals.dishingredient
+  pk: 1812
+- fields: {dish: 157, ingredient: 9}
+  model: meals.dishingredient
+  pk: 1813
+- fields: {dish: 157, ingredient: 163}
+  model: meals.dishingredient
+  pk: 1814
+- fields: {dish: 157, ingredient: 176}
+  model: meals.dishingredient
+  pk: 1815
+- fields: {dish: 157, ingredient: 177}
+  model: meals.dishingredient
+  pk: 1816
+- fields: {dish: 158, ingredient: 177}
+  model: meals.dishingredient
+  pk: 1817
+- fields: {dish: 158, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1818
+- fields: {dish: 158, ingredient: 8}
+  model: meals.dishingredient
+  pk: 1819
+- fields: {dish: 158, ingredient: 163}
+  model: meals.dishingredient
+  pk: 1820
+- fields: {dish: 159, ingredient: 170}
+  model: meals.dishingredient
+  pk: 1821
+- fields: {dish: 159, ingredient: 92}
+  model: meals.dishingredient
+  pk: 1822
+- fields: {dish: 159, ingredient: 110}
+  model: meals.dishingredient
+  pk: 1823
+- fields: {dish: 159, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1824
+- fields: {dish: 159, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1825
+- fields: {dish: 159, ingredient: 84}
+  model: meals.dishingredient
+  pk: 1826
+- fields: {dish: 159, ingredient: 86}
+  model: meals.dishingredient
+  pk: 1827
+- fields: {dish: 159, ingredient: 172}
+  model: meals.dishingredient
+  pk: 1828
+- fields: {dish: 159, ingredient: 173}
+  model: meals.dishingredient
+  pk: 1829
+- fields: {dish: 159, ingredient: 2}
+  model: meals.dishingredient
+  pk: 1830
+- fields: {dish: 159, ingredient: 40}
+  model: meals.dishingredient
+  pk: 1831
+- fields: {dish: 159, ingredient: 41}
+  model: meals.dishingredient
+  pk: 1832
+- fields: {dish: 159, ingredient: 50}
+  model: meals.dishingredient
+  pk: 1833
+- fields: {dish: 159, ingredient: 91}
+  model: meals.dishingredient
+  pk: 1834
+- fields: {dish: 160, ingredient: 178}
+  model: meals.dishingredient
+  pk: 1835
+- fields: {dish: 160, ingredient: 179}
+  model: meals.dishingredient
+  pk: 1836
+- fields: {dish: 160, ingredient: 75}
+  model: meals.dishingredient
+  pk: 1837
+- fields: {dish: 160, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1838
+- fields: {dish: 160, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1839
+- fields: {dish: 161, ingredient: 75}
+  model: meals.dishingredient
+  pk: 1840
+- fields: {dish: 161, ingredient: 31}
+  model: meals.dishingredient
+  pk: 1841
+- fields: {dish: 161, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1842
+- fields: {dish: 161, ingredient: 180}
+  model: meals.dishingredient
+  pk: 1843
+- fields: {dish: 161, ingredient: 179}
+  model: meals.dishingredient
+  pk: 1844
+- fields: {dish: 162, ingredient: 75}
+  model: meals.dishingredient
+  pk: 1845
+- fields: {dish: 162, ingredient: 7}
+  model: meals.dishingredient
+  pk: 1846
+- fields: {dish: 162, ingredient: 181}
+  model: meals.dishingredient
+  pk: 1847
+- fields: {dish: 162, ingredient: 182}
+  model: meals.dishingredient
+  pk: 1848
 - fields: {title: Authentic Mexican}
   model: meals.source
   pk: 1
@@ -5606,6 +6609,21 @@
 - fields: {ingredient: 128, tag: 2}
   model: meals.ingredienttag
   pk: 21
+- fields: {ingredient: 161, tag: 1}
+  model: meals.ingredienttag
+  pk: 22
+- fields: {ingredient: 162, tag: 1}
+  model: meals.ingredienttag
+  pk: 23
+- fields: {ingredient: 155, tag: 1}
+  model: meals.ingredienttag
+  pk: 24
+- fields: {ingredient: 165, tag: 1}
+  model: meals.ingredienttag
+  pk: 25
+- fields: {ingredient: 171, tag: 1}
+  model: meals.ingredienttag
+  pk: 26
 - fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
   model: auth.permission
   pk: 1
@@ -9135,3 +10153,309 @@
       Salsa, user: 1}
   model: admin.logentry
   pk: 712
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:10:07.951221+00:00', change_message: '',
+    content_type: 11, object_id: '2', object_repr: Bacalao-Stuffed Chiles with Tomatoes
+      and Olives, user: 1}
+  model: admin.logentry
+  pk: 713
+- fields: {action_flag: 3, action_time: ! '2015-09-28 01:10:18.379235+00:00', change_message: '',
+    content_type: 11, object_id: '2', object_repr: Bacalao-Stuffed Chiles with Tomatoes
+      and Olives, user: 1}
+  model: admin.logentry
+  pk: 714
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:10:47.262980+00:00', change_message: '',
+    content_type: 8, object_id: '147', object_repr: salt cod, user: 1}
+  model: admin.logentry
+  pk: 715
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:12:16.501181+00:00', change_message: '',
+    content_type: 7, object_id: '136', object_repr: Bacalao-Stuffed Chiles with Tomatoes
+      and Olives, user: 1}
+  model: admin.logentry
+  pk: 716
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:14:00.692381+00:00', change_message: '',
+    content_type: 8, object_id: '148', object_repr: New York strip steak, user: 1}
+  model: admin.logentry
+  pk: 717
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:14:23.231565+00:00', change_message: '',
+    content_type: 7, object_id: '137', object_repr: Grilled Steak With Spicy Guajillo
+      Sauce, user: 1}
+  model: admin.logentry
+  pk: 718
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:16:39.040234+00:00', change_message: '',
+    content_type: 7, object_id: '138', object_repr: Seared Skirt Steak with Chipotle
+      and Garlic, user: 1}
+  model: admin.logentry
+  pk: 719
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:18:27.929227+00:00', change_message: '',
+    content_type: 7, object_id: '139', object_repr: Chipotle-Seasoned Pot Roast with
+      Mexican Vegetables, user: 1}
+  model: admin.logentry
+  pk: 720
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:20:02.917905+00:00', change_message: '',
+    content_type: 8, object_id: '149', object_repr: lamb stew meat, user: 1}
+  model: admin.logentry
+  pk: 721
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:20:53.210720+00:00', change_message: '',
+    content_type: 7, object_id: '140', object_repr: Seared Lamb (or Pork) in Swarthy
+      Pasilla-Honey Sauce, user: 1}
+  model: admin.logentry
+  pk: 722
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:21:37.055324+00:00', change_message: '',
+    content_type: 8, object_id: '150', object_repr: veal stew meat, user: 1}
+  model: admin.logentry
+  pk: 723
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:23:39.852305+00:00', change_message: '',
+    content_type: 7, object_id: '141', object_repr: Almond-Thickened Veal Stew with
+      Raisins and Olives, user: 1}
+  model: admin.logentry
+  pk: 724
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:24:46.291837+00:00', change_message: '',
+    content_type: 8, object_id: '151', object_repr: garbanzo beans, user: 1}
+  model: admin.logentry
+  pk: 725
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:25:06.366263+00:00', change_message: '',
+    content_type: 8, object_id: '152', object_repr: lamb shoulder, user: 1}
+  model: admin.logentry
+  pk: 726
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:25:40.214838+00:00', change_message: '',
+    content_type: 7, object_id: '142', object_repr: Lamb Barbacoa from the Backyard
+      Grill, user: 1}
+  model: admin.logentry
+  pk: 727
+- fields: {action_flag: 2, action_time: ! '2015-09-28 01:26:34.180628+00:00', change_message: 'Added
+      dish ingredient "Lamb Barbacoa from the Backyard Grill: garbanzo beans". Added
+      dish ingredient "Lamb Barbacoa from the Backyard Grill: salt". Added dish ingredient
+      "Lamb Barbacoa from the Backyard Grill: cilantro". Added dish ingredient "Lamb
+      Barbacoa from the Backyard Grill: chipotle chiles en adobo". Added dish ingredient
+      "Lamb Barbacoa from the Backyard Grill: tomatillos". Added dish ingredient "Lamb
+      Barbacoa from the Backyard Grill: sugar".', content_type: 7, object_id: '142',
+    object_repr: Lamb Barbacoa from the Backyard Grill, user: 1}
+  model: admin.logentry
+  pk: 728
+- fields: {action_flag: 2, action_time: ! '2015-09-28 01:27:06.121184+00:00', change_message: 'Added
+      dish ingredient "Lamb Barbacoa from the Backyard Grill: Mexican queso anejo".
+      Added dish ingredient "Lamb Barbacoa from the Backyard Grill: parsley". Added
+      dish ingredient "Lamb Barbacoa from the Backyard Grill: green olives".', content_type: 7,
+    object_id: '142', object_repr: Lamb Barbacoa from the Backyard Grill, user: 1}
+  model: admin.logentry
+  pk: 729
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:29:11.403718+00:00', change_message: '',
+    content_type: 7, object_id: '143', object_repr: Chile-Seasoned Pot-Roasted Pork,
+    user: 1}
+  model: admin.logentry
+  pk: 730
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:31:44.840490+00:00', change_message: '',
+    content_type: 8, object_id: '153', object_repr: pork country ribs, user: 1}
+  model: admin.logentry
+  pk: 731
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:32:27.865039+00:00', change_message: '',
+    content_type: 7, object_id: '144', object_repr: Chile-Glazed Country Ribs, user: 1}
+  model: admin.logentry
+  pk: 732
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:34:10.272640+00:00', change_message: '',
+    content_type: 7, object_id: '145', object_repr: Tomatillo-Braised Pork Country
+      Ribs with Mexican Greens, user: 1}
+  model: admin.logentry
+  pk: 733
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:35:23.954638+00:00', change_message: '',
+    content_type: 8, object_id: '154', object_repr: cabbage, user: 1}
+  model: admin.logentry
+  pk: 734
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:35:51.725796+00:00', change_message: '',
+    content_type: 7, object_id: '146', object_repr: Tangy Yucatecan Grilled Pork,
+    user: 1}
+  model: admin.logentry
+  pk: 735
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:36:41.656138+00:00', change_message: '',
+    content_type: 8, object_id: '155', object_repr: half-and-half, user: 1}
+  model: admin.logentry
+  pk: 736
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:37:28.510337+00:00', change_message: '',
+    content_type: 8, object_id: '156', object_repr: Khalua, user: 1}
+  model: admin.logentry
+  pk: 737
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:37:43.437759+00:00', change_message: '',
+    content_type: 8, object_id: '157', object_repr: vanilla extract, user: 1}
+  model: admin.logentry
+  pk: 738
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:37:51.266730+00:00', change_message: '',
+    content_type: 8, object_id: '158', object_repr: almond extract, user: 1}
+  model: admin.logentry
+  pk: 739
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:37:54.660508+00:00', change_message: '',
+    content_type: 7, object_id: '147', object_repr: Modern Mexican Chocolate Flan
+      with Kahlua, user: 1}
+  model: admin.logentry
+  pk: 740
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:40:39.754097+00:00', change_message: '',
+    content_type: 8, object_id: '159', object_repr: mangoes, user: 1}
+  model: admin.logentry
+  pk: 741
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:41:18.552742+00:00', change_message: '',
+    content_type: 7, object_id: '148', object_repr: Mango-Lime Ice, user: 1}
+  model: admin.logentry
+  pk: 742
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:42:33.537626+00:00', change_message: '',
+    content_type: 8, object_id: '160', object_repr: cake flour, user: 1}
+  model: admin.logentry
+  pk: 743
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:43:38.323557+00:00', change_message: '',
+    content_type: 8, object_id: '161', object_repr: evaporated milk, user: 1}
+  model: admin.logentry
+  pk: 744
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:44:15.673271+00:00', change_message: '',
+    content_type: 8, object_id: '162', object_repr: goat-milk caramel, user: 1}
+  model: admin.logentry
+  pk: 745
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:44:46.021995+00:00', change_message: '',
+    content_type: 8, object_id: '163', object_repr: orange liqueur, user: 1}
+  model: admin.logentry
+  pk: 746
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:44:49.240280+00:00', change_message: '',
+    content_type: 7, object_id: '149', object_repr: Celebration Cake, user: 1}
+  model: admin.logentry
+  pk: 747
+- fields: {action_flag: 2, action_time: ! '2015-09-28 01:45:05.865821+00:00', change_message: 'Added
+      ingredient tag "half-and-half: dairy".', content_type: 8, object_id: '155',
+    object_repr: half-and-half, user: 1}
+  model: admin.logentry
+  pk: 748
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:47:46.686962+00:00', change_message: '',
+    content_type: 7, object_id: '150', object_repr: Tropical "Trifle" of Mango and
+      Almonds, user: 1}
+  model: admin.logentry
+  pk: 749
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:50:51.848406+00:00', change_message: '',
+    content_type: 8, object_id: '164', object_repr: raspberries, user: 1}
+  model: admin.logentry
+  pk: 750
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:52:06.274743+00:00', change_message: '',
+    content_type: 7, object_id: '152', object_repr: Warm Cajeta Pudding with Fresh
+      Berries, user: 1}
+  model: admin.logentry
+  pk: 751
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:52:55.997174+00:00', change_message: '',
+    content_type: 8, object_id: '165', object_repr: goat's milk, user: 1}
+  model: admin.logentry
+  pk: 752
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:53:25.969399+00:00', change_message: '',
+    content_type: 8, object_id: '166', object_repr: light corn syrup, user: 1}
+  model: admin.logentry
+  pk: 753
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:53:58.514914+00:00', change_message: '',
+    content_type: 8, object_id: '167', object_repr: baking soda, user: 1}
+  model: admin.logentry
+  pk: 754
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:54:18.307361+00:00', change_message: '',
+    content_type: 8, object_id: '168', object_repr: cream sherry, user: 1}
+  model: admin.logentry
+  pk: 755
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:54:21.799279+00:00', change_message: '',
+    content_type: 7, object_id: '153', object_repr: Goat-Milk Caramel, user: 1}
+  model: admin.logentry
+  pk: 756
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:56:02.615353+00:00', change_message: '',
+    content_type: 8, object_id: '169', object_repr: coconut, user: 1}
+  model: admin.logentry
+  pk: 757
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:57:26.675142+00:00', change_message: '',
+    content_type: 7, object_id: '154', object_repr: Yucatecan-Style Fresh Coconut
+      Pie, user: 1}
+  model: admin.logentry
+  pk: 758
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:58:00.190869+00:00', change_message: '',
+    content_type: 8, object_id: '170', object_repr: all-purpose flour, user: 1}
+  model: admin.logentry
+  pk: 759
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:59:13.682924+00:00', change_message: '',
+    content_type: 8, object_id: '171', object_repr: semisweet chocolate, user: 1}
+  model: admin.logentry
+  pk: 760
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:59:15.634611+00:00', change_message: '',
+    content_type: 7, object_id: '155', object_repr: Frontera Grill's Chocolate Pecan
+      Pie, user: 1}
+  model: admin.logentry
+  pk: 761
+- fields: {action_flag: 1, action_time: ! '2015-09-28 01:59:57.169663+00:00', change_message: '',
+    content_type: 8, object_id: '172', object_repr: dark brown sugar, user: 1}
+  model: admin.logentry
+  pk: 762
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:00:24.240897+00:00', change_message: '',
+    content_type: 8, object_id: '173', object_repr: molasses, user: 1}
+  model: admin.logentry
+  pk: 763
+- fields: {action_flag: 2, action_time: ! '2015-09-28 02:01:15.580490+00:00', change_message: 'Added
+      dish ingredient "Frontera Grill''s Chocolate Pecan Pie: dark brown sugar". Added
+      dish ingredient "Frontera Grill''s Chocolate Pecan Pie: light corn syrup". Added
+      dish ingredient "Frontera Grill''s Chocolate Pecan Pie: molasses". Added dish
+      ingredient "Frontera Grill''s Chocolate Pecan Pie: Khalua". Added dish ingredient
+      "Frontera Grill''s Chocolate Pecan Pie: vanilla extract". Added dish ingredient
+      "Frontera Grill''s Chocolate Pecan Pie: whipping cream".', content_type: 7,
+    object_id: '155', object_repr: Frontera Grill's Chocolate Pecan Pie, user: 1}
+  model: admin.logentry
+  pk: 764
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:02:15.837409+00:00', change_message: '',
+    content_type: 8, object_id: '174', object_repr: puffed amaranth, user: 1}
+  model: admin.logentry
+  pk: 765
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:03:14.524480+00:00', change_message: '',
+    content_type: 8, object_id: '175', object_repr: ice cream, user: 1}
+  model: admin.logentry
+  pk: 766
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:03:54.827495+00:00', change_message: '',
+    content_type: 7, object_id: '156', object_repr: Crunchy Amaranth Tart, user: 1}
+  model: admin.logentry
+  pk: 767
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:06:53.341814+00:00', change_message: '',
+    content_type: 8, object_id: '176', object_repr: powdered sugar, user: 1}
+  model: admin.logentry
+  pk: 768
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:07:20.844721+00:00', change_message: '',
+    content_type: 8, object_id: '177', object_repr: prickly pears, user: 1}
+  model: admin.logentry
+  pk: 769
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:07:36.599958+00:00', change_message: '',
+    content_type: 7, object_id: '157', object_repr: Creamy Lime Pie, user: 1}
+  model: admin.logentry
+  pk: 770
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:08:50.389726+00:00', change_message: '',
+    content_type: 7, object_id: '158', object_repr: Crimson Prickly Pear Sauce, user: 1}
+  model: admin.logentry
+  pk: 771
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:11:46.362703+00:00', change_message: '',
+    content_type: 7, object_id: '159', object_repr: Spicy Plantain Pie, user: 1}
+  model: admin.logentry
+  pk: 772
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:12:57.107903+00:00', change_message: '',
+    content_type: 8, object_id: '178', object_repr: Cuervo Especial gold tequila,
+    user: 1}
+  model: admin.logentry
+  pk: 773
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:13:16.218733+00:00', change_message: '',
+    content_type: 8, object_id: '179', object_repr: Grand Marnier, user: 1}
+  model: admin.logentry
+  pk: 774
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:14:01.764273+00:00', change_message: '',
+    content_type: 7, object_id: '160', object_repr: Frontera's Gold Margarita, user: 1}
+  model: admin.logentry
+  pk: 775
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:15:22.672224+00:00', change_message: '',
+    content_type: 8, object_id: '180', object_repr: Sauza Conmemorativo tequila, user: 1}
+  model: admin.logentry
+  pk: 776
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:15:35.498884+00:00', change_message: '',
+    content_type: 7, object_id: '161', object_repr: Topolo Margarita, user: 1}
+  model: admin.logentry
+  pk: 777
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:16:35.498214+00:00', change_message: '',
+    content_type: 8, object_id: '181', object_repr: Tesoro silver tequila, user: 1}
+  model: admin.logentry
+  pk: 778
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:17:14.668098+00:00', change_message: '',
+    content_type: 8, object_id: '182', object_repr: Cointreau orange liqueur, user: 1}
+  model: admin.logentry
+  pk: 779
+- fields: {action_flag: 1, action_time: ! '2015-09-28 02:17:26.721458+00:00', change_message: '',
+    content_type: 7, object_id: '162', object_repr: Top-of-the-Line Margarita, user: 1}
+  model: admin.logentry
+  pk: 780
