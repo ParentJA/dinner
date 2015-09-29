@@ -14,12 +14,17 @@
 
   function DishListController($scope, dishesService) {
     $scope.getDishes = getDishes;
+    $scope.getTotalDishes = getTotalDishes;
     $scope.hasDishes = hasDishes;
     $scope.isSelectedDish = isSelectedDish;
     $scope.setSelectedDish = setSelectedDish;
 
     function getDishes() {
       return dishesService.getDishes();
+    }
+
+    function getTotalDishes() {
+      return _.size(dishesService.getDishes());
     }
 
     function hasDishes() {
@@ -37,9 +42,14 @@
 
   function DishDetailController($scope, dishesService) {
     $scope.getSelectedDish = getSelectedDish;
+    $scope.getTotalIngredients = getTotalIngredients;
 
     function getSelectedDish() {
       return dishesService.getSelectedDish();
+    }
+
+    function getTotalIngredients() {
+      return _.size(dishesService.getSelectedDish()._ingredients);
     }
   }
 

@@ -1,20 +1,10 @@
 <div class="row">
-  <!--<div class="col-lg-6">
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h4 class="panel-title">Ingredients <span
-          class="badge pull-right">{{ getTotalIngredients() }}</span></h4>
-      </div>
-      <div x-ingredient-list></div>
-    </div>
-  </div>-->
   <div class="col-lg-6">
     <div class="panel panel-success">
       <div class="panel-heading">
-        <h4 class="panel-title">Ingredients <span class="badge pull-right">{{ getTotalIngredients() }}</span></h4>
+        <h4 class="panel-title">Ingredients <span class="badge pull-right" ng-bind="getTotalIngredients()"></span></h4>
       </div>
       <div class="panel-body">
-        <!--<div x-pillbox data-collection="getIngredients()" data-exclusions="exclusions"></div>-->
         <div x-dynamic-list
              data-collection="getIngredients()"
              data-elements="getSelectedIngredients()"
@@ -35,7 +25,7 @@
     <div class="panel panel-success">
       <div class="panel-heading">
         <h4 class="panel-title">
-          Dishes with Ingredient <span class="badge pull-right">{{ getNumMatchingDishes() }}</span>
+          Dishes with Ingredient <span class="badge pull-right" ng-bind="getNumMatchingDishes()"></span>
         </h4>
       </div>
       <div class="panel-body" ng-hide="hasSelectedIngredients()">
