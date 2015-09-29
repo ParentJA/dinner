@@ -14,22 +14,36 @@
         templateUrl: "/static/views/home.html",
         controller: "HomeController"
       })
-      .state("pantry", {
+      .state("meals", {
+        url: "/meals",
+        template: "<div ui-view></div>",
+        resolve: {
+          dishes: function (dishesService, loadDishesService) {
+            if (!dishesService.hasDishes()) {
+              loadDishesService.getDishes();
+            }
+
+            return dishesService.getDishes();
+          }
+        },
+        abstract: true
+      })
+      .state("meals.pantry", {
         url: "/pantry",
         templateUrl: "/static/views/pantry.html",
         controller: "PantryController"
       })
-      .state("menus", {
+      .state("meals.menus", {
         url: "/menus",
         templateUrl: "/static/views/menus.html",
         controller: "MenuController"
       })
-      .state("dishes", {
+      .state("meals.dishes", {
         url: "/dishes",
         templateUrl: "/static/views/dishes.html",
         controller: "DishController"
       })
-      .state("ingredients", {
+      .state("meals.ingredients", {
         url: "/ingredients",
         templateUrl: "/static/views/ingredients.html",
         controller: "IngredientController"

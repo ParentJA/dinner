@@ -2,22 +2,34 @@
 
   "use strict";
 
-  function DishFactory() {
-    return function (data) {
-      _.forEach(data.dishes, function (dish) {
-        dish._ingredients = [];
+  function DishesModel() {
+    var dishes = [];
+    var ingredients = [];
+    var tags = [];
 
-        _.forEach(dish.ingredients, function (ingredientId) {
-          dish._ingredients.push(_.find(data.ingredients, {id: ingredientId}));
-        });
-      });
-
-      return data.dishes;
+    var service = {
+      getDishes: getDishes,
+      getIngredients: getIngredients,
+      getTags: getTags,
+      update: update
     };
-  }
 
-  function IngredientFactory() {
-    return function (data) {
+    function getDishes() {
+      return dishes;
+    }
+
+    function getIngredients() {
+      return ingredients;
+    }
+
+    function getTags() {
+      return tags;
+    }
+
+    function update(data) {
+      tags = data.tags;
+
+      // Update ingredients with tag objects...
       _.forEach(data.ingredients, function (ingredient) {
         ingredient._tags = [];
 
@@ -26,202 +38,186 @@
         });
       });
 
-      return data.ingredients;
-    };
-  }
+      ingredients = data.ingredients;
 
-  function CuisineFactory() {
-    return function (data) {
-      return data.cuisines;
-    };
-  }
+      // Update dishes with ingredient objects...
+      _.forEach(data.dishes, function (dish) {
+        dish._ingredients = [];
 
-  function SourceFactory() {
-    return function (data) {
-      return data.sources;
-    };
-  }
-
-  function TagFactory() {
-    return function (data) {
-      return data.tags;
-    }
-  }
-
-  function dishService($http, BASE_URL, DishFactory, IngredientFactory, CuisineFactory, SourceFactory, TagFactory) {
-    // Dishes...
-    var dishes = [],
-      selectedDish = null;
-
-    // Ingredients...
-    var ingredients = [],
-      selectedIngredient = null,
-      selectedIngredients = [];
-
-    // Cuisines...
-    var cuisines = [],
-      selectedCuisine = null;
-
-    // Sources...
-    var sources = [],
-      selectedSource = null;
-
-    // Tag...
-    var tags = [];
-
-    var service = {
-      hasDishes: function hasDishes() {
-        return (!_.isEmpty(dishes));
-      },
-      getDishes: function getDishes() {
-        return dishes;
-      },
-      getSelectedDish: function getSelectedDish() {
-        return selectedDish;
-      },
-      setSelectedDish: function setSelectedDish(value) {
-        selectedDish = value;
-      },
-      isSelectedDish: function isSelectedDish(value) {
-        return (selectedDish === value);
-      },
-      getTotalDishes: function getTotalDishes() {
-        return _.size(dishes);
-      },
-      hasIngredients: function hasIngredients() {
-        return (!_.isEmpty(ingredients));
-      },
-      getIngredients: function getIngredients() {
-        return ingredients;
-      },
-      getSelectedIngredient: function getSelectedIngredient() {
-        return selectedIngredient;
-      },
-      setSelectedIngredient: function setSelectedIngredient(value) {
-        selectedIngredient = value;
-      },
-      isSelectedIngredient: function isSelectedIngredient(value) {
-        return (selectedIngredient === value);
-      },
-
-      addSelectedIngredient: function addSelectedIngredient(ingredient) {
-        if (!_.includes(selectedIngredients, ingredient)) {
-          selectedIngredients.push(ingredient);
-        }
-      },
-      removeSelectedIngredient: function removeSelectedIngredient(ingredient) {
-        _.remove(selectedIngredients, ingredient);
-      },
-      hasSelectedIngredients: function hasSelectedIngredients() {
-        return !_.isEmpty(selectedIngredients);
-      },
-      getSelectedIngredients: function getSelectedIngredients() {
-        return selectedIngredients;
-      },
-
-      getTotalIngredients: function getTotalIngredients() {
-        return _.size(ingredients);
-      },
-      hasCuisines: function hasCuisines() {
-        return (!_.isEmpty(cuisines));
-      },
-      getCuisines: function getCuisines() {
-        return cuisines;
-      },
-      getSelectedCuisine: function getSelectedCuisine() {
-        return selectedCuisine;
-      },
-      setSelectedCuisine: function setSelectedCuisine(value) {
-        selectedCuisine = value;
-      },
-      isSelectedCuisine: function isSelectedCuisine(value) {
-        return (selectedCuisine === value);
-      },
-      getTotalCuisines: function getTotalCuisines() {
-        return _.size(cuisines);
-      },
-      hasSources: function hasSources() {
-        return (!_.isEmpty(sources));
-      },
-      getSources: function getSources() {
-        return sources;
-      },
-      getSelectedSource: function getSelectedSource() {
-        return selectedSource;
-      },
-      setSelectedSource: function setSelectedSource(value) {
-        selectedSource = value;
-      },
-      isSelectedSource: function isSelectedSource(value) {
-        return (selectedSource === value);
-      },
-      getTotalSources: function getTotalSources() {
-        return _.size(sources);
-      },
-      getTags: function getTags() {
-        return tags;
-      },
-
-      findMatchingDishes: function findMatchingDishes(ingredients) {
-        if (_.isEmpty(ingredients)) {
-          return [];
-        }
-
-        var rankMap = {};
-
-        _.forEach(ingredients, function (ingredient) {
-          var dishesWithIngredient = _.filter(dishes, function (dish) {
-            return _.includes(dish._ingredients, ingredient);
-          });
-
-          _.forEach(dishesWithIngredient, function (dish) {
-            if (!_.has(rankMap, dish.name)) {
-              rankMap[dish.name] = 0;
-            }
-
-            rankMap[dish.name] += 1;
-          });
+        _.forEach(dish.ingredients, function (ingredientId) {
+          dish._ingredients.push(_.find(data.ingredients, {id: ingredientId}));
         });
-
-        var invertedRankMap = _.invert(rankMap, true);
-        var bestMatchesIndex = _.last(_.keys(invertedRankMap).sort());
-        var bestMatches = invertedRankMap[bestMatchesIndex];
-
-        return _.findByValues(dishes, "name", bestMatches);
-      }
-    };
-
-    var init = function init() {
-      _.mixin({
-        findByValues: function (collection, property, values) {
-          return _.filter(collection, function (element) {
-            return _.includes(values, element[property]);
-          });
-        }
       });
 
-      $http.get(BASE_URL + "meals/dishes/").then(function (response) {
-        // Dishes...
-        dishes = new DishFactory(response.data);
-        selectedDish = _.first(_.sortBy(dishes, "name"));
+      dishes = data.dishes;
+    }
 
-        // Ingredients...
-        ingredients = new IngredientFactory(response.data);
+    return service;
+  }
 
-        // Cuisines...
-        cuisines = new CuisineFactory(response.data);
+  function loadDishesService($http, BASE_URL, DishesModel) {
+    this.getDishes = getDishes;
 
-        // Sources...
-        sources = new SourceFactory(response.data);
-
-        // Tags...
-        tags = new TagFactory(response.data);
+    function getDishes() {
+      return $http.get(BASE_URL + "meals/dishes/").then(function (response) {
+        DishesModel.update(response.data);
       }, function () {
         console.error("Dishes failed to load!");
       });
+    }
+  }
+
+  function dishesService(DishesModel) {
+    var selectedDish = {};
+
+    var service = {
+      findDishesWithIngredients: findDishesWithIngredients,
+      getDishes: getDishes,
+      getSelectedDish: getSelectedDish,
+      getTotalDishes: getTotalDishes,
+      hasDishes: hasDishes,
+      isSelectedDish: isSelectedDish,
+      setSelectedDish: setSelectedDish
     };
 
-    init();
+    function findDishesWithIngredients(ingredients) {
+      if (_.isEmpty(ingredients)) {
+        return [];
+      }
+
+      var dishes = DishesModel.getDishes();
+
+      var rankMap = {};
+
+      _.forEach(ingredients, function (ingredient) {
+        var dishesWithIngredient = _.filter(dishes, function (dish) {
+          return _.includes(dish._ingredients, ingredient);
+        });
+
+        _.forEach(dishesWithIngredient, function (dish) {
+          if (!_.has(rankMap, dish.name)) {
+            rankMap[dish.name] = 0;
+          }
+
+          rankMap[dish.name] += 1;
+        });
+      });
+
+      var invertedRankMap = _.invert(rankMap, true);
+      var bestMatchesIndex = _.last(_.keys(invertedRankMap).sort());
+      var bestMatches = invertedRankMap[bestMatchesIndex];
+
+      return _.filter(dishes, function (dish) {
+        return _.includes(bestMatches, dish.name);
+      });
+    }
+
+    function getDishes() {
+      return DishesModel.getDishes();
+    }
+
+    function getSelectedDish() {
+      if (_.isEmpty(selectedDish)) {
+        return _.first(_.sortBy(DishesModel.getDishes(), "name"));
+      }
+
+      return selectedDish;
+    }
+
+    function getTotalDishes() {
+      return _.size(DishesModel.getDishes());
+    }
+
+    function hasDishes() {
+      return (!_.isEmpty(DishesModel.getDishes()));
+    }
+
+    function isSelectedDish(dish) {
+      return (selectedDish === dish);
+    }
+
+    function setSelectedDish(dish) {
+      selectedDish = dish;
+    }
+
+    return service;
+  }
+
+  function ingredientsService(DishesModel) {
+    var selectedIngredient = {};
+    var selectedIngredients = [];
+
+    var service = {
+      addSelectedIngredient: addSelectedIngredient,
+      getIngredients: getIngredients,
+      getSelectedIngredient: getSelectedIngredient,
+      getSelectedIngredients: getSelectedIngredients,
+      getTotalIngredients: getTotalIngredients,
+      hasIngredients: hasIngredients,
+      hasSelectedIngredients: hasSelectedIngredients,
+      isSelectedIngredient: isSelectedIngredient,
+      removeSelectedIngredient: removeSelectedIngredient,
+      setSelectedIngredient: setSelectedIngredient
+    };
+
+    function addSelectedIngredient(ingredient) {
+      if (!_.includes(selectedIngredients, ingredient)) {
+        selectedIngredients.push(ingredient);
+      }
+    }
+
+    function getIngredients() {
+      return DishesModel.getIngredients();
+    }
+
+    function getSelectedIngredient() {
+      return selectedIngredient;
+    }
+
+    function getSelectedIngredients() {
+      return selectedIngredients;
+    }
+
+    function getTotalIngredients() {
+      return _.size(DishesModel.getIngredients());
+    }
+
+    function hasIngredients() {
+      return (!_.isEmpty(DishesModel.getIngredients()));
+    }
+
+    function hasSelectedIngredients() {
+      return !_.isEmpty(selectedIngredients);
+    }
+
+    function isSelectedIngredient(value) {
+      return (selectedIngredient === value);
+    }
+
+    function removeSelectedIngredient(ingredient) {
+      _.remove(selectedIngredients, ingredient);
+    }
+
+    function setSelectedIngredient(value) {
+      selectedIngredient = value;
+    }
+
+    return service;
+  }
+
+  function tagsService(DishesModel) {
+    var service = {
+      getTags: getTags,
+      hasTags: hasTags
+    };
+
+    function getTags() {
+      return DishesModel.getTags();
+    }
+
+    function hasTags() {
+      return !_.isEmpty(DishesModel.getTags());
+    }
 
     return service;
   }
@@ -234,55 +230,61 @@
     var ingredientTagExclusions = [];
 
     var service = {
-      hasIngredientExclusions: function hasIngredientExclusions() {
-        return !_.isEmpty(ingredientExclusions);
-      },
-      getIngredientExclusions: function getIngredientExclusions() {
-        return _.sortBy(ingredientExclusions, "name");
-      },
-      addIngredientExclusion: function addIngredientExclusion(exclusion) {
-        if (!_.includes(ingredientExclusions, exclusion)) {
-          ingredientExclusions.push(exclusion);
-        }
-      },
-      removeIngredientExclusion: function removeIngredientExclusion(exclusion) {
-        _.remove(ingredientExclusions, exclusion);
-      },
-      hasIngredientTagExclusions: function hasIngredientTagExclusions() {
-        return !_.isEmpty(ingredientTagExclusions);
-      },
-      getIngredientTagExclusions: function getIngredientTagExclusions() {
-        return _.sortBy(ingredientTagExclusions, "name");
-      },
-      addIngredientTagExclusion: function addIngredientTagExclusion(exclusion) {
-        if (!_.includes(ingredientTagExclusions, exclusion)) {
-          ingredientTagExclusions.push(exclusion);
-        }
-      },
-      removeIngredientTagExclusion: function removeIngredientTagExclusion(exclusion) {
-        _.remove(ingredientTagExclusions, exclusion);
-      }
+      addIngredientExclusion: addIngredientExclusion,
+      addIngredientTagExclusion: addIngredientTagExclusion,
+      getIngredientExclusions: getIngredientExclusions,
+      getIngredientTagExclusions: getIngredientTagExclusions,
+      hasIngredientExclusions: hasIngredientExclusions,
+      hasIngredientTagExclusions: hasIngredientTagExclusions,
+      removeIngredientExclusion: removeIngredientExclusion,
+      removeIngredientTagExclusion: removeIngredientTagExclusion
     };
+
+    function addIngredientExclusion(exclusion) {
+      if (!_.includes(ingredientExclusions, exclusion)) {
+        ingredientExclusions.push(exclusion);
+      }
+    }
+
+    function addIngredientTagExclusion(exclusion) {
+      if (!_.includes(ingredientTagExclusions, exclusion)) {
+        ingredientTagExclusions.push(exclusion);
+      }
+    }
+
+    function getIngredientExclusions() {
+      return _.sortBy(ingredientExclusions, "name");
+    }
+
+    function getIngredientTagExclusions() {
+      return _.sortBy(ingredientTagExclusions, "name");
+    }
+
+    function hasIngredientExclusions() {
+      return !_.isEmpty(ingredientExclusions);
+    }
+
+    function hasIngredientTagExclusions() {
+      return !_.isEmpty(ingredientTagExclusions);
+    }
+
+    function removeIngredientExclusion(exclusion) {
+      _.remove(ingredientExclusions, exclusion);
+    }
+
+    function removeIngredientTagExclusion(exclusion) {
+      _.remove(ingredientTagExclusions, exclusion);
+    }
 
     return service;
   }
 
   angular.module("app")
-    .factory("DishFactory", [DishFactory])
-    .factory("IngredientFactory", [IngredientFactory])
-    .factory("CuisineFactory", [CuisineFactory])
-    .factory("SourceFactory", [SourceFactory])
-    .factory("TagFactory", [TagFactory])
-    .service("dishService", [
-      "$http",
-      "BASE_URL",
-      "DishFactory",
-      "IngredientFactory",
-      "CuisineFactory",
-      "SourceFactory",
-      "TagFactory",
-      dishService
-    ])
+    .factory("DishesModel", [DishesModel])
+    .service("loadDishesService", ["$http", "BASE_URL", "DishesModel", loadDishesService])
+    .factory("dishesService", ["DishesModel", dishesService])
+    .factory("ingredientsService", ["DishesModel", ingredientsService])
+    .factory("tagsService", ["DishesModel", tagsService])
     .service("settingsService", [settingsService]);
 
 })(window, window.angular);

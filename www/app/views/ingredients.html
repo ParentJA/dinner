@@ -45,7 +45,7 @@
         <a class="list-group-item"
            ng-repeat="dish in getMatchingDishes() | orderBy: 'name'"
            ng-click="setSelectedDish(dish)"
-           ui-sref="dishes">{{ dish.name }}</a>
+           ui-sref="meals.dishes">{{ dish.name }}</a>
       </div>
     </div>
   </div>

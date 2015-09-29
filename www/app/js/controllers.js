@@ -6,44 +6,44 @@
 
   function HomeController($scope) {}
 
-  function PantryController($scope) {}
+  function PantryController($scope, dishes) {}
 
-  function MenuController($scope) {}
+  function MenuController($scope, dishes) {}
 
-  function DishController($scope, dishService) {}
+  function DishController($scope, dishes, dishesService) {}
 
-  function DishListController($scope, dishService) {
+  function DishListController($scope, dishesService) {
     $scope.getDishes = getDishes;
     $scope.hasDishes = hasDishes;
     $scope.isSelectedDish = isSelectedDish;
     $scope.setSelectedDish = setSelectedDish;
 
     function getDishes() {
-      return dishService.getDishes();
-    };
+      return dishesService.getDishes();
+    }
 
     function hasDishes() {
-      return dishService.hasDishes();
-    };
+      return dishesService.hasDishes();
+    }
 
     function isSelectedDish(value) {
-      return dishService.isSelectedDish(value);
-    };
+      return dishesService.isSelectedDish(value);
+    }
 
     function setSelectedDish(value) {
-      dishService.setSelectedDish(value);
-    };
+      dishesService.setSelectedDish(value);
+    }
   }
 
-  function DishDetailController($scope, dishService) {
+  function DishDetailController($scope, dishesService) {
     $scope.getSelectedDish = getSelectedDish;
 
     function getSelectedDish() {
-      return dishService.getSelectedDish();
-    };
+      return dishesService.getSelectedDish();
+    }
   }
 
-  function IngredientController($scope, dishService, settingsService) {
+  function IngredientController($scope, dishes, dishesService, ingredientsService, settingsService) {
     $scope.addSelectedIngredient = addSelectedIngredient;
     $scope.frequency = frequency;
     $scope.getDishes = getDishes;
@@ -61,25 +61,25 @@
     $scope.removeSelectedIngredient = removeSelectedIngredient;
 
     function addSelectedIngredient(ingredient) {
-      dishService.addSelectedIngredient(ingredient);
-    };
+      ingredientsService.addSelectedIngredient(ingredient);
+    }
 
     function frequency(ingredient) {
-      var percentage = Math.round(ingredient.count / dishService.getTotalDishes() * 100);
+      var percentage = Math.round(ingredient.count / dishesService.getTotalDishes() * 100);
 
       return (percentage === Infinity) ? 0 : percentage;
-    };
+    }
 
     function getDishes() {
-      return dishService.getDishes();
-    };
+      return dishesService.getDishes();
+    }
 
     function getDishByName(name) {
-      return _.find(dishService.getDishes(), "name", name);
-    };
+      return _.find(dishesService.getDishes(), "name", name);
+    }
 
     function getIngredients() {
-      var ingredients = dishService.getIngredients();
+      var ingredients = ingredientsService.getIngredients();
 
       // Remove ingredient exclusions...
       ingredients = _.difference(ingredients, settingsService.getIngredientExclusions());
@@ -94,66 +94,66 @@
       ingredients = _.difference(ingredients, settingsService.getIngredientTagExclusions());
 
       // Remove selected ingredients...
-      ingredients = _.difference(ingredients, dishService.getSelectedIngredients());
+      ingredients = _.difference(ingredients, ingredientsService.getSelectedIngredients());
 
       return ingredients;
-    };
+    }
 
     function getMatchingDishes() {
-      return dishService.findMatchingDishes(dishService.getSelectedIngredients());
-    };
+      return dishesService.findDishesWithIngredients(ingredientsService.getSelectedIngredients());
+    }
 
     function getNumMatchingDishes() {
       return _.size($scope.getMatchingDishes());
-    };
+    }
 
     function getSelectedIngredient() {
-      return dishService.getSelectedIngredient();
-    };
+      return ingredientsService.getSelectedIngredient();
+    }
 
     function getSelectedIngredients() {
-      return dishService.getSelectedIngredients();
-    };
+      return ingredientsService.getSelectedIngredients();
+    }
 
     function getTotalIngredients() {
       return _.size($scope.getIngredients());
-    };
+    }
 
     function hasSelectedIngredients() {
-      return !_.isEmpty(dishService.getSelectedIngredients());
-    };
+      return !_.isEmpty(ingredientsService.getSelectedIngredients());
+    }
 
     function setSelectedDish(dish) {
-      dishService.setSelectedDish(dish);
-    };
+      dishesService.setSelectedDish(dish);
+    }
 
     function setSelectedIngredient(ingredient) {
-      dishService.setSelectedIngredient(ingredient);
-    };
+      ingredientsService.setSelectedIngredient(ingredient);
+    }
 
     function removeSelectedIngredient(ingredient) {
-      dishService.removeSelectedIngredient(ingredient);
-    };
+      ingredientsService.removeSelectedIngredient(ingredient);
+    }
   }
 
-  function IngredientListController($scope, dishService) {
+  function IngredientListController($scope, dishesService, ingredientsService) {
     $scope.frequency = frequency;
     $scope.getIngredients = getIngredients;
     $scope.hasIngredients = hasIngredients;
 
     function frequency(ingredient) {
-      var percentage = Math.round(ingredient.count / dishService.getTotalDishes() * 100);
+      var percentage = Math.round(ingredient.count / dishesService.getTotalDishes() * 100);
 
       return (percentage === Infinity) ? 0 : percentage;
-    };
+    }
 
     function getIngredients() {
-      return dishService.getIngredients();
-    };
+      return ingredientsService.getIngredients();
+    }
 
     function hasIngredients() {
-      return dishService.hasIngredients();
-    };
+      return ingredientsService.hasIngredients();
+    }
   }
 
   function PillboxController($scope) {
@@ -168,18 +168,18 @@
       if (tagObject && !_.includes($scope.exclusions, tagObject)) {
         $scope.exclusions.push(tagObject);
       }
-    };
+    }
 
     function onKeyPressed(event) {
       if (event.keyCode === 13) {
         $scope.addTag($scope.tagName);
         $scope.tagName = null;
       }
-    };
+    }
 
     function removeTag(tag) {
       _.remove($scope.exclusions, tag);
-    };
+    }
   }
 
   function PillboxTagController($scope) {}
@@ -196,21 +196,21 @@
       if (!_.isEmpty(element) && !_.includes($scope.getElements(), element)) {
         $scope.addFn({element: element});
       }
-    };
+    }
 
     function onKeyPressed(event) {
       if (event.keyCode === 13) {
         $scope.addElement($scope.name);
         $scope.name = null;
       }
-    };
+    }
 
     function removeElement(element) {
       $scope.removeFn({element: element});
-    };
+    }
   }
 
-  function SettingsController($scope, dishService, settingsService) {
+  function SettingsController($scope, ingredientsService, settingsService, tagsService) {
     $scope.addIngredientExclusion = addIngredientExclusion;
     $scope.addIngredientTagExclusion = addIngredientTagExclusion;
     $scope.getIngredients = getIngredients;
@@ -222,50 +222,50 @@
 
     function addIngredientExclusion(exclusion) {
       settingsService.addIngredientExclusion(exclusion);
-    };
+    }
 
     function addIngredientTagExclusion(exclusion) {
       settingsService.addIngredientTagExclusion(exclusion);
-    };
+    }
 
     function getIngredients() {
-      return dishService.getIngredients();
-    };
+      return ingredientsService.getIngredients();
+    }
 
     function getIngredientExclusions() {
       return settingsService.getIngredientExclusions();
-    };
+    }
 
     function getIngredientTagExclusions() {
       return settingsService.getIngredientTagExclusions();
-    };
+    }
 
     function getTags() {
-      return dishService.getTags();
-    };
+      return tagsService.getTags();
+    }
 
     function removeIngredientExclusion(exclusion) {
       settingsService.removeIngredientExclusion(exclusion);
-    };
+    }
 
     function removeIngredientTagExclusion(exclusion) {
       settingsService.removeIngredientTagExclusion(exclusion);
-    };
+    }
   }
 
   angular.module("app")
     .controller("MainController", ["$scope", MainController])
     .controller("HomeController", ["$scope", HomeController])
-    .controller("PantryController", ["$scope", PantryController])
-    .controller("MenuController", ["$scope", MenuController])
-    .controller("DishController", ["$scope", "dishService", DishController])
-    .controller("DishListController", ["$scope", "dishService", DishListController])
-    .controller("DishDetailController", ["$scope", "dishService", DishDetailController])
-    .controller("IngredientController", ["$scope", "dishService", "settingsService", IngredientController])
-    .controller("IngredientListController", ["$scope", "dishService", IngredientListController])
+    .controller("PantryController", ["$scope", "dishes", PantryController])
+    .controller("MenuController", ["$scope", "dishes", MenuController])
+    .controller("DishController", ["$scope", "dishes", "dishesService", DishController])
+    .controller("DishListController", ["$scope", "dishesService", DishListController])
+    .controller("DishDetailController", ["$scope", "dishesService", DishDetailController])
+    .controller("IngredientController", ["$scope", "dishes", "dishesService", "ingredientsService", "settingsService", IngredientController])
+    .controller("IngredientListController", ["$scope", "dishesService", "ingredientsService", IngredientListController])
     .controller("PillboxController", ["$scope", PillboxController])
     .controller("PillboxTagController", ["$scope", PillboxTagController])
     .controller("DynamicListController", ["$scope", DynamicListController])
-    .controller("SettingsController", ["$scope", "dishService", "settingsService", SettingsController]);
+    .controller("SettingsController", ["$scope", "ingredientsService", "settingsService", "tagsService", SettingsController]);
 
 })(window, window.angular);
