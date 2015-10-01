@@ -34,13 +34,13 @@
     return {
       restrict: "A",
       scope: {},
-      templateUrl: "/static/views/dish_list.html",
+      templateUrl: "/static/dishes/views/dishes/components/dish_list/dish_list.html",
       controller: "DishListController"
     };
   }
 
   angular.module("app")
     .controller("DishListController", ["$scope", "dishesService", DishListController])
-    .directive("dishList", [dishList])
+    .directive("dishList", [dishList]);
 
 })(window, window.angular);

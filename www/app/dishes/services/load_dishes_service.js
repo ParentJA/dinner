@@ -3,7 +3,9 @@
   "use strict";
 
   function loadDishesService($http, BASE_URL, DishesModel) {
-    this.getDishes = getDishes;
+    var service = {
+      getDishes: getDishes
+    };
 
     function getDishes() {
       return $http.get(BASE_URL + "meals/dishes/").then(function (response) {
@@ -12,9 +14,11 @@
         console.error("Dishes failed to load!");
       });
     }
+
+    return service;
   }
 
   angular.module("app")
-    .service("loadDishesService", ["$http", "BASE_URL", "DishesModel", loadDishesService]);
+    .factory("loadDishesService", ["$http", "BASE_URL", "DishesModel", loadDishesService]);
 
 })(window, window.angular);

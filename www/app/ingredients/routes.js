@@ -104,7 +104,7 @@
   }
 
   angular.module("app")
-    .controller("IngredientController", [
+    .controller("IngredientsController", [
       "$scope", "dishes", "dishesService", "ingredientsService", "settingsService", IngredientsController
     ])
     .config(["$stateProvider", IngredientsRouterConfig]);

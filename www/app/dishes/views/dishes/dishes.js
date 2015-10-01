@@ -1,3 +1,7 @@
-/**
- * Created by parentj on 9/30/15.
- */
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  angular.module("app");
+
+})(window, window.angular);

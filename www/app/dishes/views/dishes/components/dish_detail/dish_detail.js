@@ -19,7 +19,7 @@
     return {
       restrict: "A",
       scope: {},
-      templateUrl: "/static/dishes/views/dishes/dish_detail.html",
+      templateUrl: "/static/dishes/views/dishes/components/dish_detail/dish_detail.html",
       controller: "DishDetailController"
     };
   }
