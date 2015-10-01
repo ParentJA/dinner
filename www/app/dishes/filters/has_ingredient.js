@@ -1,11 +1,6 @@
 (function (window, angular, undefined) {
-  "use strict";
 
-  function title() {
-    return function titleFilter(text) {
-      return _.startCase(text);
-    };
-  }
+  "use strict";
 
   function hasIngredient() {
     return function hasIngredientFilter(dishes, ingredient) {
@@ -16,7 +11,6 @@
   }
 
   angular.module("app")
-    .filter("title", title)
     .filter("hasIngredient", hasIngredient);
 
 })(window, window.angular);

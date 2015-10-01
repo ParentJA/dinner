@@ -9,11 +9,6 @@
 
   function UiRouterConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state("home", {
-        url: "/",
-        templateUrl: "/static/views/home.html",
-        controller: "HomeController"
-      })
       .state("meals", {
         url: "/meals",
         template: "<div ui-view></div>",
@@ -27,31 +22,6 @@
           }
         },
         abstract: true
-      })
-      .state("meals.pantry", {
-        url: "/pantry",
-        templateUrl: "/static/views/pantry.html",
-        controller: "PantryController"
-      })
-      .state("meals.menus", {
-        url: "/menus",
-        templateUrl: "/static/views/menus.html",
-        controller: "MenuController"
-      })
-      .state("meals.dishes", {
-        url: "/dishes",
-        templateUrl: "/static/views/dishes.html",
-        controller: "DishController"
-      })
-      .state("meals.ingredients", {
-        url: "/ingredients",
-        templateUrl: "/static/views/ingredients.html",
-        controller: "IngredientController"
-      })
-      .state("settings", {
-        url: "/settings",
-        templateUrl: "/static/views/settings.html",
-        controller: "SettingsController"
       });
 
     //Default state...

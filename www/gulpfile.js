@@ -5,7 +5,9 @@ var rename = require("gulp-rename");
 var uglify = require("gulp-uglify");
 
 gulp.task("scripts", function() {
-  gulp.src("app/**/*.js")
+  gulp.src("./app/**/*.js")
     .pipe(jshint())
-    .pipe(jshint.reporter("default"));
+    .pipe(jshint.reporter("default"))
+    .pipe(concat("scripts.js"))
+    .pipe(gulp.dest("./app/"));
 });
