@@ -24,5 +24,8 @@
     "ui-router": "~0.2.15",
     "fontawesome": "~4.4.0",
     "moment": "~2.10.6"
+  },
+  "devDependencies": {
+    "angular-cookies": "~1.4.7"
   }
 }
