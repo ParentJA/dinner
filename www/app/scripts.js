@@ -58,6 +58,7 @@
     .config(["$stateProvider", DishesRouterConfig]);
 
 })(window, window.angular);
+
 (function (window, angular, undefined) {
 
   "use strict";
@@ -77,7 +78,25 @@
     .config(["$stateProvider", HomeRouterConfig]);
 
 })(window, window.angular);
+(function (window, angular, undefined) {
 
+  "use strict";
+
+  function MenuController($scope, dishes) {}
+
+  function MenusRouterConfig($stateProvider) {
+    $stateProvider.state("meals.menus", {
+      url: "/menus",
+      templateUrl: "/static/menus/views/menus/menus.html",
+      controller: "MenuController"
+    });
+  }
+
+  angular.module("app")
+    .controller("MenuController", ["$scope", "dishes", MenuController])
+    .config(["$stateProvider", MenusRouterConfig]);
+
+})(window, window.angular);
 (function (window, angular, undefined) {
 
   "use strict";
@@ -275,25 +294,6 @@
 
   "use strict";
 
-  function MenuController($scope, dishes) {}
-
-  function MenusRouterConfig($stateProvider) {
-    $stateProvider.state("meals.menus", {
-      url: "/menus",
-      templateUrl: "/static/menus/views/menus/menus.html",
-      controller: "MenuController"
-    });
-  }
-
-  angular.module("app")
-    .controller("MenuController", ["$scope", "dishes", MenuController])
-    .config(["$stateProvider", MenusRouterConfig]);
-
-})(window, window.angular);
-(function (window, angular, undefined) {
-
-  "use strict";
-
   function hasIngredient() {
     return function hasIngredientFilter(dishes, ingredient) {
       return _.filter(dishes, function (dish) {
@@ -365,20 +365,6 @@
 
   angular.module("app")
     .factory("DishesModel", [DishesModel]);
-
-})(window, window.angular);
-(function (window, angular, undefined) {
-
-  "use strict";
-
-  function title() {
-    return function titleFilter(text) {
-      return _.startCase(text);
-    };
-  }
-
-  angular.module("app")
-    .filter("title", title);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -487,6 +473,20 @@
 
   angular.module("app")
     .factory("loadDishesService", ["$http", "BASE_URL", "DishesModel", loadDishesService]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function title() {
+    return function titleFilter(text) {
+      return _.startCase(text);
+    };
+  }
+
+  angular.module("app")
+    .filter("title", title);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -657,10 +657,50 @@
 
 })(window, window.angular);
 (function (window, angular, undefined) {
-  
+
   "use strict";
 
-  angular.module("app");
+  function PillboxController($scope) {
+    $scope.addTag = addTag;
+    $scope.onKeyPressed = onKeyPressed;
+    $scope.removeTag = removeTag;
+    $scope.tagName = null;
+
+    function addTag(tagName) {
+      var tagObject = _.findWhere($scope.getCollection(), {name: tagName});
+
+      if (tagObject && !_.includes($scope.exclusions, tagObject)) {
+        $scope.exclusions.push(tagObject);
+      }
+    }
+
+    function onKeyPressed(event) {
+      if (event.keyCode === 13) {
+        $scope.addTag($scope.tagName);
+        $scope.tagName = null;
+      }
+    }
+
+    function removeTag(tag) {
+      _.remove($scope.exclusions, tag);
+    }
+  }
+
+  function pillbox() {
+    return {
+      restrict: "A",
+      scope: {
+        getCollection: "&collection",
+        exclusions: "="
+      },
+      templateUrl: "/static/views/pillbox.html",
+      controller: "PillboxController"
+    };
+  }
+
+  angular.module("app")
+    .controller("PillboxController", ["$scope", PillboxController])
+    .directive("pillbox", [pillbox]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -713,50 +753,10 @@
 
 })(window, window.angular);
 (function (window, angular, undefined) {
-
+  
   "use strict";
 
-  function PillboxController($scope) {
-    $scope.addTag = addTag;
-    $scope.onKeyPressed = onKeyPressed;
-    $scope.removeTag = removeTag;
-    $scope.tagName = null;
-
-    function addTag(tagName) {
-      var tagObject = _.findWhere($scope.getCollection(), {name: tagName});
-
-      if (tagObject && !_.includes($scope.exclusions, tagObject)) {
-        $scope.exclusions.push(tagObject);
-      }
-    }
-
-    function onKeyPressed(event) {
-      if (event.keyCode === 13) {
-        $scope.addTag($scope.tagName);
-        $scope.tagName = null;
-      }
-    }
-
-    function removeTag(tag) {
-      _.remove($scope.exclusions, tag);
-    }
-  }
-
-  function pillbox() {
-    return {
-      restrict: "A",
-      scope: {
-        getCollection: "&collection",
-        exclusions: "="
-      },
-      templateUrl: "/static/views/pillbox.html",
-      controller: "PillboxController"
-    };
-  }
-
-  angular.module("app")
-    .controller("PillboxController", ["$scope", PillboxController])
-    .directive("pillbox", [pillbox]);
+  angular.module("app");
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -784,13 +784,6 @@
 
 })(window, window.angular);
 (function (window, angular, undefined) {
-
-  "use strict";
-
-  angular.module("app");
-
-})(window, window.angular);
-(function (window, angular, undefined) {
   
   "use strict";
 
@@ -805,10 +798,38 @@
 
 })(window, window.angular);
 (function (window, angular, undefined) {
+
+  "use strict";
+
+  angular.module("app");
+
+})(window, window.angular);
+(function (window, angular, undefined) {
   
   "use strict";
 
   angular.module("app");
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function DishController($scope) {
+
+  }
+
+  function dish() {
+    return {
+      restrict: "A",
+      scope: {},
+      templateUrl: "/static/dishes/views/dishes/components/dish/dish.html",
+      controller: "DishController"
+    };
+  }
+
+  angular.module("app")
+    .directive("dish", ["$scope", dish]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -886,5 +907,26 @@
   angular.module("app")
     .controller("DishListController", ["$scope", "dishesService", DishListController])
     .directive("dishList", [dishList]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function IngredientController($scope) {
+
+  }
+
+  function ingredient() {
+    return {
+      restrict: "A",
+      scope: {},
+      templateUrl: "/static/ingredients/views/ingredients/components/ingredient/ingredient.html",
+      controller: "IngredientController"
+    };
+  }
+
+  angular.module("app")
+    .directive("ingredient", ["$scope", ingredient]);
 
 })(window, window.angular);
