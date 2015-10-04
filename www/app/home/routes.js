@@ -2,8 +2,6 @@
 
   "use strict";
 
-  function HomeController($scope) {}
-
   function HomeRouterConfig($stateProvider) {
     $stateProvider.state("home", {
       url: "/",
@@ -13,7 +11,6 @@
   }
 
   angular.module("app")
-    .controller("HomeController", ["$scope", HomeController])
     .config(["$stateProvider", HomeRouterConfig]);
 
 })(window, window.angular);

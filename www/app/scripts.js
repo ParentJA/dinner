@@ -32,11 +32,50 @@
     $rootScope.$state = $state;
   }
 
-  angular.module("app", ["ui.router"])
+  function MainController($scope, $state, accountsService) {
+    $scope.getUser = function getUser() {
+      return accountsService.getUser();
+    };
+
+    $scope.hasUser = function hasUser() {
+      return accountsService.hasUser();
+    };
+
+    $scope.logOut = function logOut() {
+      accountsService.logOut().then(function () {
+        $state.go("home");
+      });
+    };
+  }
+
+  angular.module("app", ["ngCookies", "ui.router"])
     .constant("BASE_URL", "/api/v1/")
     .config(["$httpProvider", HttpConfig])
     .config(["$stateProvider", "$urlRouterProvider", UiRouterConfig])
-    .run(["$rootScope", "$state", UiRunner]);
+    .run(["$rootScope", "$state", UiRunner])
+    .controller("MainController", ["$scope", "$state", "accountsService", MainController]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function AccountsRouterConfig($stateProvider) {
+    $stateProvider
+      .state("sign_up", {
+        url: "/sign_up",
+        templateUrl: "/static/accounts/views/sign_up/sign_up.html",
+        controller: "SignUpController"
+      })
+      .state("log_in", {
+        url: "/log_in",
+        templateUrl: "/static/accounts/views/log_in/log_in.html",
+        controller: "LogInController"
+      });
+  }
+
+  angular.module("app")
+    .config(["$stateProvider", AccountsRouterConfig]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -63,8 +102,6 @@
 
   "use strict";
 
-  function HomeController($scope) {}
-
   function HomeRouterConfig($stateProvider) {
     $stateProvider.state("home", {
       url: "/",
@@ -74,27 +111,7 @@
   }
 
   angular.module("app")
-    .controller("HomeController", ["$scope", HomeController])
     .config(["$stateProvider", HomeRouterConfig]);
-
-})(window, window.angular);
-(function (window, angular, undefined) {
-
-  "use strict";
-
-  function MenuController($scope, dishes) {}
-
-  function MenusRouterConfig($stateProvider) {
-    $stateProvider.state("meals.menus", {
-      url: "/menus",
-      templateUrl: "/static/menus/views/menus/menus.html",
-      controller: "MenuController"
-    });
-  }
-
-  angular.module("app")
-    .controller("MenuController", ["$scope", "dishes", MenuController])
-    .config(["$stateProvider", MenusRouterConfig]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -213,6 +230,25 @@
 
   "use strict";
 
+  function MenuController($scope, dishes) {}
+
+  function MenusRouterConfig($stateProvider) {
+    $stateProvider.state("meals.menus", {
+      url: "/menus",
+      templateUrl: "/static/menus/views/menus/menus.html",
+      controller: "MenuController"
+    });
+  }
+
+  angular.module("app")
+    .controller("MenuController", ["$scope", "dishes", MenuController])
+    .config(["$stateProvider", MenusRouterConfig]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
   function PantryController($scope, dishes) {}
 
   function PantryRouterConfig($stateProvider) {
@@ -226,6 +262,22 @@
   angular.module("app")
     .controller("PantryController", ["$scope", "dishes", PantryController])
     .config(["$stateProvider", PantryRouterConfig]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function ProfileRouterConfig($stateProvider) {
+    $stateProvider.state("profile", {
+      url: "/profile",
+      templateUrl: "/static/profile/views/profile/profile.html",
+      controller: "ProfileController"
+    });
+  }
+
+  angular.module("app")
+    .config(["$stateProvider", ProfileRouterConfig]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -288,6 +340,102 @@
       "$scope", "ingredientsService", "settingsService", "tagsService", SettingsController
     ])
     .config(["$stateProvider", SettingsRouterConfig]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function AccountsModel($cookies) {
+    var service = {
+      clearUser: clearUser,
+      getUser: getUser,
+      hasUser: hasUser,
+      setUser: setUser
+    };
+
+    function clearUser() {
+      $cookies.remove("authenticatedUser");
+    }
+
+    function getUser() {
+      if (!$cookies.get("authenticatedUser")) {
+        return undefined;
+      }
+
+      return JSON.parse($cookies.get("authenticatedUser"));
+    }
+
+    function hasUser() {
+      return !!$cookies.get("authenticatedUser");
+    }
+
+    function setUser(data) {
+      $cookies.put("authenticatedUser", JSON.stringify(data.user));
+    }
+
+    return service;
+  }
+
+  angular.module("app")
+    .factory("AccountsModel", ["$cookies", AccountsModel]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function accountsService($http, AccountsModel) {
+    var service = {
+      getUser: getUser,
+      hasUser: hasUser,
+      logIn: logIn,
+      logOut: logOut,
+      signUp: signUp
+    };
+
+    function getUser() {
+      return AccountsModel.getUser();
+    }
+
+    function hasUser() {
+      return AccountsModel.hasUser();
+    }
+
+    function logIn(username, password) {
+      return $http.post("/accounts/log_in/", {
+        username: username,
+        password: password
+      }).then(function (response) {
+        AccountsModel.setUser(response.data);
+      });
+    }
+
+    function logOut() {
+      return $http.post("/accounts/log_out/", {}).then(function (response) {
+        AccountsModel.clearUser();
+      }, function () {
+        console.error("Log out failed!");
+      });
+    }
+
+    function signUp(firstName, lastName, email, password) {
+      return $http.post("/accounts/sign_up/", {
+        first_name: firstName,
+        last_name: lastName,
+        username: email,
+        email: email,
+        password: password
+      }).then(function () {
+        return logIn(email, password);
+      });
+    }
+
+    return service;
+  }
+
+  angular.module("app")
+    .factory("accountsService", ["$http", "AccountsModel", accountsService]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -653,7 +801,117 @@
 
   "use strict";
 
+  function LogInController($scope, $state, accountsService) {
+    $scope.error = {};
+    $scope.form = "";
+    $scope.password = "";
+    $scope.username = "";
+
+    $scope.hasError = function hasError() {
+      return !_.isEmpty($scope.error);
+    };
+
+    $scope.onSubmit = function onSubmit() {
+      accountsService.logIn($scope.username, $scope.password).then(function () {
+        $state.go("home");
+      }, function (response) {
+        $scope.error = response.data;
+        $scope.password = "";
+      });
+    };
+  }
+
+  angular.module("app")
+    .controller("LogInController", ["$scope", "$state", "accountsService", LogInController]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function SignUpController($scope, $state, accountsService) {
+    $scope.email = "";
+    $scope.error = {};
+    $scope.firstName = "";
+    $scope.form = "";
+    $scope.lastName = "";
+    $scope.password1 = "";
+    $scope.password2 = "";
+
+    $scope.hasError = function hasError() {
+      return !_.isEmpty($scope.error);
+    };
+
+    $scope.onSubmit = function onSubmit() {
+      accountsService.signUp($scope.firstName, $scope.lastName, $scope.email, $scope.password1).then(function () {
+        $state.go("home");
+      }, function (response) {
+        $scope.error = response.data;
+        $scope.email = "";
+        $scope.password1 = "";
+        $scope.password2 = "";
+      });
+    };
+  }
+
+  angular.module("app")
+    .controller("SignUpController", ["$scope", "$state", "accountsService", SignUpController]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
   angular.module("app");
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function DynamicListController($scope) {
+    $scope.addElement = addElement;
+    $scope.name = null;
+    $scope.onKeyPressed = onKeyPressed;
+    $scope.removeElement = removeElement;
+
+    function addElement(name) {
+      var element = _.find($scope.getCollection(), {name: name});
+
+      if (!_.isEmpty(element) && !_.includes($scope.getElements(), element)) {
+        $scope.addFn({element: element});
+      }
+    }
+
+    function onKeyPressed(event) {
+      if (event.keyCode === 13) {
+        $scope.addElement($scope.name);
+        $scope.name = null;
+      }
+    }
+
+    function removeElement(element) {
+      $scope.removeFn({element: element});
+    }
+  }
+
+  function dynamicList() {
+    return {
+      restrict: "A",
+      scope: {
+        getCollection: "&collection",
+        getElements: "&elements",
+        addFn: "&",
+        removeFn: "&"
+      },
+      templateUrl: "/static/global/views/dynamic_list/dynamic_list.html",
+      controller: "DynamicListController"
+    };
+  }
+
+  angular.module("app")
+    .controller("DynamicListController", ["$scope", DynamicListController])
+    .directive("dynamicList", [dynamicList]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -707,62 +965,6 @@
 
   "use strict";
 
-  function DynamicListController($scope) {
-    $scope.addElement = addElement;
-    $scope.name = null;
-    $scope.onKeyPressed = onKeyPressed;
-    $scope.removeElement = removeElement;
-
-    function addElement(name) {
-      var element = _.find($scope.getCollection(), {name: name});
-
-      if (!_.isEmpty(element) && !_.includes($scope.getElements(), element)) {
-        $scope.addFn({element: element});
-      }
-    }
-
-    function onKeyPressed(event) {
-      if (event.keyCode === 13) {
-        $scope.addElement($scope.name);
-        $scope.name = null;
-      }
-    }
-
-    function removeElement(element) {
-      $scope.removeFn({element: element});
-    }
-  }
-
-  function dynamicList() {
-    return {
-      restrict: "A",
-      scope: {
-        getCollection: "&collection",
-        getElements: "&elements",
-        addFn: "&",
-        removeFn: "&"
-      },
-      templateUrl: "/static/global/views/dynamic_list/dynamic_list.html",
-      controller: "DynamicListController"
-    };
-  }
-
-  angular.module("app")
-    .controller("DynamicListController", ["$scope", DynamicListController])
-    .directive("dynamicList", [dynamicList]);
-
-})(window, window.angular);
-(function (window, angular, undefined) {
-  
-  "use strict";
-
-  angular.module("app");
-
-})(window, window.angular);
-(function (window, angular, undefined) {
-
-  "use strict";
-
   function PillboxTagController($scope) {}
 
   function pillboxTag() {
@@ -784,7 +986,28 @@
 
 })(window, window.angular);
 (function (window, angular, undefined) {
+
+  "use strict";
+
+  function HomeController($scope, accountsService) {
+    $scope.hasUser = function hasUser() {
+      return accountsService.hasUser();
+    };
+  }
+
+  angular.module("app")
+    .controller("HomeController", ["$scope", "accountsService", HomeController]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
   
+  "use strict";
+
+  angular.module("app");
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
   "use strict";
 
   angular.module("app");
@@ -801,7 +1024,10 @@
 
   "use strict";
 
-  angular.module("app");
+  function ProfileController($scope) {}
+
+  angular.module("app")
+    .controller("ProfileController", ["$scope", ProfileController]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -830,37 +1056,6 @@
 
   angular.module("app")
     .directive("dish", ["$scope", dish]);
-
-})(window, window.angular);
-(function (window, angular, undefined) {
-
-  "use strict";
-
-  function DishDetailController($scope, dishesService) {
-    $scope.getSelectedDish = getSelectedDish;
-    $scope.getTotalIngredients = getTotalIngredients;
-
-    function getSelectedDish() {
-      return dishesService.getSelectedDish();
-    }
-
-    function getTotalIngredients() {
-      return _.size(dishesService.getSelectedDish()._ingredients);
-    }
-  }
-
-  function dishDetail() {
-    return {
-      restrict: "A",
-      scope: {},
-      templateUrl: "/static/dishes/views/dishes/components/dish_detail/dish_detail.html",
-      controller: "DishDetailController"
-    };
-  }
-
-  angular.module("app")
-    .controller("DishDetailController", ["$scope", "dishesService", DishDetailController])
-    .directive("dishDetail", [dishDetail]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {
@@ -907,6 +1102,37 @@
   angular.module("app")
     .controller("DishListController", ["$scope", "dishesService", DishListController])
     .directive("dishList", [dishList]);
+
+})(window, window.angular);
+(function (window, angular, undefined) {
+
+  "use strict";
+
+  function DishDetailController($scope, dishesService) {
+    $scope.getSelectedDish = getSelectedDish;
+    $scope.getTotalIngredients = getTotalIngredients;
+
+    function getSelectedDish() {
+      return dishesService.getSelectedDish();
+    }
+
+    function getTotalIngredients() {
+      return _.size(dishesService.getSelectedDish()._ingredients);
+    }
+  }
+
+  function dishDetail() {
+    return {
+      restrict: "A",
+      scope: {},
+      templateUrl: "/static/dishes/views/dishes/components/dish_detail/dish_detail.html",
+      controller: "DishDetailController"
+    };
+  }
+
+  angular.module("app")
+    .controller("DishDetailController", ["$scope", "dishesService", DishDetailController])
+    .directive("dishDetail", [dishDetail]);
 
 })(window, window.angular);
 (function (window, angular, undefined) {

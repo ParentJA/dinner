@@ -11,6 +11,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'accounts.User'
+
 DEFAULT_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -27,6 +29,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
+    'accounts',
     'meals',
 )
 
@@ -99,6 +102,12 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'www/app/'),
     os.path.join(BASE_DIR, 'www/bower_components/'),
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
+
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 try:
     from .local_settings import *

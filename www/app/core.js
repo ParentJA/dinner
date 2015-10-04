@@ -32,10 +32,27 @@
     $rootScope.$state = $state;
   }
 
-  angular.module("app", ["ui.router"])
+  function MainController($scope, $state, accountsService) {
+    $scope.getUser = function getUser() {
+      return accountsService.getUser();
+    };
+
+    $scope.hasUser = function hasUser() {
+      return accountsService.hasUser();
+    };
+
+    $scope.logOut = function logOut() {
+      accountsService.logOut().then(function () {
+        $state.go("home");
+      });
+    };
+  }
+
+  angular.module("app", ["ngCookies", "ui.router"])
     .constant("BASE_URL", "/api/v1/")
     .config(["$httpProvider", HttpConfig])
     .config(["$stateProvider", "$urlRouterProvider", UiRouterConfig])
-    .run(["$rootScope", "$state", UiRunner]);
+    .run(["$rootScope", "$state", UiRunner])
+    .controller("MainController", ["$scope", "$state", "accountsService", MainController]);
 
 })(window, window.angular);
