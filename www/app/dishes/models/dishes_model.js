@@ -27,10 +27,13 @@
     }
 
     function update(data) {
+      var vectorIndex = 0;
+
       tags = data.tags;
 
-      // Update ingredients with tag objects...
+      // Update ingredients...
       _.forEach(data.ingredients, function (ingredient) {
+        ingredient.vectorIndex = vectorIndex++;
         ingredient._tags = [];
 
         _.forEach(ingredient.tags, function (tagId) {
@@ -40,7 +43,7 @@
 
       ingredients = data.ingredients;
 
-      // Update dishes with ingredient objects...
+      // Update dishes...
       _.forEach(data.dishes, function (dish) {
         dish._ingredients = [];
 
