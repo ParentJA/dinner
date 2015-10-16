@@ -4,7 +4,7 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 import os
 
 # Third-party imports...
-from dj_database_url
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
