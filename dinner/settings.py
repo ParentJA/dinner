@@ -6,7 +6,7 @@ import os
 # Third-party imports...
 import dj_database_url
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'az#p-g^l&lr#m4ub#pj2=8lzlu!ikefjls@d32u*10uokxlchp'
 
@@ -95,13 +95,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 STATIC_ROOT = 'staticfiles'
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    # os.path.join(BASE_DIR, 'www/app/'),
-    # os.path.join(BASE_DIR, 'www/bower_components/'),
     os.path.join(BASE_DIR, 'static'),
 )
 
