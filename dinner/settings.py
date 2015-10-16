@@ -3,18 +3,15 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 # Standard library imports...
 import os
 
-# Third-party imports...
-import dj_database_url
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'az#p-g^l&lr#m4ub#pj2=8lzlu!ikefjls@d32u*10uokxlchp'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+AUTH_USER_MODEL = 'accounts.User'
 
 DEFAULT_APPS = (
     'django.contrib.admin',
@@ -32,6 +29,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
+    'accounts',
     'meals',
 )
 
@@ -82,7 +80,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'dinner.wsgi.application'
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 LANGUAGE_CODE = 'en-us'
@@ -95,13 +96,18 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_ROOT = 'staticfiles'
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'www/app/'),
+    os.path.join(BASE_DIR, 'www/bower_components/'),
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
+
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 try:
     from .local_settings import *
