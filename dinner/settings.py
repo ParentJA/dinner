@@ -6,7 +6,7 @@ import os
 # Third-party imports...
 import dj_database_url
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 SECRET_KEY = 'az#p-g^l&lr#m4ub#pj2=8lzlu!ikefjls@d32u*10uokxlchp'
 
