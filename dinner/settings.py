@@ -100,8 +100,8 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'www/app/'),
-    os.path.join(BASE_DIR, 'www/bower_components/'),
+    # os.path.join(BASE_DIR, 'www/app/'),
+    # os.path.join(BASE_DIR, 'www/bower_components/'),
     os.path.join(BASE_DIR, 'static'),
 )
 
