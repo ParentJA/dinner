@@ -3,29 +3,40 @@
   "use strict";
 
   function DynamicListController($scope) {
-    $scope.addElement = addElement;
+    $scope.collection = [];
+    $scope.elements = [];
     $scope.name = null;
-    $scope.onKeyPressed = onKeyPressed;
-    $scope.removeElement = removeElement;
 
-    function addElement(name) {
+    $scope.addElement = function addElement(name) {
       var element = _.find($scope.getCollection(), {name: name});
 
       if (!_.isEmpty(element) && !_.includes($scope.getElements(), element)) {
         $scope.addFn({element: element});
       }
-    }
+    };
 
-    function onKeyPressed(event) {
+    $scope.onKeyPressed = function onKeyPressed(event) {
       if (event.keyCode === 13) {
         $scope.addElement($scope.name);
         $scope.name = null;
       }
-    }
+    };
 
-    function removeElement(element) {
+    $scope.removeElement = function removeElement(element) {
       $scope.removeFn({element: element});
-    }
+    };
+
+    $scope.$watchCollection($scope.getCollection, function (newValue, oldValue) {
+      if (!_.isEqual(newValue, oldValue)) {
+        $scope.collection = newValue;
+      }
+    });
+
+    $scope.$watchCollection($scope.getElements, function (newValue, oldValue) {
+      if (!_.isEqual(newValue, oldValue)) {
+        $scope.elements = newValue;
+      }
+    });
   }
 
   function dynamicList() {

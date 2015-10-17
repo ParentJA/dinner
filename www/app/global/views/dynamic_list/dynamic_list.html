@@ -2,13 +2,13 @@
   <div class="input-group">
     <input class="form-control" type="text" placeholder="Enter element name..." ng-model="name"
            ng-keypress="onKeyPressed($event)" typeahead-min-length="2"
-           uib-typeahead="item.name for item in getCollection() | filter: $viewValue | limitTo: 10">
+           uib-typeahead="item.name for item in collection | filter: $viewValue | limitTo: 10">
     <span class="input-group-btn">
       <button class="btn btn-default" type="button" ng-click="addElement(name)">Add element</button>
     </span>
   </div>
   <ul class="list-group">
-    <li class="list-group-item" ng-repeat="element in getElements()">
+    <li class="list-group-item" ng-repeat="element in elements">
       <span>{{ element.name }}</span>
       <span class="close pull-right" ng-click="removeElement(element)">&times;</span>
     </li>
