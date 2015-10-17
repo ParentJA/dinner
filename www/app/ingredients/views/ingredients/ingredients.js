@@ -3,41 +3,24 @@
   "use strict";
 
   function IngredientsController($scope, dishes, dishesService, ingredientsService, settingsService) {
-    $scope.addSelectedIngredient = addSelectedIngredient;
-    $scope.frequency = frequency;
-    $scope.getDishes = getDishes;
-    $scope.getDishByName = getDishByName;
-    $scope.getIngredients = getIngredients;
-    $scope.getMatchingDishes = getMatchingDishes;
-    $scope.getNumMatchingDishes = getNumMatchingDishes;
-    $scope.getSelectedIngredient = getSelectedIngredient;
-    $scope.getSelectedIngredients = getSelectedIngredients;
-    $scope.getTotalIngredients = getTotalIngredients;
-    $scope.hasSelectedIngredients = hasSelectedIngredients;
-    $scope.numIngredients = 15;
-    $scope.setSelectedDish = setSelectedDish;
-    $scope.setSelectedIngredient = setSelectedIngredient;
-    $scope.removeSelectedIngredient = removeSelectedIngredient;
+    $scope.hasSelectedIngredients = false;
+    $scope.ingredients = [];
+    $scope.matchingDishes = [];
+    $scope.numTotalIngredients = 0;
 
-    function addSelectedIngredient(ingredient) {
+    $scope.addSelectedIngredient = function addSelectedIngredient(ingredient) {
       ingredientsService.addSelectedIngredient(ingredient);
-    }
+    };
 
-    function frequency(ingredient) {
-      var percentage = Math.round(ingredient.count / dishesService.getTotalDishes() * 100);
+    $scope.frequency = function frequency(ingredient) {
+      return Math.round(ingredient.count / dishesService.getTotalDishes() * 100);
+    };
 
-      return (percentage === Infinity) ? 0 : percentage;
-    }
-
-    function getDishes() {
+    $scope.getDishes = function getDishes() {
       return dishesService.getDishes();
-    }
+    };
 
-    function getDishByName(name) {
-      return _.find(dishesService.getDishes(), "name", name);
-    }
-
-    function getIngredients() {
+    $scope.getIngredients = function getIngredients() {
       var ingredients = ingredientsService.getIngredients();
 
       // Remove ingredient exclusions...
@@ -56,48 +39,46 @@
       ingredients = _.difference(ingredients, ingredientsService.getSelectedIngredients());
 
       return ingredients;
-    }
+    };
+
+    $scope.getSelectedIngredients = function getSelectedIngredients() {
+      return ingredientsService.getSelectedIngredients();
+    };
+
+    $scope.setSelectedDish = function setSelectedDish(dish) {
+      dishesService.setSelectedDish(dish);
+    };
+
+    $scope.removeSelectedIngredient = function removeSelectedIngredient(ingredient) {
+      ingredientsService.removeSelectedIngredient(ingredient);
+    };
+
+    $scope.$watchCollection($scope.getDishes, function (newValue, oldValue) {
+      if (!_.isEqual(newValue, oldValue)) {
+        $scope.dishes = newValue;
+      }
+    });
+
+    $scope.$watchCollection($scope.getIngredients, function (newValue, oldValue) {
+      if (!_.isEqual(newValue, oldValue)) {
+        $scope.ingredients = $scope.getIngredients();
+        $scope.numTotalIngredients = _.size(newValue);
+      }
+    });
+
+    $scope.$watchCollection($scope.getSelectedIngredients, function (newValue, oldValue) {
+      if (!_.isEqual(newValue, oldValue)) {
+        $scope.hasSelectedIngredients = !_.isEmpty(ingredientsService.getSelectedIngredients());
+        $scope.matchingDishes = getMatchingDishes();
+      }
+    });
 
     function getMatchingDishes() {
-      console.log("Get matching dishes...");
-
       return dishesService.findDishesWithIngredients(ingredientsService.getSelectedIngredients());
       /*return dishesService.findSimilarDishes(
         ingredientsService.getSelectedIngredients(),
         ingredientsService.getIngredients()
       );*/
-    }
-
-    function getNumMatchingDishes() {
-      return _.size($scope.getMatchingDishes());
-    }
-
-    function getSelectedIngredient() {
-      return ingredientsService.getSelectedIngredient();
-    }
-
-    function getSelectedIngredients() {
-      return ingredientsService.getSelectedIngredients();
-    }
-
-    function getTotalIngredients() {
-      return _.size($scope.getIngredients());
-    }
-
-    function hasSelectedIngredients() {
-      return !_.isEmpty(ingredientsService.getSelectedIngredients());
-    }
-
-    function setSelectedDish(dish) {
-      dishesService.setSelectedDish(dish);
-    }
-
-    function setSelectedIngredient(ingredient) {
-      ingredientsService.setSelectedIngredient(ingredient);
-    }
-
-    function removeSelectedIngredient(ingredient) {
-      ingredientsService.removeSelectedIngredient(ingredient);
     }
   }
 
