@@ -1,7 +1,8 @@
 <div class="component--dynamic-list">
   <div class="input-group">
     <input class="form-control" type="text" placeholder="Enter element name..." ng-model="name"
-           ng-keypress="onKeyPressed($event)">
+           ng-keypress="onKeyPressed($event)" typeahead-min-length="2"
+           uib-typeahead="item.name for item in getCollection() | filter: $viewValue | limitTo: 10">
     <span class="input-group-btn">
       <button class="btn btn-default" type="button" ng-click="addElement(name)">Add element</button>
     </span>
