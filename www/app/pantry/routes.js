@@ -2,8 +2,6 @@
 
   "use strict";
 
-  function PantryController($scope, dishes) {}
-
   function PantryRouterConfig($stateProvider) {
     $stateProvider.state("meals.pantry", {
       url: "/pantry",
@@ -13,7 +11,6 @@
   }
 
   angular.module("app")
-    .controller("PantryController", ["$scope", "dishes", PantryController])
     .config(["$stateProvider", PantryRouterConfig]);
 
 })(window, window.angular);

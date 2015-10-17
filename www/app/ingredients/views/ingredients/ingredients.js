@@ -61,7 +61,7 @@
 
     $scope.$watchCollection($scope.getIngredients, function (newValue, oldValue) {
       if (!_.isEqual(newValue, oldValue)) {
-        $scope.ingredients = $scope.getIngredients();
+        $scope.ingredients = newValue;
         $scope.numTotalIngredients = _.size(newValue);
       }
     });
