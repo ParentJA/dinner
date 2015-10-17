@@ -2,7 +2,7 @@
 
   "use strict";
 
-  function loadDishesService($http, BASE_URL, DishesModel) {
+  function loadDishesService($http, $q, BASE_URL, DishesModel) {
     var service = {
       getDishes: getDishes
     };
@@ -19,6 +19,6 @@
   }
 
   angular.module("app")
-    .factory("loadDishesService", ["$http", "BASE_URL", "DishesModel", loadDishesService]);
+    .factory("loadDishesService", ["$http", "$q", "BASE_URL", "DishesModel", loadDishesService]);
 
 })(window, window.angular);

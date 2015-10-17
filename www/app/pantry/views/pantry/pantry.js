@@ -2,7 +2,7 @@
   
   "use strict";
 
-  function PantryController($scope, dishes, ingredientsService) {
+  function PantryController($scope, dishes, ingredientsService, pantries) {
     $scope.availableIngredients = [];
     $scope.emptyMethod = _.noop;
     $scope.hasSelectedIngredients = false;
@@ -59,7 +59,7 @@
 
   angular.module("app")
     .controller("PantryController", [
-      "$scope", "dishes", "ingredientsService", PantryController
+      "$scope", "dishes", "ingredientsService", "pantries", PantryController
     ]);
 
 })(window, window.angular);
