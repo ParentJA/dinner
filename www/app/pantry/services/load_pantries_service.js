@@ -4,7 +4,6 @@
 
   function loadPantriesService($http, $q, BASE_URL, pantriesModel) {
 
-
     return function() {
       var deferred = $q.defer();
 
@@ -18,20 +17,6 @@
 
       return deferred.promise;
     };
-
-    /*var service = {
-      getPantries: getPantries
-    };
-
-    function getPantries() {
-      return $http.get(BASE_URL + "pantries/").then(function (response) {
-        pantriesModel.update(response.data);
-      }, function () {
-        console.error("Pantries failed to load!");
-      });
-    }
-
-    return service;*/
   }
 
   angular.module("app")

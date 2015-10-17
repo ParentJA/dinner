@@ -2,24 +2,24 @@
 
   "use strict";
 
-  function tagsService(DishesModel) {
+  function tagsService(dishesModel) {
     var service = {
       getTags: getTags,
       hasTags: hasTags
     };
 
     function getTags() {
-      return DishesModel.getTags();
+      return dishesModel.getTags();
     }
 
     function hasTags() {
-      return !_.isEmpty(DishesModel.getTags());
+      return !_.isEmpty(dishesModel.getTags());
     }
 
     return service;
   }
 
   angular.module("app")
-    .factory("tagsService", ["DishesModel", tagsService]);
+    .factory("tagsService", ["dishesModel", tagsService]);
 
 })(window, window.angular);

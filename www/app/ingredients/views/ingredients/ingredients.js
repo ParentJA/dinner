@@ -17,7 +17,7 @@
     };
 
     $scope.getDishes = function getDishes() {
-      return dishesService.getDishes();
+      return dishes.getDishes();
     };
 
     $scope.getIngredients = function getIngredients() {
