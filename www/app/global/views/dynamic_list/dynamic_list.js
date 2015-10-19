@@ -37,6 +37,13 @@
         $scope.elements = newValue;
       }
     });
+
+    activate();
+
+    function activate() {
+      $scope.collection = $scope.getCollection();
+      $scope.elements = $scope.getElements();
+    }
   }
 
   function dynamicList() {

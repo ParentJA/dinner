@@ -3,6 +3,7 @@
   "use strict";
 
   function IngredientsController($scope, dishes, dishesService, ingredientsService, settingsService) {
+    $scope.dishes = [];
     $scope.hasSelectedIngredients = false;
     $scope.ingredients = [];
     $scope.matchingDishes = [];
@@ -14,10 +15,6 @@
 
     $scope.frequency = function frequency(ingredient) {
       return Math.round(ingredient.count / dishesService.getTotalDishes() * 100);
-    };
-
-    $scope.getDishes = function getDishes() {
-      return dishes.getDishes();
     };
 
     $scope.getIngredients = function getIngredients() {
@@ -53,25 +50,23 @@
       ingredientsService.removeSelectedIngredient(ingredient);
     };
 
-    $scope.$watchCollection($scope.getDishes, function (newValue, oldValue) {
-      if (!_.isEqual(newValue, oldValue)) {
-        $scope.dishes = newValue;
-      }
-    });
-
-    $scope.$watchCollection($scope.getIngredients, function (newValue, oldValue) {
-      if (!_.isEqual(newValue, oldValue)) {
-        $scope.ingredients = newValue;
-        $scope.numTotalIngredients = _.size(newValue);
-      }
-    });
-
     $scope.$watchCollection($scope.getSelectedIngredients, function (newValue, oldValue) {
       if (!_.isEqual(newValue, oldValue)) {
-        $scope.hasSelectedIngredients = !_.isEmpty(ingredientsService.getSelectedIngredients());
+        $scope.hasSelectedIngredients = !_.isEmpty(newValue);
+        $scope.ingredients = $scope.getIngredients();
+        $scope.numTotalIngredients = _.size($scope.ingredients);
         $scope.matchingDishes = getMatchingDishes();
       }
     });
+
+    activate();
+
+    function activate() {
+      $scope.dishes = dishes.getDishes();
+      $scope.hasSelectedIngredients = !_.isEmpty($scope.getSelectedIngredients());
+      $scope.ingredients = $scope.getIngredients();
+      $scope.numTotalIngredients = _.size($scope.ingredients);
+    }
 
     function getMatchingDishes() {
       return dishesService.findDishesWithIngredients(ingredientsService.getSelectedIngredients());

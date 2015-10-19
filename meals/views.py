@@ -9,7 +9,9 @@ from rest_framework.response import Response
 
 # Local imports...
 from .models import Cuisine, Dish, DishIngredient, Ingredient, Source, Tag
-from .serializers import CuisineSerializer, DishSerializer, IngredientSerializer, SourceSerializer, TagSerializer
+from .serializers import (
+    CuisineSerializer, DishSerializer, IngredientWithCountSerializer, SourceSerializer, TagSerializer
+)
 
 
 class DishAPIView(views.APIView):
@@ -38,7 +40,7 @@ class DishAPIView(views.APIView):
 
         return Response(status=status.HTTP_200_OK, data={
             'dishes': DishSerializer(dishes, many=True).data,
-            'ingredients': IngredientSerializer(ingredients, many=True).data,
+            'ingredients': IngredientWithCountSerializer(ingredients, many=True).data,
             'cuisines': CuisineSerializer(cuisines, many=True).data,
             'sources': SourceSerializer(sources, many=True).data,
             'tags': TagSerializer(tags, many=True).data

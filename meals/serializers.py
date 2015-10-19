@@ -20,11 +20,16 @@ class DishSerializer(serializers.ModelSerializer):
 
 
 class IngredientSerializer(serializers.ModelSerializer):
-    count = serializers.IntegerField()
-
     class Meta:
         model = Ingredient
-        fields = ('id', 'name', 'count', 'tags')
+        fields = ('id', 'name', 'tags')
+
+
+class IngredientWithCountSerializer(IngredientSerializer):
+    count = serializers.IntegerField()
+
+    class Meta(IngredientSerializer.Meta):
+        fields = list(IngredientSerializer.Meta.fields) + ['count']
 
 
 class SourceSerializer(serializers.ModelSerializer):

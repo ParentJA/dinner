@@ -25,7 +25,7 @@
           return [];
         }
 
-        var dishes = getDishes();
+        var dishes = dishesModel.getDishes();
 
         var rankMap = {};
 
@@ -53,7 +53,7 @@
       },
       findSimilarDishes: function findSimilarDishes(targetIngredients, allIngredients) {
         //var dishes = findDishesWithIngredients(targetIngredients);
-        var dishes = getDishes();
+        var dishes = dishesModel.getDishes();
         var numIngredients = allIngredients.length;
         var targetVector = createEmptyVector(numIngredients);
 
