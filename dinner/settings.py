@@ -31,6 +31,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'accounts',
     'meals',
+    'recipes',
 )
 
 INSTALLED_APPS = ('grappelli',) + DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
