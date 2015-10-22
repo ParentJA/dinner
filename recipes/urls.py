@@ -1,9 +1,11 @@
 __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 
-# Standard library imports...
-
-# Third-party imports...
-
 # Django imports...
+from django.conf.urls import url
 
 # Local imports...
+from .views import RecipeAPIView
+
+urlpatterns = [
+    url(r'^recipes/$', RecipeAPIView.as_view()),
+]
