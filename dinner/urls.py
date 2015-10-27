@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^api/v1/meals/', include('meals.urls')),
+    url(r'^api/v1/pantries/', include('pantries.urls')),
     url(r'^api/v1/recipes/', include('recipes.urls')),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
