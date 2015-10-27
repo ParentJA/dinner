@@ -2,23 +2,24 @@
 
   "use strict";
 
-  function loadDishesService($http, BASE_URL, DishesModel) {
-    var service = {
-      getDishes: getDishes
-    };
+  function loadDishesService($http, $q, BASE_URL, dishesModel) {
 
-    function getDishes() {
-      return $http.get(BASE_URL + "meals/dishes/").then(function (response) {
-        DishesModel.update(response.data);
-      }, function () {
+    return function() {
+      var deferred = $q.defer();
+
+      $http.get(BASE_URL + "meals/dishes/").then(function (response) {
+        dishesModel.update(response.data);
+        deferred.resolve(dishesModel);
+      }, function (response) {
         console.error("Dishes failed to load!");
+        deferred.reject(response.data);
       });
-    }
 
-    return service;
+      return deferred.promise;
+    };
   }
 
   angular.module("app")
-    .factory("loadDishesService", ["$http", "BASE_URL", "DishesModel", loadDishesService]);
+    .factory("loadDishesService", ["$http", "$q", "BASE_URL", "dishesModel", loadDishesService]);
 
 })(window, window.angular);

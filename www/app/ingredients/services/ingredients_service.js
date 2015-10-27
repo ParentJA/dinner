@@ -2,7 +2,7 @@
 
   "use strict";
 
-  function ingredientsService(DishesModel) {
+  function ingredientsService(dishesModel) {
     var selectedIngredient = {};
     var selectedIngredients = [];
 
@@ -26,7 +26,7 @@
     }
 
     function getIngredients() {
-      return DishesModel.getIngredients();
+      return dishesModel.getIngredients();
     }
 
     function getSelectedIngredient() {
@@ -38,11 +38,11 @@
     }
 
     function getTotalIngredients() {
-      return _.size(DishesModel.getIngredients());
+      return _.size(dishesModel.getIngredients());
     }
 
     function hasIngredients() {
-      return (!_.isEmpty(DishesModel.getIngredients()));
+      return (!_.isEmpty(dishesModel.getIngredients()));
     }
 
     function hasSelectedIngredients() {
@@ -65,6 +65,6 @@
   }
 
   angular.module("app")
-    .factory("ingredientsService", ["DishesModel", ingredientsService]);
+    .factory("ingredientsService", ["dishesModel", ingredientsService]);
 
 })(window, window.angular);

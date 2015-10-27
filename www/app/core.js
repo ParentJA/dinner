@@ -13,12 +13,12 @@
         url: "/meals",
         template: "<div ui-view></div>",
         resolve: {
-          dishes: function (dishesService, loadDishesService) {
-            if (!dishesService.hasDishes()) {
-              loadDishesService.getDishes();
+          dishes: function (dishesModel, loadDishesService) {
+            if (_.isEmpty(dishesModel.getDishes())) {
+              return loadDishesService();
             }
 
-            return dishesService.getDishes();
+            return dishesModel;
           }
         },
         abstract: true
@@ -48,7 +48,7 @@
     };
   }
 
-  angular.module("app", ["ngCookies", "ui.router"])
+  angular.module("app", ["ngCookies", "ui.bootstrap", "ui.router"])
     .constant("BASE_URL", "/api/v1/")
     .config(["$httpProvider", HttpConfig])
     .config(["$stateProvider", "$urlRouterProvider", UiRouterConfig])
