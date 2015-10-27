@@ -13,7 +13,7 @@
       resolve: {
         recipes: function (loadRecipesService, recipesModel) {
           if (_.isEmpty(recipesModel.getRecipes())) {
-            return loadRecipesService.getRecipes();
+            return loadRecipesService();
           }
 
           return recipesModel;

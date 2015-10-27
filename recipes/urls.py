@@ -7,5 +7,5 @@ from django.conf.urls import url
 from .views import RecipeAPIView
 
 urlpatterns = [
-    url(r'^recipes/$', RecipeAPIView.as_view()),
+    url(r'^$', RecipeAPIView.as_view()),
 ]

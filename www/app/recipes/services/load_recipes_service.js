@@ -2,23 +2,23 @@
 
   "use strict";
 
-  function loadRecipesService($http, BASE_URL, recipesModel) {
-    var service = {
-      getRecipes: getRecipes
-    };
+  function loadRecipesService($http, $q, BASE_URL, recipesModel) {
+    return function() {
+      var deferred = $q.defer();
 
-    function getRecipes() {
-      return $http.get(BASE_URL + "recipes/").then(function (response) {
+      $http.get(BASE_URL + "recipes/").then(function (response) {
         recipesModel.update(response.data);
+        deferred.resolve(recipesModel);
       }, function () {
         console.error("Recipes failed to load!");
+        deferred.reject(recipesModel);
       });
-    }
 
-    return service;
+      return deferred.promise;
+    };
   }
 
   angular.module("app")
-    .factory("loadRecipesService", ["$http", "BASE_URL", "recipesModel", loadRecipesService]);
+    .factory("loadRecipesService", ["$http", "$q", "BASE_URL", "recipesModel", loadRecipesService]);
 
 })(window, window.angular);
