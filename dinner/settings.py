@@ -112,7 +112,7 @@ MEDIA_URL = '/media/'
 
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
-DJANGO_WYSIWYG_FLAVOR = 'tinymce'
+DJANGO_WYSIWYG_FLAVOR = 'tinymce_advanced'
 
 try:
     from .local_settings import *
