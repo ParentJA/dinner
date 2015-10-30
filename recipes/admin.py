@@ -22,6 +22,7 @@ class RecipeCategoryClassificationAdmin(admin.TabularInline):
 
 @admin.register(Recipe)
 class RecipeAdmin(admin.ModelAdmin):
+    change_form_template = 'recipes/admin/change_form.html'
     fields = ('name', 'description', 'instructions')
     inlines = (IngredientAdmin, RecipeCategoryClassificationAdmin)
 

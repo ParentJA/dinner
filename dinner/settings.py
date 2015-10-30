@@ -24,8 +24,10 @@ DEFAULT_APPS = (
 
 THIRD_PARTY_APPS = (
     'debug_toolbar',
+    'django_wysiwyg',
     'localflavor',
     'rest_framework',
+    'tinymce',
 )
 
 LOCAL_APPS = (
@@ -109,6 +111,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+DJANGO_WYSIWYG_FLAVOR = 'tinymce'
 
 try:
     from .local_settings import *
