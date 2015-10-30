@@ -2,18 +2,24 @@
 
   "use strict";
 
-  function PantryController($scope, dishes) {}
-
   function PantryRouterConfig($stateProvider) {
     $stateProvider.state("meals.pantry", {
       url: "/pantry",
       templateUrl: "/static/pantry/views/pantry/pantry.html",
-      controller: "PantryController"
+      controller: "PantryController",
+      resolve: {
+        pantries: function (loadPantriesService, pantriesModel) {
+          if (_.isEmpty(pantriesModel.getPantries())) {
+            return loadPantriesService();
+          }
+
+          return pantriesModel;
+        }
+      }
     });
   }
 
   angular.module("app")
-    .controller("PantryController", ["$scope", "dishes", PantryController])
     .config(["$stateProvider", PantryRouterConfig]);
 
 })(window, window.angular);

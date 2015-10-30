@@ -31,6 +31,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'accounts',
     'meals',
+    'pantries',
 )
 
 INSTALLED_APPS = ('grappelli',) + DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -99,8 +100,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'www/app/'),
-    os.path.join(BASE_DIR, 'www/bower_components/'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
