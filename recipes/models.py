@@ -57,7 +57,7 @@ class Food(models.Model):
     """
     An edible grocery item.
     """
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     categories = models.ManyToManyField(
         'recipes.FoodCategory',
         through='recipes.FoodCategoryClassification',
@@ -192,4 +192,13 @@ class Pantry(models.Model):
 class PantryFood(models.Model):
     pantry = models.ForeignKey('recipes.Pantry')
     food = models.ForeignKey('recipes.Food')
-    unit_of_measure = models.ForeignKey('recipes.UnitOfMeasure')
+
+    # It is possible to have no unit of measure and no amount (e.g. salt, black pepper).
+    unit_of_measure = models.ForeignKey('recipes.UnitOfMeasure', null=True, blank=True)
+    amount = models.DecimalField(
+        help_text='ex. 0.500 (one half), 0.250 (one fourth), 0.125 (one eighth)',
+        max_digits=6,
+        decimal_places=3,
+        null=True,
+        blank=True
+    )

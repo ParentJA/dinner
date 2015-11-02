@@ -11,7 +11,7 @@ from .models import (
 
 class IngredientAdmin(admin.TabularInline):
     model = Recipe.foods.through
-    fields = ('description', 'amount', 'unit_of_measure')
+    fields = ('food', 'description', 'amount', 'unit_of_measure')
     extra = 1
 
 
