@@ -4,7 +4,7 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 from itertools import chain
 
 # Third-party imports...
-from rest_framework import generics, permissions, status, views
+from rest_framework import generics, permissions, status, views, viewsets
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 
@@ -67,8 +67,8 @@ class PantryAPIView(views.APIView):
         return Response(status=status.HTTP_200_OK, data=data)
 
 
-class PantryFoodAPIView(views.APIView):
-    def post(self, request, pantry_id, food_id):
+class PantryFoodAPIViewSet(viewsets.ViewSet):
+    def create(self, request, pantry_id, food_id):
         # Retrieve data parameters...
         amount = float(request.data.get('amount'))
         unit_of_measure_id = int(request.data.get('unit_of_measure'))
@@ -98,7 +98,7 @@ class PantryFoodAPIView(views.APIView):
 
         return Response(status=status.HTTP_201_CREATED)
 
-    def put(self, request, pantry_id, food_id):
+    def update(self, request, pantry_id, food_id):
         # Retrieve data parameters...
         amount = float(request.data.get('amount'))
         unit_of_measure_id = int(request.data.get('unit_of_measure'))
@@ -128,7 +128,7 @@ class PantryFoodAPIView(views.APIView):
 
         return Response(status=status.HTTP_200_OK)
 
-    def delete(self, request, pantry_id, food_id):
+    def destroy(self, request, pantry_id, food_id):
         # Retrieve pantry...
         get_user_pantry_or_404(request.user, pantry_id=pantry_id)
 
@@ -146,31 +146,33 @@ class PantryFoodAPIView(views.APIView):
         return Response(status=status.HTTP_200_OK)
 
 
-class RecipeAPIView(views.APIView):
-    def get(self, request, pk=None):
-        # Get parameters...
-        use_categories = request.query_params.get('categories', False)
-
-        # Prepare response data...
+class RecipeAPIViewSet(viewsets.ViewSet):
+    def list(self, request):
         data = {}
 
-        # Add recipes...
-        if pk is not None:
-            try:
-                recipe = Recipe.objects.prefetch_related('categories', 'foods').get(id=pk)
-            except Recipe.DoesNotExist:
-                return Response(status=status.HTTP_404_NOT_FOUND)
-            else:
-                data['recipes'] = RecipeSerializer([recipe], many=True).data
+        # Handle recipe list...
+        recipes = Recipe.objects.prefetch_related('categories', 'foods').defer('description', 'instructions')
 
-        else:
-            recipes = Recipe.objects.prefetch_related('categories', 'foods').defer('description', 'instructions')
-            data['recipes'] = BasicRecipeSerializer(recipes, many=True).data
+        data['recipes'] = BasicRecipeSerializer(recipes, many=True).data
 
-        # Add recipe categories...
+        # Handle parameters...
+        use_categories = request.query_params.get('categories', False)
+
         if use_categories:
             recipe_categories = set(chain.from_iterable([c for c in [recipe.categories.all() for recipe in recipes]]))
 
             data['recipe_categories'] = RecipeCategorySerializer(recipe_categories, many=True).data
+
+        return Response(status=status.HTTP_200_OK, data=data)
+
+    def retrieve(self, request, pk):
+        data = {}
+
+        try:
+            recipe = Recipe.objects.prefetch_related('categories', 'foods').get(pk=pk)
+        except Recipe.DoesNotExist:
+            raise Http404
+
+        data['recipes'] = RecipeSerializer([recipe], many=True).data
 
         return Response(status=status.HTTP_200_OK, data=data)
