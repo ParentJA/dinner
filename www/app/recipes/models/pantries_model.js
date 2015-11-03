@@ -6,11 +6,20 @@
     var pantries = [];
 
     var service = {
+      createFood: function createFood(food, amount, unitOfMeasure) {
+
+      },
+      deleteFood: function deleteFood(food) {
+
+      },
       getPantries: function getPantries() {
         return pantries;
       },
       update: function update(data) {
         pantries = data.pantries;
+      },
+      updateFood: function updateFood(food, amount, unitOfMeasure) {
+
       }
     };
 

@@ -728,6 +728,143 @@
     name: Quick-Cooked Tomato-Chile Sauce}
   model: recipes.recipe
   pk: 163
+- fields: {description: "<p>This everyday Mexican <em>salsa verde</em> is green from
+      a delicious native berry (<em>tomatillo</em>) that frequently bears the name
+      of its very distant relation the tomato. The walnut-size fruit in the papery
+      husk makes a traditional sauce with an especially fresh, tart taste.</p>\r\n<p>Mexican
+      <em>salsa verde</em> is prepared by cooks in most of the Republic. Some of them
+      will put it on the table for diners to add <em>al gusto</em>, or they&rsquo;ll
+      use it for Chicken Enchiladas, or they&rsquo;ll simmer it with tortillas to
+      make <em>Chilaquiles</em>. It&rsquo;s always put together in the same general
+      way, though some like to add a big sprig of <em>epazote</em> while the sauce
+      is cooking.</p>", instructions: "<ol>\r\n<li><em>The tomatillos.</em> Boil the
+      fresh <em>tomatillos</em> and chiles in salted water to cover until tender,
+      10 to 15 minutes; drain. Simply drain canned <em>tomatillos</em>.</li>\r\n<li><em>The
+      puree.</em> Place the <em>tomatillos</em> and chiles (raw ones if using canned&nbsp;<em>tomatillos</em>)
+      in a blender or food processor, along with the coriander, onion and garlic;
+      if using a blender, stir well. Process until smooth, but still retaining a <em>little</em>
+      texture.</li>\r\n<li><em>The sauce.</em> Heat the lard or vegetable oil in a
+      medium-large skillet set over medium-high. When hot enough to make a drop of
+      the puree sizzle sharply, pour it in all at once and stir constantly for 4 or
+      5 minutes, until darker and thicker. Add the broth, let return to a boil, reduce
+      the heat to medium and simmer until thick enough to coat a spoon, about 10 minutes.
+      Season with salt.</li>\r\n</ol>", name: Quick-Cooked Tomatillo-Chile Sauce}
+  model: recipes.recipe
+  pk: 164
+- fields: {description: '', instructions: "<ol>\r\n<li><em>The preliminaries.</em>
+      In a medium-size bowl, mix the finely chopped onion and chiles with the optional
+      tomato, garlic and coriander.</li>\r\n<li><em>The avocado.</em> Close to the
+      time you are going to serve, halve the avocados lengthwise by cutting from the
+      stem to flower ends, around the pits. Twist the avocado halves in opposite directions
+      to loosen the meat from the pits, then scoop out the pits and reserve. Scrape
+      the avocado pulp from the skins and add it to the bowl.</li>\r\n<li><em>Finishing
+      the guacamole.</em> Using your hand or a spoon, roughly mash the avocado while
+      mixing in the other ingredients, making a coarse, thick mass. Flavor with salt,
+      then enough lime&nbsp;juice to add a little zing, if you wish. Return the pits
+      to the guacamole and cover with a sheet of plastic wrap pressed directly onto
+      the surface of the mixture. Set aside for a few minutes to let the flavors blend.</li>\r\n<li><em>Garnish
+      and presentation.</em> The guacamole is very attractive in a pottery bowl or
+      Mexican mortar, sprinkled with chopped onion, coriander, radish slices and crumbled
+      fresh cheese; radish roses really dress it up.</li>\r\n</ol>", name: Chunky
+      Guacamole (Avocado Relish)}
+  model: recipes.recipe
+  pk: 165
+- fields: {description: '', instructions: "<p><em>The tomatillos.</em> Boil the fresh
+      <em>tomatillos</em> in salted water to cover until just soft through, about
+      10 minutes; drain and place in a blender jar or food processor. Canned <em>tomatillos</em>
+      need only be drained and put in the blender or food processor.</p>\r\n<p><em>The
+      puree.</em> Add the chile, coriander and onion to the <em>tomatillos</em> (and
+      stir, if using a blender). Blend or process to a coarse puree.</p>\r\n<p><em>The
+      avocado.</em> Halve the avocado lengthwise by cutting from stem to flower ends
+      around the pit. Twist the halves apart, then scoop out the pit and reserve it.
+      Scrape the avocado pulp from the skin and place in a mixing bowl.</p>\r\n<p><em>Finishing
+      the sauce.</em> Mash the avocado until smooth, using a fork or your hand. Scrape
+      in the <em>tomatillo</em> puree and mix well. Season with salt, return the pit
+      to the sauce and cover well. Let stand a few minutes to blend the flavors, then
+      serve.</p>", name: Guacamole With Tomatillos}
+  model: recipes.recipe
+  pk: 166
+- fields: {description: "<p>In spite of its being called a salad, this cactus-paddle
+      preparation is actually used more like a condiment&mdash;like a coarse <em>salsa
+      mexicana</em> mixed with pieces of cactus. It&rsquo;s very popular in the <em>fondas</em>
+      of some markets (certainly a lot more popular than you&rsquo;d expect any <em>salad</em>
+      to be in Mexico).</p>\r\n<p>While Mexicans love condiments and garnishes and
+      adornment,&nbsp;North Americans are fond of salads. So that is how most of you
+      will probably be happiest serving it. I think you&rsquo;ll find the firm texture
+      and pleasantly green flavor of the cactus right for this colorful vinegar-and-oil
+      treatment, as would be green beans, say, or asparagus.</p>", instructions: "<ol>\r\n<li><em>The
+      cactus.</em> Prepare the fresh cactus according to the directions.</li>\r\n<li><em>Assembling
+      the salad.</em> Shortly before serving, thoroughly rinse and drain the <em>boiled
+      or canned</em> (but not the roasted) cactus, then mix with the tomato, onion
+      and coriander. Blend together the dressing ingredients by thoroughly whisking
+      or by shaking in a tightly closed jar; taste for salt, then pour over the vegetables
+      and toss to combine.</li>\r\n<li><em>Garnish and presentation.</em> Line a decorative
+      platter with the lettuce leaves and heap up the cactus salad in the center.
+      Sprinkle with cheese, arrange the pickled chiles and radishes over the top and
+      serve.</li>\r\n</ol>", name: Relishy Cactus-Paddle Salad}
+  model: recipes.recipe
+  pk: 167
+- fields: {description: "<p>When you taste a pickled chile from the glass barrels
+      in Quer&eacute;taro, Aguascalientes or San Luis Potos&iacute;, or from the beautiful
+      bottled mixtures in Toluca or San Crist&oacute;bal de las Cases, Chiapas, the
+      flavor seems so much more lively than the canned pickled <em>jalape&ntilde;os</em>
+      that fill our grocery-store shelves. No doubt it&rsquo;s because the Mexican
+      ones are often made with homemade fruit vinegar and the chiles include a wide
+      variety of sizes and colors.</p>\r\n<p>For the Central Mexican recipe outlined
+      here, the onions and carrots are first fried, then simmered with the chiles
+      in the mild brine. The same method can be used for making pickled vegetables,
+      as described in the variation recipe; the result is attractive and delicious
+      for a picnic or buffet table.</p>", instructions: "<p><em>Frying the vegetables</em>.
+      In a medium-size skillet, heat the&nbsp;vegetable oil over medium, add the whole
+      garlic cloves and fry, stirring frequently, for about 3 minutes, until they
+      are lightly browned; remove and set aside. Add the carrot, chiles and onion,
+      and fry, stirring frequently, until the onion is translucent, about 5 minutes.</p>\r\n<p><em>Simmering
+      the chiles.</em> Add &frac12; cup water, the browned garlic, vinegar, bay leaves,
+      herbs, pepper and salt. Cover and simmer over medium-low heat for 8 to 10 minutes,
+      until the carrot is barely tender and the chiles are olive-green. Remove from
+      the fire, pour into a noncorrosive container, cool and season with additional
+      salt, if necessary. Cover and refrigerate for a day before using.</p>", name: Pickled
+      Chiles With Other Vegetables}
+  model: recipes.recipe
+  pk: 168
+- fields: {description: '<p>I wouldn&rsquo;t want a chicken-topped <em>Panucho</em>
+      or a plate of Pork Pibil unless I could have it topped with these sweet-and-sour,
+      richly spiced red onions. They are at practically every Yucatecan meal, and
+      I know Deann uses a Yucatecan dinner as an excuse to make a big batch of them
+      to have around for sandwiches and just about any other snack. To summarize:
+      They are delicious.</p>', instructions: "<p><em>Parboiling the onion.</em> Place
+      the thinly sliced red onion in a saucepan with salted water to cover, bring
+      to a boil, time 1 minute, then remove from the heat and drain.</p>\r\n<p><em>The
+      pickling.</em> Coarsely grind the peppercorns and cumin in a mortar or spice
+      grinder, then add to the saucepan, along with the remaining ingredients. Pour
+      in just enough water to barely cover the onions, bring to a boil over medium
+      heat, time 3 minutes, then remove from the heat and pour into a small, noncorrosive
+      bowl. Let stand several hours before using.</p>", name: Pickled Red Onions}
+  model: recipes.recipe
+  pk: 169
+- fields: {description: "<p>It isn&rsquo;t uncommon to see three or four buckets of
+      cream in Central, West-Central and Tabascan markets: from thin, sweet and fresh
+      to well ripened, thick and tangy. It&rsquo;s all heavy cream&mdash;not the light,
+      low-butterfat &ldquo;cream&rdquo; that is cultured for sour cream here&mdash;so
+      it has a richer, glossier texture. And you can bet it&rsquo;s not pasteurized,
+      because the process would have killed the natural bacteria that preserves and
+      thickens the riper cream.</p>\r\n<p>To me, this thick, ripe cream (similar to
+      the French <em>cr&egrave;me fra&icirc;che</em>) is one of the great pleasures
+      of Mexican cooking&mdash;drizzled on Fresh-Corn Tamales , Butter-Fried Plantains,
+      Quick-Simmered Tortilla Casserole (<em>Chilaquiles</em>,) or simple fried tacos
+      and such. Mixing a little milk or cream into our commercial sour cream is a
+      passable substitute here, but nothing like the smoother, less acidic taste of
+      this recipe.</p>", instructions: "<p><em>Preparing the cream</em>. Pour the
+      cream into a small saucepan, set over low heat and stir just until the chill
+      is off; do not heat above&nbsp;100&deg; (lukewarm). Stir in the buttermilk and
+      pour into a glass jar.</p>\r\n<p><em>Ripening the cream.</em> Set the lid on
+      the jar (but don&rsquo;t tighten it) and place in a warm (80&ndash;90&deg;)
+      spot. Let the cream culture and set for 12 to 24 hours, until noticeably thicker
+      (perhaps almost set like yogurt or sour cream). Stir gently, screw on the lid
+      and refrigerate at least 4 hours to chill and complete the thickening.</p>",
+    name: Homemade Thick Cream}
+  model: recipes.recipe
+  pk: 170
 - fields: {description: salsa}
   model: recipes.recipecategory
   pk: 1
@@ -779,6 +916,36 @@
 - fields: {recipe: 163, recipe_category: 1}
   model: recipes.recipecategoryclassification
   pk: 14
+- fields: {recipe: 164, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 15
+- fields: {recipe: 164, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 16
+- fields: {recipe: 165, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 17
+- fields: {recipe: 165, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 18
+- fields: {recipe: 166, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 19
+- fields: {recipe: 166, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 20
+- fields: {recipe: 167, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 21
+- fields: {recipe: 169, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 23
+- fields: {recipe: 168, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 24
+- fields: {recipe: 170, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 25
 - fields: {name: achiote seeds}
   model: recipes.food
   pk: 1
@@ -1328,6 +1495,18 @@
 - fields: {name: "dried chiles de \xE1rbol"}
   model: recipes.food
   pk: 183
+- fields: {name: dried mixed herbs}
+  model: recipes.food
+  pk: 184
+- fields: {name: buttermilk}
+  model: recipes.food
+  pk: 185
+- fields: {description: dairy}
+  model: recipes.foodcategory
+  pk: 1
+- fields: {food: 185, food_category: 1}
+  model: recipes.foodcategoryclassification
+  pk: 1
 - fields: {amount: null, description: '', food: 1, recipe: 12, unit_of_measure: null}
   model: recipes.ingredient
   pk: 158
@@ -6876,6 +7055,220 @@
     unit_of_measure: 2}
   model: recipes.ingredient
   pk: 1994
+- fields: {amount: '1.000', description: '1 pound (11 medium) fresh tomatillos, husked
+      and washed', food: 26, recipe: 164, unit_of_measure: 4}
+  model: recipes.ingredient
+  pk: 1995
+- fields: {amount: '3.000', description: 'fresh hot green chiles to taste (roughly
+      3 chiles serranos), stemmed', food: 27, recipe: 164, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1996
+- fields: {amount: '1.000', description: '5 or 6 sprigs fresh coriander (cilantro),
+      roughly chopped', food: 15, recipe: 164, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1997
+- fields: {amount: '1.000', description: '1 small onion, chopped', food: 17, recipe: 164,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1998
+- fields: {amount: '1.000', description: '1 large clove garlic, peeled and roughly
+      chopped', food: 6, recipe: 164, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1999
+- fields: {amount: '1.000', description: 1 tablespoon lard or vegetable oil, food: 110,
+    recipe: 164, unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 2000
+- fields: {amount: '2.000', description: 2 cups any poultry or meat broth (depending
+      on how the sauce is to be used), food: 36, recipe: 164, unit_of_measure: 7}
+  model: recipes.ingredient
+  pk: 2001
+- fields: {amount: '0.500', description: 'salt, about 1/2 teaspoon (depending on the
+      saltiness of the broth)', food: 7, recipe: 164, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2002
+- fields: {amount: '0.500', description: '1/2 small onion, very finely chopped', food: 17,
+    recipe: 165, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2003
+- fields: {amount: '2.000', description: 'fresh hot green chiles to taste (roughly
+      2 chiles serranos), stemmed, seeded and very finely chopped', food: 27, recipe: 165,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2004
+- fields: {amount: '1.000', description: '1 ripe, medium-large tomato, cored and very
+      finely chopped (optional)', food: 23, recipe: 165, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2005
+- fields: {amount: '1.000', description: '1 clove garlic, peeled and very finely chopped
+      (optional)', food: 6, recipe: 165, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2006
+- fields: {amount: '1.000', description: '10 sprigs fresh coriander (cilantro), chopped
+      (optional)', food: 15, recipe: 165, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2007
+- fields: {amount: '3.000', description: '3 ripe, medium avocados', food: 28, recipe: 165,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2008
+- fields: {amount: '0.500', description: 'salt, about 1/2 teaspoon', food: 7, recipe: 165,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2009
+- fields: {amount: '0.500', description: '1/2 lime, juiced (optional)', food: 75,
+    recipe: 165, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2010
+- fields: {amount: '8.000', description: '8 ounces (5 or 6 medium) fresh tomatillos,
+      husked and washed', food: 26, recipe: 166, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 2011
+- fields: {amount: '2.000', description: 'fresh hot green chiles to taste (roughly
+      2 chiles serranos), stemmed, seeded and roughly chopped', food: 27, recipe: 166,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2012
+- fields: {amount: '1.000', description: '4 sprigs fresh coriander (cilantro), roughly
+      chopped', food: 15, recipe: 166, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2013
+- fields: {amount: '0.500', description: '1/2 small onion, roughly chopped', food: 17,
+    recipe: 166, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2014
+- fields: {amount: '1.000', description: '1 ripe, medium-large avocado', food: 28,
+    recipe: 166, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2015
+- fields: {amount: '0.500', description: 'salt, about 1/2 teaspoon', food: 7, recipe: 166,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2016
+- fields: {amount: '14.000', description: 4 medium (12 to 14 ounces total) fresh cactus
+      paddles (nopales or napalitos), food: 76, recipe: 167, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 2017
+- fields: {amount: '1.000', description: '1 ripe, medium-large tomato, cored and diced',
+    food: 23, recipe: 167, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2018
+- fields: {amount: '0.250', description: 1/4 cup diced onion, food: 17, recipe: 167,
+    unit_of_measure: 7}
+  model: recipes.ingredient
+  pk: 2019
+- fields: {amount: '1.000', description: '6 sprigs fresh coriander (cilantro), chopped',
+    food: 15, recipe: 167, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2020
+- fields: {amount: '3.000', description: 3 tablespoons vegetable or olive oil (or
+      a mixture of the two), food: 20, recipe: 167, unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 2021
+- fields: {amount: '1.000', description: 1 tablespoon cider vinegar, food: 5, recipe: 167,
+    unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 2022
+- fields: {amount: '1.000', description: A big pinch of dried oregano, food: 4, recipe: 167,
+    unit_of_measure: 6}
+  model: recipes.ingredient
+  pk: 2023
+- fields: {amount: '0.125', description: 'salt, about 1/8 teaspoon', food: 7, recipe: 167,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2024
+- fields: {amount: '1.000', description: several romaine lettuce leaves, food: 22,
+    recipe: 167, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2025
+- fields: {amount: '3.000', description: '3 tablespoons crumbled Mexican queso fresco,
+      or other fresh cheese like feta or farmer''s cheese', food: 21, recipe: 167,
+    unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 2026
+- fields: {amount: '1.000', description: "Several pickled chiles jalape\xF1os, store-bought
+      or homemade", food: 64, recipe: 167, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2027
+- fields: {amount: '1.000', description: Several radish slices or roses, food: 29,
+    recipe: 167, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2028
+- fields: {amount: '3.000', description: 3 tablespoons vegetable oil, food: 20, recipe: 168,
+    unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 2029
+- fields: {amount: '1.000', description: '5 cloves garlic, peeled', food: 6, recipe: 168,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2030
+- fields: {amount: '1.000', description: '1 medium carrot, peeled', food: 90, recipe: 168,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2031
+- fields: {amount: '12.000', description: "6 ounces fresh hot green chiles (12 large
+      chiles jalape\xF1os)", food: 87, recipe: 168, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2032
+- fields: {amount: '0.500', description: '1/2 medium onion, sliced 1/8 inch thick',
+    food: 17, recipe: 168, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2033
+- fields: {amount: '0.500', description: 1/2 cup cider vinegar, food: 5, recipe: 168,
+    unit_of_measure: 7}
+  model: recipes.ingredient
+  pk: 2034
+- fields: {amount: '2.000', description: 2 bay leaves, food: 52, recipe: 168, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2035
+- fields: {amount: '1.000', description: '1 scant teaspoon mixed dried herbs (such
+      as thyme, marjoram and oregano)', food: 184, recipe: 168, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2036
+- fields: {amount: '0.125', description: '4 black peppercorns, very coarsely ground',
+    food: 3, recipe: 168, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2037
+- fields: {amount: '0.500', description: 'salt, about 1/2 teaspoon', food: 7, recipe: 168,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2038
+- fields: {amount: '1.000', description: '1 small (6-ounce) red onion, sliced 1/8
+      inch thick', food: 13, recipe: 169, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2039
+- fields: {amount: '0.250', description: 1/4 teaspoon black peppercorns, food: 3,
+    recipe: 169, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2040
+- fields: {amount: '0.250', description: 1/4 teaspoon cumin seeds, food: 14, recipe: 169,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2041
+- fields: {amount: '0.500', description: 1/2 teaspoon dried oregano, food: 4, recipe: 169,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2042
+- fields: {amount: '1.000', description: '2 cloves garlic, peeled and halved', food: 6,
+    recipe: 169, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2043
+- fields: {amount: '0.250', description: 1/4 teaspoon salt, food: 7, recipe: 169,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2044
+- fields: {amount: '0.333', description: 1/3 cup cider vinegar, food: 5, recipe: 169,
+    unit_of_measure: 7}
+  model: recipes.ingredient
+  pk: 2045
+- fields: {amount: '1.000', description: 1 cup whipping cream, food: 50, recipe: 170,
+    unit_of_measure: 7}
+  model: recipes.ingredient
+  pk: 2046
+- fields: {amount: '2.000', description: 2 teaspoons buttermilk, food: 185, recipe: 170,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2047
 - fields: {amount: '1.000', food: 23, price: '0.46', unit_of_measure: 1}
   model: recipes.pricecomponent
   pk: 1
@@ -6924,10 +7317,10 @@
 - fields: {abbreviation: tbsp, description: tablespoons}
   model: recipes.unitofmeasure
   pk: 5
-- fields: {abbreviation: pinch, description: pinch}
+- fields: {abbreviation: pinch, description: pinches}
   model: recipes.unitofmeasure
   pk: 6
-- fields: {abbreviation: cup, description: cup}
+- fields: {abbreviation: cup, description: cups}
   model: recipes.unitofmeasure
   pk: 7
 - fields: {name: Home}

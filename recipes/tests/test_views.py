@@ -193,7 +193,7 @@ class RecipeViewTest(APITestCase):
         })
 
     def test_can_retrieve_basic_recipe_list(self):
-        with self.assertNumQueries(3):
+        with self.assertNumQueries(4):
             response = self.client.get('/api/v1/recipes/recipes/')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -207,7 +207,7 @@ class RecipeViewTest(APITestCase):
         })
 
     def test_can_retrieve_basic_recipe_list_with_categories(self):
-        with self.assertNumQueries(3):
+        with self.assertNumQueries(4):
             response = self.client.get('/api/v1/recipes/recipes/?categories=true')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -221,5 +221,49 @@ class RecipeViewTest(APITestCase):
             'recipe_categories': [{
                 'id': self.recipe_category.id,
                 'description': self.recipe_category.description
+            }]
+        })
+
+    def test_can_retrieve_basic_recipe_list_with_foods(self):
+        response = self.client.get('/api/v1/recipes/recipes/?foods=true')
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, {
+            'recipes': [{
+                'id': self.recipe.id,
+                'name': self.recipe.name,
+                'foods': [f.id for f in self.recipe.foods.all()],
+                'categories': [c.id for c in self.recipe.categories.all()]
+            }],
+            'foods': [{
+                'id': self.food.id,
+                'name': self.food.name,
+                'categories': [c.id for c in self.food.categories.all()]
+            }]
+        })
+
+    def test_can_retrieve_basic_recipe_list_with_categories_and_foods(self):
+        response = self.client.get('/api/v1/recipes/recipes/?categories=true&foods=true')
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, {
+            'recipes': [{
+                'id': self.recipe.id,
+                'name': self.recipe.name,
+                'foods': [f.id for f in self.recipe.foods.all()],
+                'categories': [c.id for c in self.recipe.categories.all()]
+            }],
+            'recipe_categories': [{
+                'id': self.recipe_category.id,
+                'description': self.recipe_category.description
+            }],
+            'foods': [{
+                'id': self.food.id,
+                'name': self.food.name,
+                'categories': [c.id for c in self.food.categories.all()]
+            }],
+            'food_categories': [{
+                'id': self.food_category.id,
+                'description': self.food_category.description
             }]
         })

@@ -2,81 +2,81 @@
   
   "use strict";
 
-  function PantryController($scope, deletePantryIngredientsService, dishes, ingredientsService, pantries, updatePantryIngredientsService) {
-    $scope.availableIngredients = [];
+  function PantryController($scope, createPantryFoodsService, deletePantryFoodsService, recipes, foodsService, pantries, updatePantryFoodsService) {
+    $scope.availableFoods = [];
     $scope.emptyMethod = _.noop;
-    $scope.hasSelectedIngredients = false;
-    $scope.numAvailableIngredients = 0;
-    $scope.numPantryIngredients = 0;
-    $scope.pantryIngredients = [];
+    $scope.hasSelectedFoods = false;
+    $scope.numAvailableFoods = 0;
+    $scope.numPantryFoods = 0;
+    $scope.pantryFoods = [];
 
-    $scope.getAvailableIngredients = function getAvailableIngredients() {
-      return $scope.availableIngredients;
+    $scope.getAvailableFoods = function getAvailableFoods() {
+      return $scope.availableFoods;
     };
 
-    $scope.getPantryIngredients = function getPantryIngredients() {
-      return $scope.pantryIngredients;
+    $scope.getPantryFoods = function getPantryFoods() {
+      return $scope.pantryFoods;
     };
 
-    $scope.moveAvailableIngredient = function moveAvailableIngredient(ingredient) {
-      var availableIngredient = _.remove($scope.availableIngredients, ingredient)[0];
+    $scope.moveAvailableFood = function moveAvailableFood(food) {
+      var availableFood = _.remove($scope.availableFoods, food)[0];
 
-      updatePantryIngredientsService(availableIngredient).then(function (response) {
-        $scope.pantryIngredients.push(availableIngredient);
+      createPantryFoodsService(availableFood).then(function (response) {
+        $scope.pantryFoods.push(availableFood);
       });
     };
 
-    $scope.movePantryIngredient = function movePantryIngredient(ingredient) {
-      var pantryIngredient = _.remove($scope.pantryIngredients, ingredient)[0];
+    $scope.movePantryFood = function movePantryFood(food) {
+      var pantryFood = _.remove($scope.pantryFoods, food)[0];
 
-      deletePantryIngredientsService(pantryIngredient).then(function (response) {
-        $scope.availableIngredients.push(pantryIngredient);
+      deletePantryFoodsService(pantryFood).then(function (response) {
+        $scope.availableFoods.push(pantryFood);
       });
     };
 
-    $scope.$watchCollection("availableIngredients", function (newValue, oldValue) {
+    $scope.$watchCollection("availableFoods", function (newValue, oldValue) {
       if (!_.isEqual(newValue, oldValue)) {
-        $scope.numAvailableIngredients = _.size(newValue);
+        $scope.numAvailableFoods = _.size(newValue);
       }
     });
 
-    $scope.$watchCollection("pantryIngredients", function (newValue, oldValue) {
+    $scope.$watchCollection("pantryFoods", function (newValue, oldValue) {
       if (!_.isEqual(newValue, oldValue)) {
-        $scope.numPantryIngredients = _.size(newValue);
+        $scope.numPantryFoods = _.size(newValue);
       }
     });
 
-    $scope.$watchCollection($scope.getSelectedIngredients, function (newValue, oldValue) {
+    $scope.$watchCollection($scope.getSelectedFoods, function (newValue, oldValue) {
       if (!_.isEqual(newValue, oldValue)) {
-        $scope.hasSelectedIngredients = !_.isEmpty(ingredientsService.getSelectedIngredients());
+        $scope.hasSelectedFoods = !_.isEmpty(foodsService.getSelectedFoods());
       }
     });
 
     activate();
 
     function activate() {
-      var pantryIngredientIds = _.first(pantries.getPantries()).ingredients;
-      var pantryIngredients = [];
-      var availableIngredients = [];
+      var pantryFoodIds = _.first(pantries.getPantries()).foods;
+      var pantryFoods = [];
+      var availableFoods = [];
 
-      _.forEach(dishes.getIngredients(), function (ingredient) {
-        if (_.indexOf(pantryIngredientIds, ingredient.id) !== -1) {
-          pantryIngredients.push(ingredient);
+      _.forEach(recipes.getFoods(), function (food) {
+        if (_.indexOf(pantryFoodIds, food.id) !== -1) {
+          pantryFoods.push(food);
         }
         else {
-          availableIngredients.push(ingredient);
+          availableFoods.push(food);
         }
       });
 
-      $scope.pantryIngredients = pantryIngredients;
-      $scope.availableIngredients = availableIngredients;
+      $scope.pantryFoods = pantryFoods;
+      $scope.availableFoods = availableFoods;
     }
   }
 
   angular.module("app")
     .controller("PantryController", [
-      "$scope", "deletePantryIngredientsService", "dishes", "ingredientsService", "pantries",
-      "updatePantryIngredientsService", PantryController
+      "$scope", "createPantryFoodsService", "deletePantryFoodsService", "recipes", "foodsService", "pantries",
+      "updatePantryFoodsService", PantryController
     ]);
 
 })(window, window.angular);

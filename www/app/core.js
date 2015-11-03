@@ -13,12 +13,15 @@
         url: "/meals",
         template: "<div ui-view></div>",
         resolve: {
-          dishes: function (dishesModel, loadDishesService) {
-            if (_.isEmpty(dishesModel.getDishes())) {
-              return loadDishesService();
+          recipes: function (recipesModel, loadRecipesService) {
+            if (_.isEmpty(recipesModel.getRecipes())) {
+              var useCategories = true;
+              var useFoods = true;
+
+              return loadRecipesService(useCategories, useFoods);
             }
 
-            return dishesModel;
+            return recipesModel;
           }
         },
         abstract: true

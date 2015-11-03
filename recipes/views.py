@@ -151,7 +151,9 @@ class RecipeAPIViewSet(viewsets.ViewSet):
         data = {}
 
         # Handle recipe list...
-        recipes = Recipe.objects.prefetch_related('categories', 'foods').defer('description', 'instructions')
+        recipes = Recipe.objects.prefetch_related('categories', 'foods', 'foods__categories').defer(
+            'description', 'instructions'
+        )
 
         data['recipes'] = BasicRecipeSerializer(recipes, many=True).data
 
@@ -162,6 +164,18 @@ class RecipeAPIViewSet(viewsets.ViewSet):
             recipe_categories = set(chain.from_iterable([c for c in [recipe.categories.all() for recipe in recipes]]))
 
             data['recipe_categories'] = RecipeCategorySerializer(recipe_categories, many=True).data
+
+        use_foods = request.query_params.get('foods', False)
+
+        if use_foods:
+            foods = set(chain.from_iterable([f for f in [recipe.foods.all() for recipe in recipes]]))
+
+            data['foods'] = FoodSerializer(foods, many=True).data
+
+            if use_categories:
+                food_categories = set(chain.from_iterable([c for c in [food.categories.all() for food in foods]]))
+
+                data['food_categories'] = FoodCategorySerializer(food_categories, many=True).data
 
         return Response(status=status.HTTP_200_OK, data=data)
 

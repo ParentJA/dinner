@@ -4,10 +4,10 @@
 
   function loadPantriesService($http, $q, BASE_URL, pantriesModel) {
 
-    return function() {
+    return function () {
       var deferred = $q.defer();
 
-      $http.get(BASE_URL + "pantries/").then(function (response) {
+      $http.get(BASE_URL + "recipes/pantries/").then(function (response) {
         pantriesModel.update(response.data);
         deferred.resolve(pantriesModel);
       }, function (response) {

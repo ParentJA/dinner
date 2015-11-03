@@ -1,0 +1,20 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h4 class="panel-title">Recipe Detail</h4>
+  </div>
+  <div class="panel-body">
+    <h3>{{ getSelectedRecipe().name | title }}</h3>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Foods <span class="badge badge-success pull-right" ng-bind="getTotalFoods()"></span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="food in getSelectedRecipe()._foods | orderBy: 'name'">
+      <td>{{ food.name | title }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

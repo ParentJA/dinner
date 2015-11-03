@@ -10,14 +10,14 @@
         return pantries;
       },
       update: function update(data) {
-        // Update ingredients...
-        var ingredientsMap = _.indexBy(data.ingredients, "id");
+        // Update foods...
+        var foodsMap = _.indexBy(data.foods, "id");
 
         _.forEach(data.pantries, function (pantry) {
-          pantry._ingredients = [];
+          pantry._foods = [];
 
-          _.forEach(pantry.ingredients, function (ingredientId) {
-            pantry._ingredients.push(ingredientsMap[ingredientId]);
+          _.forEach(pantry.foods, function (foodId) {
+            pantry._foods.push(foodsMap[foodId]);
           });
         });
 
