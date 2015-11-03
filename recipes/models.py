@@ -100,7 +100,6 @@ class Ingredient(models.Model):
     food = models.ForeignKey('recipes.Food')
 
     # It is possible to have no unit of measure and no amount (e.g. salt, black pepper).
-    unit_of_measure = models.ForeignKey('recipes.UnitOfMeasure', null=True, blank=True)
     amount = models.DecimalField(
         help_text='ex. 0.500 (one half), 0.250 (one fourth), 0.125 (one eighth)',
         max_digits=6,
@@ -108,6 +107,7 @@ class Ingredient(models.Model):
         null=True,
         blank=True
     )
+    unit_of_measure = models.ForeignKey('recipes.UnitOfMeasure', null=True, blank=True)
 
     description = models.CharField(help_text='ex. 2 cloves of garlic, minced', max_length=255)
 
@@ -124,16 +124,26 @@ class PriceComponent(models.Model):
     A component that describes the price of an item with several factors (e.g. geographic location, unit of measure).
     """
     food = models.ForeignKey('recipes.Food')
-    unit_of_measure = models.ForeignKey('recipes.UnitOfMeasure')
     price = models.DecimalField(help_text='ex. 1.25 ($1.25)', max_digits=6, decimal_places=2)
+
+    # It is possible to have no unit of measure and no amount (e.g. salt, black pepper).
+    amount = models.DecimalField(
+        help_text='ex. 0.500 (one half), 0.250 (one fourth), 0.125 (one eighth)',
+        max_digits=6,
+        decimal_places=3,
+        null=True,
+        blank=True
+    )
+    unit_of_measure = models.ForeignKey('recipes.UnitOfMeasure', null=True, blank=True)
 
     class Meta:
         default_related_name = 'price_components'
         ordering = ['food']
 
     def __unicode__(self):
-        return '{price} for {measurement} of {food}'.format(
+        return '${price} for {amount} {measurement} of {food}'.format(
             price=self.price,
+            amount=self.amount,
             measurement=self.unit_of_measure.description,
             food=self.food.name
         )
@@ -194,7 +204,6 @@ class PantryFood(models.Model):
     food = models.ForeignKey('recipes.Food')
 
     # It is possible to have no unit of measure and no amount (e.g. salt, black pepper).
-    unit_of_measure = models.ForeignKey('recipes.UnitOfMeasure', null=True, blank=True)
     amount = models.DecimalField(
         help_text='ex. 0.500 (one half), 0.250 (one fourth), 0.125 (one eighth)',
         max_digits=6,
@@ -202,3 +211,7 @@ class PantryFood(models.Model):
         null=True,
         blank=True
     )
+    unit_of_measure = models.ForeignKey('recipes.UnitOfMeasure', null=True, blank=True)
+
+    class Meta:
+        unique_together = ('pantry', 'food')

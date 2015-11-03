@@ -50,7 +50,7 @@ class FoodCategoryAdmin(admin.ModelAdmin):
 
 @admin.register(PriceComponent)
 class PriceComponentAdmin(admin.ModelAdmin):
-    fields = ('food', 'price', 'unit_of_measure')
+    fields = ('food', 'price', 'amount', 'unit_of_measure')
 
 
 @admin.register(UnitOfMeasure)
@@ -65,7 +65,7 @@ class UserPantryAdmin(admin.ModelAdmin):
 
 class PantryFoodAdmin(admin.TabularInline):
     model = Pantry.foods.through
-    fields = ('food', 'unit_of_measure')
+    fields = ('food', 'amount', 'unit_of_measure')
     extra = 1
 
 

@@ -10,7 +10,7 @@ from django.contrib.auth import get_user_model
 # Local imports...
 from ..models import (
     Food, FoodCategory, FoodCategoryClassification, Ingredient, Pantry, PantryFood, Recipe, RecipeCategory,
-    RecipeCategoryClassification, UserPantry
+    RecipeCategoryClassification, UnitOfMeasure, UserPantry
 )
 
 User = get_user_model()
@@ -71,6 +71,9 @@ class PantryViewTest(APITestCase):
             password='password'
         )
 
+        # Create unit of measure...
+        self.unit_of_measure = UnitOfMeasure.objects.create(description='quantity', abbreviation='qty')
+
         # Set up food data...
         self.food = Food.objects.create(name='tomatoes')
         self.food_category = FoodCategory.objects.create(description='vegetable')
@@ -98,6 +101,50 @@ class PantryViewTest(APITestCase):
                 'foods': [f.id for f in self.pantry.foods.all()]
             }]
         })
+
+    def test_can_create_user_pantry_foods(self):
+        # Create a new food...
+        food = Food.objects.create(name='white onions')
+
+        # Add the food to the pantry...
+        response = self.client.post('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
+            pantry_id=self.pantry.id, food_id=food.id
+        ), {
+            'amount': 1.00,
+            'unit_of_measure': self.unit_of_measure.id
+        })
+
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertTrue(PantryFood.objects.filter(pantry=self.pantry, food=food).exists())
+
+    def test_can_update_user_pantry_foods(self):
+        # Create a new food...
+        food = Food.objects.create(name='white onions')
+        PantryFood.objects.create(pantry=self.pantry, food=food)
+
+        # Add the food to the pantry...
+        response = self.client.put('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
+            pantry_id=self.pantry.id, food_id=food.id
+        ), {
+            'amount': 2.00,
+            'unit_of_measure': self.unit_of_measure.id
+        })
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(PantryFood.objects.filter(pantry=self.pantry, food=food).exists())
+
+    def test_can_delete_user_pantry_foods(self):
+        # Add a new food to the pantry...
+        food = Food.objects.create(name='white onions')
+        PantryFood.objects.create(pantry=self.pantry, food=food)
+
+        # Delete the food from the pantry...
+        response = self.client.delete('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
+            pantry_id=self.pantry.id, food_id=food.id
+        ))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertFalse(PantryFood.objects.filter(pantry=self.pantry, food=food).exists())
 
 
 class RecipeViewTest(APITestCase):
@@ -131,7 +178,7 @@ class RecipeViewTest(APITestCase):
 
     def test_can_retrieve_recipe(self):
         with self.assertNumQueries(3):
-            response = self.client.get('/api/v1/recipes/recipes/' + str(self.recipe.pk) + '/')
+            response = self.client.get('/api/v1/recipes/recipes/{}/'.format(self.recipe.pk))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, {

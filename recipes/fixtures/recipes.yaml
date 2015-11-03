@@ -580,18 +580,205 @@
 - fields: {description: null, instructions: null, name: Top-of-the-Line Margarita}
   model: recipes.recipe
   pk: 157
+- fields: {description: "<p>All over this temperate country, which year-round offers
+      crimson-orange tomatoes with good flavor, a <em>salsa mexicana</em> made from
+      ripe tomatoes is a traditional condiment put on tables in <em>taquer&iacute;as</em>
+      and <em>cafeter&iacute;as</em>, bus stations and homey dining rooms.</p>\r\n<p>I&rsquo;ve
+      never been keen on tomatoes that fall short of that, like the common, mealy
+      store-bought ones. But when the red fruit is full of perfume, <em>salsa mexicana</em>
+      comes across with the balanced strength of sweet tomato, hot green chiles, crunchy
+      onion and aromatic fresh coriander&mdash;flavors at the heart of the Mexican
+      kitchen.</p>\r\n<p>This definitive, relishy sauce is available in every region
+      of Mexico, with a texture that ranges from a beautiful coarse puree to an unhappy
+      collection of grape-size pieces. The Yucatecan name for the mixture is <em>xnipec</em>
+      (which means, rather picturesquely, &ldquo;nose of the dog&rdquo;&mdash;see
+      variation recipe); in the rest of Mexico, it can be <em>salsa cruda</em>, <em>salsa
+      fresca</em>, <em>salsa</em>, <em>chile</em>, you name it; and in Texas, you
+      get it when you ask for <em>pico de gallo</em> (literally &ldquo;rooster&rsquo;s
+      beak&rdquo;), which would get you something entirely different in West Central
+      Mexico.</p>", instructions: "<ol>\r\n<li><em>Chopping the ingredients.</em>
+      Core the tomato, then optionally seed it by cutting across the width and squeezing
+      out the seeds and liquid. Chop it very finely (so that no pieces are larger
+      than 1/16 inch) and scoop into a small bowl. If you want a milder sauce, seed
+      the chiles, then chop very finely and add to the tomatoes. Finely chop the onion
+      and garlic and add to the bowl along with the coriander.</li>\r\n<li><em>Seasoning
+      the sauce.</em> Stir in the salt, vinegar (or lime juice) and 1 tablespoon water,
+      then let the flavors mingle for &frac12; hour or so before serving.</li>\r\n</ol>",
+    name: Fresh Tomato-Chile Relish}
+  model: recipes.recipe
+  pk: 158
+- fields: {description: "<p>This green <em>tomatillo</em> version of the table <em>salsa
+      mexicana</em> seems even more commonplace in Mexico&rsquo;s snack parlors and
+      street stalls than the red tomato one&mdash;partly, I suspect, because the cooked
+      <em>tomatillos</em> make it more a sauce than a relish, and because it has a
+      tasty puckeriness that deliciously heightens&nbsp;the flavor of whatever it
+      goes on.</p>\r\n<p>The sauce is frequently within easy reach in <em>cafeter&iacute;as</em>,
+      too, paired with a hot Red-Chile Sauce or <em>Salsa Picante</em>. They all get
+      sprinkled on or stirred in, like the salt and pepper on our tables. This fresh
+      green <em>tomatillo</em> sauce is a particular favorite in Central Mexico.</p>",
+    instructions: "<ol>\r\n<li><em>The tomatillos.</em> Boil fresh <em>tomatillos</em>
+      in salted water to cover until <em>barely tender</em>, 8 to 10 minutes; drain.
+      Canned <em>tomatillos</em> only need to be drained.</li>\r\n<li><em>The puree.</em>
+      Place the <em>tomatillos</em> in a blender or food processor. If you want a
+      milder sauce, seed the chile(s), then chop into small bits and add to the <em>tomatillos</em>
+      along with the coriander and chopped onion; if using a blender, stir well. Blend
+      or process to a coarse puree.</li>\r\n<li><em>Finishing the sauce.</em> Scrape
+      into a sauce dish, thin to a medium-thick consistency with about &frac14; cup
+      water, then season with salt. Let stand for about &frac12; hour before serving,
+      for the flavors to blend.</li>\r\n</ol>", name: Fresh Green Tomatillo Sauce}
+  model: recipes.recipe
+  pk: 159
+- fields: {description: "<p>If the flavors of this picante red-chile sauce are well
+      blended, the heat will have been&nbsp;rounded out with a little softening tomato
+      flavor and balanced with a burst of roasted garlic. I&rsquo;ve come across carelessly
+      made versions that varied from riveting to impotent to heart-burning. But if
+      you follow the directions laid out here, you&rsquo;ll turn out a traditionally
+      spirited table sauce that is an unsurpassed condiment for mouthfuls of charcoal-broiled
+      steak.</p>\r\n<p>Simple red-chile sauces are in the repertory of cooks all over
+      Mexico (save Yucat&aacute;n, I believe) and they are commonly made with the
+      very hot <em>chiles de &aacute;rbol</em> and softened with <em>tomatillo</em>
+      or mellowed with vinegar. This is a version I learned from two infectiously
+      friendly <em>antojito</em> makers in Toluca, and I love it.</p>", instructions: "<ol>\r\n<li><em>The
+      chiles and garlic.</em> Tear the <em>guajillo</em> chiles into flat pieces,
+      then toast them on a griddle or heavy skillet over medium heat, using a metal
+      spatula to press them flat to the hot surface for a few seconds, then flipping
+      and pressing again. You&rsquo;ll notice a toasted look to each side and perhaps
+      a whiff of smoke when they&rsquo;re ready, but don&rsquo;t burn them or they&rsquo;ll
+      taste bitter. Lay the unpeeled garlic on the griddle and turn frequently until
+      soft and blackened in spots, about 15 minutes. Cool, peel off the skin and cut
+      in quarters.</li>\r\n<li><em>Blending the ingredients.</em> Break the chiles
+      into a dry blender jar, cover and blend on high until pulverized. Add the garlic,
+      roasted tomato, optional <em>chile chipotle</em> and &frac14; cup water, then
+      blend until very smooth.</li>\r\n<li><em>Finishing the sauce.</em> Strain the
+      saurce through a medium-mesh sieve into a small dish, then stir in a little
+      more water, if necessary, to make a light, pourable consistency. Season with
+      salt and let stand for &frac12; hour to let the flavors mingle.</li>\r\n</ol>",
+    name: Red Chile Sauce with Roasted Tomato}
+  model: recipes.recipe
+  pk: 160
+- fields: {description: '<p>This is a simple, smoky hot table sauce that is delicious
+      with grilled meats. Made from the smoke-dried <em>jalape&ntilde;os</em> they
+      call <em>chipotles</em> (from Nahuatl for &ldquo;smoked chile&rdquo;), it is
+      an exceptional composite of flavors&mdash;though one that doesn&rsquo;t show
+      up in such a pure form much in Mexico. Instead, the sauce that most frequently
+      enlivens tacos seems to combine the cook&rsquo;s two or three favorite dried
+      chiles, one of which is almost sure to be a <em>chipotle</em>. So try it this
+      way, then move on to your own combinations.</p>', instructions: "<ol>\r\n<li><em>Roasting
+      the tomatillos and garlic.</em> Lay a square of aluminum foil on a griddle or
+      skillet set over medium heat; set the <em>tomatillos</em> on top and turn regularly
+      until soft and blackened in spots, about 10 minutes. While the <em>tomatillos</em>
+      are roasting, toast the garlic on an uncovered spot on the griddle or skillet,
+      turning frequently until soft, about 15 minutes; cool, slip off the skin and
+      chop.</li>\r\n<li><em>Finishing the sauce.</em> Place the <em>tomatillos</em>,
+      garlic, <em>chipotles</em> and 2 tablespoons water in a blender jar or food
+      processor and puree. Scrape into a sauce dish, season with salt and stir in
+      a little more water to give it a light, saucy consistency. If a smokier flavor
+      is desired, stir in a teaspoon or two of the sauce from the canned <em>chiles
+      chipotles</em>.</li>\r\n</ol>", name: Chipotle Chile Sauce}
+  model: recipes.recipe
+  pk: 161
+- fields: {description: '<p>It stands in corked liter liquor bottles in markets through
+      West-Central and Northern Mexico, waiting to be taken home to sprinkle on tacos,
+      tostadas or the lot of other snacks, or to dash into White <em>Pozole</em>,
+      <em>Menudo</em> or any other soup. It lasts indefinitely, unlike the uncooked
+      vegetable-chile blends that also go on the table; it&rsquo;s the closest you&rsquo;ll
+      get to Tabasco sauce&mdash;and it is a lot better.</p>', instructions: "<ol>\r\n<li><em>The
+      chiles and seeds.</em> Stem the chiles, then roll them between your thumb and
+      fingers, pressing gently to loosen the seeds inside. Break in half, shake out
+      as many seeds as possible, then place in a blender jar. Heat an ungreased skillet
+      over medium-low. Measure in the sesame seeds and stir for several minutes as
+      they brown and pop; scoop into the blender jar. Add the pumpkinseeds to the
+      skillet. When the first one pops, stir constantly for several minutes, until
+      all are golden and have popped up into a round shape.</li>\r\n<li><em>Blending
+      the sauce.</em> Pulverize the cumin, allspice and cloves in a mortar or spice
+      grinder, then add to the blender jar along with the oregano, salt, garlic and
+      vinegar. Blend for several minutes, until the mixture is orange-red and feels
+      quite smooth when a drop is rubbed between your fingers.</li>\r\n<li><em>Straining
+      and ripening the sauce.</em> Strain through a medium-mesh sieve, working the
+      solids back and forth and pressing them firmly; there will be a fair amount
+      of chile seeds, skins, sesame hulls and other debris to discard, but be careful
+      that there is nothing liquid trapped within them.<br />Stir in &frac34; cup
+      water, then pour into a bottle, cover and let stand for 24 hours before serving.</li>\r\n</ol>",
+    name: "Chile De \xC1rbol Hot Sauce"}
+  model: recipes.recipe
+  pk: 162
+- fields: {description: "<p>Many gastronomical commentators have singled out the tomato
+      as Mexico&rsquo;s most useful contribution to world cookery&hellip;even in light
+      of her chiles and chocolate. Tomatoes do, after all, have that fresh tangy sweetness
+      and an ability to cook into a soft-textured mass that offers relief from those
+      old-fashioned glutinous soups and sauces.</p>\r\n<p>The cooks of Mexico&rsquo;s
+      distinct regions boil and roast and fry huge quantities of this fruit-of-the-groping-vine
+      into all sorts of delicious variations on this simple sauce, ones that their
+      people have come to identify as their own. For the basic recipe below, I have
+      culled out a kind of fence-straddling version that works as well to spark up
+      <em>Huevos Rancheros</em> and Mexican Rice as it does for saucing <em>Chiles
+      Rellenos</em> or Quick-Simmered Tortilla Casserole (<em>Chilaquiles</em>) or
+      for spooning onto tacos.</p>", instructions: "<ol>\r\n<li><em>The tomatoes.</em>
+      For a more refined sauce, seed the tomatoes: Cut them in half across the middle
+      and squeeze out the seeds and liquid. Roughly chop the tomatoes and place in
+      a blender or food processor.</li>\r\n<li><em>The puree.</em> If you want a milder
+      sauce, first seed the chiles. Then chop them into small bits and add to the
+      blender or processor, along with the onion and garlic. If using a blender, stir
+      to distribute the ingredients evenly, then process the mixture until pureed
+      (but still retaining a little texture).</li>\r\n<li><em>Frying the sauce.</em>
+      Heat the lard or oil in a medium-large skillet over medium-high. When it is
+      hot enough to make a drop of the puree really sizzle, add it all at once and
+      stir constantly for about 5 minutes, as the puree sears and cooks into a thicker,
+      more orange-colored sauce. Season with salt and remove from the fire.</li>\r\n</ol>",
+    name: Quick-Cooked Tomato-Chile Sauce}
+  model: recipes.recipe
+  pk: 163
 - fields: {description: salsa}
   model: recipes.recipecategory
   pk: 1
 - fields: {description: Mexican}
   model: recipes.recipecategory
   pk: 2
+- fields: {description: Authentic Mexican}
+  model: recipes.recipecategory
+  pk: 3
 - fields: {recipe: 1, recipe_category: 1}
   model: recipes.recipecategoryclassification
   pk: 1
 - fields: {recipe: 1, recipe_category: 2}
   model: recipes.recipecategoryclassification
   pk: 2
+- fields: {recipe: 158, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 3
+- fields: {recipe: 158, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 4
+- fields: {recipe: 159, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 5
+- fields: {recipe: 159, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 6
+- fields: {recipe: 160, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 7
+- fields: {recipe: 160, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 8
+- fields: {recipe: 161, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 9
+- fields: {recipe: 161, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 10
+- fields: {recipe: 162, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 11
+- fields: {recipe: 162, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 12
+- fields: {recipe: 163, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 13
+- fields: {recipe: 163, recipe_category: 1}
+  model: recipes.recipecategoryclassification
+  pk: 14
 - fields: {name: achiote seeds}
   model: recipes.food
   pk: 1
@@ -1138,6 +1325,9 @@
 - fields: {name: Cointreau orange liqueur}
   model: recipes.food
   pk: 182
+- fields: {name: "dried chiles de \xE1rbol"}
+  model: recipes.food
+  pk: 183
 - fields: {amount: null, description: '', food: 1, recipe: 12, unit_of_measure: null}
   model: recipes.ingredient
   pk: 158
@@ -6538,3 +6728,208 @@
 - fields: {amount: null, description: '', food: 182, recipe: 157, unit_of_measure: null}
   model: recipes.ingredient
   pk: 1957
+- fields: {amount: '1.000', description: '1 ripe, large tomato', food: 23, recipe: 158,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1958
+- fields: {amount: '3.000', description: 'fresh hot green chiles to taste (roughly
+      3 chiles serranos), stemmed', food: 27, recipe: 158, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1959
+- fields: {amount: '1.000', description: 1 small onion, food: 17, recipe: 158, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1960
+- fields: {amount: '1.000', description: '1 clove garlic, peeled', food: 6, recipe: 158,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1961
+- fields: {amount: '1.000', description: '8 to 10 sprigs fresh coriander (cilantro),
+      chopped', food: 15, recipe: 158, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1962
+- fields: {amount: '0.500', description: 'salt, about 1/2 teaspoon', food: 7, recipe: 158,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1963
+- fields: {amount: '1.000', description: 1 teaspoon freshly squeezed lime juice, food: 75,
+    recipe: 158, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1964
+- fields: {amount: '8.000', description: '8 ounces (5 or 6 medium) fresh tomatillos,
+      husked and washed', food: 26, recipe: 159, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 1965
+- fields: {amount: '2.000', description: 'fresh hot green chiles to taste (roughly
+      2 chiles serranos), stemmed', food: 27, recipe: 159, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1966
+- fields: {amount: '1.000', description: '5 or 6 sprigs fresh coriander (cilantro),
+      roughly chopped', food: 15, recipe: 159, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1967
+- fields: {amount: '0.500', description: '1/2 small onion, chopped', food: 17, recipe: 159,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1968
+- fields: {amount: '0.500', description: 'salt, about 1/2 teaspoon', food: 7, recipe: 159,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1969
+- fields: {amount: '1.000', description: '4 medium (about 1 ounce total) dried chiles
+      guajillos, stemmed, seeded and deveined', food: 96, recipe: 160, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 1970
+- fields: {amount: '1.000', description: '2 cloves garlic, unpeeled', food: 6, recipe: 160,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1971
+- fields: {amount: '1.000', description: '1 ripe, large tomato, roasted, peeled, cored
+      and roughly chopped', food: 23, recipe: 160, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1972
+- fields: {amount: '1.000', description: '1/2 canned chile chipotle, seeded (optional)',
+    food: 19, recipe: 160, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1973
+- fields: {amount: '0.500', description: 'salt, about 1/2 teaspoon', food: 7, recipe: 160,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1974
+- fields: {amount: '4.500', description: '3 medium (about 4 1/2 ounces total) fresh
+      tomatillos, husked and washed', food: 26, recipe: 161, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 1975
+- fields: {amount: '1.000', description: '2 large cloves garlic, unpeeled', food: 6,
+    recipe: 161, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1976
+- fields: {amount: '3.000', description: '3 canned chiles chipotles, seeded', food: 19,
+    recipe: 161, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1977
+- fields: {amount: '0.250', description: 'salt, about 1/4 teaspoon', food: 7, recipe: 161,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1978
+- fields: {amount: '1.250', description: "1 1/4 ounces (about 50 to 60 mixed-size)
+      dried chiles de \xE1rbol", food: 183, recipe: 162, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 1979
+- fields: {amount: '1.500', description: 1 1/2 tablespoons sesame seeds, food: 109,
+    recipe: 162, unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 1980
+- fields: {amount: '2.000', description: 2 tablespoons shelled pumpkin seeds (pepitas),
+    food: 54, recipe: 162, unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 1981
+- fields: {amount: '0.250', description: 1/4 teaspoon cumin seeds (or a generous 1/4
+      teaspoon ground), food: 14, recipe: 162, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1982
+- fields: {amount: '0.125', description: 4 large allspice berries (or about 1/8 teaspoon
+      ground), food: 2, recipe: 162, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1983
+- fields: {amount: '1.000', description: 2 cloves (or a big pinch ground), food: 41,
+    recipe: 162, unit_of_measure: 6}
+  model: recipes.ingredient
+  pk: 1984
+- fields: {amount: '1.000', description: 1 teaspoon dried oregano, food: 4, recipe: 162,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1985
+- fields: {amount: '1.000', description: 1 scant teaspoon salt, food: 7, recipe: 162,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1986
+- fields: {amount: '1.000', description: '2 large cloves garlic, peeled and roughly
+      chopped', food: 6, recipe: 162, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1987
+- fields: {amount: '0.750', description: 3/4 cup cider vinegar, food: 5, recipe: 162,
+    unit_of_measure: 7}
+  model: recipes.ingredient
+  pk: 1988
+- fields: {amount: '1.500', description: '1 1/2 pounds (3 medium-large round, 9 or
+      10 pear-shaped) ripe tomatoes, boiled or roasted, peeled and cored', food: 23,
+    recipe: 163, unit_of_measure: 4}
+  model: recipes.ingredient
+  pk: 1989
+- fields: {amount: '5.000', description: 'fresh hot green chiles to taste (roughly
+      3 to 5 chiles serranos), stemmed', food: 27, recipe: 163, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1990
+- fields: {amount: '1.000', description: '1/2 small onion, chopped', food: 17, recipe: 163,
+    unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1991
+- fields: {amount: '1.000', description: '1 large clove garlic, peeled and roughly
+      chopped', food: 6, recipe: 163, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 1992
+- fields: {amount: '1.000', description: 1 tablespoon lard or vegetable oil, food: 110,
+    recipe: 163, unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 1993
+- fields: {amount: '0.500', description: 'salt, about 1/2 teaspoon', food: 7, recipe: 163,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 1994
+- fields: {amount: '1.000', food: 23, price: '0.46', unit_of_measure: 1}
+  model: recipes.pricecomponent
+  pk: 1
+- fields: {amount: '4.000', food: 23, price: '0.46', unit_of_measure: 3}
+  model: recipes.pricecomponent
+  pk: 2
+- fields: {amount: '1.000', food: 17, price: '0.95', unit_of_measure: 1}
+  model: recipes.pricecomponent
+  pk: 3
+- fields: {amount: '9.000', food: 17, price: '0.95', unit_of_measure: 3}
+  model: recipes.pricecomponent
+  pk: 4
+- fields: {amount: '1.000', food: 27, price: '4.99', unit_of_measure: 4}
+  model: recipes.pricecomponent
+  pk: 5
+- fields: {amount: '1.000', food: 6, price: '1.99', unit_of_measure: 4}
+  model: recipes.pricecomponent
+  pk: 6
+- fields: {amount: '48.000', food: 7, price: '3.99', unit_of_measure: 3}
+  model: recipes.pricecomponent
+  pk: 7
+- fields: {amount: '1.000', food: 15, price: '1.49', unit_of_measure: 1}
+  model: recipes.pricecomponent
+  pk: 8
+- fields: {amount: '1.000', food: 75, price: '0.25', unit_of_measure: 1}
+  model: recipes.pricecomponent
+  pk: 9
+- fields: {amount: '2.000', food: 26, price: '0.42', unit_of_measure: 3}
+  model: recipes.pricecomponent
+  pk: 10
+- fields: {amount: '1.000', food: 26, price: '0.42', unit_of_measure: 1}
+  model: recipes.pricecomponent
+  pk: 11
+- fields: {abbreviation: qty, description: quantity}
+  model: recipes.unitofmeasure
+  pk: 1
+- fields: {abbreviation: tsp, description: teaspoons}
+  model: recipes.unitofmeasure
+  pk: 2
+- fields: {abbreviation: oz, description: ounces}
+  model: recipes.unitofmeasure
+  pk: 3
+- fields: {abbreviation: lb, description: pounds}
+  model: recipes.unitofmeasure
+  pk: 4
+- fields: {abbreviation: tbsp, description: tablespoons}
+  model: recipes.unitofmeasure
+  pk: 5
+- fields: {abbreviation: pinch, description: pinch}
+  model: recipes.unitofmeasure
+  pk: 6
+- fields: {abbreviation: cup, description: cup}
+  model: recipes.unitofmeasure
+  pk: 7
+- fields: {name: Home}
+  model: recipes.pantry
+  pk: 1
