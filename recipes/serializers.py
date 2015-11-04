@@ -13,6 +13,13 @@ class FoodSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'categories')
 
 
+class CountedFoodSerializer(FoodSerializer):
+    count = serializers.IntegerField()
+
+    class Meta(FoodSerializer.Meta):
+        fields = list(FoodSerializer.Meta.fields) + ['count']
+
+
 class FoodCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodCategory

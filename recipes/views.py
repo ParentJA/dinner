@@ -1,6 +1,7 @@
 __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 
 # Standard library imports...
+from collections import Counter
 from itertools import chain
 
 # Third-party imports...
@@ -13,10 +14,10 @@ from django.contrib.auth import get_user_model
 from django.http import Http404
 
 # Local imports...
-from .models import Food, Recipe, Pantry, PantryFood, UnitOfMeasure, UserPantry
+from .models import Food, Ingredient, Recipe, Pantry, PantryFood, UnitOfMeasure, UserPantry
 from .serializers import (
-    BasicRecipeSerializer, FoodSerializer, FoodCategorySerializer, PantrySerializer, RecipeSerializer,
-    RecipeCategorySerializer, UnitOfMeasureSerializer
+    BasicRecipeSerializer, CountedFoodSerializer, FoodSerializer, FoodCategorySerializer, PantrySerializer,
+    RecipeSerializer, RecipeCategorySerializer, UnitOfMeasureSerializer
 )
 
 User = get_user_model()
@@ -194,7 +195,14 @@ class RecipeAPIViewSet(viewsets.ViewSet):
         if use_foods:
             foods = set(chain.from_iterable([f for f in [recipe.foods.all() for recipe in recipes]]))
 
-            data['foods'] = FoodSerializer(foods, many=True).data
+            # Count and modify ingredients...
+            ingredients = Ingredient.objects.select_related('food')
+            ingredient_counter = Counter(map(lambda i: i.food.id, ingredients))
+
+            for food in foods:
+                food.count = ingredient_counter.get(food.id)
+
+            data['foods'] = CountedFoodSerializer(foods, many=True).data
 
             if use_categories:
                 food_categories = set(chain.from_iterable([c for c in [food.categories.all() for food in foods]]))

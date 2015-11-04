@@ -90,9 +90,10 @@ class PantryViewTest(APITestCase):
         self.client.login(username='jason.parent@example.com', password='password')
 
     def test_can_create_user_pantries(self):
-        response = self.client.post('/api/v1/recipes/pantries/', {
-            'name': 'New'
-        })
+        with self.assertNumQueries(7):
+            response = self.client.post('/api/v1/recipes/pantries/', {
+                'name': 'New'
+            })
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -130,7 +131,8 @@ class PantryViewTest(APITestCase):
             u.pantry.delete()
             u.delete()
 
-        response = self.client.get('/api/v1/recipes/pantries/')
+        with self.assertNumQueries(6):
+            response = self.client.get('/api/v1/recipes/pantries/')
 
         user_pantry = UserPantry.objects.get(user=self.user)
 
@@ -148,12 +150,13 @@ class PantryViewTest(APITestCase):
         food = Food.objects.create(name='white onions')
 
         # Add the food to the pantry...
-        response = self.client.post('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
-            pantry_id=self.pantry.id, food_id=food.id
-        ), {
-            'amount': 1.00,
-            'unit_of_measure': self.unit_of_measure.id
-        })
+        with self.assertNumQueries(7):
+            response = self.client.post('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
+                pantry_id=self.pantry.id, food_id=food.id
+            ), {
+                'amount': 1.00,
+                'unit_of_measure': self.unit_of_measure.id
+            })
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertTrue(PantryFood.objects.filter(pantry=self.pantry, food=food).exists())
@@ -164,12 +167,13 @@ class PantryViewTest(APITestCase):
         PantryFood.objects.create(pantry=self.pantry, food=food)
 
         # Add the food to the pantry...
-        response = self.client.put('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
-            pantry_id=self.pantry.id, food_id=food.id
-        ), {
-            'amount': 2.00,
-            'unit_of_measure': self.unit_of_measure.id
-        })
+        with self.assertNumQueries(7):
+            response = self.client.put('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
+                pantry_id=self.pantry.id, food_id=food.id
+            ), {
+                'amount': 2.00,
+                'unit_of_measure': self.unit_of_measure.id
+            })
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertTrue(PantryFood.objects.filter(pantry=self.pantry, food=food).exists())
@@ -180,9 +184,10 @@ class PantryViewTest(APITestCase):
         PantryFood.objects.create(pantry=self.pantry, food=food)
 
         # Delete the food from the pantry...
-        response = self.client.delete('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
-            pantry_id=self.pantry.id, food_id=food.id
-        ))
+        with self.assertNumQueries(5):
+            response = self.client.delete('/api/v1/recipes/pantries/{pantry_id}/foods/{food_id}/'.format(
+                pantry_id=self.pantry.id, food_id=food.id
+            ))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertFalse(PantryFood.objects.filter(pantry=self.pantry, food=food).exists())
@@ -266,7 +271,8 @@ class RecipeViewTest(APITestCase):
         })
 
     def test_can_retrieve_basic_recipe_list_with_foods(self):
-        response = self.client.get('/api/v1/recipes/recipes/?foods=true')
+        with self.assertNumQueries(5):
+            response = self.client.get('/api/v1/recipes/recipes/?foods=true')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, {
@@ -279,12 +285,14 @@ class RecipeViewTest(APITestCase):
             'foods': [{
                 'id': self.food.id,
                 'name': self.food.name,
-                'categories': [c.id for c in self.food.categories.all()]
+                'categories': [c.id for c in self.food.categories.all()],
+                'count': 1
             }]
         })
 
     def test_can_retrieve_basic_recipe_list_with_categories_and_foods(self):
-        response = self.client.get('/api/v1/recipes/recipes/?categories=true&foods=true')
+        with self.assertNumQueries(5):
+            response = self.client.get('/api/v1/recipes/recipes/?categories=true&foods=true')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, {
@@ -301,7 +309,8 @@ class RecipeViewTest(APITestCase):
             'foods': [{
                 'id': self.food.id,
                 'name': self.food.name,
-                'categories': [c.id for c in self.food.categories.all()]
+                'categories': [c.id for c in self.food.categories.all()],
+                'count': 1
             }],
             'food_categories': [{
                 'id': self.food_category.id,
