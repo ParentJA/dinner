@@ -65,6 +65,7 @@
       $scope.recipes = recipes.getRecipes();
       $scope.hasSelectedFoods = !_.isEmpty($scope.getSelectedFoods());
       $scope.foods = $scope.getFoods();
+      $scope.matchingRecipes = getMatchingRecipes();
       $scope.numTotalFoods = _.size($scope.foods);
     }
 
