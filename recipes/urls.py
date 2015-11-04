@@ -4,7 +4,7 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 from django.conf.urls import url
 
 # Local imports...
-from .views import FoodAPIView, PantryAPIView, PantryFoodAPIViewSet, RecipeAPIViewSet
+from .views import FoodAPIView, PantryAPIView, PantryFoodAPIViewSet, RecipeAPIViewSet, UnitOfMeasureAPIView
 
 urlpatterns = [
     url(r'^foods/$', FoodAPIView.as_view()),
@@ -16,4 +16,5 @@ urlpatterns = [
     })),
     url(r'^recipes/(?P<pk>\d+)/$', RecipeAPIViewSet.as_view({'get': 'retrieve'})),
     url(r'^recipes/$', RecipeAPIViewSet.as_view({'get': 'list'})),
+    url(r'^units_of_measure/$', UnitOfMeasureAPIView.as_view()),
 ]

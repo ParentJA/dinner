@@ -16,7 +16,7 @@ from django.http import Http404
 from .models import Food, Recipe, Pantry, PantryFood, UnitOfMeasure, UserPantry
 from .serializers import (
     BasicRecipeSerializer, FoodSerializer, FoodCategorySerializer, PantrySerializer, RecipeSerializer,
-    RecipeCategorySerializer
+    RecipeCategorySerializer, UnitOfMeasureSerializer
 )
 
 User = get_user_model()
@@ -59,6 +59,30 @@ class PantryAPIView(views.APIView):
         data = {}
 
         # Add pantries...
+        user_pantries = UserPantry.objects.select_related('user', 'pantry').filter(user=request.user)
+
+        if not user_pantries.exists():
+            pantry = Pantry.objects.create(name='Home')
+            user_pantries = [UserPantry.objects.create(user=request.user, pantry=pantry)]
+
+        pantries = set([u.pantry for u in user_pantries])
+
+        data['pantries'] = PantrySerializer(pantries, many=True).data
+
+        return Response(status=status.HTTP_200_OK, data=data)
+
+    def post(self, request):
+        # Retrieve data parameters...
+        name = request.data.get('name')
+
+        # Prepare response data...
+        data = {}
+
+        # Create pantry...
+        pantry = Pantry.objects.create(name=name)
+        UserPantry.objects.create(user=request.user, pantry=pantry)
+
+        # Retrieve pantries...
         user_pantries = UserPantry.objects.select_related('user', 'pantry').filter(user=request.user)
         pantries = set([u.pantry for u in user_pantries])
 
@@ -190,3 +214,12 @@ class RecipeAPIViewSet(viewsets.ViewSet):
         data['recipes'] = RecipeSerializer([recipe], many=True).data
 
         return Response(status=status.HTTP_200_OK, data=data)
+
+
+class UnitOfMeasureAPIView(views.APIView):
+    def get(self, request):
+        units_of_measure = UnitOfMeasure.objects.all()
+
+        return Response(status=status.HTTP_200_OK, data={
+            'units_of_measure': UnitOfMeasureSerializer(units_of_measure, many=True).data
+        })

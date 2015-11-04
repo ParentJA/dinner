@@ -1,13 +1,14 @@
 (function (window, angular, undefined) {
-  
+
   "use strict";
 
-  function PantryController($scope, createPantryFoodsService, deletePantryFoodsService, recipes, foodsService, pantries, updatePantryFoodsService) {
+  function PantryController($scope, $uibModal, createPantryFoodsService, deletePantryFoodsService, foodsService, pantries, recipes, unitsOfMeasure, updatePantryFoodsService) {
     $scope.availableFoods = [];
     $scope.emptyMethod = _.noop;
     $scope.hasSelectedFoods = false;
     $scope.numAvailableFoods = 0;
     $scope.numPantryFoods = 0;
+    $scope.pantry = {};
     $scope.pantryFoods = [];
 
     $scope.getAvailableFoods = function getAvailableFoods() {
@@ -19,18 +20,47 @@
     };
 
     $scope.moveAvailableFood = function moveAvailableFood(food) {
-      var availableFood = _.remove($scope.availableFoods, food)[0];
+      // Handle modal...
+      var modalInstance = $uibModal.open({
+        animation: true,
+        controller: "CreatePantryFoodModalController",
+        size: "sm",
+        templateUrl: "/static/pantry/views/pantry/components/create_pantry_food_modal/create_pantry_food_modal.html",
+        resolve: {
+          pantry: $scope.pantry,
+          food: food
+        }
+      });
 
-      createPantryFoodsService(availableFood).then(function (response) {
-        $scope.pantryFoods.push(availableFood);
+      modalInstance.result.then(function (payload) {
+        createPantryFoodsService(
+          payload.pantryId,
+          payload.foodId,
+          payload.amount,
+          payload.unitOfMeasureId
+        ).then(function (response) {
+          $scope.pantryFoods.push(_.first(_.remove($scope.availableFoods, food)));
+        });
       });
     };
 
     $scope.movePantryFood = function movePantryFood(food) {
-      var pantryFood = _.remove($scope.pantryFoods, food)[0];
+      // Handle modal...
+      var modalInstance = $uibModal.open({
+        animation: true,
+        controller: "DeletePantryFoodModalController",
+        size: "sm",
+        templateUrl: "/static/pantry/views/pantry/components/delete_pantry_food_modal/delete_pantry_food_modal.html",
+        resolve: {
+          pantry: $scope.pantry,
+          food: food
+        }
+      });
 
-      deletePantryFoodsService(pantryFood).then(function (response) {
-        $scope.availableFoods.push(pantryFood);
+      modalInstance.result.then(function (payload) {
+        deletePantryFoodsService(payload.pantryId, payload.foodId).then(function (response) {
+          $scope.availableFoods.push(_.first(_.remove($scope.pantryFoods, food)));
+        });
       });
     };
 
@@ -68,6 +98,7 @@
         }
       });
 
+      $scope.pantry = _.first(pantries.getPantries());
       $scope.pantryFoods = pantryFoods;
       $scope.availableFoods = availableFoods;
     }
@@ -75,8 +106,8 @@
 
   angular.module("app")
     .controller("PantryController", [
-      "$scope", "createPantryFoodsService", "deletePantryFoodsService", "recipes", "foodsService", "pantries",
-      "updatePantryFoodsService", PantryController
+      "$scope", "$uibModal", "createPantryFoodsService", "deletePantryFoodsService", "foodsService", "pantries",
+      "recipes", "unitsOfMeasure", "updatePantryFoodsService", PantryController
     ]);
 
 })(window, window.angular);

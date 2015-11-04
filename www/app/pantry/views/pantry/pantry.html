@@ -15,8 +15,8 @@
       </div>
       <div class="list-group">
         <a class="list-group-item" href
-           ng-repeat="Food in availableFoods | orderBy: '-count'" ng-click="moveAvailableFood(Food)">
-          <span>{{ Food.name }}</span>
+           ng-repeat="food in availableFoods | orderBy: '-count'" ng-click="moveAvailableFood(food)">
+          <span>{{ food.name }}</span>
         </a>
       </div>
     </div>
@@ -38,8 +38,8 @@
       </div>
       <div class="list-group">
         <a class="list-group-item" href
-           ng-repeat="Food in pantryFoods | orderBy: '-count'" ng-click="movePantryFood(Food)">
-          <span>{{ Food.name }}</span>
+           ng-repeat="food in pantryFoods | orderBy: '-count'" ng-click="movePantryFood(food)">
+          <span>{{ food.name }}</span>
         </a>
       </div>
     </div>

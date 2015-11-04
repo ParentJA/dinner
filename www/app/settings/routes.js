@@ -2,46 +2,46 @@
 
   "use strict";
 
-  function SettingsController($scope, ingredientsService, settingsService, tagsService) {
-    $scope.addIngredientExclusion = addIngredientExclusion;
-    $scope.addIngredientTagExclusion = addIngredientTagExclusion;
-    $scope.getIngredients = getIngredients;
-    $scope.getIngredientExclusions = getIngredientExclusions;
-    $scope.getIngredientTagExclusions = getIngredientTagExclusions;
+  function SettingsController($scope, foodsService, settingsService, tagsService) {
+    $scope.addFoodExclusion = addFoodExclusion;
+    $scope.addFoodTagExclusion = addFoodTagExclusion;
+    $scope.getFoods = getFoods;
+    $scope.getFoodExclusions = getFoodExclusions;
+    $scope.getFoodTagExclusions = getFoodTagExclusions;
     $scope.getTags = getTags;
-    $scope.removeIngredientExclusion = removeIngredientExclusion;
-    $scope.removeIngredientTagExclusion = removeIngredientTagExclusion;
+    $scope.removeFoodExclusion = removeFoodExclusion;
+    $scope.removeFoodTagExclusion = removeFoodTagExclusion;
 
-    function addIngredientExclusion(exclusion) {
-      settingsService.addIngredientExclusion(exclusion);
+    function addFoodExclusion(exclusion) {
+      settingsService.addFoodExclusion(exclusion);
     }
 
-    function addIngredientTagExclusion(exclusion) {
-      settingsService.addIngredientTagExclusion(exclusion);
+    function addFoodTagExclusion(exclusion) {
+      settingsService.addFoodTagExclusion(exclusion);
     }
 
-    function getIngredients() {
-      return ingredientsService.getIngredients();
+    function getFoods() {
+      return foodsService.getFoods();
     }
 
-    function getIngredientExclusions() {
-      return settingsService.getIngredientExclusions();
+    function getFoodExclusions() {
+      return settingsService.getFoodExclusions();
     }
 
-    function getIngredientTagExclusions() {
-      return settingsService.getIngredientTagExclusions();
+    function getFoodTagExclusions() {
+      return settingsService.getFoodTagExclusions();
     }
 
     function getTags() {
       return tagsService.getTags();
     }
 
-    function removeIngredientExclusion(exclusion) {
-      settingsService.removeIngredientExclusion(exclusion);
+    function removeFoodExclusion(exclusion) {
+      settingsService.removeFoodExclusion(exclusion);
     }
 
-    function removeIngredientTagExclusion(exclusion) {
-      settingsService.removeIngredientTagExclusion(exclusion);
+    function removeFoodTagExclusion(exclusion) {
+      settingsService.removeFoodTagExclusion(exclusion);
     }
   }
 
@@ -55,7 +55,7 @@
 
   angular.module("app")
     .controller("SettingsController", [
-      "$scope", "ingredientsService", "settingsService", "tagsService", SettingsController
+      "$scope", "foodsService", "settingsService", "tagsService", SettingsController
     ])
     .config(["$stateProvider", SettingsRouterConfig]);
 

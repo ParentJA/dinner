@@ -14,6 +14,9 @@
           }
 
           return pantriesModel;
+        },
+        unitsOfMeasure: function (loadUnitsOfMeasureService) {
+          return loadUnitsOfMeasureService();
         }
       }
     });

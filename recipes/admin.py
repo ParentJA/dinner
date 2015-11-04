@@ -60,7 +60,7 @@ class UnitOfMeasureAdmin(admin.ModelAdmin):
 
 @admin.register(UserPantry)
 class UserPantryAdmin(admin.ModelAdmin):
-    pass
+    fields = ('user', 'pantry')
 
 
 class PantryFoodAdmin(admin.TabularInline):

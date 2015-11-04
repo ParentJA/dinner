@@ -89,16 +89,57 @@ class PantryViewTest(APITestCase):
         # Log in...
         self.client.login(username='jason.parent@example.com', password='password')
 
+    def test_can_create_user_pantries(self):
+        response = self.client.post('/api/v1/recipes/pantries/', {
+            'name': 'New'
+        })
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        user_pantry = UserPantry.objects.get(user=self.user, pantry__name='New')
+
+        self.assertEqual(response.data, {
+            'pantries': [{
+                'id': self.pantry.id,
+                'name': 'Home',
+                'foods': [f.id for f in self.pantry.foods.all()]
+            }, {
+                'id': user_pantry.pantry.id,
+                'name': user_pantry.pantry.name,
+                'foods': [f.id for f in user_pantry.pantry.foods.all()]
+            }]
+        })
+
     def test_can_retrieve_user_pantries(self):
-        with self.assertNumQueries(4):
+        with self.assertNumQueries(5):
             response = self.client.get('/api/v1/recipes/pantries/')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, {
             'pantries': [{
                 'id': self.pantry.id,
-                'name': 'Home',
+                'name': self.pantry.name,
                 'foods': [f.id for f in self.pantry.foods.all()]
+            }]
+        })
+
+    def test_new_user_has_pantry(self):
+        user_pantries = UserPantry.objects.filter(user=self.user)
+
+        for u in user_pantries:
+            u.pantry.delete()
+            u.delete()
+
+        response = self.client.get('/api/v1/recipes/pantries/')
+
+        user_pantry = UserPantry.objects.get(user=self.user)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, {
+            'pantries': [{
+                'id': user_pantry.pantry.id,
+                'name': user_pantry.pantry.name,
+                'foods': [f.id for f in user_pantry.pantry.foods.all()]
             }]
         })
 
@@ -265,5 +306,26 @@ class RecipeViewTest(APITestCase):
             'food_categories': [{
                 'id': self.food_category.id,
                 'description': self.food_category.description
+            }]
+        })
+
+
+class UnitOfMeasureViewTest(APITestCase):
+    def setUp(self):
+        self.client = APIClient()
+
+        # Set up units of measure...
+        self.unit_of_measure = UnitOfMeasure.objects.create(description='teaspoons', abbreviation='tsp')
+
+    def test_can_retrieve_units_of_measure_list(self):
+        with self.assertNumQueries(1):
+            response = self.client.get('/api/v1/recipes/units_of_measure/')
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, {
+            'units_of_measure': [{
+                'id': self.unit_of_measure.id,
+                'description': self.unit_of_measure.description,
+                'abbreviation': self.unit_of_measure.abbreviation
             }]
         })

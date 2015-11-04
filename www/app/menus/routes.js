@@ -2,8 +2,6 @@
 
   "use strict";
 
-  function MenuController($scope, dishes) {}
-
   function MenusRouterConfig($stateProvider) {
     $stateProvider.state("meals.menus", {
       url: "/menus",
@@ -13,7 +11,6 @@
   }
 
   angular.module("app")
-    .controller("MenuController", ["$scope", "dishes", MenuController])
     .config(["$stateProvider", MenusRouterConfig]);
 
 })(window, window.angular);

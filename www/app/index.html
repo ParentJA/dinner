@@ -34,8 +34,8 @@
         <li ng-class="{active: $state.is('meals.recipes')}">
           <a ui-sref="meals.recipes">Recipes</a>
         </li>
-        <li ng-class="{active: $state.is('meals.ingredients')}">
-          <a ui-sref="meals.ingredients">Ingredients</a>
+        <li ng-class="{active: $state.is('meals.foods')}">
+          <a ui-sref="meals.foods">Foods</a>
         </li>
       </ul>
       <div class="navbar-right" ng-if="hasUser()">
@@ -70,7 +70,9 @@
 <script src="{% static 'angular/angular.min.js' %}"></script>
 <script src="{% static 'angular-bootstrap/ui-bootstrap.min.js' %}"></script>
 <script src="{% static 'angular-bootstrap/ui-bootstrap-tpls.min.js' %}"></script>
+<script src="{% static 'angular-animate/angular-animate.min.js' %}"></script>
 <script src="{% static 'angular-cookies/angular-cookies.min.js' %}"></script>
+<script src="{% static 'angular-sanitize/angular-sanitize.min.js' %}"></script>
 <script src="{% static 'lodash/lodash.min.js' %}"></script>
 <script src="{% static 'moment/min/moment.min.js' %}"></script>
 <script src="{% static 'restangular/dist/restangular.min.js' %}"></script>
