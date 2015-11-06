@@ -1,6 +1,28 @@
 describe("a recipe model", function () {
 
   var recipesModel;
+  var responseData = {
+    food_categories: [{
+      description: "vegetable",
+      id: 1
+    }],
+    foods: [{
+      categories: [1],
+      count: 1,
+      id: 1,
+      name: "tomatoes"
+    }],
+    recipe_categories: [{
+      description: "Mexican",
+      id: 1
+    }],
+    recipes: [{
+      categories: [1],
+      foods: [1],
+      id: 1,
+      name: "Salsa"
+    }]
+  };
 
   beforeEach(function () {
     module("app");
@@ -10,36 +32,12 @@ describe("a recipe model", function () {
     });
   });
 
-  it("can update the information for a collection of recipes", function () {
+  it("should update the information for a collection of recipes", function () {
 
     //Confirm that the models has an update() method...
     expect(recipesModel.update).toBeDefined();
 
-    // Example response data...
-    var data = {
-      food_categories: [{
-        description: "vegetable",
-        id: 1
-      }],
-      foods: [{
-        categories: [1],
-        count: 1,
-        id: 1,
-        name: "tomatoes"
-      }],
-      recipe_categories: [{
-        description: "Mexican",
-        id: 1
-      }],
-      recipes: [{
-        categories: [1],
-        foods: [1],
-        id: 1,
-        name: "Salsa"
-      }]
-    };
-
-    recipesModel.update(data);
+    recipesModel.update(responseData);
 
     var foods = recipesModel.getFoods();
     var food = _.find(foods, "id", 1);
@@ -77,36 +75,13 @@ describe("a recipe model", function () {
 
   });
 
-  describe("updating a single recipe", function () {
+  describe("a recipe model that has already been updated", function () {
 
     beforeEach(function () {
-      var data = {
-        food_categories: [{
-          description: "vegetable",
-          id: 1
-        }],
-        foods: [{
-          categories: [1],
-          count: 1,
-          id: 1,
-          name: "tomatoes"
-        }],
-        recipe_categories: [{
-          description: "Mexican",
-          id: 1
-        }],
-        recipes: [{
-          categories: [1],
-          foods: [1],
-          id: 1,
-          name: "Salsa"
-        }]
-      };
-
-      recipesModel.update(data);
+      recipesModel.update(responseData);
     });
 
-    it("can update the information for a single recipe", function () {
+    it("should update the information for a single recipe", function () {
 
       // Confirm that the model has an updateOne() method...
       expect(recipesModel.updateOne).toBeDefined();
@@ -132,6 +107,40 @@ describe("a recipe model", function () {
       // Confirm that a description and instructions have been added to the recipe...
       expect(recipe.description).toEqual(description);
       expect(recipe.instructions).toEqual(instructions);
+
+    });
+
+    it("should get a list of food categories", function () {
+
+      var foodCategories = recipesModel.getFoodCategories();
+
+      expect(foodCategories).toEqual(responseData.food_categories);
+
+    });
+
+    it("should get a list of foods", function () {
+
+      var foods = recipesModel.getFoods();
+
+      expect(foods).toEqual([{
+        categories: [1],
+        count: 1,
+        id: 1,
+        name: "tomatoes",
+        vectorIndex: 0,
+        _categories: [{
+          description: "vegetable",
+          id: 1
+        }]
+      }]);
+
+    });
+
+    it("should get a list of recipe categories", function () {
+
+      var recipeCategories = recipesModel.getRecipeCategories();
+
+      expect(recipeCategories).toEqual(responseData.recipe_categories);
 
     });
 

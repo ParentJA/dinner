@@ -3,16 +3,13 @@
   "use strict";
 
   function RecipeDetailController($scope, recipesService) {
-    $scope.getSelectedRecipe = getSelectedRecipe;
-    $scope.getTotalFoods = getTotalFoods;
+    $scope.selectedRecipe = {};
+    $scope.totalFoods = 0;
 
-    function getSelectedRecipe() {
-      return recipesService.getSelectedRecipe();
-    }
-
-    function getTotalFoods() {
-      return _.size(recipesService.getSelectedRecipe()._foods);
-    }
+    $scope.$watch(recipesService.getSelectedRecipe, function (newValue, oldValue) {
+      $scope.selectedRecipe = recipesService.getSelectedRecipe();
+      $scope.totalFoods = _.size($scope.selectedRecipe._foods);
+    });
   }
 
   function recipeDetail() {

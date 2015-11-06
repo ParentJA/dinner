@@ -8,7 +8,7 @@
       var deferred = $q.defer();
 
       $http.get(BASE_URL + "recipes/recipes/" + recipeId + "/").then(function (response) {
-        recipesModel.update(response.data);
+        recipesModel.updateOne(response.data);
         deferred.resolve(recipesModel);
       }, function (response) {
         console.error("Recipe %d failed to load!", recipeId);
