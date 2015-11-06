@@ -12,7 +12,14 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^accounts/', include('accounts.urls')),
-    url(r'^api/v1/meals/', include('meals.urls')),
+    url(r'^api/v1/recipes/', include('recipes.urls')),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^tinymce/', include('tinymce.urls')),
+]
+
+# Serves static files in development environment...
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# Serves media files in development environment...
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

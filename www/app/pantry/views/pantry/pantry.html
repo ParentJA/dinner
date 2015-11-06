@@ -1,1 +1,48 @@
-<div class="row"></div>
+<div class="row">
+  <div class="col-lg-6">
+
+    <!-- Available Foods -->
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">Available Foods <span class="badge pull-right" ng-bind="numAvailableFoods"></span></h4>
+      </div>
+      <div class="panel-body">
+        <div x-dynamic-list
+             data-collection="getAvailableFoods()"
+             data-elements="getSelectedFoods()"
+             data-add-fn="moveAvailableFood(element)"
+             data-remove-fn="emptyMethod(element)"></div>
+      </div>
+      <div class="list-group">
+        <a class="list-group-item" href
+           ng-repeat="food in availableFoods | orderBy: '-count'" ng-click="moveAvailableFood(food)">
+          <span>{{ food.name }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+
+    <!-- Pantry Foods -->
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">Pantry Foods <span class="badge pull-right" ng-bind="numPantryFoods"></span></h4>
+      </div>
+      <div class="panel-body">
+        <div x-dynamic-list
+             data-collection="getPantryFoods()"
+             data-elements="getSelectedFoods()"
+             data-add-fn="movePantryFood(element)"
+             data-remove-fn="emptyMethod(element)"></div>
+      </div>
+      <div class="list-group">
+        <a class="list-group-item" href
+           ng-repeat="food in pantryFoods | orderBy: '-count'" ng-click="movePantryFood(food)">
+          <span>{{ food.name }}</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

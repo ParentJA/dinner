@@ -5,18 +5,18 @@
         <h4 class="panel-title">Settings</h4>
       </div>
       <div class="panel-body">
-        <h4>Ingredient Exclusions</h4>
+        <h4>Food Exclusions</h4>
         <div x-dynamic-list
-             data-collection="getIngredients()"
-             data-elements="getIngredientExclusions()"
-             data-add-fn="addIngredientExclusion(element)"
-             data-remove-fn="removeIngredientExclusion(element)"></div>
-        <h4>Ingredient Tag Exclusions</h4>
+             data-collection="getFoods()"
+             data-elements="getFoodExclusions()"
+             data-add-fn="addFoodExclusion(element)"
+             data-remove-fn="removeFoodExclusion(element)"></div>
+        <h4>Food Tag Exclusions</h4>
         <div x-dynamic-list
              data-collection="getTags()"
-             data-elements="getIngredientTagExclusions()"
-             data-add-fn="addIngredientTagExclusion(element)"
-             data-remove-fn="removeIngredientTagExclusion(element)"></div>
+             data-elements="getFoodTagExclusions()"
+             data-add-fn="addFoodTagExclusion(element)"
+             data-remove-fn="removeFoodTagExclusion(element)"></div>
       </div>
     </div>
   </div>

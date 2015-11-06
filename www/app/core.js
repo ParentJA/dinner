@@ -13,12 +13,15 @@
         url: "/meals",
         template: "<div ui-view></div>",
         resolve: {
-          dishes: function (dishesService, loadDishesService) {
-            if (!dishesService.hasDishes()) {
-              loadDishesService.getDishes();
+          recipes: function (recipesModel, loadRecipesService) {
+            if (_.isEmpty(recipesModel.getRecipes())) {
+              var useCategories = true;
+              var useFoods = true;
+
+              return loadRecipesService(useCategories, useFoods);
             }
 
-            return dishesService.getDishes();
+            return recipesModel;
           }
         },
         abstract: true
@@ -48,7 +51,7 @@
     };
   }
 
-  angular.module("app", ["ngCookies", "ui.router"])
+  angular.module("app", ["ngAnimate", "ngCookies", "ngSanitize", "ui.bootstrap", "ui.router"])
     .constant("BASE_URL", "/api/v1/")
     .config(["$httpProvider", HttpConfig])
     .config(["$stateProvider", "$urlRouterProvider", UiRouterConfig])

@@ -3,57 +3,57 @@
   "use strict";
 
   function settingsService() {
-    // Users might want to exclude specific ingredients for dietary reasons (e.g. Paleo, lactose intolerance, etc.)
-    var ingredientExclusions = [];
+    // Users might want to exclude specific foods for dietary reasons (e.g. Paleo, lactose intolerance, etc.)
+    var foodExclusions = [];
 
-    // Users might want to exclude groups of ingredients according to their tags
-    var ingredientTagExclusions = [];
+    // Users might want to exclude groups of foods according to their tags
+    var foodTagExclusions = [];
 
     var service = {
-      addIngredientExclusion: addIngredientExclusion,
-      addIngredientTagExclusion: addIngredientTagExclusion,
-      getIngredientExclusions: getIngredientExclusions,
-      getIngredientTagExclusions: getIngredientTagExclusions,
-      hasIngredientExclusions: hasIngredientExclusions,
-      hasIngredientTagExclusions: hasIngredientTagExclusions,
-      removeIngredientExclusion: removeIngredientExclusion,
-      removeIngredientTagExclusion: removeIngredientTagExclusion
+      addFoodExclusion: addFoodExclusion,
+      addFoodTagExclusion: addFoodTagExclusion,
+      getFoodExclusions: getFoodExclusions,
+      getFoodTagExclusions: getFoodTagExclusions,
+      hasFoodExclusions: hasFoodExclusions,
+      hasFoodTagExclusions: hasFoodTagExclusions,
+      removeFoodExclusion: removeFoodExclusion,
+      removeFoodTagExclusion: removeFoodTagExclusion
     };
 
-    function addIngredientExclusion(exclusion) {
-      if (!_.includes(ingredientExclusions, exclusion)) {
-        ingredientExclusions.push(exclusion);
+    function addFoodExclusion(exclusion) {
+      if (!_.includes(foodExclusions, exclusion)) {
+        foodExclusions.push(exclusion);
       }
     }
 
-    function addIngredientTagExclusion(exclusion) {
-      if (!_.includes(ingredientTagExclusions, exclusion)) {
-        ingredientTagExclusions.push(exclusion);
+    function addFoodTagExclusion(exclusion) {
+      if (!_.includes(foodTagExclusions, exclusion)) {
+        foodTagExclusions.push(exclusion);
       }
     }
 
-    function getIngredientExclusions() {
-      return _.sortBy(ingredientExclusions, "name");
+    function getFoodExclusions() {
+      return _.sortBy(foodExclusions, "name");
     }
 
-    function getIngredientTagExclusions() {
-      return _.sortBy(ingredientTagExclusions, "name");
+    function getFoodTagExclusions() {
+      return _.sortBy(foodTagExclusions, "name");
     }
 
-    function hasIngredientExclusions() {
-      return !_.isEmpty(ingredientExclusions);
+    function hasFoodExclusions() {
+      return !_.isEmpty(foodExclusions);
     }
 
-    function hasIngredientTagExclusions() {
-      return !_.isEmpty(ingredientTagExclusions);
+    function hasFoodTagExclusions() {
+      return !_.isEmpty(foodTagExclusions);
     }
 
-    function removeIngredientExclusion(exclusion) {
-      _.remove(ingredientExclusions, exclusion);
+    function removeFoodExclusion(exclusion) {
+      _.remove(foodExclusions, exclusion);
     }
 
-    function removeIngredientTagExclusion(exclusion) {
-      _.remove(ingredientTagExclusions, exclusion);
+    function removeFoodTagExclusion(exclusion) {
+      _.remove(foodTagExclusions, exclusion);
     }
 
     return service;

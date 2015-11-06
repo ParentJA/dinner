@@ -2,6 +2,9 @@
   
   "use strict";
 
-  angular.module("app");
+  function MenuController($scope, recipes) {}
+
+  angular.module("app")
+    .controller("MenuController", ["$scope", "recipes", MenuController]);
 
 })(window, window.angular);
