@@ -7323,6 +7323,12 @@
 - fields: {abbreviation: cup, description: cups}
   model: recipes.unitofmeasure
   pk: 7
+- fields: {pantry: 2, user: 1}
+  model: recipes.userpantry
+  pk: 4
 - fields: {name: Home}
   model: recipes.pantry
   pk: 1
+- fields: {name: Home}
+  model: recipes.pantry
+  pk: 2
