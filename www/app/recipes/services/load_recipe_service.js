@@ -9,7 +9,8 @@
 
       $http.get(BASE_URL + "recipes/recipes/" + recipeId + "/").then(function (response) {
         recipesModel.updateOne(response.data);
-        deferred.resolve(_.find(recipesModel.getRecipes(), "id", _.parseInt(recipeId)));
+        var recipe = recipesModel.getRecipeById(recipeId);
+        deferred.resolve(recipe);
       }, function (response) {
         console.error("Recipe %d failed to load!", recipeId);
         deferred.reject(response.data);

@@ -18,7 +18,7 @@ describe("a load recipe service", function () {
       $urlRouterProvider.deferIntercept();
 
       // Handle mocks...
-      recipesModelMock = jasmine.createSpyObj("recipesModel", ["updateOne"]);
+      recipesModelMock = jasmine.createSpyObj("recipesModel", ["updateOne", "getRecipeById"]);
 
       $provide.value("recipesModel", recipesModelMock);
     });

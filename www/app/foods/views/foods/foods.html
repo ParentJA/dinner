@@ -36,7 +36,7 @@
         <a class="list-group-item"
            ng-repeat="recipe in matchingRecipes | orderBy: 'name'"
            ng-click="setSelectedRecipe(recipe)"
-           ui-sref="meals.recipes">{{ recipe.name }}</a>
+           ui-sref="meals.recipes.detail({recipeId: recipe.id})">{{ recipe.name }}</a>
       </div>
     </div>
   </div>

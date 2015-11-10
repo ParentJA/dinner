@@ -15,6 +15,9 @@
       getFoods: function getFoods() {
         return foods;
       },
+      getRecipeById: function getRecipeById(recipeId) {
+        return _.find(recipes, "id", _.parseInt(recipeId));
+      },
       getRecipeCategories: function getRecipeCategories() {
         return recipeCategories;
       },

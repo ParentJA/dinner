@@ -1,26 +1,20 @@
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h4 class="panel-title">Recipe Detail</h4>
-  </div>
-  <div class="panel-body">
-    <h3>{{ recipe.name | title }}</h3>
-  </div>
-  <div class="panel-body" ng-if="recipe.description">
-    <p ng-bind-html="recipe.description"></p>
-  </div>
-  <table class="table">
-    <thead>
-    <tr>
-      <th>Ingredients <span class="badge badge-success pull-right" ng-bind="totalFoods"></span></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="ingredient in recipeIngredients">
-      <td>{{ ingredient }}</td>
-    </tr>
-    </tbody>
-  </table>
-  <div class="panel-body" ng-if="recipe.instructions">
-    <p ng-bind-html="recipe.instructions"></p>
+<div class="component--recipe-detail">
+  <ol class="breadcrumb">
+    <li>
+      <a href ui-sref="meals.recipes.list">Recipes</a>
+    </li>
+    <li class="active">{{ recipe.name }}</li>
+  </ol>
+  <div class="panel">
+    <div class="panel-body">
+      <h2>{{ recipe.name | title }}</h2>
+      <p ng-bind-html="recipe.description" ng-if="recipe.description"></p>
+      <h3>Ingredients <span class="label label-success pull-right" ng-bind="totalFoods"></span></h3>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="ingredient in recipeIngredients">{{ ingredient }}</li>
+    </ul>
+    <h3 ng-if="recipe.instructions">Instructions</h3>
+    <div ng-bind-html="recipe.instructions" ng-if="recipe.instructions"></div>
   </div>
 </div>
