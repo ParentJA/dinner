@@ -96,8 +96,8 @@ class Ingredient(models.Model):
     """
     A food that is used in a recipe.
     """
-    recipe = models.ForeignKey('recipes.Recipe')
-    food = models.ForeignKey('recipes.Food')
+    recipe = models.ForeignKey('recipes.Recipe', related_name='ingredients')
+    food = models.ForeignKey('recipes.Food', related_name='ingredients')
 
     # It is possible to have no unit of measure and no amount (e.g. salt, black pepper).
     amount = models.DecimalField(

@@ -12,6 +12,7 @@ from ..models import (
     Food, FoodCategory, FoodCategoryClassification, Ingredient, Pantry, PantryFood, Recipe, RecipeCategory,
     RecipeCategoryClassification, UnitOfMeasure, UserPantry
 )
+from ..serializers import FoodSerializer, IngredientSerializer, RecipeSerializer, UnitOfMeasureSerializer
 
 User = get_user_model()
 
@@ -197,6 +198,9 @@ class RecipeViewTest(APITestCase):
     def setUp(self):
         self.client = APIClient()
 
+        # Set up unit of measure...
+        self.unit_of_measure = UnitOfMeasure.objects.create(description='tablespoons', abbreviation='tbsp')
+
         # Set up food data...
         self.food = Food.objects.create(name='tomatoes')
         self.food_category = FoodCategory.objects.create(description='vegetable')
@@ -214,7 +218,13 @@ class RecipeViewTest(APITestCase):
         RecipeCategoryClassification.objects.create(
             recipe=self.recipe, recipe_category=self.recipe_category
         )
-        Ingredient.objects.create(recipe=self.recipe, food=self.food)
+        Ingredient.objects.create(
+            recipe=self.recipe,
+            food=self.food,
+            amount=1.000,
+            unit_of_measure=self.unit_of_measure,
+            description='1 tablespoon of black pepper'
+        )
 
     def test_cannot_retrieve_nonexistent_recipe(self):
         with self.assertNumQueries(1):
@@ -223,19 +233,16 @@ class RecipeViewTest(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def test_can_retrieve_recipe(self):
-        with self.assertNumQueries(3):
+        with self.assertNumQueries(2):
             response = self.client.get('/api/v1/recipes/recipes/{}/'.format(self.recipe.pk))
+
+        ingredients = Ingredient.objects.select_related('unit_of_measure').filter(recipe=self.recipe)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, {
-            'recipes': [{
-                'id': self.recipe.id,
-                'name': self.recipe.name,
-                'description': self.recipe.description,
-                'instructions': self.recipe.instructions,
-                'foods': [f.id for f in self.recipe.foods.all()],
-                'categories': [c.id for c in self.recipe.categories.all()]
-            }]
+            'ingredients': IngredientSerializer(ingredients, many=True).data,
+            'recipes': RecipeSerializer([self.recipe], many=True).data,
+            'units_of_measure': UnitOfMeasureSerializer([self.unit_of_measure], many=True).data
         })
 
     def test_can_retrieve_basic_recipe_list(self):

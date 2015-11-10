@@ -71,6 +71,15 @@
         var existingRecipe = _.find(recipes, "id", recipeId);
         existingRecipe.description = description;
         existingRecipe.instructions = instructions;
+
+        // Update ingredients...
+        var foodMap = _.indexBy(existingRecipe._foods, "id");
+
+        _.forEach(data.ingredients, function (ingredient) {
+          ingredient._food = foodMap[ingredient.food];
+        });
+
+        existingRecipe.ingredients = data.ingredients;
       }
     };
 

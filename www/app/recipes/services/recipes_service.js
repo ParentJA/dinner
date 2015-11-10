@@ -107,10 +107,6 @@
       },
       setSelectedRecipe: function setSelectedRecipe(recipe) {
         selectedRecipe = recipe;
-
-        if (!this.isFullRecipe(recipe)) {
-          loadRecipeService(recipe.id);
-        }
       }
     };
 

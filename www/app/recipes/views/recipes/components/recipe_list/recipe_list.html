@@ -15,7 +15,8 @@
     <tr ng-repeat="recipe in getRecipes() | orderBy: 'name'"
         ng-class="{active: isSelectedRecipe(recipe)}"
         ng-click="setSelectedRecipe(recipe)"
-        ng-show="hasRecipes()">
+        ng-show="hasRecipes()"
+        ui-sref="meals.recipes.detail({recipeId: recipe.id})">
       <td>{{ recipe.name | title }}</td>
     </tr>
     </tbody>

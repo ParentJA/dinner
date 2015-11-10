@@ -31,11 +31,16 @@
     $urlRouterProvider.otherwise("/");
   }
 
-  function UiRunner($rootScope, $state) {
+  function UiRunner($rootScope, $state, navigationService) {
     $rootScope.$state = $state;
+    $rootScope.$on("$stateChangeSuccess", function (event, toState, toParams, fromState, fromParams) {
+      navigationService.closeNavigation();
+    });
   }
 
-  function MainController($scope, $state, accountsService) {
+  function MainController($scope, $state, accountsService, navigationService) {
+    $scope.navigationService = navigationService;
+
     $scope.getUser = function getUser() {
       return accountsService.getUser();
     };
@@ -55,7 +60,7 @@
     .constant("BASE_URL", "/api/v1/")
     .config(["$httpProvider", HttpConfig])
     .config(["$stateProvider", "$urlRouterProvider", UiRouterConfig])
-    .run(["$rootScope", "$state", UiRunner])
-    .controller("MainController", ["$scope", "$state", "accountsService", MainController]);
+    .run(["$rootScope", "$state", "navigationService", UiRunner])
+    .controller("MainController", ["$scope", "$state", "accountsService", "navigationService", MainController]);
 
 })(window, window.angular);

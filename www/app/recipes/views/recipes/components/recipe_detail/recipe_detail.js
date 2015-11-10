@@ -2,14 +2,31 @@
 
   "use strict";
 
-  function RecipeDetailController($scope, recipesService) {
-    $scope.selectedRecipe = {};
+  function RecipeDetailController($scope, recipe, recipes) {
+    $scope.recipe = recipe;
+    $scope.recipeIngredients = [];
     $scope.totalFoods = 0;
 
-    $scope.$watch(recipesService.getSelectedRecipe, function (newValue, oldValue) {
-      $scope.selectedRecipe = recipesService.getSelectedRecipe();
-      $scope.totalFoods = _.size($scope.selectedRecipe._foods);
-    });
+    activate();
+
+    function activate() {
+      // Handle selected recipe ingredients...
+      var hasValidIngredients = (
+        _.has(recipe, "ingredients") &&
+        _.some(recipe.ingredients, function (ingredient) {
+          return !_.isEmpty(ingredient.description);
+        })
+      );
+
+      if (hasValidIngredients) {
+        $scope.recipeIngredients = _.map(recipe.ingredients, "description");
+      }
+      else {
+        $scope.recipeIngredients = _.map(recipe._foods, "name");
+      }
+
+      $scope.totalFoods = _.size(recipe._foods);
+    }
   }
 
   function recipeDetail() {
@@ -22,7 +39,7 @@
   }
 
   angular.module("app")
-    .controller("RecipeDetailController", ["$scope", "recipesService", RecipeDetailController])
+    .controller("RecipeDetailController", ["$scope", "recipe", "recipes", RecipeDetailController])
     .directive("recipeDetail", [recipeDetail]);
 
 })(window, window.angular);

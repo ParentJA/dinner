@@ -16,8 +16,8 @@ from django.http import Http404
 # Local imports...
 from .models import Food, Ingredient, Recipe, Pantry, PantryFood, UnitOfMeasure, UserPantry
 from .serializers import (
-    BasicRecipeSerializer, CountedFoodSerializer, FoodSerializer, FoodCategorySerializer, PantrySerializer,
-    RecipeSerializer, RecipeCategorySerializer, UnitOfMeasureSerializer
+    BasicRecipeSerializer, CountedFoodSerializer, FoodSerializer, FoodCategorySerializer, IngredientSerializer,
+    PantrySerializer, RecipeSerializer, RecipeCategorySerializer, UnitOfMeasureSerializer
 )
 
 User = get_user_model()
@@ -212,16 +212,25 @@ class RecipeAPIViewSet(viewsets.ViewSet):
         return Response(status=status.HTTP_200_OK, data=data)
 
     def retrieve(self, request, pk):
-        data = {}
+        ingredients = Ingredient.objects.select_related('recipe', 'food', 'unit_of_measure').filter(recipe__pk=pk)
 
-        try:
-            recipe = Recipe.objects.prefetch_related('categories', 'foods').get(pk=pk)
-        except Recipe.DoesNotExist:
+        if not ingredients.exists():
             raise Http404
 
-        data['recipes'] = RecipeSerializer([recipe], many=True).data
+        recipes = []
+        units_of_measure = []
 
-        return Response(status=status.HTTP_200_OK, data=data)
+        for ingredient in ingredients:
+            recipes.append(ingredient.recipe)
+            units_of_measure.append(ingredient.unit_of_measure)
+
+        return Response(status=status.HTTP_200_OK, data={
+            'ingredients': IngredientSerializer(ingredients, many=True).data,
+            'recipes': RecipeSerializer(set(recipes), many=True).data,
+            'units_of_measure': UnitOfMeasureSerializer(
+                set(filter(lambda u: u is not None, units_of_measure)), many=True
+            ).data,
+        })
 
 
 class UnitOfMeasureAPIView(views.APIView):
