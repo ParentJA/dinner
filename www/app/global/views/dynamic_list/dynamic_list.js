@@ -53,7 +53,9 @@
         getCollection: "&collection",
         getElements: "&elements",
         addFn: "&",
-        removeFn: "&"
+        removeFn: "&",
+        placeholder: "@",
+        button: "@"
       },
       templateUrl: "/static/global/views/dynamic_list/dynamic_list.html",
       controller: "DynamicListController"

@@ -1,43 +1,5 @@
 <div class="row">
-  <div class="col-lg-6">
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h4 class="panel-title">Foods <span class="badge pull-right" ng-bind="numTotalFoods"></span></h4>
-      </div>
-      <div class="panel-body">
-        <div x-dynamic-list
-             data-collection="getFoods()"
-             data-elements="getSelectedFoods()"
-             data-add-fn="addSelectedFood(element)"
-             data-remove-fn="removeSelectedFood(element)"></div>
-      </div>
-      <div class="list-group">
-        <a class="list-group-item" href
-           ng-repeat="food in foods | orderBy: '-count'" ng-click="addSelectedFood(food)">
-          <!-- TODO: Is there a way to just bind frequency once? The "::" syntax doesn't seem to work... -->
-          <span class="badge badge-success">{{ frequency(food) }}%</span>
-          <span>{{ food.name }}</span>
-          <span class="label label-success" ng-repeat="tag in ::food._tags">{{ tag.name }}</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          Recipes with Food <span class="badge pull-right" ng-bind="matchingRecipes.length"></span>
-        </h4>
-      </div>
-      <div class="panel-body" ng-hide="hasSelectedFoods">
-        <span class="text-center">Select a food</span>
-      </div>
-      <div class="list-group" ng-show="hasSelectedFoods">
-        <a class="list-group-item"
-           ng-repeat="recipe in matchingRecipes | orderBy: 'name'"
-           ng-click="setSelectedRecipe(recipe)"
-           ui-sref="meals.recipes.detail({recipeId: recipe.id})">{{ recipe.name }}</a>
-      </div>
-    </div>
+  <div class="col-md-offset-3 col-md-6">
+    <div ui-view></div>
   </div>
 </div>

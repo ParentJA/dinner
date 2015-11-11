@@ -1,15 +1,17 @@
 <div class="component--recipe-list">
   <h2 class="text-center">Recipes</h2>
-  <div class="panel">
-    <div class="input-group">
-      <input class="form-control" type="text" placeholder="Enter recipe name..." ng-model="recipe"
-             ng-keypress="onKeyPressed($event)" typeahead-min-length="2"
-             uib-typeahead="recipe as recipe.name for recipe in recipes | filter: {name: $viewValue} | limitTo: 10">
+  <p class="text-center">
+    <!--<a href ui-sref="meals.foods.match_list">{{ matchingRecipes.length }} matching recipes</a>-->
+    {{ totalRecipes }} total recipes
+  </p>
+  <div class="input-group">
+    <input class="form-control" type="text" placeholder="Enter recipe name..." ng-model="recipe"
+           ng-keypress="onKeyPressed($event)" typeahead-min-length="2"
+           uib-typeahead="recipe as recipe.name for recipe in recipes | filter: {name: $viewValue} | limitTo: 10">
       <span class="input-group-btn">
         <a class="btn btn-default" href ui-sref="meals.recipes.detail({recipeId: recipe.id})">
           <span class="glyphicon glyphicon-search"></span>
         </a>
       </span>
-    </div>
   </div>
 </div>

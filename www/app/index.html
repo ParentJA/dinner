@@ -28,14 +28,14 @@
         <li ng-class="{active: $state.is('meals.pantry')}">
           <a ui-sref="meals.pantry">Pantry</a>
         </li>
-        <li ng-class="{active: $state.is('meals.menus')}">
+        <!--<li ng-class="{active: $state.is('meals.menus')}">
           <a ui-sref="meals.menus">Menus</a>
-        </li>
+        </li>-->
         <li ng-class="{active: $state.includes('meals.recipes')}">
           <a ui-sref="meals.recipes.list">Recipes</a>
         </li>
         <li ng-class="{active: $state.is('meals.foods')}">
-          <a ui-sref="meals.foods">Foods</a>
+          <a ui-sref="meals.foods.list">Foods</a>
         </li>
       </ul>
       <div class="navbar-right" ng-if="hasUser()">

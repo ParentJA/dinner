@@ -10,12 +10,12 @@
         controller: "RecipesController"
       })
       .state("meals.recipes.list", {
-        url: "/recipes/list",
+        url: "/list",
         templateUrl: "/static/recipes/views/recipes/components/recipe_list/recipe_list.html",
         controller: "RecipeListController"
       })
       .state("meals.recipes.detail", {
-        url: "/recipes/detail/:recipeId",
+        url: "/detail/:recipeId",
         templateUrl: "/static/recipes/views/recipes/components/recipe_detail/recipe_detail.html",
         controller: "RecipeDetailController",
         resolve: {
