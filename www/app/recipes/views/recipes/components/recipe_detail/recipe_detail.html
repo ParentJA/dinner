@@ -5,16 +5,16 @@
     </li>
     <li class="active">{{ recipe.name }}</li>
   </ol>
-  <div class="panel">
-    <div class="panel-body">
-      <h2>{{ recipe.name | title }}</h2>
-      <p ng-bind-html="recipe.description" ng-if="recipe.description"></p>
-      <h3>Ingredients <span class="label label-success pull-right" ng-bind="totalFoods"></span></h3>
-    </div>
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="ingredient in recipeIngredients">{{ ingredient }}</li>
-    </ul>
-    <h3 ng-if="recipe.instructions">Instructions</h3>
-    <div ng-bind-html="recipe.instructions" ng-if="recipe.instructions"></div>
-  </div>
+  <h2 class="text-center">{{ recipe.name | title }}</h2>
+  <p ng-bind-html="recipe.description" ng-if="recipe.description"></p>
+  <h3>Ingredients <span class="label label-default pull-right" ng-bind="totalFoods"></span></h3>
+  <table class="table">
+    <tbody>
+    <tr ng-repeat="ingredient in recipeIngredients">
+      <td>{{ ingredient }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <h3 ng-if="recipe.instructions">Instructions</h3>
+  <div ng-bind-html="recipe.instructions" ng-if="recipe.instructions"></div>
 </div>

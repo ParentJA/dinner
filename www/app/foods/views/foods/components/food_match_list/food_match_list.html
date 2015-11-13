@@ -5,20 +5,16 @@
     </li>
     <li class="active">Matching Recipes</li>
   </ol>
-  <div class="panel">
-    <div class="panel-heading">
-      <!--<h4 class="panel-title">
-        Recipes with Food <span class="badge pull-right" ng-bind="matchingRecipes.length"></span>
-      </h4>-->
-    </div>
-    <div class="panel-body" ng-hide="hasSelectedFoods">
-      <span class="text-center">No matching recipes</span>
-    </div>
-    <div class="list-group" ng-show="hasSelectedFoods">
-      <a class="list-group-item"
-         ng-repeat="recipe in matchingRecipes | orderBy: 'name'"
-         ng-click="setSelectedRecipe(recipe)"
-         ui-sref="meals.recipes.detail({recipeId: recipe.id})">{{ recipe.name }}</a>
-    </div>
-  </div>
+  <h2 class="text-center">Matching Recipes</h2>
+  <p class="text-center">{{ matchingRecipes.length }} matching recipes</p>
+  <span class="text-center" ng-hide="hasSelectedFoods">No matching recipes</span>
+  <table class="table table-hover">
+    <tbody>
+    <tr ng-repeat="recipe in matchingRecipes | orderBy: 'name'"
+        ng-click="setSelectedRecipe(recipe)"
+        ui-sref="meals.recipes.detail({recipeId: recipe.id})">
+      <td>{{ recipe.name }}</td>
+    </tr>
+    </tbody>
+  </table>
 </div>
