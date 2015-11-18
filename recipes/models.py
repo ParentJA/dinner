@@ -25,6 +25,10 @@ class Recipe(models.Model):
         through_fields=('recipe', 'recipe_category')
     )
 
+    @staticmethod
+    def autocomplete_search_fields():
+        return ['name__icontains']
+
     class Meta:
         default_related_name = 'recipes'
         ordering = ['name']
@@ -63,6 +67,10 @@ class Food(models.Model):
         through='recipes.FoodCategoryClassification',
         through_fields=('food', 'food_category')
     )
+
+    @staticmethod
+    def autocomplete_search_fields():
+        return ['name__icontains']
 
     class Meta:
         default_related_name = 'foods'
@@ -155,6 +163,10 @@ class UnitOfMeasure(models.Model):
     """
     description = models.CharField(max_length=255)
     abbreviation = models.CharField(max_length=10, null=True, blank=True)
+
+    @staticmethod
+    def autocomplete_search_fields():
+        return ['description__icontains']
 
     class Meta:
         default_related_name = 'units_of_measure'

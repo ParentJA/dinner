@@ -12,6 +12,10 @@ from .models import (
 class IngredientAdmin(admin.TabularInline):
     model = Recipe.foods.through
     fields = ('food', 'description', 'amount', 'unit_of_measure')
+    raw_id_fields = ('food', 'unit_of_measure')
+    autocomplete_lookup_fields = {
+        'fk': ('food', 'unit_of_measure')
+    }
     extra = 1
 
 
