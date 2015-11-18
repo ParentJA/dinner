@@ -13,7 +13,7 @@
     <tr ng-repeat="recipe in matchingRecipes | orderBy: 'name'"
         ng-click="setSelectedRecipe(recipe)"
         ui-sref="meals.recipes.detail({recipeId: recipe.id})">
-      <td>{{ recipe.name }}</td>
+      <td ng-bind-html="recipe.name"></td>
     </tr>
     </tbody>
   </table>

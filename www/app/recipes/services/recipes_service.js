@@ -2,7 +2,7 @@
 
   "use strict";
 
-  function recipesService(loadRecipeService, recipesModel) {
+  function recipesService(recipesModel) {
     var selectedRecipe = {};
 
     function createEmptyVector(numElements) {
@@ -114,6 +114,6 @@
   }
 
   angular.module("app")
-    .factory("recipesService", ["loadRecipeService", "recipesModel", recipesService]);
+    .factory("recipesService", ["recipesModel", recipesService]);
 
 })(window, window.angular);

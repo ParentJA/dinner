@@ -3,15 +3,15 @@
     <li>
       <a href ui-sref="meals.recipes.list">Recipes</a>
     </li>
-    <li class="active">{{ recipe.name }}</li>
+    <li class="active" ng-bind-html="recipe.name"></li>
   </ol>
-  <h2 class="text-center">{{ recipe.name | title }}</h2>
+  <h2 class="text-center" ng-bind-html="recipe.name | title"></h2>
   <p ng-bind-html="recipe.description" ng-if="recipe.description"></p>
   <h3>Ingredients <span class="label label-default pull-right" ng-bind="totalFoods"></span></h3>
   <table class="table">
     <tbody>
     <tr ng-repeat="ingredient in recipeIngredients">
-      <td>{{ ingredient }}</td>
+      <td ng-bind-html="ingredient"></td>
     </tr>
     </tbody>
   </table>
