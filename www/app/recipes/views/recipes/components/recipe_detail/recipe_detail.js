@@ -2,10 +2,18 @@
 
   "use strict";
 
-  function RecipeDetailController($scope, recipe, recipes) {
+  function RecipeDetailController($scope, recipe, recipes, recipesService, saveRecipeService) {
     $scope.recipe = recipe;
     $scope.recipeIngredients = [];
     $scope.totalFoods = 0;
+
+    $scope.isRecipeInProgress = function isRecipeInProgress() {
+      return recipesService.isRecipeInProgress(recipe);
+    };
+
+    $scope.setRecipeInProgress = function setRecipeInProgress(value) {
+      saveRecipeService(recipe.id, value);
+    };
 
     activate();
 
@@ -39,7 +47,9 @@
   }
 
   angular.module("app")
-    .controller("RecipeDetailController", ["$scope", "recipe", "recipes", RecipeDetailController])
+    .controller("RecipeDetailController", [
+      "$scope", "recipe", "recipes", "recipesService", "saveRecipeService", RecipeDetailController
+    ])
     .directive("recipeDetail", [recipeDetail]);
 
 })(window, window.angular);

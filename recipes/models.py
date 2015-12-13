@@ -3,6 +3,7 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 # Django imports...
 from django.conf import settings
 from django.db import models
+from django.template.defaulttags import date
 
 AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL')
 
@@ -227,3 +228,23 @@ class PantryFood(models.Model):
 
     class Meta:
         unique_together = ('pantry', 'food')
+
+
+class UserRecipeRecord(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    recipe = models.ForeignKey('recipes.Recipe')
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(null=True, blank=True, default=None)
+
+    class Meta:
+        default_related_name = 'user_recipe_records'
+        verbose_name = 'user recipe record'
+        verbose_name_plural = 'user recipe records'
+
+    def __unicode__(self):
+        return '{user} made {recipe}: {created} to {updated}'.format(
+            user=self.user,
+            recipe=self.recipe,
+            created=date(self.created, 'DATETIME_FORMAT'),
+            updated=date(self.updated, 'DATETIME_FORMAT')
+        )

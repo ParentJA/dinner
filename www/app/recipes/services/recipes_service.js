@@ -102,6 +102,9 @@
       isFullRecipe: function (recipe) {
         return (_.has(recipe, "description") || _.has(recipe, "instructions"));
       },
+      isRecipeInProgress: function isRecipeInProgress(recipe) {
+        return (_.has(recipe, "inProgress") && recipe.inProgress === true);
+      },
       isSelectedRecipe: function isSelectedRecipe(recipe) {
         return (selectedRecipe === recipe);
       },

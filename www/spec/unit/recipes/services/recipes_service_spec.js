@@ -41,6 +41,25 @@ describe("a recipes service", function () {
 
   });
 
+  it("should return whether a recipe is in progress", function () {
+
+    var recipe = _.first(recipes);
+    var isRecipeInProgress = recipesService.isRecipeInProgress(recipe);
+
+    expect(isRecipeInProgress).toEqual(false);
+
+    isRecipeInProgress = recipesService.isRecipeInProgress({
+      description: "A delicious mixture of chopped vegetables.",
+      id: 1,
+      inProgress: true,
+      instructions: "<ol><li>Chop vegetables.</li><li>Combine.</li></ol>",
+      name: "Salsa"
+    });
+
+    expect(isRecipeInProgress).toEqual(true);
+
+  });
+
   it("should be able to store and retrieve a selected recipe", function () {
 
     // If no recipe is selected, the selected recipe is the first recipe...

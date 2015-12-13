@@ -17,4 +17,10 @@
   </table>
   <h3 ng-if="recipe.instructions">Instructions</h3>
   <div ng-bind-html="recipe.instructions" ng-if="recipe.instructions"></div>
+  <button class="btn btn-success btn-block" type="button" ng-hide="isRecipeInProgress()"
+          ng-click="setRecipeInProgress(true)">Start recipe
+  </button>
+  <button class="btn btn-danger btn-block" type="button" ng-show="isRecipeInProgress()"
+          ng-click="setRecipeInProgress(false)">Finish recipe
+  </button>
 </div>

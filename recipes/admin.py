@@ -5,7 +5,7 @@ from django.contrib import admin
 
 # Local imports...
 from .models import (
-    Food, FoodCategory, Pantry, PriceComponent, Recipe, RecipeCategory, UnitOfMeasure, UserPantry
+    Food, FoodCategory, Pantry, PriceComponent, Recipe, RecipeCategory, UnitOfMeasure, UserPantry, UserRecipeRecord
 )
 
 
@@ -77,3 +77,10 @@ class PantryFoodAdmin(admin.TabularInline):
 class PantryAdmin(admin.ModelAdmin):
     fields = ('name',)
     inlines = (PantryFoodAdmin,)
+
+
+@admin.register(UserRecipeRecord)
+class UserRecipeRecordAdmin(admin.ModelAdmin):
+    model = UserRecipeRecord
+    fields = ('user', 'recipe', 'created', 'updated',)
+    readonly_fields = ('user', 'recipe', 'created')

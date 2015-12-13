@@ -69,11 +69,13 @@
         var recipeId = recipe.id;
         var description = recipe.description;
         var instructions = recipe.instructions;
+        var inProgress = recipe.in_progress;
 
         // Update recipe...
         var existingRecipe = _.find(recipes, "id", recipeId);
         existingRecipe.description = description;
         existingRecipe.instructions = instructions;
+        existingRecipe.inProgress = inProgress;
 
         // Update ingredients...
         var foodMap = _.indexBy(existingRecipe._foods, "id");

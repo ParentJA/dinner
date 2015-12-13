@@ -39,9 +39,11 @@ class BasicRecipeSerializer(serializers.ModelSerializer):
 
 
 class RecipeSerializer(serializers.ModelSerializer):
+    in_progress = serializers.BooleanField()
+
     class Meta:
         model = Recipe
-        fields = ('id', 'name', 'description', 'instructions')
+        fields = ('id', 'name', 'description', 'instructions', 'in_progress')
 
 
 class RecipeCategorySerializer(serializers.ModelSerializer):

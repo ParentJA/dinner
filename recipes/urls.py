@@ -14,7 +14,10 @@ urlpatterns = [
         'put': 'update',
         'delete': 'destroy'
     })),
-    url(r'^recipes/(?P<pk>\d+)/$', RecipeAPIViewSet.as_view({'get': 'retrieve'})),
+    url(r'^recipes/(?P<pk>\d+)/$', RecipeAPIViewSet.as_view({
+        'get': 'retrieve',
+        'put': 'update'
+    })),
     url(r'^recipes/$', RecipeAPIViewSet.as_view({'get': 'list'})),
     url(r'^units_of_measure/$', UnitOfMeasureAPIView.as_view()),
 ]
