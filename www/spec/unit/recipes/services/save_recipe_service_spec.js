@@ -1,13 +1,14 @@
-describe("a load recipe service", function () {
+describe("a save recipe service", function () {
 
   var $httpBackend;
-  var loadRecipeService;
+  var saveRecipeService;
   var recipesModelMock;
 
   var responseData = {
     recipes: [{
       description: "A delicious mixture of chopped vegetables.",
       id: 1,
+      in_progress: true,
       instructions: "<ol><li>Chop vegetables.</li><li>Combine.</li></ol>",
       name: "Salsa"
     }]
@@ -25,9 +26,9 @@ describe("a load recipe service", function () {
 
     inject(function ($injector) {
       $httpBackend = $injector.get("$httpBackend");
-      $httpBackend.when("GET", "/api/v1/recipes/recipes/1/").respond(responseData);
+      $httpBackend.when("PUT", "/api/v1/recipes/recipes/1/").respond(responseData);
 
-      loadRecipeService = $injector.get("loadRecipeService");
+      saveRecipeService = $injector.get("saveRecipeService");
     });
   });
 
@@ -36,10 +37,10 @@ describe("a load recipe service", function () {
     $httpBackend.verifyNoOutstandingRequest();
   });
 
-  it("should get a full recipe", function () {
+  it("should save that a user has started making a recipe", function () {
 
-    $httpBackend.expectGET("/api/v1/recipes/recipes/1/");
-    loadRecipeService(1);
+    $httpBackend.expectPUT("/api/v1/recipes/recipes/1/");
+    saveRecipeService(1, true);
     $httpBackend.flush();
 
     // Confirm model update called...

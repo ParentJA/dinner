@@ -1,3 +1,96 @@
+- fields: {app_label: admin, model: logentry}
+  model: contenttypes.contenttype
+  pk: 1
+- fields: {app_label: auth, model: permission}
+  model: contenttypes.contenttype
+  pk: 2
+- fields: {app_label: auth, model: group}
+  model: contenttypes.contenttype
+  pk: 3
+- fields: {app_label: contenttypes, model: contenttype}
+  model: contenttypes.contenttype
+  pk: 4
+- fields: {app_label: sessions, model: session}
+  model: contenttypes.contenttype
+  pk: 5
+- fields: {app_label: accounts, model: user}
+  model: contenttypes.contenttype
+  pk: 6
+- fields: {app_label: meals, model: dish}
+  model: contenttypes.contenttype
+  pk: 7
+- fields: {app_label: meals, model: ingredient}
+  model: contenttypes.contenttype
+  pk: 8
+- fields: {app_label: meals, model: dishingredient}
+  model: contenttypes.contenttype
+  pk: 9
+- fields: {app_label: meals, model: source}
+  model: contenttypes.contenttype
+  pk: 10
+- fields: {app_label: meals, model: cuisine}
+  model: contenttypes.contenttype
+  pk: 11
+- fields: {app_label: meals, model: tag}
+  model: contenttypes.contenttype
+  pk: 12
+- fields: {app_label: meals, model: ingredienttag}
+  model: contenttypes.contenttype
+  pk: 13
+- fields: {app_label: pantries, model: pantry}
+  model: contenttypes.contenttype
+  pk: 14
+- fields: {app_label: pantries, model: pantryingredient}
+  model: contenttypes.contenttype
+  pk: 15
+- fields: {app_label: recipes, model: recipe}
+  model: contenttypes.contenttype
+  pk: 16
+- fields: {app_label: recipes, model: recipecategory}
+  model: contenttypes.contenttype
+  pk: 17
+- fields: {app_label: recipes, model: recipecategoryclassification}
+  model: contenttypes.contenttype
+  pk: 18
+- fields: {app_label: recipes, model: food}
+  model: contenttypes.contenttype
+  pk: 19
+- fields: {app_label: recipes, model: foodcategory}
+  model: contenttypes.contenttype
+  pk: 20
+- fields: {app_label: recipes, model: foodcategoryclassification}
+  model: contenttypes.contenttype
+  pk: 21
+- fields: {app_label: recipes, model: ingredient}
+  model: contenttypes.contenttype
+  pk: 22
+- fields: {app_label: recipes, model: pricecomponent}
+  model: contenttypes.contenttype
+  pk: 23
+- fields: {app_label: recipes, model: unitofmeasure}
+  model: contenttypes.contenttype
+  pk: 24
+- fields: {app_label: recipes, model: userpantry}
+  model: contenttypes.contenttype
+  pk: 25
+- fields: {app_label: recipes, model: pantry}
+  model: contenttypes.contenttype
+  pk: 26
+- fields: {app_label: recipes, model: pantryfood}
+  model: contenttypes.contenttype
+  pk: 27
+- fields: {expire_date: ! '2015-11-24 21:55:05.402187+00:00', session_data: ZjY5NGJjZTczN2FmYWJjMjExNzBjZGZmODI1ZGEyMDQyZGVjOGYzMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjJjNjk3NGYyNGZlYWQxMmEzY2IwMTZiYjU3ZDliOGE1OTIyZGFjMjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
+  model: sessions.session
+  pk: 90td5k5x0g5eb8e5y6arkhyj07vlx7xp
+- fields: {expire_date: ! '2015-11-25 01:04:00.814253+00:00', session_data: ZjY5NGJjZTczN2FmYWJjMjExNzBjZGZmODI1ZGEyMDQyZGVjOGYzMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjJjNjk3NGYyNGZlYWQxMmEzY2IwMTZiYjU3ZDliOGE1OTIyZGFjMjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
+  model: sessions.session
+  pk: bc52bv155zbb2blh1iwbazdxacsw10tp
+- fields: {expire_date: ! '2015-11-13 03:50:22.546081+00:00', session_data: OWRiNTcyNDIwNDMzMTczYjAzNTdjZjkyN2U4NzMyOTM0YWM3YjVhNjp7Il9hdXRoX3VzZXJfaGFzaCI6IjJjNjk3NGYyNGZlYWQxMmEzY2IwMTZiYjU3ZDliOGE1OTIyZGFjMjYiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=}
+  model: sessions.session
+  pk: d1ox6vgzjqekxoj1i54suchtxg0yviwj
+- fields: {expire_date: ! '2015-11-15 05:07:38.407029+00:00', session_data: ZjY5NGJjZTczN2FmYWJjMjExNzBjZGZmODI1ZGEyMDQyZGVjOGYzMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjJjNjk3NGYyNGZlYWQxMmEzY2IwMTZiYjU3ZDliOGE1OTIyZGFjMjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
+  model: sessions.session
+  pk: qhvn08ekr4ti7q61v8clrg8yntr9fl72
 - fields: {description: '', instructions: '', name: Essential Simmered Tomato-Jalapeno
       Sauce}
   model: recipes.recipe
@@ -865,6 +958,123 @@
     name: Homemade Thick Cream}
   model: recipes.recipe
   pk: 170
+- fields: {description: "<p><em>Chorizo</em> sits prominently on the mixed-grill combination
+      plates in places known for charcoal fires; other places it gets scrambled invitingly
+      into fresh eggs, or browned with crispy potatoes. One of my favorites, though,
+      is <em>chorizo</em> on a plate of good melted cheese, with a stack of fresh-baked
+      flour tortillas to roll it all in.</p>\r\n<p>The <em>chorizo</em> recipe that
+      follows, for the deliciously flavored Tolucan variety, is based on one in Vel&aacute;zquez
+      de Le&oacute;n&rsquo;s <em>Platillos regionales de la Rep&uacute;blica Mexicana</em>.</p>",
+    instructions: "<ol>\r\n<li><em>The pork fat.</em> Place the pork fat in the freezer
+      (to firm it for easy chopping) while preparing the seasonings.</li>\r\n<li><em>The
+      chiles and other seasonings.</em> Set a griddle or heavy skillet over medium
+      heat, then tear the chiles into large flat pieces. A few at a time, lay the
+      chiles on the hot surface, press them down with a metal spatula until they blister
+      and change color, flip them over and press down to toast the other side. Cool
+      until crisp, then crumble them into a spice grinder (or blender fitted with
+      the miniblend container). Measure in the coriander seeds, cinnamon stick, cloves,
+      oregano and black peppercorns, and pulverize. Sift through a medium-mesh sieve
+      into a large bowl, add the nutmeg, ginger, paprika and salt, then stir in the
+      garlic and vinegar.</li>\r\n<li><em>Grinding and flavoring the meat.</em> Set
+      up a meat grinder fitted with the coarse grinding plate. Mix together the pork
+      loin, shoulder and fat, then run through the grinder and into the bowl with
+      the seasonings. Mix the meat and seasonings thoroughly, cover and refrigerate
+      overnight. (Before using or stuffing the sausage, fry a little, taste it, then
+      add more salt, if necessary.)</li>\r\n<li><em>Optional stuffing and aging.</em>
+      If the casings were packed in salt, soak for an hour before stuffing. According
+      to manufacturer&rsquo;s directions, set up the meat grinder with the funnellike
+      sausage-stuffing attachment.</li>\r\n</ol>\r\n<p>Rinse the casings, then check
+      each piece for leaks by running water through it; either cut the casing where
+      there are leaks or discard the piece. (To be useful, a casing should be at least
+      30 inches long, with no leaks.)</p>\r\n<p>Thread 1 piece of casing over the
+      sausage-stuffing attachment, leaving a 3-inch overhang. Begin feeding the sausage
+      through: When it comes through the end of the attachment, clamp off the casing
+      so that the sausage collects and stretches the casing to a 1-inch diameter;
+      if there is an air bubble, stop the machine and work it out. Feeding the sausage
+      through the grinder in an uninterrupted flow, slowly move the casing away from
+      the stuffer as the sausage fills out a continuous 1-inch diameter link. When
+      the sausage is about 6 inches long, pull off an extra inch of casing and squeeze
+      through the meat, completing one link and starting another. Continue until all
+      of the sausage meat has been cased, stopping to thread on more casing as necessary.&nbsp;</p>\r\n<p>Either
+      twist the links several times to separate them or tie pieces of string between
+      them. Hang in a cool, dry, airy place for about 36 hours or until dry to the
+      touch and somewhat firm. Set a dish underneath to catch drips.</p>\r\n<p>Wrap
+      in plastic and refrigerate until ready to use.</p>", name: Tolucan Chile-Flavored
+      Sausage}
+  model: recipes.recipe
+  pk: 171
+- fields: {description: "<p>My butcher in Oaxaca could brandish her long steel knife
+      with grace and speed, unfolding a thick slab of beef round into thin sheets
+      for curing. She salted them, then hung them above her counter for customers
+      to buy fresh (for tough little steaks) or dry (to roast and gnaw, or to stew).
+      With a little age, the flavors mellowed and deepened&mdash;like those of a well-aged
+      steak.</p>\r\n<p>Her thin-cutting-with-the-grain is a time-honored approach
+      to making rather tough&nbsp;fresh meat into something more versatile. The method
+      is used for pork and venison as well as beef, and it&rsquo;s the method employed
+      north of the border for the Old West&rsquo;s jerky.</p>\r\n<p>Sheer lack of
+      familiarity made me hesitant to tackle this preparation until I was forced to,
+      after having been smitten with a love for Burritos with Shredded Jerky and the
+      Scrambled Eggs with Shredded Jerky. Now, I almost always have some on hand.
+      Once you get the feel of the thin-slicing procedure (it may seem awkward at
+      first, if you&rsquo;ve not done a lot of meat cutting), you&rsquo;ll find jerky
+      easily managed in your kitchen. This recipe is one I learned in Baja California.</p>",
+    instructions: "<ol>\r\n<li>Accordian-cutting the meat. Using a very sharp knife
+      (such as a boning, filleting or slicing knife), trim the ends, top and bottom
+      of the meat to make them flat, giving you a roughly loaf-shaped chunk (weighing
+      about 1&frac14; pounds). Reserve the scraps for another use.<br />Lay the meat
+      so that its length (and the grain) runs crosswise in front of you. Place one
+      hand firmly on top of the meat, then begin slicing at one end, parallel to the
+      work surface and 1/8 inch below the top (and, as you guessed, 1/8 inch below
+      the level of your hand).<br />Work your way across the meat, but stop 1/8 inch
+      short of the other end; do not cut through. Remove your knife, turn the meat
+      180&deg; and start a second cut across, &frac14; inch below the top. When you&rsquo;ve
+      cut across about 1 inch, open out the top slice, bending it on the 1/8-inch
+      &ldquo;hinge&rdquo; that you left at the end. Lay your hand firmly on the newly
+      exposed top and continue cutting across, again 1/8 inch below the surface, below
+      your hand. Stop 1/8 inch from the end, turn the meat around and begin a third
+      slice &frac14; inch below what is now the top. Cut across 1 inch, unfold the
+      second slice, then continue your cut, 1/8 inch below your firmly held hand.
+      Work your way back and forth across the meat, leaving 1/8-inch hinges at the
+      end of each slice, until the entire piece has been stretched out to a long,
+      1/8-inch-thick piece of meat.&nbsp;</li>\r\n<li>Salting and aging. Mix together
+      the salt, lime juice and oregano, stirring until the salt has mostly dissolved.
+      Spread out the meat, smear the mixture on both sides, then refold into its original
+      shape. Let stand &frac12; hour.<br />Unfold the meat and hang it to dry in a
+      dry place with good air circulation.</li>\r\n<li>For cecina (fresh or half-dried
+      strips of beef). For dishes that call for cecina , let the meat dry a few hours
+      or overnight. Cut into manageable-size pieces, cover and refrigerate; to ensure
+      that the meat doesn&rsquo;t dry any further, you may lightly rub both sides
+      with oil.</li>\r\n<li>For carne seca (jerky). For dishes that require jerky,
+      let the meat hang for at least 48 hours. If you plan to keep it for an extended
+      period, let it hang several days longer, then loosely wrap and store in a cool,
+      dry place.</li>\r\n</ol>", name: 'Thin Sliced Strips of Beef, Fresh or Dried
+      to Jerky'}
+  model: recipes.recipe
+  pk: 172
+- fields: {description: "<p>The chile and vinegar tenderize the meat and give it that
+      incomparable Mexican savor; the spices and herbs make it rich-tasting and attractive.</p>\r\n<p>As
+      in jerky-making, slicing the meat for this preparation is easily mastered, and
+      there&rsquo;s nothing tricky about the marinade. The finished sheets of pork
+      can be enjoyed simply fried like pork steaks and served with Roasted Pepper
+      Rajas on the side, or they can be fried and sliced for tacos.</p>", instructions: "<ol>\r\n<li><em>Trimming
+      the meat.</em> Using a sharp knife (such as a boning, filleting or slicing knife),
+      trim off the cap of fat that covers one side of the pork loin. On the other
+      side of the loin, there may be a strip that runs the length and has a different
+      texture than the solid loin meat: Separate it by running your hand down the
+      membrane that connects it to the loin, then cut it off and reserve for pork
+      fillings and the like. If there is membrane or fat covering any of the surfaces,
+      trim it off. The piece of loin should now be clear, solid meat from one end
+      to the other.</li>\r\n<li><em>Slicing the meat.</em> Slice the meat &ldquo;accordian&rdquo;
+      fashion, into a single 1/8-inch-thick strip, as described in Step 1.</li>\r\n<li><em>Coating
+      and marinating the meat.</em> Coat the meat with adobo and restack it: Spread
+      a scant tablespoon of the paste over the center of a small plate, lay the bottom
+      layer of meat over it, spread with a thin cap of adobo , fold over the next
+      layer of meat, spread with adobo , and so on, until the meat has been restacked
+      with a little adobo between all layers. Spread the top and sides with adobo
+      , cover with plastic wrap and refrigerate for several hours or, preferably,
+      overnight.</li>\r\n</ol>", name: Sheets of Pork in Chile-Spice Marinade}
+  model: recipes.recipe
+  pk: 173
 - fields: {description: salsa}
   model: recipes.recipecategory
   pk: 1
@@ -946,6 +1156,15 @@
 - fields: {recipe: 170, recipe_category: 3}
   model: recipes.recipecategoryclassification
   pk: 25
+- fields: {recipe: 171, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 26
+- fields: {recipe: 172, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 27
+- fields: {recipe: 173, recipe_category: 3}
+  model: recipes.recipecategoryclassification
+  pk: 28
 - fields: {name: achiote seeds}
   model: recipes.food
   pk: 1
@@ -1501,6 +1720,30 @@
 - fields: {name: buttermilk}
   model: recipes.food
   pk: 185
+- fields: {name: pork fat}
+  model: recipes.food
+  pk: 186
+- fields: {name: coriander seeds}
+  model: recipes.food
+  pk: 187
+- fields: {name: nutmeg}
+  model: recipes.food
+  pk: 188
+- fields: {name: ground ginger}
+  model: recipes.food
+  pk: 189
+- fields: {name: paprika}
+  model: recipes.food
+  pk: 190
+- fields: {name: hog casings}
+  model: recipes.food
+  pk: 191
+- fields: {name: beef eye of round}
+  model: recipes.food
+  pk: 192
+- fields: {name: Red-Chile Marinade}
+  model: recipes.food
+  pk: 193
 - fields: {description: dairy}
   model: recipes.foodcategory
   pk: 1
@@ -7269,6 +7512,98 @@
     unit_of_measure: 2}
   model: recipes.ingredient
   pk: 2047
+- fields: {amount: '0.333', description: '1/3 pound pork fat, cut into 1/2-inch cubes',
+    food: 186, recipe: 171, unit_of_measure: 4}
+  model: recipes.ingredient
+  pk: 2048
+- fields: {amount: '1.000', description: '2 medium (about 1 ounce total) dried chiles
+      anchos, stemmed, seeded, and deveined', food: 53, recipe: 171, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 2049
+- fields: {amount: '0.666', description: '2 medium (about 2/3 ounce total) dried chiles
+      pasillas, stemmed, seeded, and deveined', food: 34, recipe: 171, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 2050
+- fields: {amount: '0.250', description: a generous 1/4 teaspoon coriander seeds (or
+      about 1/4 teaspoon ground), food: 187, recipe: 171, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2051
+- fields: {amount: '0.500', description: 1/2 inch cinnamon stick (or about 1/2 teaspoon
+      ground), food: 40, recipe: 171, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2052
+- fields: {amount: '0.125', description: 1/8 teaspoon cloves (or a generous 1/8 teaspoon
+      ground), food: 41, recipe: 171, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2053
+- fields: {amount: '0.750', description: 3/4 teaspoon dried oregano, food: 4, recipe: 171,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2054
+- fields: {amount: '0.333', description: a generous 1/4 teaspoon black peppercorns
+      (or about 1/3 teaspoon ground), food: 3, recipe: 171, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2055
+- fields: {amount: '0.125', description: 1/8 teaspoon freshly ground nutmeg, food: 188,
+    recipe: 171, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2056
+- fields: {amount: '0.125', description: 1/8 teaspoon ground ginger, food: 189, recipe: 171,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2057
+- fields: {amount: '2.000', description: 2 tablespoons good-quality paprika, food: 190,
+    recipe: 171, unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 2058
+- fields: {amount: '1.000', description: 1 generous teaspoon salt, food: 7, recipe: 171,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2059
+- fields: {amount: '1.000', description: '3 cloves garlic, peeled and finely minced',
+    food: 6, recipe: 171, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2060
+- fields: {amount: '0.333', description: 1/3 cup cider vinegar, food: 5, recipe: 171,
+    unit_of_measure: 7}
+  model: recipes.ingredient
+  pk: 2061
+- fields: {amount: '8.000', description: '8 ounces lean, boneless pork loin, cut into
+      1-inch cubes and chilled', food: 62, recipe: 171, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 2062
+- fields: {amount: '8.000', description: '8 ounces lean, boneless pork shoulder, cut
+      into 1-inch cubes and chilled', food: 10, recipe: 171, unit_of_measure: 3}
+  model: recipes.ingredient
+  pk: 2063
+- fields: {amount: '1.000', description: '4 to 5 feet of hog casings in 1 or 2 pieces,
+      for stuffing the sausage (optional)', food: 191, recipe: 171, unit_of_measure: 1}
+  model: recipes.ingredient
+  pk: 2064
+- fields: {amount: '1.500', description: "a 1\xBD-pound piece eye of round", food: 192,
+    recipe: 172, unit_of_measure: 4}
+  model: recipes.ingredient
+  pk: 2065
+- fields: {amount: '1.500', description: "1\xBD teaspoons salt", food: 7, recipe: 172,
+    unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2066
+- fields: {amount: '1.000', description: 1 tablespoon freshly squeezed lime juice,
+    food: 8, recipe: 172, unit_of_measure: 5}
+  model: recipes.ingredient
+  pk: 2067
+- fields: {amount: '1.500', description: "1\xBD teaspoons dried oregano", food: 4,
+    recipe: 172, unit_of_measure: 2}
+  model: recipes.ingredient
+  pk: 2068
+- fields: {amount: '1.250', description: "a 1\xBC-pound piece of lean, boneless pork
+      loin", food: 62, recipe: 173, unit_of_measure: 4}
+  model: recipes.ingredient
+  pk: 2069
+- fields: {amount: '0.333', description: 1/3 cup Red-Chile Marinade, food: 193, recipe: 173,
+    unit_of_measure: 7}
+  model: recipes.ingredient
+  pk: 2070
 - fields: {amount: '1.000', food: 23, price: '0.46', unit_of_measure: 1}
   model: recipes.pricecomponent
   pk: 1
@@ -7323,12 +7658,832 @@
 - fields: {abbreviation: cup, description: cups}
   model: recipes.unitofmeasure
   pk: 7
-- fields: {pantry: 2, user: 1}
-  model: recipes.userpantry
-  pk: 4
 - fields: {name: Home}
   model: recipes.pantry
   pk: 1
 - fields: {name: Home}
   model: recipes.pantry
   pk: 2
+- fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
+  model: auth.permission
+  pk: 1
+- fields: {codename: change_logentry, content_type: 1, name: Can change log entry}
+  model: auth.permission
+  pk: 2
+- fields: {codename: delete_logentry, content_type: 1, name: Can delete log entry}
+  model: auth.permission
+  pk: 3
+- fields: {codename: add_permission, content_type: 2, name: Can add permission}
+  model: auth.permission
+  pk: 4
+- fields: {codename: change_permission, content_type: 2, name: Can change permission}
+  model: auth.permission
+  pk: 5
+- fields: {codename: delete_permission, content_type: 2, name: Can delete permission}
+  model: auth.permission
+  pk: 6
+- fields: {codename: add_group, content_type: 3, name: Can add group}
+  model: auth.permission
+  pk: 7
+- fields: {codename: change_group, content_type: 3, name: Can change group}
+  model: auth.permission
+  pk: 8
+- fields: {codename: delete_group, content_type: 3, name: Can delete group}
+  model: auth.permission
+  pk: 9
+- fields: {codename: add_contenttype, content_type: 4, name: Can add content type}
+  model: auth.permission
+  pk: 10
+- fields: {codename: change_contenttype, content_type: 4, name: Can change content
+      type}
+  model: auth.permission
+  pk: 11
+- fields: {codename: delete_contenttype, content_type: 4, name: Can delete content
+      type}
+  model: auth.permission
+  pk: 12
+- fields: {codename: add_session, content_type: 5, name: Can add session}
+  model: auth.permission
+  pk: 13
+- fields: {codename: change_session, content_type: 5, name: Can change session}
+  model: auth.permission
+  pk: 14
+- fields: {codename: delete_session, content_type: 5, name: Can delete session}
+  model: auth.permission
+  pk: 15
+- fields: {codename: add_user, content_type: 6, name: Can add user}
+  model: auth.permission
+  pk: 16
+- fields: {codename: change_user, content_type: 6, name: Can change user}
+  model: auth.permission
+  pk: 17
+- fields: {codename: delete_user, content_type: 6, name: Can delete user}
+  model: auth.permission
+  pk: 18
+- fields: {codename: add_dish, content_type: 7, name: Can add dish}
+  model: auth.permission
+  pk: 19
+- fields: {codename: change_dish, content_type: 7, name: Can change dish}
+  model: auth.permission
+  pk: 20
+- fields: {codename: delete_dish, content_type: 7, name: Can delete dish}
+  model: auth.permission
+  pk: 21
+- fields: {codename: add_ingredient, content_type: 8, name: Can add ingredient}
+  model: auth.permission
+  pk: 22
+- fields: {codename: change_ingredient, content_type: 8, name: Can change ingredient}
+  model: auth.permission
+  pk: 23
+- fields: {codename: delete_ingredient, content_type: 8, name: Can delete ingredient}
+  model: auth.permission
+  pk: 24
+- fields: {codename: add_dishingredient, content_type: 9, name: Can add dish ingredient}
+  model: auth.permission
+  pk: 25
+- fields: {codename: change_dishingredient, content_type: 9, name: Can change dish
+      ingredient}
+  model: auth.permission
+  pk: 26
+- fields: {codename: delete_dishingredient, content_type: 9, name: Can delete dish
+      ingredient}
+  model: auth.permission
+  pk: 27
+- fields: {codename: add_source, content_type: 10, name: Can add source}
+  model: auth.permission
+  pk: 28
+- fields: {codename: change_source, content_type: 10, name: Can change source}
+  model: auth.permission
+  pk: 29
+- fields: {codename: delete_source, content_type: 10, name: Can delete source}
+  model: auth.permission
+  pk: 30
+- fields: {codename: add_cuisine, content_type: 11, name: Can add cuisine}
+  model: auth.permission
+  pk: 31
+- fields: {codename: change_cuisine, content_type: 11, name: Can change cuisine}
+  model: auth.permission
+  pk: 32
+- fields: {codename: delete_cuisine, content_type: 11, name: Can delete cuisine}
+  model: auth.permission
+  pk: 33
+- fields: {codename: add_tag, content_type: 12, name: Can add tag}
+  model: auth.permission
+  pk: 34
+- fields: {codename: change_tag, content_type: 12, name: Can change tag}
+  model: auth.permission
+  pk: 35
+- fields: {codename: delete_tag, content_type: 12, name: Can delete tag}
+  model: auth.permission
+  pk: 36
+- fields: {codename: add_ingredienttag, content_type: 13, name: Can add ingredient
+      tag}
+  model: auth.permission
+  pk: 37
+- fields: {codename: change_ingredienttag, content_type: 13, name: Can change ingredient
+      tag}
+  model: auth.permission
+  pk: 38
+- fields: {codename: delete_ingredienttag, content_type: 13, name: Can delete ingredient
+      tag}
+  model: auth.permission
+  pk: 39
+- fields: {codename: add_pantry, content_type: 14, name: Can add pantry}
+  model: auth.permission
+  pk: 40
+- fields: {codename: change_pantry, content_type: 14, name: Can change pantry}
+  model: auth.permission
+  pk: 41
+- fields: {codename: delete_pantry, content_type: 14, name: Can delete pantry}
+  model: auth.permission
+  pk: 42
+- fields: {codename: add_pantryingredient, content_type: 15, name: Can add pantry
+      ingredient}
+  model: auth.permission
+  pk: 43
+- fields: {codename: change_pantryingredient, content_type: 15, name: Can change pantry
+      ingredient}
+  model: auth.permission
+  pk: 44
+- fields: {codename: delete_pantryingredient, content_type: 15, name: Can delete pantry
+      ingredient}
+  model: auth.permission
+  pk: 45
+- fields: {codename: add_recipe, content_type: 16, name: Can add recipe}
+  model: auth.permission
+  pk: 46
+- fields: {codename: change_recipe, content_type: 16, name: Can change recipe}
+  model: auth.permission
+  pk: 47
+- fields: {codename: delete_recipe, content_type: 16, name: Can delete recipe}
+  model: auth.permission
+  pk: 48
+- fields: {codename: add_recipecategory, content_type: 17, name: Can add recipe category}
+  model: auth.permission
+  pk: 49
+- fields: {codename: change_recipecategory, content_type: 17, name: Can change recipe
+      category}
+  model: auth.permission
+  pk: 50
+- fields: {codename: delete_recipecategory, content_type: 17, name: Can delete recipe
+      category}
+  model: auth.permission
+  pk: 51
+- fields: {codename: add_recipecategoryclassification, content_type: 18, name: Can
+      add recipe category classification}
+  model: auth.permission
+  pk: 52
+- fields: {codename: change_recipecategoryclassification, content_type: 18, name: Can
+      change recipe category classification}
+  model: auth.permission
+  pk: 53
+- fields: {codename: delete_recipecategoryclassification, content_type: 18, name: Can
+      delete recipe category classification}
+  model: auth.permission
+  pk: 54
+- fields: {codename: add_food, content_type: 19, name: Can add food}
+  model: auth.permission
+  pk: 55
+- fields: {codename: change_food, content_type: 19, name: Can change food}
+  model: auth.permission
+  pk: 56
+- fields: {codename: delete_food, content_type: 19, name: Can delete food}
+  model: auth.permission
+  pk: 57
+- fields: {codename: add_foodcategory, content_type: 20, name: Can add food category}
+  model: auth.permission
+  pk: 58
+- fields: {codename: change_foodcategory, content_type: 20, name: Can change food
+      category}
+  model: auth.permission
+  pk: 59
+- fields: {codename: delete_foodcategory, content_type: 20, name: Can delete food
+      category}
+  model: auth.permission
+  pk: 60
+- fields: {codename: add_foodcategoryclassification, content_type: 21, name: Can add
+      food category classification}
+  model: auth.permission
+  pk: 61
+- fields: {codename: change_foodcategoryclassification, content_type: 21, name: Can
+      change food category classification}
+  model: auth.permission
+  pk: 62
+- fields: {codename: delete_foodcategoryclassification, content_type: 21, name: Can
+      delete food category classification}
+  model: auth.permission
+  pk: 63
+- fields: {codename: add_ingredient, content_type: 22, name: Can add ingredient}
+  model: auth.permission
+  pk: 64
+- fields: {codename: change_ingredient, content_type: 22, name: Can change ingredient}
+  model: auth.permission
+  pk: 65
+- fields: {codename: delete_ingredient, content_type: 22, name: Can delete ingredient}
+  model: auth.permission
+  pk: 66
+- fields: {codename: add_pricecomponent, content_type: 23, name: Can add price component}
+  model: auth.permission
+  pk: 67
+- fields: {codename: change_pricecomponent, content_type: 23, name: Can change price
+      component}
+  model: auth.permission
+  pk: 68
+- fields: {codename: delete_pricecomponent, content_type: 23, name: Can delete price
+      component}
+  model: auth.permission
+  pk: 69
+- fields: {codename: add_unitofmeasure, content_type: 24, name: Can add unit of measure}
+  model: auth.permission
+  pk: 70
+- fields: {codename: change_unitofmeasure, content_type: 24, name: Can change unit
+      of measure}
+  model: auth.permission
+  pk: 71
+- fields: {codename: delete_unitofmeasure, content_type: 24, name: Can delete unit
+      of measure}
+  model: auth.permission
+  pk: 72
+- fields: {codename: add_userpantry, content_type: 25, name: Can add user pantry}
+  model: auth.permission
+  pk: 73
+- fields: {codename: change_userpantry, content_type: 25, name: Can change user pantry}
+  model: auth.permission
+  pk: 74
+- fields: {codename: delete_userpantry, content_type: 25, name: Can delete user pantry}
+  model: auth.permission
+  pk: 75
+- fields: {codename: add_pantry, content_type: 26, name: Can add pantry}
+  model: auth.permission
+  pk: 76
+- fields: {codename: change_pantry, content_type: 26, name: Can change pantry}
+  model: auth.permission
+  pk: 77
+- fields: {codename: delete_pantry, content_type: 26, name: Can delete pantry}
+  model: auth.permission
+  pk: 78
+- fields: {codename: add_pantryfood, content_type: 27, name: Can add pantry food}
+  model: auth.permission
+  pk: 79
+- fields: {codename: change_pantryfood, content_type: 27, name: Can change pantry
+      food}
+  model: auth.permission
+  pk: 80
+- fields: {codename: delete_pantryfood, content_type: 27, name: Can delete pantry
+      food}
+  model: auth.permission
+  pk: 81
+- fields:
+    date_joined: 2015-10-30 02:43:12+00:00
+    date_of_birth: 1984-08-10
+    email: jason.a.parent@gmail.com
+    first_name: Jason
+    groups: []
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: 2015-11-11 01:04:00.805848+00:00
+    last_name: Parent
+    password: pbkdf2_sha256$20000$JDaOmvv1ZHm2$4vhpuhJ8bMqsylISFVtQU3uX9aDlvw2wJgXpJ/qKBhM=
+    phone_number: 860-977-7458
+    photo: photos/no-image.jpg
+    user_permissions: []
+    username: jason.a.parent@gmail.com
+  model: accounts.user
+  pk: 1
+- fields: {pantry: 2, user: 1}
+  model: recipes.userpantry
+  pk: 4
+- fields: {action_flag: 2, action_time: ! '2015-10-30 02:44:12.110024+00:00', change_message: 'Changed
+      first_name, last_name, date_of_birth and phone_number.', content_type: 6, object_id: '1',
+    object_repr: Jason Parent, user: 1}
+  model: admin.logentry
+  pk: 1
+- fields: {action_flag: 1, action_time: ! '2015-11-01 05:08:19.995689+00:00', change_message: '',
+    content_type: 17, object_id: '1', object_repr: salsa, user: 1}
+  model: admin.logentry
+  pk: 2
+- fields: {action_flag: 1, action_time: ! '2015-11-01 05:08:25.213853+00:00', change_message: '',
+    content_type: 16, object_id: '1', object_repr: Essential Simmered Tomato-Jalapeno
+      Sauce, user: 1}
+  model: admin.logentry
+  pk: 3
+- fields: {action_flag: 1, action_time: ! '2015-11-01 05:16:53.636123+00:00', change_message: '',
+    content_type: 17, object_id: '2', object_repr: Mexican, user: 1}
+  model: admin.logentry
+  pk: 4
+- fields: {action_flag: 2, action_time: ! '2015-11-01 05:17:10.464188+00:00', change_message: Added
+      recipe category classification "RecipeCategoryClassification object"., content_type: 16,
+    object_id: '1', object_repr: Essential Simmered Tomato-Jalapeno Sauce, user: 1}
+  model: admin.logentry
+  pk: 5
+- fields: {action_flag: 1, action_time: ! '2015-11-02 17:48:27.744662+00:00', change_message: '',
+    content_type: 17, object_id: '3', object_repr: Authentic Mexican, user: 1}
+  model: admin.logentry
+  pk: 6
+- fields: {action_flag: 1, action_time: ! '2015-11-02 17:56:26.283908+00:00', change_message: '',
+    content_type: 24, object_id: '1', object_repr: quantity (qty), user: 1}
+  model: admin.logentry
+  pk: 7
+- fields: {action_flag: 1, action_time: ! '2015-11-02 17:58:56.022725+00:00', change_message: '',
+    content_type: 16, object_id: '158', object_repr: Fresh Tomato-Chile Relish, user: 1}
+  model: admin.logentry
+  pk: 8
+- fields: {action_flag: 1, action_time: ! '2015-11-02 18:05:20.373901+00:00', change_message: '',
+    content_type: 24, object_id: '2', object_repr: teaspoon (tsp), user: 1}
+  model: admin.logentry
+  pk: 9
+- fields: {action_flag: 2, action_time: ! '2015-11-02 18:05:24.723902+00:00', change_message: 'Added
+      ingredient "1 small onion". Added ingredient "1 clove garlic, peeled". Added
+      ingredient "8 to 10 sprigs fresh coriander (cilantro), chopped". Added ingredient
+      "salt, about 1/2 teaspoon". Added ingredient "1 teaspoon freshly squeezed lime
+      juice". Changed description and unit_of_measure for ingredient "fresh hot green
+      chiles to taste (roughly 3 chiles serranos), stemmed".', content_type: 16, object_id: '158',
+    object_repr: Fresh Tomato-Chile Relish, user: 1}
+  model: admin.logentry
+  pk: 10
+- fields: {action_flag: 2, action_time: ! '2015-11-02 18:05:40.213820+00:00', change_message: 'Changed
+      unit_of_measure for ingredient "salt, about 1/2 teaspoon". Added recipe category
+      classification "RecipeCategoryClassification object".', content_type: 16, object_id: '158',
+    object_repr: Fresh Tomato-Chile Relish, user: 1}
+  model: admin.logentry
+  pk: 11
+- fields: {action_flag: 1, action_time: ! '2015-11-02 18:14:12.108174+00:00', change_message: '',
+    content_type: 16, object_id: '159', object_repr: Fresh Green Tomatillo Sauce,
+    user: 1}
+  model: admin.logentry
+  pk: 12
+- fields: {action_flag: 2, action_time: ! '2015-11-02 18:35:28.006551+00:00', change_message: Changed
+      instructions., content_type: 16, object_id: '159', object_repr: Fresh Green
+      Tomatillo Sauce, user: 1}
+  model: admin.logentry
+  pk: 13
+- fields: {action_flag: 2, action_time: ! '2015-11-02 18:36:48.841755+00:00', change_message: Changed
+      instructions., content_type: 16, object_id: '159', object_repr: Fresh Green
+      Tomatillo Sauce, user: 1}
+  model: admin.logentry
+  pk: 14
+- fields: {action_flag: 2, action_time: ! '2015-11-02 18:37:08.402912+00:00', change_message: Added
+      recipe category classification "RecipeCategoryClassification object". Added
+      recipe category classification "RecipeCategoryClassification object"., content_type: 16,
+    object_id: '159', object_repr: Fresh Green Tomatillo Sauce, user: 1}
+  model: admin.logentry
+  pk: 15
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:28:29.275092+00:00', change_message: '',
+    content_type: 24, object_id: '3', object_repr: ounces (oz), user: 1}
+  model: admin.logentry
+  pk: 16
+- fields: {action_flag: 2, action_time: ! '2015-11-02 19:30:50.918976+00:00', change_message: 'Added
+      ingredient "8 ounces (5 or 6 medium) fresh tomatillos, husked and washed". Added
+      ingredient "fresh hot green chiles to taste (roughly 2 chiles serranos), stemmed".
+      Added ingredient "5 or 6 sprigs fresh coriander (cilantro), roughly chopped".
+      Added ingredient "1/2 small onion, chopped". Added ingredient "salt, about 1/2
+      teaspoon".', content_type: 16, object_id: '159', object_repr: Fresh Green Tomatillo
+      Sauce, user: 1}
+  model: admin.logentry
+  pk: 17
+- fields: {action_flag: 2, action_time: ! '2015-11-02 19:31:02.271933+00:00', change_message: Changed
+      description., content_type: 24, object_id: '2', object_repr: teaspoons (tsp),
+    user: 1}
+  model: admin.logentry
+  pk: 18
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:32:40.867177+00:00', change_message: '',
+    content_type: 26, object_id: '1', object_repr: Home, user: 1}
+  model: admin.logentry
+  pk: 19
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:35:09.603221+00:00', change_message: '',
+    content_type: 23, object_id: '1', object_repr: 0.59 for quantity of tomatoes,
+    user: 1}
+  model: admin.logentry
+  pk: 20
+- fields: {action_flag: 2, action_time: ! '2015-11-02 19:36:01.186145+00:00', change_message: Changed
+      price., content_type: 23, object_id: '1', object_repr: 0.46 for quantity of
+      tomatoes, user: 1}
+  model: admin.logentry
+  pk: 21
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:38:45.822455+00:00', change_message: '',
+    content_type: 23, object_id: '2', object_repr: $0.46 for 4 ounces of tomatoes,
+    user: 1}
+  model: admin.logentry
+  pk: 22
+- fields: {action_flag: 2, action_time: ! '2015-11-02 19:38:52.266977+00:00', change_message: Changed
+      amount., content_type: 23, object_id: '1', object_repr: $0.46 for 1 quantity
+      of tomatoes, user: 1}
+  model: admin.logentry
+  pk: 23
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:39:38.787372+00:00', change_message: '',
+    content_type: 23, object_id: '3', object_repr: $0.95 for 1 quantity of white onions,
+    user: 1}
+  model: admin.logentry
+  pk: 24
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:39:54.142300+00:00', change_message: '',
+    content_type: 23, object_id: '4', object_repr: $0.95 for 9 ounces of white onions,
+    user: 1}
+  model: admin.logentry
+  pk: 25
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:40:43.998784+00:00', change_message: '',
+    content_type: 24, object_id: '4', object_repr: pounds (lb), user: 1}
+  model: admin.logentry
+  pk: 26
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:40:55.420709+00:00', change_message: '',
+    content_type: 23, object_id: '5', object_repr: $4.99 for 1 pounds of serrano chiles,
+    user: 1}
+  model: admin.logentry
+  pk: 27
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:41:32.160998+00:00', change_message: '',
+    content_type: 23, object_id: '6', object_repr: $1.99 for 1 pounds of garlic, user: 1}
+  model: admin.logentry
+  pk: 28
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:42:04.201970+00:00', change_message: '',
+    content_type: 23, object_id: '7', object_repr: $3.99 for 48 ounces of salt, user: 1}
+  model: admin.logentry
+  pk: 29
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:42:28.165365+00:00', change_message: '',
+    content_type: 23, object_id: '8', object_repr: $1.49 for 1 quantity of cilantro,
+    user: 1}
+  model: admin.logentry
+  pk: 30
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:43:06.574686+00:00', change_message: '',
+    content_type: 23, object_id: '9', object_repr: $0.25 for 1 quantity of limes,
+    user: 1}
+  model: admin.logentry
+  pk: 31
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:43:46.601802+00:00', change_message: '',
+    content_type: 23, object_id: '10', object_repr: $0.42 for 2 ounces of tomatillos,
+    user: 1}
+  model: admin.logentry
+  pk: 32
+- fields: {action_flag: 1, action_time: ! '2015-11-02 19:43:58.367412+00:00', change_message: '',
+    content_type: 23, object_id: '11', object_repr: $0.42 for 1 quantity of tomatillos,
+    user: 1}
+  model: admin.logentry
+  pk: 33
+- fields: {action_flag: 2, action_time: ! '2015-11-02 19:44:35.359878+00:00', change_message: Changed
+      food and unit_of_measure for ingredient "1 teaspoon freshly squeezed lime juice".,
+    content_type: 16, object_id: '158', object_repr: Fresh Tomato-Chile Relish, user: 1}
+  model: admin.logentry
+  pk: 34
+- fields: {action_flag: 1, action_time: ! '2015-11-02 20:00:47.098849+00:00', change_message: '',
+    content_type: 16, object_id: '160', object_repr: Red Chile Sauce with Roasted
+      Tomato, user: 1}
+  model: admin.logentry
+  pk: 35
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:02:37.388168+00:00', change_message: Changed
+      instructions., content_type: 16, object_id: '160', object_repr: Red Chile Sauce
+      with Roasted Tomato, user: 1}
+  model: admin.logentry
+  pk: 36
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:07:32.224414+00:00', change_message: 'Added
+      ingredient "4 medium (about 1 ounce total) dried chiles guajillos, stemmed,
+      seeded and deveined". Added ingredient "2 cloves garlic, unpeeled". Added ingredient
+      "1 ripe, large tomato, roasted, peeled, cored and roughly chopped". Added ingredient
+      "1/2 canned chile chipotle, seeded (optional)". Added ingredient "salt, about
+      1/2 teaspoon". Added recipe category classification "RecipeCategoryClassification
+      object". Added recipe category classification "RecipeCategoryClassification
+      object".', content_type: 16, object_id: '160', object_repr: Red Chile Sauce
+      with Roasted Tomato, user: 1}
+  model: admin.logentry
+  pk: 37
+- fields: {action_flag: 1, action_time: ! '2015-11-02 20:09:10.095252+00:00', change_message: '',
+    content_type: 16, object_id: '161', object_repr: Chipotle Chile Sauce, user: 1}
+  model: admin.logentry
+  pk: 38
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:10:24.831009+00:00', change_message: Changed
+      instructions., content_type: 16, object_id: '161', object_repr: Chipotle Chile
+      Sauce, user: 1}
+  model: admin.logentry
+  pk: 39
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:14:09.119084+00:00', change_message: 'Added
+      ingredient "3 medium (about 4 1/2 ounces total) fresh tomatillos, husked and
+      washed". Added ingredient "2 large cloves garlic, unpeeled". Added ingredient
+      "3 canned chiles chipotles, seeded". Added ingredient "salt, about 1/4 teaspoon".
+      Added recipe category classification "RecipeCategoryClassification object".
+      Added recipe category classification "RecipeCategoryClassification object".',
+    content_type: 16, object_id: '161', object_repr: Chipotle Chile Sauce, user: 1}
+  model: admin.logentry
+  pk: 40
+- fields: {action_flag: 1, action_time: ! '2015-11-02 20:15:51.254809+00:00', change_message: '',
+    content_type: 16, object_id: '162', object_repr: "Chile De \xC1", user: 1}
+  model: admin.logentry
+  pk: 41
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:16:11.146012+00:00', change_message: Changed
+      name., content_type: 16, object_id: '162', object_repr: "Chile De \xC1rbol Hot
+      Sauce", user: 1}
+  model: admin.logentry
+  pk: 42
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:19:05.633190+00:00', change_message: Changed
+      description and instructions., content_type: 16, object_id: '162', object_repr: "Chile
+      De \xC1rbol Hot Sauce", user: 1}
+  model: admin.logentry
+  pk: 43
+- fields: {action_flag: 1, action_time: ! '2015-11-02 20:20:18.555829+00:00', change_message: '',
+    content_type: 19, object_id: '183', object_repr: "dried chiles de \xE1rbol", user: 1}
+  model: admin.logentry
+  pk: 44
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:21:07.328371+00:00', change_message: "Added
+      ingredient \"1 1/4 ounces (about 50 to 60 mixed-size) dried chiles de \xE1rbol\".",
+    content_type: 16, object_id: '162', object_repr: "Chile De \xC1rbol Hot Sauce",
+    user: 1}
+  model: admin.logentry
+  pk: 45
+- fields: {action_flag: 1, action_time: ! '2015-11-02 20:21:46.481084+00:00', change_message: '',
+    content_type: 24, object_id: '5', object_repr: tablespoons (tbsp), user: 1}
+  model: admin.logentry
+  pk: 46
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:21:56.137085+00:00', change_message: Added
+      ingredient "1 1/2 tablespoons sesame seeds". Added recipe category classification
+      "RecipeCategoryClassification object". Added recipe category classification
+      "RecipeCategoryClassification object"., content_type: 16, object_id: '162',
+    object_repr: "Chile De \xC1rbol Hot Sauce", user: 1}
+  model: admin.logentry
+  pk: 47
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:23:36.744741+00:00', change_message: Added
+      ingredient "2 tablespoons shelled pumpkin seeds (pepitas)". Added ingredient
+      "1/4 teaspoon cumin seeds (or a generous 1/4 teaspoon ground)"., content_type: 16,
+    object_id: '162', object_repr: "Chile De \xC1rbol Hot Sauce", user: 1}
+  model: admin.logentry
+  pk: 48
+- fields: {action_flag: 1, action_time: ! '2015-11-02 20:24:53.747769+00:00', change_message: '',
+    content_type: 24, object_id: '6', object_repr: pinch (pinch), user: 1}
+  model: admin.logentry
+  pk: 49
+- fields: {action_flag: 1, action_time: ! '2015-11-02 20:33:51.153197+00:00', change_message: '',
+    content_type: 24, object_id: '7', object_repr: cup (cup), user: 1}
+  model: admin.logentry
+  pk: 50
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:33:55.026724+00:00', change_message: 'Added
+      ingredient "4 large allspice berries (or about 1/8 teaspoon ground)". Added
+      ingredient "2 cloves (or a big pinch ground)". Added ingredient "1 teaspoon
+      dried oregano". Added ingredient "1 scant teaspoon salt". Added ingredient "2
+      large cloves garlic, peeled and roughly chopped". Added ingredient "3/4 cup
+      cider vinegar".', content_type: 16, object_id: '162', object_repr: "Chile De
+      \xC1rbol Hot Sauce", user: 1}
+  model: admin.logentry
+  pk: 51
+- fields: {action_flag: 1, action_time: ! '2015-11-02 20:35:28.924495+00:00', change_message: '',
+    content_type: 16, object_id: '163', object_repr: Quick-Cooked Tomato-Chile Sauce,
+    user: 1}
+  model: admin.logentry
+  pk: 52
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:42:03.696072+00:00', change_message: Changed
+      description and instructions., content_type: 16, object_id: '163', object_repr: Quick-Cooked
+      Tomato-Chile Sauce, user: 1}
+  model: admin.logentry
+  pk: 53
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:42:12.058577+00:00', change_message: Added
+      recipe category classification "RecipeCategoryClassification object". Added
+      recipe category classification "RecipeCategoryClassification object"., content_type: 16,
+    object_id: '163', object_repr: Quick-Cooked Tomato-Chile Sauce, user: 1}
+  model: admin.logentry
+  pk: 54
+- fields: {action_flag: 2, action_time: ! '2015-11-02 20:46:27.248692+00:00', change_message: 'Added
+      ingredient "1 1/2 pounds (3 medium-large round, 9 or 10 pear-shaped) ripe tomatoes,
+      boiled or roasted, peeled and cored". Added ingredient "fresh hot green chiles
+      to taste (roughly 3 to 5 chiles serranos), stemmed". Added ingredient "1/2 small
+      onion, chopped". Added ingredient "1 large clove garlic, peeled and roughly
+      chopped". Added ingredient "1 tablespoon lard or vegetable oil". Added ingredient
+      "salt, about 1/2 teaspoon".', content_type: 16, object_id: '163', object_repr: Quick-Cooked
+      Tomato-Chile Sauce, user: 1}
+  model: admin.logentry
+  pk: 55
+- fields: {action_flag: 2, action_time: ! '2015-11-03 01:37:21.216441+00:00', change_message: No
+      fields changed., content_type: 16, object_id: '163', object_repr: Quick-Cooked
+      Tomato-Chile Sauce, user: 1}
+  model: admin.logentry
+  pk: 56
+- fields: {action_flag: 1, action_time: ! '2015-11-03 02:35:27.827259+00:00', change_message: '',
+    content_type: 16, object_id: '164', object_repr: Quick-Cooked Tomatillo-Chile
+      Sauce, user: 1}
+  model: admin.logentry
+  pk: 57
+- fields: {action_flag: 2, action_time: ! '2015-11-03 02:39:58.707949+00:00', change_message: 'Added
+      ingredient "1 pound (11 medium) fresh tomatillos, husked and washed". Added
+      ingredient "fresh hot green chiles to taste (roughly 3 chiles serranos), stemmed".
+      Added ingredient "5 or 6 sprigs fresh coriander (cilantro), roughly chopped".
+      Added ingredient "1 small onion, chopped". Added ingredient "1 large clove garlic,
+      peeled and roughly chopped". Added ingredient "1 tablespoon lard or vegetable
+      oil". Added ingredient "2 cups any poultry or meat broth (depending on how the
+      sauce is to be used)". Added ingredient "salt, about 1/2 teaspoon (depending
+      on the saltiness of the broth)". Added recipe category classification "RecipeCategoryClassification
+      object". Added recipe category classification "RecipeCategoryClassification
+      object".', content_type: 16, object_id: '164', object_repr: Quick-Cooked Tomatillo-Chile
+      Sauce, user: 1}
+  model: admin.logentry
+  pk: 58
+- fields: {action_flag: 2, action_time: ! '2015-11-03 02:40:14.280916+00:00', change_message: Changed
+      description., content_type: 24, object_id: '7', object_repr: cups (cup), user: 1}
+  model: admin.logentry
+  pk: 59
+- fields: {action_flag: 2, action_time: ! '2015-11-03 02:40:19.791569+00:00', change_message: Changed
+      description., content_type: 24, object_id: '6', object_repr: pinches (pinch),
+    user: 1}
+  model: admin.logentry
+  pk: 60
+- fields: {action_flag: 1, action_time: ! '2015-11-03 02:43:56.013798+00:00', change_message: '',
+    content_type: 16, object_id: '165', object_repr: Chunky Guacamole (Avocado Relish),
+    user: 1}
+  model: admin.logentry
+  pk: 61
+- fields: {action_flag: 2, action_time: ! '2015-11-03 02:45:46.377244+00:00', change_message: 'Added
+      ingredient "1/2 small onion, very finely chopped". Added ingredient "fresh hot
+      green chiles to taste (roughly 2 chiles serranos), stemmed, seeded and very
+      finely chopped". Added ingredient "1 ripe, medium-large tomato, cored and very
+      finely chopped (optional)". Added ingredient "1 clove garlic, peeled and very
+      finely chopped (optional)".', content_type: 16, object_id: '165', object_repr: Chunky
+      Guacamole (Avocado Relish), user: 1}
+  model: admin.logentry
+  pk: 62
+- fields: {action_flag: 2, action_time: ! '2015-11-03 02:48:06.976839+00:00', change_message: 'Added
+      ingredient "10 sprigs fresh coriander (cilantro), chopped (optional)". Added
+      ingredient "3 ripe, medium avocados". Added ingredient "salt, about 1/2 teaspoon".
+      Added ingredient "1/2 lime, juiced (optional)". Added recipe category classification
+      "RecipeCategoryClassification object". Added recipe category classification
+      "RecipeCategoryClassification object".', content_type: 16, object_id: '165',
+    object_repr: Chunky Guacamole (Avocado Relish), user: 1}
+  model: admin.logentry
+  pk: 63
+- fields: {action_flag: 1, action_time: ! '2015-11-03 02:53:16.437242+00:00', change_message: '',
+    content_type: 16, object_id: '166', object_repr: Guacamole With Tomatillos, user: 1}
+  model: admin.logentry
+  pk: 64
+- fields: {action_flag: 1, action_time: ! '2015-11-03 02:57:07.169407+00:00', change_message: '',
+    content_type: 16, object_id: '167', object_repr: Relishy Cactus-Paddle Salad,
+    user: 1}
+  model: admin.logentry
+  pk: 65
+- fields: {action_flag: 2, action_time: ! '2015-11-03 03:03:05.004151+00:00', change_message: "Added
+      ingredient \"4 medium (12 to 14 ounces total) fresh cactus paddles (nopales
+      or napalitos)\". Added ingredient \"1 ripe, medium-large tomato, cored and diced\".
+      Added ingredient \"1/4 cup diced onion\". Added ingredient \"6 sprigs fresh
+      coriander (cilantro), chopped\". Added ingredient \"3 tablespoons vegetable
+      or olive oil (or a mixture of the two)\". Added ingredient \"1 tablespoon cider
+      vinegar\". Added ingredient \"A big pinch of dried oregano\". Added ingredient
+      \"salt, about 1/8 teaspoon\". Added ingredient \"several romaine lettuce leaves\".
+      Added ingredient \"3 tablespoons crumbled Mexican queso fresco, or other fresh
+      cheese like feta or farmer's cheese\". Added ingredient \"Several pickled chiles
+      jalape\xF1os, store-bought or homemade\". Added ingredient \"Several radish
+      slices or roses\". Added recipe category classification \"RecipeCategoryClassification
+      object\". Added recipe category classification \"RecipeCategoryClassification
+      object\".", content_type: 16, object_id: '167', object_repr: Relishy Cactus-Paddle
+      Salad, user: 1}
+  model: admin.logentry
+  pk: 66
+- fields: {action_flag: 1, action_time: ! '2015-11-03 03:06:06.607976+00:00', change_message: '',
+    content_type: 16, object_id: '168', object_repr: Pickled Chiles With Other Vegetables,
+    user: 1}
+  model: admin.logentry
+  pk: 67
+- fields: {action_flag: 1, action_time: ! '2015-11-03 03:09:43.177769+00:00', change_message: '',
+    content_type: 19, object_id: '184', object_repr: dried mixed herbs, user: 1}
+  model: admin.logentry
+  pk: 68
+- fields: {action_flag: 2, action_time: ! '2015-11-03 03:11:21.524205+00:00', change_message: "Added
+      ingredient \"3 tablespoons vegetable oil\". Added ingredient \"5 cloves garlic,
+      peeled\". Added ingredient \"1 medium carrot, peeled\". Added ingredient \"6
+      ounces fresh hot green chiles (12 large chiles jalape\xF1os)\". Added ingredient
+      \"1/2 medium onion, sliced 1/8 inch thick\". Added ingredient \"1/2 cup cider
+      vinegar\". Added ingredient \"2 bay leaves\". Added ingredient \"1 scant teaspoon
+      mixed dried herbs (such as thyme, marjoram and oregano)\". Added ingredient
+      \"4 black peppercorns, very coarsely ground\". Added ingredient \"salt, about
+      1/2 teaspoon\".", content_type: 16, object_id: '168', object_repr: Pickled Chiles
+      With Other Vegetables, user: 1}
+  model: admin.logentry
+  pk: 69
+- fields: {action_flag: 1, action_time: ! '2015-11-03 03:13:14.642048+00:00', change_message: '',
+    content_type: 16, object_id: '169', object_repr: Pickled Red Onions, user: 1}
+  model: admin.logentry
+  pk: 70
+- fields: {action_flag: 2, action_time: ! '2015-11-03 03:16:14.888692+00:00', change_message: 'Added
+      ingredient "1 small (6-ounce) red onion, sliced 1/8 inch thick". Added ingredient
+      "1/4 teaspoon black peppercorns". Added ingredient "1/4 teaspoon cumin seeds".
+      Added ingredient "1/2 teaspoon dried oregano". Added ingredient "2 cloves garlic,
+      peeled and halved". Added ingredient "1/4 teaspoon salt". Added ingredient "1/3
+      cup cider vinegar". Added recipe category classification "RecipeCategoryClassification
+      object".', content_type: 16, object_id: '169', object_repr: Pickled Red Onions,
+    user: 1}
+  model: admin.logentry
+  pk: 71
+- fields: {action_flag: 2, action_time: ! '2015-11-03 03:16:44.891211+00:00', change_message: Added
+      recipe category classification "RecipeCategoryClassification object"., content_type: 16,
+    object_id: '168', object_repr: Pickled Chiles With Other Vegetables, user: 1}
+  model: admin.logentry
+  pk: 72
+- fields: {action_flag: 2, action_time: ! '2015-11-03 03:17:21.924868+00:00', change_message: Deleted
+      recipe category classification "RecipeCategoryClassification object"., content_type: 16,
+    object_id: '167', object_repr: Relishy Cactus-Paddle Salad, user: 1}
+  model: admin.logentry
+  pk: 73
+- fields: {action_flag: 2, action_time: ! '2015-11-03 03:17:27.031363+00:00', change_message: No
+      fields changed., content_type: 16, object_id: '167', object_repr: Relishy Cactus-Paddle
+      Salad, user: 1}
+  model: admin.logentry
+  pk: 74
+- fields: {action_flag: 1, action_time: ! '2015-11-03 03:20:59.697078+00:00', change_message: '',
+    content_type: 20, object_id: '1', object_repr: dairy, user: 1}
+  model: admin.logentry
+  pk: 75
+- fields: {action_flag: 1, action_time: ! '2015-11-03 03:21:04.130343+00:00', change_message: '',
+    content_type: 19, object_id: '185', object_repr: buttermilk, user: 1}
+  model: admin.logentry
+  pk: 76
+- fields: {action_flag: 1, action_time: ! '2015-11-03 03:21:23.280179+00:00', change_message: '',
+    content_type: 16, object_id: '170', object_repr: Homemade Thick Cream, user: 1}
+  model: admin.logentry
+  pk: 77
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:06:49.848088+00:00', change_message: '',
+    content_type: 16, object_id: '171', object_repr: Tolucan Chile-Flavored Sausage,
+    user: 1}
+  model: admin.logentry
+  pk: 78
+- fields: {action_flag: 2, action_time: ! '2015-11-06 04:09:16.176203+00:00', change_message: Changed
+      instructions., content_type: 16, object_id: '171', object_repr: Tolucan Chile-Flavored
+      Sausage, user: 1}
+  model: admin.logentry
+  pk: 79
+- fields: {action_flag: 2, action_time: ! '2015-11-06 04:10:58.419881+00:00', change_message: Changed
+      instructions., content_type: 16, object_id: '171', object_repr: Tolucan Chile-Flavored
+      Sausage, user: 1}
+  model: admin.logentry
+  pk: 80
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:11:24.165629+00:00', change_message: '',
+    content_type: 19, object_id: '186', object_repr: pork fat, user: 1}
+  model: admin.logentry
+  pk: 81
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:16:03.947027+00:00', change_message: '',
+    content_type: 19, object_id: '187', object_repr: coriander seeds, user: 1}
+  model: admin.logentry
+  pk: 82
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:19:56.820583+00:00', change_message: '',
+    content_type: 19, object_id: '188', object_repr: nutmeg, user: 1}
+  model: admin.logentry
+  pk: 83
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:20:37.625302+00:00', change_message: '',
+    content_type: 19, object_id: '189', object_repr: ground ginger, user: 1}
+  model: admin.logentry
+  pk: 84
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:21:20.899724+00:00', change_message: '',
+    content_type: 19, object_id: '190', object_repr: paprika, user: 1}
+  model: admin.logentry
+  pk: 85
+- fields: {action_flag: 2, action_time: ! '2015-11-06 04:22:57.444584+00:00', change_message: 'Added
+      ingredient "1/3 pound pork fat, cut into 1/2-inch cubes". Added ingredient "2
+      medium (about 1 ounce total) dried chiles anchos, stemmed, seeded, and deveined".
+      Added ingredient "2 medium (about 2/3 ounce total) dried chiles pasillas, stemmed,
+      seeded, and deveined". Added ingredient "a generous 1/4 teaspoon coriander seeds
+      (or about 1/4 teaspoon ground)". Added ingredient "1/2 inch cinnamon stick (or
+      about 1/2 teaspoon ground)". Added ingredient "1/8 teaspoon cloves (or a generous
+      1/8 teaspoon ground)". Added ingredient "3/4 teaspoon dried oregano". Added
+      ingredient "a generous 1/4 teaspoon black peppercorns (or about 1/3 teaspoon
+      ground)". Added ingredient "1/8 teaspoon freshly ground nutmeg". Added ingredient
+      "1/8 teaspoon ground ginger". Added ingredient "2 tablespoons good-quality paprika".
+      Added ingredient "1 generous teaspoon salt". Added ingredient "3 cloves garlic,
+      peeled and finely minced".', content_type: 16, object_id: '171', object_repr: Tolucan
+      Chile-Flavored Sausage, user: 1}
+  model: admin.logentry
+  pk: 86
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:25:20.161186+00:00', change_message: '',
+    content_type: 19, object_id: '191', object_repr: hog casings, user: 1}
+  model: admin.logentry
+  pk: 87
+- fields: {action_flag: 2, action_time: ! '2015-11-06 04:26:04.804357+00:00', change_message: 'Added
+      ingredient "1/3 cup cider vinegar". Added ingredient "8 ounces lean, boneless
+      pork loin, cut into 1-inch cubes and chilled". Added ingredient "8 ounces lean,
+      boneless pork shoulder, cut into 1-inch cubes and chilled". Added ingredient
+      "4 to 5 feet of hog casings in 1 or 2 pieces, for stuffing the sausage (optional)".
+      Added recipe category classification "RecipeCategoryClassification object".',
+    content_type: 16, object_id: '171', object_repr: Tolucan Chile-Flavored Sausage,
+    user: 1}
+  model: admin.logentry
+  pk: 88
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:34:11.822455+00:00', change_message: '',
+    content_type: 16, object_id: '172', object_repr: 'Thin Sliced Strips of Beef,
+      Fresh or Dried to Jerky', user: 1}
+  model: admin.logentry
+  pk: 89
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:34:44.016876+00:00', change_message: '',
+    content_type: 19, object_id: '192', object_repr: beef eye of round, user: 1}
+  model: admin.logentry
+  pk: 90
+- fields: {action_flag: 2, action_time: ! '2015-11-06 04:37:22.024739+00:00', change_message: "Added
+      ingredient \"a 1\xBD-pound piece eye of round\". Added ingredient \"1\xBD teaspoons
+      salt\". Added ingredient \"1 tablespoon freshly squeezed lime juice\". Added
+      ingredient \"1\xBD teaspoons dried oregano\". Added recipe category classification
+      \"RecipeCategoryClassification object\".", content_type: 16, object_id: '172',
+    object_repr: 'Thin Sliced Strips of Beef, Fresh or Dried to Jerky', user: 1}
+  model: admin.logentry
+  pk: 91
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:43:36.205908+00:00', change_message: '',
+    content_type: 16, object_id: '173', object_repr: Sheets of Pork in Chile-Spice
+      Marinade, user: 1}
+  model: admin.logentry
+  pk: 92
+- fields: {action_flag: 1, action_time: ! '2015-11-06 04:45:05.570024+00:00', change_message: '',
+    content_type: 19, object_id: '193', object_repr: Red-Chile Marinade, user: 1}
+  model: admin.logentry
+  pk: 93
+- fields: {action_flag: 2, action_time: ! '2015-11-06 04:45:35.959249+00:00', change_message: Added
+      ingredient "1/3 cup Red-Chile Marinade". Added recipe category classification
+      "RecipeCategoryClassification object"., content_type: 16, object_id: '173',
+    object_repr: Sheets of Pork in Chile-Spice Marinade, user: 1}
+  model: admin.logentry
+  pk: 94

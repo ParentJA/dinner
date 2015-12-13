@@ -2,12 +2,14 @@
 
   "use strict";
 
-  function loadRecipeService($http, $q, BASE_URL, recipesModel) {
+  function saveRecipeService($http, $q, BASE_URL, recipesModel) {
 
-    return function (recipeId) {
+    return function (recipeId, inProgress) {
       var deferred = $q.defer();
 
-      $http.get(BASE_URL + "recipes/recipes/" + recipeId + "/").then(function (response) {
+      $http.put(BASE_URL + "recipes/recipes/" + recipeId + "/", {
+        in_progress: inProgress
+      }).then(function (response) {
         recipesModel.updateOne(response.data);
         var recipe = recipesModel.getRecipeById(recipeId);
         deferred.resolve(recipe);
@@ -21,6 +23,6 @@
   }
 
   angular.module("app")
-    .factory("loadRecipeService", ["$http", "$q", "BASE_URL", "recipesModel", loadRecipeService]);
+    .factory("saveRecipeService", ["$http", "$q", "BASE_URL", "recipesModel", saveRecipeService]);
 
 })(window, window.angular);

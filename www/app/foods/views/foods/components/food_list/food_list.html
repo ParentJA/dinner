@@ -1,0 +1,25 @@
+<div class="component--food-list">
+  <h2 class="text-center">Foods</h2>
+  <p class="text-center">
+    <a href ui-sref="meals.foods.match_list">{{ matchingRecipes.length }} matching recipes</a>
+  </p>
+  <div x-dynamic-list
+       data-collection="getFoods()"
+       data-elements="getSelectedFoods()"
+       data-add-fn="addSelectedFood(element)"
+       data-remove-fn="removeSelectedFood(element)"
+       data-placeholder="Enter a food..."
+       data-button="Add food"></div>
+  <table class="table table-hover">
+    <tbody>
+    <tr ng-repeat="food in foods | orderBy: '-count'" ng-click="addSelectedFood(food)">
+      <td>
+        <!-- TODO: Is there a way to just bind frequency once? The "::" syntax doesn't seem to work... -->
+        <span class="badge badge-default pull-right">{{ frequency(food) }}%</span>
+        <span>{{ food.name }}</span>
+        <span class="label label-default" ng-repeat="tag in ::food._tags">{{ tag.name }}</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

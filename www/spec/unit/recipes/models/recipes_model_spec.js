@@ -88,12 +88,14 @@ describe("a recipe model", function () {
 
       var description = "A delicious mixture of chopped vegetables.";
       var instructions = "<ol><li>Chop vegetables.</li><li>Combine.</li></ol>";
+      var inProgress = false;
 
       // Example response data...
       var data = {
         recipes: [{
           description: description,
           id: 1,
+          in_progress: inProgress,
           instructions: instructions,
           name: "Salsa"
         }]
@@ -107,6 +109,7 @@ describe("a recipe model", function () {
       // Confirm that a description and instructions have been added to the recipe...
       expect(recipe.description).toEqual(description);
       expect(recipe.instructions).toEqual(instructions);
+      expect(recipe.inProgress).toEqual(inProgress);
 
     });
 

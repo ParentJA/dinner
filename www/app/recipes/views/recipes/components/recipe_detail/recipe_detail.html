@@ -1,26 +1,26 @@
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h4 class="panel-title">Recipe Detail</h4>
-  </div>
-  <div class="panel-body">
-    <h3>{{ selectedRecipe.name | title }}</h3>
-  </div>
-  <div class="panel-body" ng-if="selectedRecipe.description">
-    <p ng-bind-html="selectedRecipe.description"></p>
-  </div>
+<div class="component--recipe-detail">
+  <ol class="breadcrumb">
+    <li>
+      <a href ui-sref="meals.recipes.list">Recipes</a>
+    </li>
+    <li class="active" ng-bind-html="recipe.name"></li>
+  </ol>
+  <h2 class="text-center" ng-bind-html="recipe.name | title"></h2>
+  <p ng-bind-html="recipe.description" ng-if="recipe.description"></p>
+  <h3>Ingredients <span class="label label-default pull-right" ng-bind="totalFoods"></span></h3>
   <table class="table">
-    <thead>
-    <tr>
-      <th>Ingredients <span class="badge badge-success pull-right" ng-bind="totalFoods"></span></th>
-    </tr>
-    </thead>
     <tbody>
-    <tr ng-repeat="food in selectedRecipe._foods | orderBy: 'name'">
-      <td>{{ food.name | title }}</td>
+    <tr ng-repeat="ingredient in recipeIngredients">
+      <td ng-bind-html="ingredient"></td>
     </tr>
     </tbody>
   </table>
-  <div class="panel-body" ng-if="selectedRecipe.instructions">
-    <p ng-bind-html="selectedRecipe.instructions"></p>
-  </div>
+  <h3 ng-if="recipe.instructions">Instructions</h3>
+  <div ng-bind-html="recipe.instructions" ng-if="recipe.instructions"></div>
+  <button class="btn btn-success btn-block" type="button" ng-hide="isRecipeInProgress()"
+          ng-click="setRecipeInProgress(true)">Start recipe
+  </button>
+  <button class="btn btn-danger btn-block" type="button" ng-show="isRecipeInProgress()"
+          ng-click="setRecipeInProgress(false)">Finish recipe
+  </button>
 </div>

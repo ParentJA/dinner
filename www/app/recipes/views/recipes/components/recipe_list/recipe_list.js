@@ -2,31 +2,36 @@
 
   "use strict";
 
-  function RecipeListController($scope, recipesService) {
-    $scope.getRecipes = getRecipes;
-    $scope.getTotalRecipes = getTotalRecipes;
-    $scope.hasRecipes = hasRecipes;
-    $scope.isSelectedRecipe = isSelectedRecipe;
-    $scope.setSelectedRecipe = setSelectedRecipe;
+  function RecipeListController($scope, $state, recipesService) {
+    $scope.hasRecipes = false;
+    $scope.recipes = [];
+    $scope.totalRecipes = 0;
 
-    function getRecipes() {
-      return recipesService.getRecipes();
-    }
+    $scope.onKeyPressed = function onKeyPressed(event) {
+      if (event.keyCode === 13) {
+        $state.go("meals.recipes.detail", {
+          recipeId: $scope.recipe.id
+        });
 
-    function getTotalRecipes() {
-      return _.size(recipesService.getRecipes());
-    }
+        // Clear recipe...
+        $scope.recipe = null;
+      }
+    };
 
-    function hasRecipes() {
-      return recipesService.hasRecipes();
-    }
-
-    function isSelectedRecipe(value) {
+    $scope.isSelectedRecipe = function isSelectedRecipe(value) {
       return recipesService.isSelectedRecipe(value);
-    }
+    };
 
-    function setSelectedRecipe(value) {
+    $scope.setSelectedRecipe = function setSelectedRecipe(value) {
       recipesService.setSelectedRecipe(value);
+    };
+
+    activate();
+
+    function activate() {
+      $scope.hasRecipes = recipesService.hasRecipes();
+      $scope.recipes = recipesService.getRecipes();
+      $scope.totalRecipes = _.size($scope.recipes);
     }
   }
 
@@ -40,7 +45,7 @@
   }
 
   angular.module("app")
-    .controller("RecipeListController", ["$scope", "recipesService", RecipeListController])
+    .controller("RecipeListController", ["$scope", "$state", "recipesService", RecipeListController])
     .directive("recipeList", [recipeList]);
 
 })(window, window.angular);

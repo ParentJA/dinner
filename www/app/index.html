@@ -16,26 +16,26 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-content">
+      <button class="navbar-toggle" type="button" ng-click="navigationService.toggleNavigation()">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" ui-sref="home">Dinner</a>
     </div>
-    <div id="navbar-content" class="collapse navbar-collapse">
+    <div id="navbar-content" class="collapse navbar-collapse" uib-collapse="!navigationService.isNavigationOpen()">
       <ul class="nav navbar-nav" ng-if="hasUser()">
         <li ng-class="{active: $state.is('meals.pantry')}">
           <a ui-sref="meals.pantry">Pantry</a>
         </li>
-        <li ng-class="{active: $state.is('meals.menus')}">
+        <!--<li ng-class="{active: $state.is('meals.menus')}">
           <a ui-sref="meals.menus">Menus</a>
-        </li>
-        <li ng-class="{active: $state.is('meals.recipes')}">
-          <a ui-sref="meals.recipes">Recipes</a>
+        </li>-->
+        <li ng-class="{active: $state.includes('meals.recipes')}">
+          <a ui-sref="meals.recipes.list">Recipes</a>
         </li>
         <li ng-class="{active: $state.is('meals.foods')}">
-          <a ui-sref="meals.foods">Foods</a>
+          <a ui-sref="meals.foods.list">Foods</a>
         </li>
       </ul>
       <div class="navbar-right" ng-if="hasUser()">

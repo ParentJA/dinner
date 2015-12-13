@@ -12,13 +12,15 @@ from rest_framework.response import Response
 # Django imports...
 from django.contrib.auth import get_user_model
 from django.http import Http404
+from django.utils.timezone import now
 
 # Local imports...
-from .models import Food, Ingredient, Recipe, Pantry, PantryFood, UnitOfMeasure, UserPantry
+from .models import Food, Ingredient, Recipe, Pantry, PantryFood, UnitOfMeasure, UserPantry, UserRecipeRecord
 from .serializers import (
-    BasicRecipeSerializer, CountedFoodSerializer, FoodSerializer, FoodCategorySerializer, PantrySerializer,
-    RecipeSerializer, RecipeCategorySerializer, UnitOfMeasureSerializer
+    BasicRecipeSerializer, CountedFoodSerializer, FoodSerializer, FoodCategorySerializer, IngredientSerializer,
+    PantrySerializer, RecipeSerializer, RecipeCategorySerializer, UnitOfMeasureSerializer
 )
+from .services import get_current_user_recipe_record
 
 User = get_user_model()
 
@@ -212,16 +214,49 @@ class RecipeAPIViewSet(viewsets.ViewSet):
         return Response(status=status.HTTP_200_OK, data=data)
 
     def retrieve(self, request, pk):
-        data = {}
+        ingredients = Ingredient.objects.select_related('recipe', 'food', 'unit_of_measure').filter(recipe__pk=pk)
 
-        try:
-            recipe = Recipe.objects.prefetch_related('categories', 'foods').get(pk=pk)
-        except Recipe.DoesNotExist:
+        if not ingredients.exists():
             raise Http404
 
-        data['recipes'] = RecipeSerializer([recipe], many=True).data
+        recipes = []
+        units_of_measure = []
 
-        return Response(status=status.HTTP_200_OK, data=data)
+        for ingredient in ingredients:
+            recipes.append(ingredient.recipe)
+            units_of_measure.append(ingredient.unit_of_measure)
+
+        # Only one recipe exists...
+        recipe = recipes[0]
+        recipe.in_progress = get_current_user_recipe_record(request.user, recipe) is not None
+
+        return Response(status=status.HTTP_200_OK, data={
+            'ingredients': IngredientSerializer(ingredients, many=True).data,
+            'recipes': RecipeSerializer(set(recipes), many=True).data,
+            'units_of_measure': UnitOfMeasureSerializer(
+                set(filter(lambda u: u is not None, units_of_measure)), many=True
+            ).data,
+        })
+
+    def update(self, request, pk):
+        in_progress = request.data.get('in_progress', False)
+
+        # Get any current user recipe record...
+        recipe = get_object_or_404(Recipe, pk=pk)
+        user_recipe_record = get_current_user_recipe_record(request.user, recipe)
+
+        if in_progress:
+            if user_recipe_record is None:
+                UserRecipeRecord.objects.create(user=request.user, recipe=recipe)
+            else:
+                raise Http404
+
+        else:
+            if user_recipe_record is not None:
+                user_recipe_record.updated = now()
+                user_recipe_record.save()
+
+        return self.retrieve(request, pk)
 
 
 class UnitOfMeasureAPIView(views.APIView):

@@ -2,7 +2,7 @@
 
   "use strict";
 
-  function recipesService(loadRecipeService, recipesModel) {
+  function recipesService(recipesModel) {
     var selectedRecipe = {};
 
     function createEmptyVector(numElements) {
@@ -102,15 +102,14 @@
       isFullRecipe: function (recipe) {
         return (_.has(recipe, "description") || _.has(recipe, "instructions"));
       },
+      isRecipeInProgress: function isRecipeInProgress(recipe) {
+        return (_.has(recipe, "inProgress") && recipe.inProgress === true);
+      },
       isSelectedRecipe: function isSelectedRecipe(recipe) {
         return (selectedRecipe === recipe);
       },
       setSelectedRecipe: function setSelectedRecipe(recipe) {
         selectedRecipe = recipe;
-
-        if (!this.isFullRecipe(recipe)) {
-          loadRecipeService(recipe.id);
-        }
       }
     };
 
@@ -118,6 +117,6 @@
   }
 
   angular.module("app")
-    .factory("recipesService", ["loadRecipeService", "recipesModel", recipesService]);
+    .factory("recipesService", ["recipesModel", recipesService]);
 
 })(window, window.angular);

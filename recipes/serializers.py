@@ -4,7 +4,7 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 from rest_framework import serializers
 
 # Local imports...
-from .models import Food, FoodCategory, Pantry, Recipe, RecipeCategory, UnitOfMeasure
+from .models import Food, FoodCategory, Ingredient, Pantry, Recipe, RecipeCategory, UnitOfMeasure
 
 
 class FoodSerializer(serializers.ModelSerializer):
@@ -39,9 +39,11 @@ class BasicRecipeSerializer(serializers.ModelSerializer):
 
 
 class RecipeSerializer(serializers.ModelSerializer):
+    in_progress = serializers.BooleanField()
+
     class Meta:
         model = Recipe
-        fields = ('id', 'name', 'description', 'instructions', 'foods', 'categories')
+        fields = ('id', 'name', 'description', 'instructions', 'in_progress')
 
 
 class RecipeCategorySerializer(serializers.ModelSerializer):
@@ -54,3 +56,9 @@ class UnitOfMeasureSerializer(serializers.ModelSerializer):
     class Meta:
         model = UnitOfMeasure
         fields = ('id', 'description', 'abbreviation')
+
+
+class IngredientSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ingredient
+        fields = ('id', 'recipe', 'food', 'amount', 'unit_of_measure', 'description')

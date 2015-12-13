@@ -3,6 +3,7 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 # Django imports...
 from django.conf import settings
 from django.db import models
+from django.template.defaulttags import date
 
 AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL')
 
@@ -24,6 +25,10 @@ class Recipe(models.Model):
         through='recipes.RecipeCategoryClassification',
         through_fields=('recipe', 'recipe_category')
     )
+
+    @staticmethod
+    def autocomplete_search_fields():
+        return ['name__icontains']
 
     class Meta:
         default_related_name = 'recipes'
@@ -64,6 +69,10 @@ class Food(models.Model):
         through_fields=('food', 'food_category')
     )
 
+    @staticmethod
+    def autocomplete_search_fields():
+        return ['name__icontains']
+
     class Meta:
         default_related_name = 'foods'
         ordering = ['name']
@@ -96,8 +105,8 @@ class Ingredient(models.Model):
     """
     A food that is used in a recipe.
     """
-    recipe = models.ForeignKey('recipes.Recipe')
-    food = models.ForeignKey('recipes.Food')
+    recipe = models.ForeignKey('recipes.Recipe', related_name='ingredients')
+    food = models.ForeignKey('recipes.Food', related_name='ingredients')
 
     # It is possible to have no unit of measure and no amount (e.g. salt, black pepper).
     amount = models.DecimalField(
@@ -155,6 +164,10 @@ class UnitOfMeasure(models.Model):
     """
     description = models.CharField(max_length=255)
     abbreviation = models.CharField(max_length=10, null=True, blank=True)
+
+    @staticmethod
+    def autocomplete_search_fields():
+        return ['description__icontains']
 
     class Meta:
         default_related_name = 'units_of_measure'
@@ -215,3 +228,23 @@ class PantryFood(models.Model):
 
     class Meta:
         unique_together = ('pantry', 'food')
+
+
+class UserRecipeRecord(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    recipe = models.ForeignKey('recipes.Recipe')
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(null=True, blank=True, default=None)
+
+    class Meta:
+        default_related_name = 'user_recipe_records'
+        verbose_name = 'user recipe record'
+        verbose_name_plural = 'user recipe records'
+
+    def __unicode__(self):
+        return '{user} made {recipe}: {created} to {updated}'.format(
+            user=self.user,
+            recipe=self.recipe,
+            created=date(self.created, 'DATETIME_FORMAT'),
+            updated=date(self.updated, 'DATETIME_FORMAT')
+        )

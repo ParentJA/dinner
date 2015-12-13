@@ -15,6 +15,9 @@
       getFoods: function getFoods() {
         return foods;
       },
+      getRecipeById: function getRecipeById(recipeId) {
+        return _.find(recipes, "id", _.parseInt(recipeId));
+      },
       getRecipeCategories: function getRecipeCategories() {
         return recipeCategories;
       },
@@ -66,11 +69,22 @@
         var recipeId = recipe.id;
         var description = recipe.description;
         var instructions = recipe.instructions;
+        var inProgress = recipe.in_progress;
 
         // Update recipe...
         var existingRecipe = _.find(recipes, "id", recipeId);
         existingRecipe.description = description;
         existingRecipe.instructions = instructions;
+        existingRecipe.inProgress = inProgress;
+
+        // Update ingredients...
+        var foodMap = _.indexBy(existingRecipe._foods, "id");
+
+        _.forEach(data.ingredients, function (ingredient) {
+          ingredient._food = foodMap[ingredient.food];
+        });
+
+        existingRecipe.ingredients = data.ingredients;
       }
     };
 

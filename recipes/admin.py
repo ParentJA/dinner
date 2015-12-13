@@ -5,13 +5,17 @@ from django.contrib import admin
 
 # Local imports...
 from .models import (
-    Food, FoodCategory, Pantry, PriceComponent, Recipe, RecipeCategory, UnitOfMeasure, UserPantry
+    Food, FoodCategory, Pantry, PriceComponent, Recipe, RecipeCategory, UnitOfMeasure, UserPantry, UserRecipeRecord
 )
 
 
 class IngredientAdmin(admin.TabularInline):
     model = Recipe.foods.through
     fields = ('food', 'description', 'amount', 'unit_of_measure')
+    raw_id_fields = ('food', 'unit_of_measure')
+    autocomplete_lookup_fields = {
+        'fk': ('food', 'unit_of_measure')
+    }
     extra = 1
 
 
@@ -73,3 +77,10 @@ class PantryFoodAdmin(admin.TabularInline):
 class PantryAdmin(admin.ModelAdmin):
     fields = ('name',)
     inlines = (PantryFoodAdmin,)
+
+
+@admin.register(UserRecipeRecord)
+class UserRecipeRecordAdmin(admin.ModelAdmin):
+    model = UserRecipeRecord
+    fields = ('user', 'recipe', 'created', 'updated',)
+    readonly_fields = ('user', 'recipe', 'created')
