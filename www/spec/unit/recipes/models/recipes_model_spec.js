@@ -89,6 +89,10 @@ describe("a recipe model", function () {
       var description = "A delicious mixture of chopped vegetables.";
       var instructions = "<ol><li>Chop vegetables.</li><li>Combine.</li></ol>";
       var inProgress = false;
+      var userData = {
+        is_favorite: false,
+        rating: null
+      };
 
       // Example response data...
       var data = {
@@ -98,7 +102,8 @@ describe("a recipe model", function () {
           in_progress: inProgress,
           instructions: instructions,
           name: "Salsa"
-        }]
+        }],
+        user_data: userData
       };
 
       recipesModel.updateOne(data);

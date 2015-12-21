@@ -4,11 +4,12 @@
 
   function saveRecipeService($http, $q, BASE_URL, recipesModel) {
 
-    return function (recipeId, inProgress) {
+    return function (recipeId, inProgress, rating) {
       var deferred = $q.defer();
 
       $http.put(BASE_URL + "recipes/recipes/" + recipeId + "/", {
-        in_progress: inProgress
+        in_progress: inProgress,
+        rating: rating
       }).then(function (response) {
         recipesModel.updateOne(response.data);
         var recipe = recipesModel.getRecipeById(recipeId);

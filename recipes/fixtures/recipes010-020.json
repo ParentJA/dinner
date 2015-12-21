@@ -1,0 +1,567 @@
+[
+  {
+    "instructions": "<p>Set a medium (3-quart) saucepan over medium high and add the sugar with 1 &#188; cups of water. Bring to a boil, whisking until the sugar is dissolved. Remove from the heat and cool completely.</p><p>Cut the avocados in half, running a knife around the pit from top to bottom and back up again. Twist the halves in opposite directions to release the pit from one side. Remove the pit, then scoop the flesh from each half into a food processor or blender and process until the avocado is completely smooth. You will need 3 cups of avocado puree.<br/>Add the cooled syrup, lime juice and salt to the avocado and process until everything is well mixed.</p><p>Pour the mixture into the canister of your ice cream maker and freeze according to the manufacturer&#8217;s directions. The ice will have the best texture if scooped into a container and placed in a freezer to firm up for 3 or 4 hours.</p>",
+    "ingredients": [
+      {
+        "amount": "2 1/4",
+        "unit_of_measure": "cups",
+        "description": "2 1/4 cups sugar"
+      },
+      {
+        "amount": "8 ",
+        "unit_of_measure": "medium or 5 large very ripe",
+        "description": "8 medium or 5 large very ripe avocados"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup",
+        "description": "1/2 cup fresh lime juice"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "teaspoon",
+        "description": "1/2 teaspoon Salt"
+      }
+    ],
+    "name": "Avocado Ice",
+    "description": "From Season 9, Mexico&#8212;One Plate At A Time"
+  },
+  {
+    "instructions": "<p>Arrange the bacon slices between a double layer of paper towels on a microwavable plate. Microwave on high for 2 &#189; to 3 &#189; minutes, until crispy.&#160; <b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </b></p><p>Pour the pumpkinseeds<b> </b>into a small skillet and set over medium heat. Once the first one pops, stir constantly until all have popped from flat to round, about 5 minutes. Scoop about 1/3 of them into a blender jar and add the lime juice.&#160; Pour the remainder into a small dish.</p><p>Return the skillet to medium heat and measure in the oil. Add the garlic and optional chile. Cook, stirring regularly, until the garlic is soft and lightly browned, about 5 minutes.&#160; Scrape the oil and garlic into the blender or food processor.&#160; Add the honey and &#189; teaspoon salt.&#160; Process until smooth.&#160; Taste and season with more salt if you think necessary.&#160; (It should be highly seasoned.)</p><p><b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </b>Divide the lettuce between 4 dinner plates.&#160; Pit and the avocados, scoop flesh from the skin and cut it into slices.&#160; Peel the mango, then cut the flesh from the pit.&#160; Slice to match the avocado pieces.&#160; Arrange the avocado and mango in the center of the lettuce.&#160; Drizzle everything with the dressing, then sprinkle with the cheese and toasted pumpkinseeds.&#160; Crumble the bacon and strew it over the top, and the salad is ready.</p><p><b>A Few Simple Riffs:&#160; </b>Bacon can be replaced with flaked hot-smoked salmon, eel, trout or other fish. Leave out the bacon to make the salad vegetarian, or replace it with pan-grilled onion slices.&#160; The pumpkinseeds can be replaced with pinenuts (they toast&#8212;and burn&#8212;much faster than the pumpkinseeds). The luscious texture of mango works well with avocado, but so would ripe peach or nectarine.&#160; The green chile could be replaced by hot ground red chile (like &#225;rbol)&#8212;sprinkle it over the salad rather than blending it with the dressing. Crumbled goat cheese is a good stand-in for Mexican <i>queso fresco</i>.</p><p><b>Over-the-Top Crab-Avocado-Mango Salad:&#160;&#160;</b>Sprinkle a generous portion of crab over the avocado and mango before drizzling with dressing.</p>",
+    "ingredients": [
+      {
+        "amount": "4",
+        "unit_of_measure": "slices",
+        "description": "4 slices bacon"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup",
+        "description": "1/2 cup hulled pumpkin (pepita) seeds"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup",
+        "description": "1/2 cup fresh lime juice"
+      },
+      {
+        "amount": "1/3",
+        "unit_of_measure": "cup",
+        "description": "1/3 cup vegetable or olive oil"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": null,
+        "description": "2 garlic cloves, peeled"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Fresh hot green chile to taste (I like a large serrano or a small jalapeno), stemmed (optional)"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "tablespoon",
+        "description": "1 tablespoon honey"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": null,
+        "description": "1 large head Boston/butterhead lettuce (or an equivalent amount of Bibb lettuce), leaves separated"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": "large",
+        "description": "2 large ripe avocados"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": null,
+        "description": "2 ripe mangoes"
+      },
+      {
+        "amount": "A generous",
+        "unit_of_measure": "3/4 cup",
+        "description": "A generous 3/4 cup coarsely crumbled Mexican queso fresco or mild blue cheese (Gorgonzola is great)"
+      }
+    ],
+    "name": "Avocado-Mango Salad with Fresh (or Blue) Cheese, Bacon and Toasted Pumpkin Seeds",
+    "description": "From the Mexican mind-set, both buttery avocado and tropical mango derive beautiful benefit from chile, salt and lime, all three of which form a foundation for this salad&#8217;s dressing, along with saut&#233;ed garlic&#8217;s savory aroma and honey&#8217;s mellowness. Add the crunch of toasted pumpkinseeds, the tenderness of Boston lettuce and the savory saltiness of crisp bacon and fresh Mexican cheese, and you have a compelling salad. It&#8217;s the least substantial of my main course salads&#8212;perfect for hot-weather appetites. Also, feel free to scale down the size of the portions so you can use this delicia as the first course for a special dinner. Or serve the large portions with grilled chicken breasts for a more substantial meal. "
+  },
+  {
+    "instructions": "<p>In a blender or food processor, combine the tomatillos, garlic, green chile, cilantro and &#189; cup water. Process to a coarse puree. Add the avocado and pulse until nearly smooth. Pour into a salsa dish. If necessary, thin to a drizzleable consistency with a little more water (I often add 1 to 2 tablespoons more). Taste and season with salt, usually about 1 teaspoon.</p>",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit_of_measure": "ounces (3 to 4 medium)",
+        "description": "8 ounces (3 to 4 medium) tomatillos, husked, rinsed and roughly chopped"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": null,
+        "description": "1 garlic clove, peeled and roughly chopped"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Fresh hot green chile to taste (roughly 2 or 3 serranos or 1 or 2 jalapenos), stemmed and roughly chopped"
+      },
+      {
+        "amount": "About 1/4",
+        "unit_of_measure": "cup",
+        "description": "About 1/4 cup (loosely packed) roughly chopped cilantro, thick lower stems cut off"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "large",
+        "description": "1 large avocado, itted, flesh scooped from skin and roughly chopped"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      }
+    ],
+    "name": "Avocado Tomatillo Salsa",
+    "description": "From Season 9 - Mexico: One Plate at a Time"
+  },
+  {
+    "instructions": "<p>Heat the oil in an 8-inch non-stick skillet over medium heat. Add the bacon and cook for 6 to 8 minutes or until browned and crisp. Remove the bacon and tip off most of the fat, leaving about 1 tablespoon in the pan. Once the bacon has cooled, crumble and set aside for the garnish. Raise the heat to medium-high and add the onions. Saut&#233; for about 8 minutes, or until the onion is golden brown. Add the chiles and sun-dried tomatoes and cook for about 1 minute, or until the chile has softened. Pour in the beer and stir until the liquid has evaporated and the mixture is once again dry looking.</p><p>Reduce the heat to medium-low, sprinkle the cheese evenly over the vegetables and stir slowly and constantly until just melted&#8212;too long over the heat and the cheese will become tough, oily and stringy. Immediately scoop into a warm serving dish (a small fondue dish with a tea light below is ideal) and sprinkle on the crumbled bacon and chopped cilantro. Serve with warm tortillas or tortilla chips.</p>",
+    "ingredients": [
+      {
+        "amount": "3",
+        "unit_of_measure": "strips",
+        "description": "3 strips thick-sliced bacon"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "medium",
+        "description": "1 medium white onion, diced"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Hot green chiles to taste (roughly 1 large jalape&#241;o or 2 serranos), stemmed, seeded if you wish, finely diced"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "cup",
+        "description": "1/4 cup diced recipe ready sun-dried tomatoes (We prefer the California Sun Dry Smoked Tomatoes brand)"
+      },
+      {
+        "amount": "3",
+        "unit_of_measure": "tablespoons",
+        "description": "3 tablespoons beer, preferably a full-flavored beer like Negra Modelo"
+      },
+      {
+        "amount": "8",
+        "unit_of_measure": "ounces",
+        "description": "8 ounces Monterey jack cheese, shredded (you&#8217;ll have about 2 cups)"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "cup",
+        "description": "1/4 cup chopped cilantro"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Warm corn or flour tortillas or tortilla chips"
+      }
+    ],
+    "name": "Bacon with Carmelized Onion and Sun-Dried Tomatoes Queso Fundido",
+    "description": "Here&#8217;s a new take on the classic Queso Fundido recipe that's fun to serve at your next football party.&#160; It combines bacon, carmelized onions, smoked sun-dried tomatoes, beer and cheese.&#160; Now that&#8217;s what I call a party in a bowl!<"
+  },
+  {
+    "instructions": "<p>In a large (5- to 6-quart) soup pot, cook the chorizo over medium heat, stirring to break up any clumps, until it&#8217;s crispy, about 10 minutes.&#160; With a slotted spoon, scoop the chorizo onto a paper towel to drain, leaving behind as much fat as possible.</p><p>Scoop the leeks and chiles into the pot, cover and return to medium heat.&#160; Let cook, uncovering to stir from time to time, until the leeks and chiles are very soft, about 10 minutes.&#160; Uncover and continue to cook, stirring frequently, until the leeks and chiles look thoroughly melted and are just beginning to brown, about 10 minutes more.&#160; Scrape the leek mixture into a blender jar, add <em>1 can</em> (or <em>1 &#190; cup</em>) of the beans and the chicken broth.&#160; Blend until smooth and return to the pan.</p><p>Add the remaining can of beans to the soup and bring to a simmer over medium heat. Taste and season with salt, usually a scant teaspoon depending on the saltiness of your broth and beans.&#160; Let simmer for a few more minutes to blend the flavors, then ladle into warm soup bowls, sprinkle with the crispy chorizo and garnish with the herb leaves, cheese or <em>crema</em>&#8212;whatever you have.&#160; Soup&#8217;s on.</p>",
+    "ingredients": [
+      {
+        "amount": "6",
+        "unit_of_measure": "ounces (about 3/4 cup)",
+        "description": "6 ounces (about 3/4 cup) Mexican chorizo sausage, casing removed"
+      },
+      {
+        "amount": "1 1/2",
+        "unit_of_measure": "pounds (about 6 medium)",
+        "description": "1 1/2 pounds (about 6 medium) leeks, roots cut off, cut in half lengthwise, thoroughly washed through all the layers, each half sliced crosswise into &#188;-inch pieces"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "pound (about 6)",
+        "description": "1 pound (about 6) fresh g&#252;ero chiles (aka hot or mild banana peppers), stemmed, seeded and sliced crosswise &#188;-inch thick"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": "15-ounce cans",
+        "description": "2 15-ounce cans white beans, drained OR 3 &#189;  cups home-cooked white beans, drained (divided use)"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "quart",
+        "description": "1 quart chicken broth"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "A",
+        "unit_of_measure": null,
+        "description": "A handful of cilantro or flat leaf parsley leaves, for serving OR a few tablespoons grated Mexican queso a&#241;ejo or other garnishing cheese such as Romano or Parmesan, for serving OR a few tablespoons Mexican crema, sour cream, cr&#232;me fraiche or Greek-style yogurt, for serving"
+      }
+    ],
+    "name": "Banana Pepper-Leek Soup with White Beans and Crispy Chorizo",
+    "description": ""
+  },
+  {
+    "instructions": "<p><ol><li><strong>Prepare the cornhusks.</strong> Cover the husks with very hot water, weight with a plate to keep them submerged, and let stand for a couple of hours until the husks are pliable. For forming the tamales, separate out 28 of the largest and most pliable husks&#8212;ones that are at least 6 inches across on the wider end and 6 or 7 inches long. If you can&#8217;t find enough good ones, overlap some of the large ones to give wide, sturdy surfaces to spread the batter on. Pat the chosen husks dry with a towel.</li><li><strong>Prepare the batter.</strong> With an electric mixer on medium-high speed, beat the lard or shortening with 2 teaspoons salt and the baking powder until light in texture, about 1 minute. Continue beating as you add the masa (fresh or reconstituted) in three additions. Reduce the speed to medium-low and add <em>1 cup</em> of the broth. Continue beating for another minute or so, until a 1/2 teaspoon dollop of the batter floats in a cup of cold water (if it floats you can be sure the tamales will be tender and light). Beat in enough of the <em>remaining 1/2 cup</em> of broth to give the mixture the consistency of soft (not runny) cake batter; it should hold its shape in a spoon. Taste the batter and season with additional salt if you think it needs some. For the lightest textured tamales, refrigerate the batter for an hour or so, then rebeat, adding a little more broth or water to bring the mixture to the soft consistency it had before.</li><li><strong>Set up the steamer.</strong> Steaming 26 husk-wrapped tamales can be done in batches in a collapsible vegetable steamer set into a large, deep saucepan. To steam them all at once, you need something like the kettle-size tamal steamers used in Mexico or Asian stack steamers, or you can improvise by setting a wire rack on 4 coffee or custard cups in a large kettle. It is best to line the rack or upper part of the steamer with leftover cornhusks to protect the tamales from direct contact with the steam and to add more flavor. Make sure to leave tiny spaces between the husks so condensing steam can drain off.</li><li><strong>Form the tamales.</strong> Cut twenty-six 8- to 10-inch pieces of string or thin strips of cornhusks. One at a time, form the tamales: Lay out one of your chosen cornhusks with the tapering end toward you. Spread about 1/4 cup of the batter into about a 4-inch square, leaving at least a 1 1/2-inch border on the side toward you and a 3/4-inch border along the other sides (with large husks, the borders will be much bigger). Spoon about 1 1/2 tablespoons of the filling down the center of the batter. Pick up the two long sides of the cornhusk and bring them together (this will cause the batter to surround the filling). If the uncovered borders of the two long sides you&#8217;re holding are narrow, tuck one side under the other; if wide, roll both sides in the same direction around the tamal. (If the husk is small, you may feel more comfortable wrapping the tamal in a second husk.) Finally, fold up the empty 1 1/2-inch section of the husk (to form a tightly closed &#8220;bottom&#8221; leaving the top open), and secure it in place by loosely tying one of the strings or strips of husk around the tamal. As they&#8217;re made, stand the tamales on their folded bottoms in the prepared steamer. Don&#8217;t tie the tamales too tightly or pack them too closely in the steamer. They need room to expand.</li><li><strong>Steam and serve the tamales.</strong> When all the tamales are in the steamer, cover them with a layer of leftover cornhusks; if your husk-wrapped tamales don&#8217;t take up the entire steamer, fill in the open spaces with loosely wadded aluminum foil (to keep the tamales from falling over). Set the lid in place and steam over a constant medium heat for about 1 1/4 hours. Watch carefully that all the water doesn&#8217;t boil away and, to keep the steam steady, pour boiling water into the pot when more is necessary. Tamales are done when the husk peels away from the masa easily. Let tamales stand in the steamer off the heat for a few minutes to firm up. For the best textured tamales, let them cool completely, then re-steam about 15 minutes to heat through.</li></ol></p>",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit_of_measure": "8-ounce package",
+        "description": "1 8-ounce package dried corn husks"
+      },
+      {
+        "amount": "10",
+        "unit_of_measure": "ounces ( 1 1/3 cups)",
+        "description": "10 ounces ( 1 1/3 cups) rich tasting pork lard or vegetable shortening if you wish), slightly softened but not at all runny"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "1 1/2",
+        "unit_of_measure": "teaspoon",
+        "description": "1 1/2 teaspoon baking powder"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": "pounds (4 cups)",
+        "description": "2 pounds (4 cups) fresh coarse-ground corn masa for tamales OR 3 1/2 cups dried masa harina for tamales mixed with 2 1/4 cups hot water"
+      },
+      {
+        "amount": "1 to 1 1/2",
+        "unit_of_measure": "cups",
+        "description": "1 to 1 1/2 cups chicken broth"
+      },
+      {
+        "amount": "2 1/2 to 3",
+        "unit_of_measure": "cups filling, such as",
+        "description": "2 1/2 to 3 cups filling, such as Pork in Red Chile or chicken in green chile"
+      }
+    ],
+    "name": "Basic Tamal Dough",
+    "description": ""
+  },
+  {
+    "instructions": "<p><ol><li><strong>&#160;Make the guajillo sauce. </strong> Set a heavy ungreased skillet or griddle over medium heat. Lay the unpeeled garlic on the hot surface and let it roast, until soft and blackened in a few spots, about 15 minutes. Cool, then slip off the papery skins and roughly chop.<p>While the garlic is roasting, break off the stems of the chiles, open them up, remove the seeds, then tear them into flat pieces. Toast the chiles a few at a time on a medium-hot skillet or griddle. Lay them skin-side up, press flat with a metal spatula until they are aromatic and lightened in color underneath &#8211; about 10 seconds per side. (If you see more than a whiff of smoke, they are burning.) Transfer the toasted chiles to a bowl, cover with hot water and let rehydrate for 30 minutes, stirring regularly to ensure even soaking. Pour off all the water and discard.</p><p>Transfer the drained chiles into a food processor or blender along with the garlic, oregano, black pepper and cumin. Measure in 2/3 cup of the broth and process to a smooth puree, scraping down the sides as necessary. If you&#8217;re using a blender and the mixture won&#8217;t move through the blades, add more broth a little at a time until everything is moving. With a rubber spatula, work the puree through a medium-mesh strainer into a bowl; discard the skins and seeds that remain in the strainer.</p><p>Heat the oil in a medium-size (4-quart) dutch oven over medium-high. When hot enough to make a drop of the puree sizzle sharply, add it all at once. Cook, stirring constantly, as the puree sears, reduces and darkens to an attractively earthy brick-red paste (usually about 7 minutes). You&#8217;ll know it&#8217;s cooked enough when it has lost that harsh raw-chile taste.</p><p>Stir in the remaining 3 cups of the broth, partially cover and simmer, stirring occasionally, about 30 minutes. If the sauce has thickened past the consistency of a light cream soup, add more broth. Taste and season with about 1 teaspoon salt and 1 1/2 teaspoons sugar--salt to brighten and focus the flavors, sugar to smooth any rough or bitter chile edges. Cover and set aside.</p></li><li><strong>Make the mushroom and swiss chard stuffing. </strong> Heat the oil in a large (12-inch) non-stick skillet over medium-high heat. When hot, add the mushrooms and 1/2 teaspoon salt. Cook for 8 to 10 minutes until golden brown. Stir in the minced garlic and cook for an additional minute. Add the chard and stir until wilted and dry about 5 minutes more. Remove from the heat and stir in 1/2 cup guajillo sauce. Cool to room temperature.</li><li><strong>&#160;Roast the tenderloin. </strong> Preheat oven to 425 degrees. Butterfly the tenderloin. Sprinkle with salt. Spread the cooled mushroom mixture over the surface leaving about 1/2-inch border around all sides. Roll up, as tightly as possible, and using kitchen string, tie every 1 1/2-inches, then tie once lengthwise. Push any stuffing that has fallen out back in. Rub the entire surface with olive oil and sprinkle with salt. Place on a rack, set over a rimmed baking sheet and roast for 30 to 40 minutes or until the internal temperature reaches 125 degrees for medium-rare. Remove from the oven, loosely cover with foil and let rest for 10 minutes before serving. While the meat is resting, warm the guajillo sauce.</li><li><strong>&#160;Serve.</strong> Remove the kitchen strings and cut into 1-inch slices. Place the slices on individual plates and spoon the warm guajillo sauce over and around the beef.</li></ol></p>",
+    "ingredients": [
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "For the Guajillo Sauce"
+      },
+      {
+        "amount": "6",
+        "unit_of_measure": null,
+        "description": "6 garlic cloves, unpeeled"
+      },
+      {
+        "amount": "16",
+        "unit_of_measure": "medium-large (about 4 ounces total)",
+        "description": "16 medium-large (about 4 ounces total) dried guajillo chiles"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "teaspoon",
+        "description": "1 teaspoon dried oregano, preferably Mexican"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "teaspoon",
+        "description": "1/4 teaspoon freshly ground black pepper"
+      },
+      {
+        "amount": "1/8",
+        "unit_of_measure": "teaspoon",
+        "description": "1/8 teaspoon cumin"
+      },
+      {
+        "amount": "3 2/3",
+        "unit_of_measure": "cups",
+        "description": "3 2/3 cups beef broth, plus a little more if needed, divided use"
+      },
+      {
+        "amount": "1 1/2",
+        "unit_of_measure": "tablespoons",
+        "description": "1 1/2 tablespoons vegetable or olive oil"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "About 1/2",
+        "unit_of_measure": "teaspoon",
+        "description": "About 1/2 teaspoon sugar"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Shiitake Mushroom and Swiss Chard Stuffing"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": "tablespoons",
+        "description": "2 tablespoons olive oil"
+      },
+      {
+        "amount": "3/4",
+        "unit_of_measure": "pound",
+        "description": "3/4 pound shiitake mushrooms, stemmed, cut into 1/4-inch slices"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": null,
+        "description": "2 garlic cloves, minced"
+      },
+      {
+        "amount": "3/4",
+        "unit_of_measure": "pound",
+        "description": "3/4 pound swiss chard, stem removed, discarded, cut into 1/2-inch slices"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Beef Tenderloin"
+      },
+      {
+        "amount": "3",
+        "unit_of_measure": "pound",
+        "description": "3 pound beef tenderloin"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": "tablespoons",
+        "description": "2 tablespoons olive oil"
+      }
+    ],
+    "name": "Beef Tenderloin Stuffed with Shiitake Mushrooms and Swiss Chard with Guajillo Sauce",
+    "description": "Holiday time means entertaining, and this dish will be the centerpiece of an elegant dinner party.&#160; This recipe is actually a lot easier than it looks, since you can prepare both the guajillo sauce and the mushroom and swiss chard stuffing several days in advance.&#160; Bring both back to room temperature before proceeding with the recipe. &#160;"
+  },
+  {
+    "instructions": "<p><ol><li><strong>Make black bean sauce. </strong>Place the beans in a medium-size (2- to 3-quart) saucepan, cover with 3 cups water, remove any beans that float and heat slowly to a simmer.<br/>If using avocado leaves, toast them for a few seconds per side (they&#8217;ll become aromatic and lightly brown) over a medium gas flame or heated griddle. Add the avocado leaves (or fennel), <em>1/4 cup </em>of the chorizo and <em>1/2 </em>of the onion to the beans, partially cover and simmer over medium to medium-low heat, stirring occasionally, until the beans are fully tender, 1 1/2 to 2 hours. If you see the beans peeking up through the liquid, add water to cover them by 1/2-inch.<br/>Coarsely puree the beans in batches in a food processor or <em>loosely</em> covered blender. Return to the pot and add enough water to thin to the consistency of a medium cream soup. Taste and season with salt.</li><li><strong>The tortillas and chorizo. </strong>Set up a steamer (a vegetable steamer in a large saucepan filled with 1/2 inch of water works well); heat to a boil. Wrap the tortillas in a heavy kitchen towel, lay in the steamer and cover with a tight lid. Boil 1 minute, turn off the heat and let stand without opening the steamer for 15 minutes.<br/>Meanwhile, in a small (7- to 8-inch) skillet, cook the remaining <em>1 cup </em>of chorizo over medium-low heat until done, about 10 minutes, breaking up any clumps as it cooks. Drain off the rendered fat, cover the skillet and keep warm over very low heat.</li><li><strong>Finish the enfrijoladas. </strong>Turn the oven on to the lowest setting and warm a serving platter in it. Pour out 1 1/2 cups of the warm bean sauce onto a deep plate. One by one, dip both sides of the warm tortillas into the sauce, fold into quarters and transfer to the warm serving platter, laying the tortillas in 2 rows, slightly overlapping. Keep warm in the oven.<br/>Scrape any bean sauce remaining on the plate back into the pot. (If the sauce has thickened, add a little water to get it back to the original consistency.) Quickly bring it to a simmer, spoon it over the folded tortillas (there should be a considerable amount of sauce), strew with the warm chorizo<em>,</em> splash with the optional salsa, then sprinkle on the crumbled cheese, chopped parsley and the remaining sliced onion. Serve your delicious <em>enfrijoladas</em> without hesitation--they don&#8217;t take well to delays.</li></ol><p><strong>Advance Preparation: </strong>The black beans can be prepared through Step 1 several days ahead; the chorizo can be cooked, too. Store separately in the refrigerator, covered. Reheat the sauce slowly in a covered pan, thinning if necessary. Warm the chorizo<em> </em>before heating the tortillas and finishing the dish.</p><p><strong>Shortcuts: </strong> Though the flavor and color won&#8217;t be as nice, the beans could be replaced with 2 drained 15-ounce cans of black beans.</p><p><strong>Variations and Improvisation:</strong> The avocado leaf (or fennel) could easily be omitted or replaced with 2 or 3 canned chipotles <em>en adobo</em> or toasted-and-soaked red-black chipotles or <em>chiles pasillas oaxaquenos </em>(in fact, with the chipotle or <em>pasilla oaxaqueno </em>you won&#8217;t really miss the chorizo--either in the beans or on the top)<em>. </em>Spooning soft goat cheese onto the tortillas before folding them makes the dish more substantial (you can omit the cheese garnish, if you wish). Bacon, ham or other sausage can replace chorizo; <em>enfrijoladas</em> are also delicious splashed with Roasted Tomatillo-Chipotle Salsa. In short, with bean sauce and tortillas as a base, you can vary toppings (or fillings) as you like.</p><p><strong>Plantain <em>Enfrijoladas </em>with Sour Cream<em>:</em> </strong>Prepare the bean sauce, tortillas and chorizo as described in Steps 1 and 2. Fry 1 diced ripe plantain in a little vegetable oil over medium heat until browned. Dip the warmed tortillas in the warm sauce as described in Step 3, filling them with a mixture of the fresh cheese and chorizo<em> </em>as they are folded into quarters and layed in an ovenproof baking dish. Sauce them, then bake them covered in a 400 degree oven for 5 minutes or so, until very hot, then drizzle with a little crema or sour cream thinned with a little milk. Garnish with the fried plantains, onion and parsley.</p>",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit_of_measure": "cup (about 6 ounces)",
+        "description": "1 cup (about 6 ounces) dry black beans, rinsed"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": null,
+        "description": "2 avocado leaves OR 1/2 rib of fresh fennel, roughly chopped"
+      },
+      {
+        "amount": "1 1/4 ",
+        "unit_of_measure": "cups (10 ounces)",
+        "description": "1 1/4 cups (10 ounces) chorizo sausage, casings removed"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "medium",
+        "description": "1 medium white onion,"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt (about 1/2 tsp)"
+      },
+      {
+        "amount": "12",
+        "unit_of_measure": null,
+        "description": "12 corn tortillas (plus a few extra, in case some break)"
+      },
+      {
+        "amount": "About 3/4",
+        "unit_of_measure": "cup",
+        "description": "About 3/4 cup Serrano-Tomatillo Salsa (optional)"
+      },
+      {
+        "amount": "3/4",
+        "unit_of_measure": "cup (about 3 ounces)",
+        "description": "3/4 cup (about 3 ounces) crumbled Mexican queso fresco, dry goat cheese or salted farmer&#8217;s cheese"
+      },
+      {
+        "amount": "3",
+        "unit_of_measure": "tablespoons",
+        "description": "3 tablespoons roughly chopped flat leaf parsley"
+      }
+    ],
+    "name": "Black Bean Bathed Enchiladas (with Chorizo and Fresh Cheese)",
+    "description": "Having the great fortune to visit Oaxaca two or three times a year, I get the chance to enjoy this rustic, satisfying dish regularly where it is most well known.&#160; And I must say I really love fresh tortillas awash in the rich texture of black bean sauce, especially the Oaxacan one that is simmered with anisey avocado leaves (I suggest a bit of fresh fennel to substitute for the less-available avocado leaves; they&#8217;re not the same, but the fennel moves the flavor in the Oaxacan direction).A plate of enfrijoladas with a big salad and cold beer or fruity red wine is a delicious lunch or supper.&#160;If you have 2 1/2 to 3 cups of beans cooked (or 3 cups of leftover Oaxacan Black Bean Soup), the dish is fast as well.&#160; And it is nutritious (low in meat and fat, high in grains, beans and flavor&#8212;covering most of the popular topics these days). So enfrijoladas are a great candidate for everyday eating.Recipe from Season 4, Mexico&#8212;One Plate at a Time"
+  },
+  {
+    "instructions": "<p><ol><li><strong><em>Cook the beans</em>.</strong> Place the black beans, avocado leaves if you are using them and 6 cups of water in a large (4-quart) saucepan. Bring to a boil over medium-high, lower the heat and simmer until the beans are softened and completely cooked through, about 2 hours. Remove from the heat and strain the beans, reserving the cooking liquid.</li><li>&#160;<em><strong>Make the black bean sauce</strong>.</em> Add &#190; cup of the cooked beans and 2 cups of the cooking liquid to a blender and puree until smooth. Pour the puree and the remaining broth into the saucepan and bring to a boil over medium-high. Boil, stirring regularly, until the bean sauce is reduced to 2 cups, about 30 minutes. The consistency should be very saucy, like a very light bean soup; if necessary, stir in a little water. Taste and season with salt, usually a generous teaspoon. Cover and set over the lowest heat. Save the remaining beans for another meal.</li><li>&#160;<strong><em>Fry the chorizo</em>.</strong> In a medium (9-inch) skillet, fry the chorizo over medium-low (add a little oil if it doesn&#8217;t begin to render fat right away) until done, about 10 minutes, breaking up any clumps as it cooks. Keep warm over low heat or in a low oven.</li><li><strong><em>Warm the tortillas.</em></strong> Lightly brush or spray both sides of each tortilla with oil. Slide into a plastic bag and microwave on high (100%) for 1 minute to warm and soften.</li><li>&#160;<strong><em>Finish the enfrijoladas.</em></strong> One by one, dip the tortillas into the hot bean broth, fold into quarters and divide among four warm dinner plates, slightly overlapping each pair. Spoon a portion (about &#188; cup) of the remaining hot bean broth over each pair of quartered tortillas, splash with some of the <a>Chipotle</a> or <a>Roasted Tomatillo Salsa</a>, then sprinkle with chorizo, crumbled cheese, sliced onion and chopped parsley. Serve immediately.</li></ol></p>",
+    "ingredients": [
+      {
+        "amount": "12",
+        "unit_of_measure": "ounces",
+        "description": "12 ounces dried black beans"
+      },
+      {
+        "amount": "Handful of dried",
+        "unit_of_measure": null,
+        "description": "Handful of dried avocado leaves, lightly toasted in a dry skillet (optional)"
+      },
+      {
+        "amount": "8",
+        "unit_of_measure": "ounces (about 1 cup)",
+        "description": "8 ounces (about 1 cup) Mexican Chorizo sausage, removed from its casing"
+      },
+      {
+        "amount": "8",
+        "unit_of_measure": null,
+        "description": "8 corn tortillas"
+      },
+      {
+        "amount": "A",
+        "unit_of_measure": "little",
+        "description": "A little vegetable oil, for brushing or spraying the tortillas"
+      },
+      {
+        "amount": "About 1/2",
+        "unit_of_measure": "cup",
+        "description": "About 1/2 cup Roasted Tomatillo Salsa or Chipotle Salsa"
+      },
+      {
+        "amount": "About 1/2",
+        "unit_of_measure": "cup",
+        "description": "About 1/2 cup crumbled Mexican queso fresco or other fresh cheese like salted pressed farmers cheese or goat cheese"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "A couple of thin white onion slices, broken into rings"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "A few tablespoons coarsely chopped flat-leaf parsley"
+      }
+    ],
+    "name": "Black Bean-Sauced Enchiladas",
+    "description": "From Season 9, Mexico&#8212;One Plate At A Time"
+  },
+  {
+    "instructions": "<p>Place a stovetop-rated slow cooker liner over medium-low heat. (If your slow cooker liner isn&#8217;t made from a material that can be used on a stovetop, use a very large (12-inch) non-stick skillet.) Add the bacon in a single layer and cook, stirring occasionally until the bacon is crisp, about 20 minutes. If you're using the sliced bacon, remove 1/2 to use as part of your garnish. Leave 1/4 cup of the bacon drippings in the bottom of the pan and remove the rest. Raise the temperature to medium-high and add the onions, celery root, fennel (if you're using them) and 1 teaspoon salt. Stir to coat the vegetables. Add the garlic after about 10 minutes and continue cooking until the vegetables are softened and lightly browned, about 15 minutes. If you're using a skillet, transfer the vegetables to the slow cooker and stir in the chipotles, black beans, broth and bay leaves. Cover and cook on low for 8 hours or until the beans are tender.</p><p>At the end of the cooking time, remove and discard the bay leaves. Puree 3 cups of the soup in a blender until smooth, then stir back in along with the drained tomatoes and the hominy/pozole/corn. If the soup is too thick, add water to adjust the consistency, usually about 1 1/2 cups. Taste and adjust the seasonings with adobo sauce and additional salt. Cover and cook for another 30 minutes until all the flavors meld together.</p><p>Ladle into bowls, add a dollop of crema. Sprinkle on the diced avocado, green onions, cilantro and the reserved crispy bacon.</p><p><strong>* Testing Notes:</strong> If there's a Mexican grocery in your neighborhood, you should be able to find cooked pozole corn there, otherwise use sweet corn.</p>",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit_of_measure": "pound",
+        "description": "1/2 pound slab smoked bacon cut into 1/2-inch cubes or 1/2 pound sliced bacon cut into 1/2-inch pieces"
+      },
+      {
+        "amount": "4",
+        "unit_of_measure": "cups",
+        "description": "4 cups onions, small dice"
+      },
+      {
+        "amount": "1 1/2",
+        "unit_of_measure": "cups",
+        "description": "1 1/2 cups celery root, peeled and cut in a small dice (optional)"
+      },
+      {
+        "amount": "1 1/2",
+        "unit_of_measure": "cups",
+        "description": "1 1/2 cups fennel, cored and stalks remove, cut into a small dice (optional)"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "6",
+        "unit_of_measure": null,
+        "description": "6 garlic cloves, peeled and finely chopped"
+      },
+      {
+        "amount": "3 to 4",
+        "unit_of_measure": null,
+        "description": "3 to 4 canned chipotle chiles en adobo, seeded and finely chopped"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "pound",
+        "description": "1 pound dried black beans, picked over and rinsed"
+      },
+      {
+        "amount": "6",
+        "unit_of_measure": "cups",
+        "description": "6 cups low sodium chicken broth"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": null,
+        "description": "2 Bay Leaves"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "28-ounce",
+        "description": "1 28-ounce can fire roasted diced tomatoes, well drained"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": "cups",
+        "description": "2 cups well drained hominy or cooked pozole * or sweet corn"
+      },
+      {
+        "amount": "2 to 3",
+        "unit_of_measure": "tablespoons",
+        "description": "2 to 3 tablespoons adobo canning sauce"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "cup",
+        "description": "1 cup Mexican crema or sour cream"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": "large",
+        "description": "2 large avocados, diced"
+      },
+      {
+        "amount": "6",
+        "unit_of_measure": null,
+        "description": "6 green onions, cut into 1/4-inch pieces"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup",
+        "description": "1/2 cup chopped cilantro"
+      }
+    ],
+    "name": "Black Bean Soup",
+    "description": "As the temperature took a plunge this week, I started craving a bowl of hot soup. I was feeling adventurous and decided to try making a black bean soup in a slow cooker. I maximized my prep time by cutting up all the vegetables while the bacon was rendering. I chose to use both celery root and fennel for a more complex flavor, but you can leave them out if you prefer.&#160; I gilded the lily by adding the hominy/cooked pozole corn or sweet corn and the tomatoes.&#160; Finish the soup by garnishing it with&#160; avocado, Mexican crema, chopped green onions and a sprinkling of cilantro.&#160; This soup freezes very well without the garnishes.&#160; "
+  }
+]

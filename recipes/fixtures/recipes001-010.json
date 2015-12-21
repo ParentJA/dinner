@@ -1,0 +1,467 @@
+[
+  {
+    "instructions": "<p>Place the shrimp in a large bowl and add the lime juice. Measure in the ketchup, hot sauce, Worcestershire, onion and cilantro. Mix well.</p><p>Cut the avocado in half, running a knife around the pit from stem to blossom end and back again. Twist the two sides apart and scoop out the pit. Scoop each half out onto your cutting board, cut gently into small cubes, then scoop the avocado on top of the shrimp mixture. Carefully fold in the avocado, then divide the mixture between 4 to 6 serving dishes (martini glasses make a dressy presentation). Garnish with sprigs of cilantro and prepare for a taste of beach-side dining.</p>",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit_of_measure": "pound",
+        "description": "1 pound cooked shrimp"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup",
+        "description": "1/2 cup fresh lime juice"
+      },
+      {
+        "amount": "3/4",
+        "unit_of_measure": "cup",
+        "description": "3/4 cup ketchup"
+      },
+      {
+        "amount": "1-2",
+        "unit_of_measure": "tablespoons",
+        "description": "1-2 tablespoons hot sauce (Tabasco Chipotle Pepper Sauce is delicious here)"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "teaspoon",
+        "description": "1 teaspoon Worcestershire sauce"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "small",
+        "description": "1/2 small white onion, finely diced"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup (loosely packed)",
+        "description": "1/2 cup (loosely packed) chopped cilantro, plus a few sprigs for garnish"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": null,
+        "description": "1 avocado"
+      }
+    ],
+    "name": "Acapulco-Style Shrimp Cocktail",
+    "description": "Recipe from Season 3, Mexico&#8212;One Plate at a Time"
+  },
+  {
+    "instructions": "<p><ol><li><strong>Marinate the shrimp.</strong> Break the achiote paste into a blender jar and add the garlic, orange and lime juices, vinegar and 1/4 teaspoon salt. Blend until smooth. Pour over the shrimp, cover and refrigerate 30 minutes.</li><li><strong>Prepare the onions.</strong> In a small bowl, combine the onion, habanero (or as much of it as you think you&#8217;ll like), lime and 1 scant teaspoon salt. Cover and let stand until the shrimp is ready. (If working ahead, the onions may be stored in the refrigerator, covered, for several days.)</li><li><strong>Cook the shrimp.</strong> In a very large (12-inch) skillet, heat the oil over medium-high. Using a slotted spoon, scoop the shrimp out of the marinade and into the hot oil, leaving behind as much marinade as possible. Stir-fry until the shrimp is just cooked through, about 3 minutes. Scoop onto a serving plate, pour all of the marinade into the skillet, and stir continuously until the mixture thickens, 2 to 3 minutes. Thin the sauce with a little water until it&#8217;s the consistency of a cream sauce. Spoon the sauce over the shrimp. Sprinkle with chopped cilantro or parsley and serve with the pickled onions.</li></ol></p>",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit_of_measure": "small package (3 1/2 ounces) prepared",
+        "description": "1/2 small package (3 1/2 ounces) prepared achiote paste, such as Yucateco, La Anita or Marin brand)"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": null,
+        "description": "2 garlic cloves, peeled and roughly chopped"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "cup",
+        "description": "1/4 cup fresh orange juice"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "cup",
+        "description": "1/4 cup fresh lime juice"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "tablespoon",
+        "description": "1 tablespoon vinegar"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "1 1/4",
+        "unit_of_measure": "pounds (about 24 pieces)",
+        "description": "1 1/4 pounds (about 24 pieces) large shrimp, peeled, leaving tail and final segment intact"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "For the Onions:"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "large",
+        "description": "1 large red onion, thinly sliced"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "small",
+        "description": "1 small habanero chile, stemmed, seeded and thinly sliced"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "cup",
+        "description": "1/4 cup fresh lime juice"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "For finishing the dish:"
+      },
+      {
+        "amount": "3",
+        "unit_of_measure": "tablespoons",
+        "description": "3 tablespoons olive or vegetable oil"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Roughly chopped cilantro or parsley, for garnish"
+      }
+    ],
+    "name": "Achiote Seared Shrimp with Quick Habanero Pickled Onions",
+    "description": "Recipe from Season 5, Mexico&#8212;One Plate at a Time"
+  },
+  {
+    "instructions": "<p>In a small saucepan, heat the oil over medium. Add the garlic, stir until fragrant but not browned, about 1 minute, then add the remaining ingredients and &#190; cup water, whisking to combine thoroughly. Simmer over medium-low heat for about 10 minutes to blend flavors and eliminate the &#8220;raw&#8221; ancho taste. Allow to cool to room temperature, then scrape into a jar and cover. Refrigerate for up to a month or more.</p>",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit_of_measure": "tablespoon",
+        "description": "1 tablespoon vegetable or olive oil"
+      },
+      {
+        "amount": "6",
+        "unit_of_measure": null,
+        "description": "6 garlic cloves, peeled and finely chopped"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup",
+        "description": "1/2 cup ground ancho chile powder (available from national companies, such as McCormick, Mexican groceries and internet sites)"
+      },
+      {
+        "amount": "3",
+        "unit_of_measure": "tablespoons",
+        "description": "3 tablespoons vinegar (apple cider vinegar is common in Mexico)"
+      },
+      {
+        "amount": "1 1/2",
+        "unit_of_measure": "teaspoons",
+        "description": "1 1/2 teaspoons dried oregano, preferably Mexican"
+      },
+      {
+        "amount": "3/4",
+        "unit_of_measure": "teaspoon",
+        "description": "3/4 teaspoon sugar"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "teaspoon",
+        "description": "1 teaspoon salt"
+      }
+    ],
+    "name": "Adobo Marinade for Lamb Barbacoa",
+    "description": "From Season 9, Mexico&#8212;One Plate at a Time"
+  },
+  {
+    "instructions": "<p><ol><li><strong>The tortillas.</strong> If the tortillas are just made and very moist feeling, lay them out in a single layer and cover with a dish towel or napkin - the goal is to let them dry to leathery, so that they'll crisp on the grill.</li><li><strong>Make the tangy avocado sauce.</strong> Set a small non-stick skillet over medium-high heat (if no non-stick skillet is available, lay a piece of foil on the bottom of the skillet). Lay in the garlic and tomatillos (cut side down). When the tomatillos are well browned, 3 or 4 minutes, turn everything over and brown the other side. (The tomatillos should be completely soft.) Scoop the tomatillos and garlic into a blender or food processor, and let cool to room temperature, about 5 minutes. Add the chile, cilantro and avocado. Blend until nearly smooth. Pour into a salsa dish, thin to a drizzleable consistency with a little water, usually about 1/4 cup. Taste and season with salt, usually about 1 teaspoon.</li><li><strong></strong><strong>The chorizo and fresh cheese.</strong><em> </em> In a medium skillet, cook the chorizo over medium heat, breaking up any clumps, until well browned, about 12 minutes. Scrape out onto a plate lined with paper towels to absorb excess fat. Transfer to a serving dish. Scoop the crumbled cheese into a serving dish.</li><li><strong>Grill and serve the tlayudas.</strong> Turn on a gas grill to medium or light a charcoal grill and let the coals burn until medium hot and covered with white ash. Lay several tortillas on the grill and turn every 20 seconds or so until nearly crisp - depending on the heat of your fire this should take a couple of minutes. Brush the top of each tortilla completely (and a little generously) with the lard or oil, then sprinkle each with a tablespoon of chorizo. When the tortillas are completely crisp (they'll be richly browned underneath) and the chorizo is hot, remove them to a serving platter. Drizzle with the avocado sauce and sprinkle with the cheese. Let your guest enjoy the first round while you're making the remainder.</li></ol></p>",
+    "ingredients": [
+      {
+        "amount": "About 2",
+        "unit_of_measure": "dozen",
+        "description": "About 2 dozen corn tortillas, preferably thin homemade ones or ones from a local tortilleria"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "pound (about 4 medium)",
+        "description": "1/2 pound (about 4 medium) tomatillos, husked, rinsed and cut in half"
+      },
+      {
+        "amount": "3",
+        "unit_of_measure": null,
+        "description": "3 garlic cloves, peeled"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Hot green chiles to taste (roughly 2 or 3 serranos or 1 or 2 jalapenos), stems broken off, roughly chopped"
+      },
+      {
+        "amount": "About 1/4",
+        "unit_of_measure": "cup",
+        "description": "About 1/4 cup (loosely packed) cilantro, thick lower stems cut off"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "large, ripe",
+        "description": "1 large, ripe avocado, pitted, flesh scooped from peel and roughly chopped"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "About 1/4",
+        "unit_of_measure": "cup fresh-rendered, room temperature pork",
+        "description": "About 1/4 cup fresh-rendered, room temperature pork lard (preferably the kind with bits of brown cracklings in it's what's called asiento in Oaxaca) or vegetable oil"
+      },
+      {
+        "amount": "About 1",
+        "unit_of_measure": "pound",
+        "description": "About 1 pound fresh Mexican chorizo sausage, casing removed"
+      },
+      {
+        "amount": "About 6",
+        "unit_of_measure": "ounces",
+        "description": "About 6 ounces crumbled Mexican queso fresco or other fresh cheese such as feta or goat cheese"
+      }
+    ],
+    "name": "&#8220;Almost Oaxacan&#8221; Grilled Tostadas with Chorizo, Tangy Guacamole and Fresh Cheese",
+    "description": "Recipe from Season 6, Mexico&#8212;One Plate at a Time"
+  },
+  {
+    "instructions": "<p>Place a grill pan over high heat. Cut 12 &#188;-inch slices from the baguette (reserve any leftover bread for another use) and brush each side lightly with olive oil. Lay the slices on the grill pan and toast until lightly golden, about 2 minutes, then flip the slices and toast the other side, about 2 minutes more.</p><p>Heat the olive oil in a large (10-inch) skillet set over medium-high. When the oil is hot, add the chile pieces and fry, stirring constantly, for 15 seconds. Use a slotted spoon to transfer the chile pieces to a paper towel-lined plate, leaving behind as much oil as possible.</p><p>Add the beets to the pan, sprinkle with a little salt, and cook, stirring frequently, until softened, about 2 minutes. Transfer to a medium mixing bowl and let cool.</p><p>Roughly chop the peanuts and stir them into the beets along with the ricotta, <em>half</em> of the toasted anchos, parsley and &#189; teaspoon salt. Spread each slice of toast with about 2 tablespoons of the ricotta mixture and garnish with the remaining ancho and a sprinkling peanuts and cracked black pepper.</p><p><strong>&#160;</strong></p><p><span>rinkling peanuts.</span></p>",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit_of_measure": null,
+        "description": "1 demi baguette"
+      },
+      {
+        "amount": "3",
+        "unit_of_measure": "tbsp",
+        "description": "3 tbsp olive oil plus more for brushing the bread"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": null,
+        "description": "2 dried ancho chile, stemmed, seeded and cut into &#188;-inch pieces"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": null,
+        "description": "2 small beets (about 5 ounces total), peeled and roughly shredded"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "cup",
+        "description": "1/4 cup peanuts, plus more for garnish"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "generous cup",
+        "description": "1 generous cup homemade or store-bought &#8220;hand-dipped&#8221; ricotta"
+      },
+      {
+        "amount": "2",
+        "unit_of_measure": "tbsp",
+        "description": "2 tbsp chopped parsley"
+      }
+    ],
+    "name": "Ricotta-Beet Spread",
+    "description": ""
+  },
+  {
+    "instructions": "<p>Spread the Peppery Cinnamon Salt on a small plate.&#160; Moisten the rim of a 6-ounce martini glass with the lime wedge, and upend the glass onto the salt to crust the rim. Set aside.</p><p>In a cocktail shaker, combine the tequila, lime juice, Calvados, Apple-Habanero Puree, apple brandy&#160;and ice. Cover and shake vigorously until frothy and cold; tiny ice crystals will appear in the drink after about 15 seconds of shaking. Strain into the salt-crusted glass and serve immediately.</p><p><b>Apple-Habanero Puree</b></p><p>2 large apples, peeled, quartered and cored (you need about 12 ounces/3 &#189; cups of &#160; &#160;cleaned apple quarters)<br/>&#188; cup sugar<br/>&#188; to &#189; fresh habanero chile, stemmed<br/>&#188; cup agave syrup (light organic syrup gives the best flavor) or simple syrup</p><p>Heat your oven to 400 degrees.&#160; Spread the apples onto a baking sheet and sprinkle with the sugar, tossing them to coat evenly.&#160; Add the habanero to the baking sheet, and slide into the oven. Roast for 20 minutes, then use a spatula to flip the apple pieces. Roast for another 20 minutes, until lightly browned and completely soft.</p><p>In a food processor or blender, process the roasted apples with the agave syrup (or Rich Simple Syrup) and &#189; cup water until completely smooth. Chop the habanero (seeds and all), then add a portion to the apple puree&#8212;start with a quarter to make it a little spicy, half for the full experience. Process to blend thoroughly, taste and add more habanero if you were too timid at first. Pulse to blend.&#160; Pour into a storage container (strain the mixture if you think there may be unblended bits), cover and refrigerate until you are ready to use, up to 5 days.</p><p>Yield: 1 &#189; cups</p>",
+    "ingredients": [
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Peppery Cinnamon Salt (see Bartender&#8217;s notes above) or coarse (kosher) salt"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": null,
+        "description": "1 lime wedge"
+      },
+      {
+        "amount": "1 1/2",
+        "unit_of_measure": "ounces",
+        "description": "1 1/2 ounces 100% blue agave reposado tequila"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "ounce",
+        "description": "1/4 ounce fresh lime juice"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "ounce",
+        "description": "1/2 ounce apple brandy (Calvados is the most famous one)"
+      },
+      {
+        "amount": "1 1/2",
+        "unit_of_measure": "ounces",
+        "description": "1 1/2 ounces Apple-Habanero Puree (see recipe below)"
+      },
+      {
+        "amount": "6 to 10",
+        "unit_of_measure": null,
+        "description": "6 to 10 small ice cubes (about &#190; cup)"
+      }
+    ],
+    "name": "Apple-Habanero Margarita",
+    "description": "Habanero chiles, though foremost thought of in terms of their heat, are one of the most delicious chiles on earth&#8212;fruity, citrusy, wonderfully floral. And they pair perfectly with apples. So when you&#8217;re at the fall farmer&#8217;s market, buy your favorite apples and a few habaneros (thankfully, both are in abundance at the same moment) for this special cocktail&#8212;special for anyone who loves spicy. For me, &#189; of an habanero is the right amount. I typically roast a whole habanero with the apples, then roughly chop it and add it to the pureed apples a little at a time, until the flavor and heat at perfect. I encourage you to do the same. Combining apple brandy and roasted apple puree gives this drink a rich, roasty oaky flavor with hints of oakiness. A resonant reposado tequila fits in beautifully, offering an age-induced smoothess while preserving the tequila&#8217;s agave flavor. To make Peppery Cinnamon Salt, mix 3 parts coarse (kosher) salt with 2 parts ground cinnamon (preferably fresh-ground Mexican canela) and 1 part fresh-ground black pepper. "
+  },
+  {
+    "instructions": "<p>Sprinkle flour over the countertop for rolling out the puff pastry. Unfold and cut the pastry in half. Place the second half back in the refrigerator while you work with the first half. Roll out into a 12 x 15 rectangle. Cut out five 5-inch circles. Transfer them to a baking sheet lined with parchment paper, then slide it back into the refrigerator. Repeat this step with the other half. You'll have a total of 10 circles. (If you're using the puff pastry that comes in two pieces, there's no need to cut them in half, just roll out each piece into a 12 x 15 rectangle.)</p><p>Peel and core the apples, cut into 1/4-inch slices. Scoop into a bowl and toss with the cinnamon and sugar.</p><p>Working with one baking sheet at a time, arrange the apple slices in a spiral pattern on the pastry circles, leaving a generous 1/4-inch border all the way around. Fold the edges up over the apples toward the center, gently pleating the dough. Brush the edges with egg wash. then dot each tart with small pieces of butter. Return the tarts back to the refrigerator. (If at any point the pastry gets too soft to work with, just refrigerate until it firms back up.) You'll need to refrigerate the tarts for at least 30 minutes before baking.</p><p>Preheat the oven to 425 degrees. Place the tarts in the oven and bake for 20 to 25 minutes or until golden brown. Remove from the oven and carefully transfer the tarts to cooling racks. Drizzle on the warm cajeta and sprinkle the chopped pecans over the top. These tarts are delicious served warm or at room temperature.</p>",
+    "ingredients": [
+      {
+        "amount": "One",
+        "unit_of_measure": "14-ounce package",
+        "description": "One 14-ounce package Dufour Pastry Kitchens' Classic Puff Pastry, defrosted,  but keep very cold"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Flour for rolling out the puff pastry"
+      },
+      {
+        "amount": "3 to 4",
+        "unit_of_measure": "medium (about 1 3/4 pounds total)",
+        "description": "3 to 4 medium (about 1 3/4 pounds total) firm cooking apples (such as Granny Smith or Gala)"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "teaspoon",
+        "description": "1 teaspoon ground cinnamon, preferably Mexican canela"
+      },
+      {
+        "amount": "1/3",
+        "unit_of_measure": "cup",
+        "description": "1/3 cup sugar"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": null,
+        "description": "1 egg mixed with 1 tablespoon water to make an egg wash"
+      },
+      {
+        "amount": "3",
+        "unit_of_measure": "tablespoons",
+        "description": "3 tablespoons unsalted butter, cut into small pieces"
+      },
+      {
+        "amount": "About",
+        "unit_of_measure": "1/2 cup warm",
+        "description": "About 1/2 cup warm cajeta, store bought (we like the Coronado brand), homemade or your favorite caramel sauce"
+      },
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup",
+        "description": "1/2 cup chopped pecans"
+      }
+    ],
+    "name": "Apple Tarts with Cajeta and Pecans",
+    "description": "When I think of fall, I think about apple desserts.&#160; This is one of my favorites since it's easy to make, tastes delicious and looks like it came from a bakery.&#160; We used an all butter puff pastry for the taste, which you'll find it in the freezer section of many grocery stores (Whole Foods usually carries it).&#160; The only secret&#160; to this recipe is to keep the puff pastry ice cold.&#160; After every step, you need to place it back into the refrigerator before moving on to the next step, especially before you bake it.&#160;&#160;"
+  },
+  {
+    "instructions": "<p>In an ungreased skillet set over medium heat, toast the chiles, stirring them around for a minute or so until they are very aromatic (some will have slightly darkened spots on them). Cover with hot tap water and let rehydrate for 30 minutes.</p><p>In the same skillet, roast the garlic, turning regularly, until soft and blotchy-dark in places, about 15 minutes. Cool and slip off the papery skin.</p><p>Roast the tomatillos on a baking sheet 4 inches below a very hot broiler until darkly roasted, even blackened in spots, about 5 minutes. Flip them over and roast the other side - 4 or 5 minutes more will give you splotchy-black and blistered tomatillos. Cool, then transfer the contents of the baking sheet (including any juices) to a blender or food processor.</p><p>Drain the chiles and add them to the tomatillos along with the garlic. Puree, then scrape into a serving dish. Stir in enough water to give the salsa a spoonable consistency, usually about 1/4 cup. Season with salt, usually a scant teaspoon, and the sugar. Refrigerated, the salsa keeps for several days.</p>",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit_of_measure": "ounce (about 16)",
+        "description": "1/2 ounce (about 16) chile de arbol"
+      },
+      {
+        "amount": "6",
+        "unit_of_measure": null,
+        "description": "6 x, large garlic cloves, unpeeled"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "pound (10 to 12 medium)",
+        "description": "1 pound (10 to 12 medium) tomatillos, husked and rinsed"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      },
+      {
+        "amount": "About 1/2",
+        "unit_of_measure": "teaspoon",
+        "description": "About 1/2 teaspoon sugar (optional)"
+      }
+    ],
+    "name": "Arbol Chile Salsa",
+    "description": "Recipe from Season 6, Mexico&#8212;One Plate at a Time"
+  },
+  {
+    "instructions": "<p>In a food processor, combine the mayonnaise, avocado and cilantro. Pulse until mayo and avocado are thoroughly combined. Taste and season with salt, usually about 1/4 teaspoon.</p>",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit_of_measure": "cup",
+        "description": "1/2 cup top-quality mayonnaise"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": null,
+        "description": "1 avocado, pitted, flesh scooped from the skin"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "cup (loosely packed)",
+        "description": "1/4 cup (loosely packed) cilantro, roughly chopped"
+      }
+    ],
+    "name": "Avocado-Cilantro Mayonnaise",
+    "description": "Recipe from Season 7, Mexico&#8211;One Plate at a Time "
+  },
+  {
+    "instructions": "<p>In a medium bowl, combine the shrimp, onion, and 1/4 cup sun-dried tomato.</p><p>Measure the lime juice into a food processor or blender. Cover, turn on and drop in the chiles. When chopped, turn the blender off and scoop in the avocado and cilantro. Process until smooth. Thin to a \"creamy dressing\" consistency with water, usually 2 to 3 tablespoons. Taste and season with salt, usually about 1 teaspoon. (You will have about 1 1/2 cups of dressing.)</p><p>Mix the dressing into the shrimp mixture. Cover with plastic wrap directly on the surface of the shrimp and refrigerate. When you're ready to serve, scoop onto the mini tostadas and decorate with cilantro and diced sun-dried tomatoes.</p>",
+    "ingredients": [
+      {
+        "amount": "12",
+        "unit_of_measure": "ounces",
+        "description": "12 ounces medium cooked shrimp, peeled and deveined"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": null,
+        "description": "1 medium white onion, cut into 1/4-inch pieces, rinsed under cold running water and drained"
+      },
+      {
+        "amount": "1/4",
+        "unit_of_measure": "cup",
+        "description": "1/4 cup finely chopped sun-dried tomatoes, plus extra for garnish"
+      },
+      {
+        "amount": "1/4-1/3",
+        "unit_of_measure": "cup",
+        "description": "1/4-1/3 cup fresh lime juice"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Hot green chiles to taste (usually 3 serranos  or 1 to 2 jalapenos), stemmed and roughly chopped"
+      },
+      {
+        "amount": "1",
+        "unit_of_measure": "medium",
+        "description": "1 medium avocado, pitted, flesh scooped from the skin"
+      },
+      {
+        "amount": "1/3",
+        "unit_of_measure": "cup (loosely packed) roughly chopped",
+        "description": "1/3 cup (loosely packed) roughly chopped cilantro (thick bottom stems cut off), plus extra for garnish"
+      },
+      {
+        "amount": null,
+        "unit_of_measure": null,
+        "description": "Salt"
+      }
+    ],
+    "name": "Avocado-Dressed Shrimp a la Mexicana",
+    "description": "This version&#160;of Camarones a la Mexicana con Aguacate uses&#160;sun-dried tomatoes instead of fresh.&#160;Look for the sun-dried tomatoes sold in a resealable pouch; the oil-packed sun-dried tomatoes won't work well here."
+  }
+]

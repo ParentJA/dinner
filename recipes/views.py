@@ -11,16 +11,21 @@ from rest_framework.response import Response
 
 # Django imports...
 from django.contrib.auth import get_user_model
+from django.db.models import Q
 from django.http import Http404
 from django.utils.timezone import now
 
 # Local imports...
-from .models import Food, Ingredient, Recipe, Pantry, PantryFood, UnitOfMeasure, UserPantry, UserRecipeRecord
+from .models import (
+    Food, Ingredient, Recipe, Pantry, PantryFood, UnitOfMeasure, UserPantry, UserRecipeRecord,
+    UserFavorite, UserRating
+)
 from .serializers import (
     BasicRecipeSerializer, CountedFoodSerializer, FoodSerializer, FoodCategorySerializer, IngredientSerializer,
-    PantrySerializer, RecipeSerializer, RecipeCategorySerializer, UnitOfMeasureSerializer
-)
-from .services import get_current_user_recipe_record
+    PantrySerializer, RecipeSerializer, RecipeCategorySerializer, UnitOfMeasureSerializer,
+    UserFavoriteSerializer, UserRatingSerializer,
+    UserDataSerializer)
+from .services import get_current_user_recipe_record, get_rating
 
 User = get_user_model()
 
@@ -177,8 +182,11 @@ class RecipeAPIViewSet(viewsets.ViewSet):
     def list(self, request):
         data = {}
 
+        # Only get recipes that have a description or instructions...
+        query = Q(description__isnull=False) | Q(instructions__isnull=False)
+
         # Handle recipe list...
-        recipes = Recipe.objects.prefetch_related('categories', 'foods', 'foods__categories').defer(
+        recipes = Recipe.objects.prefetch_related('categories', 'foods', 'foods__categories').filter(query).defer(
             'description', 'instructions'
         )
 
@@ -198,7 +206,9 @@ class RecipeAPIViewSet(viewsets.ViewSet):
             foods = set(chain.from_iterable([f for f in [recipe.foods.all() for recipe in recipes]]))
 
             # Count and modify ingredients...
-            ingredients = Ingredient.objects.select_related('food')
+            ingredients = Ingredient.objects.select_related('food', 'recipe').filter(
+                Q(recipe__description__isnull=False) | Q(recipe__instructions__isnull=False)
+            )
             ingredient_counter = Counter(map(lambda i: i.food.id, ingredients))
 
             for food in foods:
@@ -230,31 +240,57 @@ class RecipeAPIViewSet(viewsets.ViewSet):
         recipe = recipes[0]
         recipe.in_progress = get_current_user_recipe_record(request.user, recipe) is not None
 
+        # Get user data...
+        is_favorite = UserFavorite.objects.filter(user=request.user, recipe=recipe).exists()
+
+        try:
+            rating = UserRating.objects.get(user=request.user, recipe=recipe).rating
+        except UserRating.DoesNotExist:
+            rating = None
+
         return Response(status=status.HTTP_200_OK, data={
             'ingredients': IngredientSerializer(ingredients, many=True).data,
             'recipes': RecipeSerializer(set(recipes), many=True).data,
             'units_of_measure': UnitOfMeasureSerializer(
                 set(filter(lambda u: u is not None, units_of_measure)), many=True
             ).data,
+            'user_data': UserDataSerializer({
+                'is_favorite': is_favorite,
+                'rating': float(rating)
+            }).data
         })
 
     def update(self, request, pk):
-        in_progress = request.data.get('in_progress', False)
+        in_progress = request.data.get('in_progress')
+        rating = request.data.get('rating')
 
-        # Get any current user recipe record...
+        # Get a recipe to update...
         recipe = get_object_or_404(Recipe, pk=pk)
-        user_recipe_record = get_current_user_recipe_record(request.user, recipe)
 
-        if in_progress:
-            if user_recipe_record is None:
-                UserRecipeRecord.objects.create(user=request.user, recipe=recipe)
+        # Handle in progress...
+        if in_progress is not None:
+            user_recipe_record = get_current_user_recipe_record(request.user, recipe)
+
+            # Start making recipe (it should not already be in progress)...
+            if in_progress:
+                if user_recipe_record is None:
+                    UserRecipeRecord.objects.create(user=request.user, recipe=recipe)
+                else:
+                    raise Http404
+
+            # Stop making recipe...
             else:
-                raise Http404
+                if user_recipe_record is not None:
+                    user_recipe_record.updated = now()
+                    user_recipe_record.save()
 
-        else:
-            if user_recipe_record is not None:
-                user_recipe_record.updated = now()
-                user_recipe_record.save()
+        # Handle rating...
+        if rating is not None:
+            user_rating, created = UserRating.objects.get_or_create(user=request.user, recipe=recipe, defaults={
+                'rating': get_rating(rating)
+            })
+            user_rating.rating = get_rating(rating)
+            user_rating.save()
 
         return self.retrieve(request, pk)
 

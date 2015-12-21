@@ -4,7 +4,9 @@ __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 from rest_framework import serializers
 
 # Local imports...
-from .models import Food, FoodCategory, Ingredient, Pantry, Recipe, RecipeCategory, UnitOfMeasure
+from .models import (
+    Food, FoodCategory, Ingredient, Pantry, Recipe, RecipeCategory, UnitOfMeasure, UserFavorite, UserRating
+)
 
 
 class FoodSerializer(serializers.ModelSerializer):
@@ -62,3 +64,20 @@ class IngredientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ingredient
         fields = ('id', 'recipe', 'food', 'amount', 'unit_of_measure', 'description')
+
+
+class UserFavoriteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserFavorite
+        fields = ('id', 'user', 'recipe')
+
+
+class UserRatingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserRating
+        fields = ('id', 'user', 'recipe', 'rating')
+
+
+class UserDataSerializer(serializers.Serializer):
+    is_favorite = serializers.BooleanField(default=False)
+    rating = serializers.FloatField(default=None)

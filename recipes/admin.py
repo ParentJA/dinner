@@ -5,7 +5,8 @@ from django.contrib import admin
 
 # Local imports...
 from .models import (
-    Food, FoodCategory, Pantry, PriceComponent, Recipe, RecipeCategory, UnitOfMeasure, UserPantry, UserRecipeRecord
+    Food, FoodCategory, Pantry, PriceComponent, Recipe, RecipeCategory, UnitOfMeasure, UserPantry, UserRating,
+    UserRecipeRecord
 )
 
 
@@ -84,3 +85,9 @@ class UserRecipeRecordAdmin(admin.ModelAdmin):
     model = UserRecipeRecord
     fields = ('user', 'recipe', 'created', 'updated',)
     readonly_fields = ('user', 'recipe', 'created')
+
+
+@admin.register(UserRating)
+class UserRatingAdmin(admin.ModelAdmin):
+    model = UserRating
+    fields = ('user', 'recipe', 'rating')

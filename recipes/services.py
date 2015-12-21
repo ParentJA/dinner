@@ -1,5 +1,8 @@
 __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 
+# Standard library imports...
+from decimal import Decimal
+
 # Local imports...
 from .models import UserRecipeRecord
 
@@ -17,3 +20,13 @@ def get_current_user_recipe_record(user, recipe):
         return UserRecipeRecord.objects.get(user=user, recipe=recipe, updated__isnull=True)
     except UserRecipeRecord.DoesNotExist:
         return None
+
+
+def get_rating(value):
+    """
+    Retrieves a decimal value between 1.0 and 5.0.
+    :param value: float: a number
+    :return: a decimal value
+    """
+    value = min(5.0, max(1.0, float(value)))
+    return Decimal(value)

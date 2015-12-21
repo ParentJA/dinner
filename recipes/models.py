@@ -1,11 +1,25 @@
 __author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 
+# Standard library imports...
+from decimal import Decimal
+
 # Django imports...
 from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.template.defaulttags import date
 
 AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL')
+
+
+def validate_rating(value):
+    if value < Decimal(1.0) or value > Decimal(5.0):
+        raise ValidationError('Value must be between 1.0 and 5.0')
+
+    fractional_part = int('{:.1f}'.format(value).split('.')[1])
+
+    if fractional_part not in (0, 5):
+        raise ValidationError('Value must be a multiple of 0.5')
 
 
 class Recipe(models.Model):
@@ -231,7 +245,7 @@ class PantryFood(models.Model):
 
 
 class UserRecipeRecord(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    user = models.ForeignKey(AUTH_USER_MODEL)
     recipe = models.ForeignKey('recipes.Recipe')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(null=True, blank=True, default=None)
@@ -248,3 +262,33 @@ class UserRecipeRecord(models.Model):
             created=date(self.created, 'DATETIME_FORMAT'),
             updated=date(self.updated, 'DATETIME_FORMAT')
         )
+
+
+class UserRating(models.Model):
+    """A rating that a user has given to a recipe on a scale of 1 to 5."""
+    user = models.ForeignKey(AUTH_USER_MODEL)
+    recipe = models.ForeignKey('recipes.Recipe')
+    rating = models.DecimalField(
+        help_text='A number between 1.0 and 5.0 (increments of 0.5)',
+        max_digits=2,
+        decimal_places=1,
+        validators=[validate_rating]
+    )
+
+    class Meta:
+        default_related_name = 'user_ratings'
+        verbose_name = 'user rating'
+        verbose_name_plural = 'user ratings'
+
+    def __unicode__(self):
+        return '{user} rated {recipe} a {rating}'.format(
+            user=self.user,
+            recipe=self.recipe,
+            rating=self.rating
+        )
+
+
+class UserFavorite(models.Model):
+    """A recipe that a user has marked as a favorite."""
+    user = models.ForeignKey(AUTH_USER_MODEL)
+    recipe = models.ForeignKey('recipes.Recipe')

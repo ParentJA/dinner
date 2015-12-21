@@ -71,11 +71,17 @@
         var instructions = recipe.instructions;
         var inProgress = recipe.in_progress;
 
+        var userData = data.user_data;
+        var isFavorite = userData.is_favorite;
+        var rating = userData.rating;
+
         // Update recipe...
         var existingRecipe = _.find(recipes, "id", recipeId);
         existingRecipe.description = description;
         existingRecipe.instructions = instructions;
         existingRecipe.inProgress = inProgress;
+        existingRecipe.isFavorite = isFavorite;
+        existingRecipe.rating = rating;
 
         // Update ingredients...
         var foodMap = _.indexBy(existingRecipe._foods, "id");

@@ -5,6 +5,16 @@
     </li>
     <li class="active" ng-bind-html="recipe.name"></li>
   </ol>
+  <div>
+    <span>
+      Rating: <span x-rating-bar data-get-rating="getRating()" data-set-rating="setRating(rating)"></span>
+    </span>
+    <span class="pull-right">
+      Favorite:
+      <i class="fa fa-heart-o" ng-hide="recipe.isFavorite"></i>
+      <i class="fa fa-heart" ng-show="recipe.isFavorite"></i>
+    </span>
+  </div>
   <h2 class="text-center" ng-bind-html="recipe.name | title"></h2>
   <p ng-bind-html="recipe.description" ng-if="recipe.description"></p>
   <h3>Ingredients <span class="label label-default pull-right" ng-bind="totalFoods"></span></h3>

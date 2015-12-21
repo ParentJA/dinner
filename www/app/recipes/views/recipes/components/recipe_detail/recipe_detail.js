@@ -15,6 +15,14 @@
       saveRecipeService(recipe.id, value);
     };
 
+    $scope.getRating = function getRating() {
+      return recipe.rating;
+    };
+
+    $scope.setRating = function setRating(rating) {
+      saveRecipeService(recipe.id, null, rating);
+    };
+
     activate();
 
     function activate() {
