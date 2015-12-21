@@ -262,6 +262,7 @@ class RecipeAPIViewSet(viewsets.ViewSet):
 
     def update(self, request, pk):
         in_progress = request.data.get('in_progress')
+        is_favorite = request.data.get('is_favorite')
         rating = request.data.get('rating')
 
         # Get a recipe to update...
@@ -283,6 +284,16 @@ class RecipeAPIViewSet(viewsets.ViewSet):
                 if user_recipe_record is not None:
                     user_recipe_record.updated = now()
                     user_recipe_record.save()
+
+        # Handle is favorite...
+        if is_favorite is not None:
+            if is_favorite:
+                UserFavorite.objects.create(user=request.user, recipe=recipe)
+            else:
+                try:
+                    UserFavorite.objects.get(user=request.user, recipe=recipe).delete()
+                except UserFavorite.DoesNotExist:
+                    pass
 
         # Handle rating...
         if rating is not None:

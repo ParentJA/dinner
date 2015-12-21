@@ -7,12 +7,12 @@
   </ol>
   <div>
     <span>
-      Rating: <span x-rating-bar data-get-rating="getRating()" data-set-rating="setRating(rating)"></span>
+      Rating:
+      <span x-rating-bar data-get-rating="getRating()" data-set-rating="setRating(rating)"></span>
     </span>
     <span class="pull-right">
       Favorite:
-      <i class="fa fa-heart-o" ng-hide="recipe.isFavorite"></i>
-      <i class="fa fa-heart" ng-show="recipe.isFavorite"></i>
+      <span x-favorite-button data-is-favorite="isFavorite()" data-set-favorite="setFavorite(isFavorite)"></span>
     </span>
   </div>
   <h2 class="text-center" ng-bind-html="recipe.name | title"></h2>

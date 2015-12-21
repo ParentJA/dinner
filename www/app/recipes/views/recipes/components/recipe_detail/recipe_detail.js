@@ -23,6 +23,14 @@
       saveRecipeService(recipe.id, null, rating);
     };
 
+    $scope.isFavorite = function isFavorite() {
+      return recipe.isFavorite;
+    };
+
+    $scope.setFavorite = function setFavorite(isFavorite) {
+      saveRecipeService(recipe.id, null, null, isFavorite);
+    };
+
     activate();
 
     function activate() {

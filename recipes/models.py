@@ -279,6 +279,7 @@ class UserRating(models.Model):
         default_related_name = 'user_ratings'
         verbose_name = 'user rating'
         verbose_name_plural = 'user ratings'
+        unique_together = ('user', 'recipe')
 
     def __unicode__(self):
         return '{user} rated {recipe} a {rating}'.format(
@@ -292,3 +293,6 @@ class UserFavorite(models.Model):
     """A recipe that a user has marked as a favorite."""
     user = models.ForeignKey(AUTH_USER_MODEL)
     recipe = models.ForeignKey('recipes.Recipe')
+
+    class Meta:
+        unique_together = ('user', 'recipe')
